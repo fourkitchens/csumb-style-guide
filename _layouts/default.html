@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{ page.title }} | {{ site.name }}</title>
+    <meta name="viewport" content="width=device-width" />
+    <script src="/styleguide-assets/js/modernizr-latest.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/718384/css/fonts.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/styleguide.css" />
+    <!-- syntax highlighting CSS -->
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+  </head>
+  <body>
+    <div class="styleguide-container">
+      <header>
+        <a href="/">
+          <div id="logo" class="logo-white-solid"><h1 class="logo">{{ site.name }}</h1></div>
+        </a>
+      </header>
+
+      <main>
+        {{ content }}
+      </main>
+
+      <footer>
+        <div>
+          Four Kitchens | <a href="http://www.fourkitchens.com">www.fourkitchens.com</a>
+        </div>
+      </footer>
+    </div> <!-- /styleguide-container -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/styleguide-assets/js/main.js"></script>
+  </body>
+</html>

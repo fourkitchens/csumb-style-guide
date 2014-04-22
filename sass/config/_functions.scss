@@ -1,0 +1,69 @@
+////////////////////////
+// Functions Partials
+//
+// All of your functions should go in this file.
+////////////////////////
+
+
+// A function to grab the value of the breakpoint, if we are just doing min-width.
+@function bp-value($context) {
+  @if type-of($breakpoints) != 'map' {
+    @warn "Your breakpoints aren't a map! See https://github.com/snugug/respond-to#api if you'd like a reminder on how to use Respond-to";
+    @return false;
+  }
+  @else if map-has-key($breakpoints, $context) {
+    @if type-of(map-get($breakpoints, $context)) == 'number' {
+      @return map-get($breakpoints, $context);
+    }
+  }
+  @else {
+    @warn "There is no breakpoint defined for this context.";
+  }
+
+  @return false;
+}
+
+
+// World Pulse Color Utility:
+//   $color: one of the color maps defined in _variables.scss: purple, red,
+//           orange, blue, grey, or green
+//   $value: the color value, string preferred, but legacy index numbers are
+//           translated with a warning. Dark, main (default if not provided),
+//           bright, highlight.
+//   $adjustment: A percentage to lighten or darken the selected color value.
+//           +/-5% is preferred, but other values are used on RARE OCCASION.
+@function wp-color($color, $value: 'main', $adjustment: 0) {
+  @if type-of($color) != 'map' {
+    @warn '@function wp-color expects first argument to be a map: purple, red, orange, blue, grey, or green.';
+  }
+
+  @if type-of($value) != 'string' {
+    @if type-of($value) == 'number' and $value > 0 and $value < 5 {
+      $value: nth(('dark', 'main', 'bright', 'highlight'), $value);
+      @warn '@function wp-color now uses value strings, not integers: dark, main* (default), bright, or highlight. Assumed ' + $value + '.';
+    }
+    @else {
+      @warn '@function wp-color expects second argument [optional] to be a string: dark, main* (default), bright, or highlight. "' + $value + '" provided.';
+    }
+  }
+
+  @if map-has-key($color, $value) {
+    $selected: map-get($color, $value);
+
+    @if ($adjustment > 0) {
+      @return lighten($selected, $adjustment);
+    }
+    @else if ($adjustment < 0) {
+      @return darken($selected, abs($adjustment));
+    }
+    @else {
+      @return $selected;
+    }
+  }
+
+  @else {
+    @warn '@function wp-color error: ' + $value + ' value is not defined within provided color.';
+  }
+
+  @return false;
+}

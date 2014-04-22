@@ -1,0 +1,40 @@
+---
+layout: component
+title:  "Drupal Messages"
+---
+
+{% capture status %}
+  <div class="messages status">
+    <h2 class="element-invisible">Status message</h2>
+    Journal entry <a href="#"><em>Introducing Myself and My Journal</em></a>
+    has been created.
+  </div>
+{% endcapture %}
+
+{% capture warning %}
+  <div class="messages warning">
+    <h2 class="element-invisible">Status message</h2>
+    Some of the pending updates cannot be applied.
+    <a href="#">Review database logs.</a>
+  </div>
+{% endcapture %}
+
+{% capture error %}
+  <div class="messages error">
+    <h2 class="element-invisible">Status message</h2>
+    Sorry, unrecognized username or password.
+    <a href="#">Have you forgotten your password?</a>
+  </div>
+{% endcapture %}
+
+### Status Message
+{% include sample.html sample=status %}
+
+### Warning Message
+{% include sample.html sample=warning %}
+
+### Error Message
+{% include sample.html sample=error %}
+
+_Output lifted from [Styleguide](https://drupal.org/project/styleguide) project
+[sample page](http://styleguide.allgoo.de/)._

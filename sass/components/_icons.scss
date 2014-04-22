@@ -1,0 +1,129 @@
+/**
+ * Icons
+ */
+%worldpulse-icon {
+  position: relative;
+
+  display: inline-block; // @TODO: IE6/7??
+  vertical-align: middle;
+  line-height: 32px;
+
+  // Align right makes my text-hiding method stop working, in the case of some
+  // right-align icon lists.
+  text-align: left;
+  text-indent: -5000px;
+
+  // @TODO: Is 32px the right size here?
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  max-width: 100%;
+
+  // Allow a small icon, when we know the browser can scale down the image appropraitely.
+  .backgroundsize &.icon-small {
+    height: 24px;
+    width: 24px;
+    line-height: 24px;
+  }
+
+  margin: 0.5em;
+
+  background: {
+    position: center center;
+    repeat: no-repeat;
+    size: contain;
+  }
+
+  .svg & {
+    background-size: 120%; // Iconmonstr's SVG files seem to have some whitespace around the artboard.
+  }
+
+  &.show-tooltip:after {
+    position: absolute;
+    display: none;
+    z-index: 1000;
+    top: 28px;
+    left: -24px;
+    width: 80px;
+
+    font-size: 0.75em;
+    line-height: 1.15;
+
+    text-indent: 0;
+    text-align: center;
+    content: attr(data-desc);
+
+    border: 1px solid;
+    border-bottom-width: 2px;
+    @include border-radius(2px);
+    padding: 0.5em 0.25em;
+
+    background-color: wp-color($grey, 'highlight', 5%);
+  }
+
+  &.show-tooltip:focus:after,
+  &.show-tooltip:hover:after {
+    display: block;
+  }
+}
+
+span.show-tooltip:after {
+  color: wp-color($purple, 'bright');
+  border-color: wp-color($purple, 'bright');
+}
+
+a.show-tooltip:after {
+  color: wp-color($blue, 'main', -5%);
+  border-color: wp-color($blue, 'dark', -5%);
+}
+
+$icons: // All icons
+  "abuse"
+  "cc"
+  "friends"
+  "private"
+  "public"
+  "region"
+  "tags"
+  "edit"
+  "delete"
+  "reply"
+;
+
+$hovers: // Icons which have images for a hover-state. Although Compass throws
+         // errors for image-url() files that don't exist, it doesn't provide a
+         // way to check for this automatically.
+  "abuse"
+  "cc"
+  "edit"
+  "delete"
+  "reply"
+;
+
+@each $icon in $icons {
+  #{('.icon-' + $icon)} {
+    @extend %worldpulse-icon;
+    background-image: image-url('icons/icon-' + $icon + '-32.png');
+    @include respond-to('hi res') { background-image: image-url('icons/icon-' + $icon + '-64.png'); }
+    .svg & { background-image: image-url('icons/icon-' + $icon + '.svg'); }
+  }
+
+  @if ( index($hovers, $icon) ) {
+    #{('a.icon-' + $icon + ':hover')} {
+      background-image: image-url('icons/icon-' + $icon + '-32-hover.png');
+      @include respond-to('hi res') { background-image: image-url('icons/icon-' + $icon + '-64-hover.png'); }
+      .svg & { background-image: image-url('icons/icon-' + $icon + '-hover.svg'); }
+    }
+  }
+}
+
+/**
+ * Individual tweaks
+ */
+
+// The red ones:
+.icon-abuse.show-tooltip:after,
+.icon-delete.show-tooltip:after {
+  color: wp-color($red, 'bright');
+  border-color: wp-color($red, 'main', 5%);
+}

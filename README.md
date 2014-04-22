@@ -1,3 +1,9 @@
-# CSUMB style guide
+# World Pulse style guide
 
-This is the frontend style guide for the new CSUMB website
+Style guide for the new worldpulse.com
+
+* Jekyll
+* Grunt
+* Sass / Compass
+* Breakpoint 
+* Singularity

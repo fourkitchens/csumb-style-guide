@@ -1,0 +1,211 @@
+/**
+* Form elements: Inputs, buttons, etc.
+*/
+
+form {
+}
+
+fieldset {
+  border: 1px solid wp-color($grey, highlight, -2.5%);
+  border-bottom-width: 2px;
+  @include border-radius(3px);
+  margin-bottom: 1em;
+  padding: 1em;
+
+  > legend {
+    padding: 0 1em;
+    font-family: $gotham;
+    font-weight: 600;
+    color: wp-color($grey, bright, -15%);
+  }
+}
+
+legend {
+}
+
+
+label,
+input,
+button,
+select,
+textarea {
+
+}
+
+input,
+button,
+select,
+textarea {
+  max-width: 100%;
+  font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
+  padding: 0.375em;
+  outline: 0;
+  background-color: wp-color($grey, 'highlight', 5%);
+
+  @include transition(box-shadow 0.3s ease-out, border 0.3s ease-out);
+  &:focus {
+    border-color: wp-color($orange, 'dark');
+    background-color: #ffffff; // Yes, this is the *one time* we're calling out pure white.
+    @include box-shadow(0 0 4px rgba(wp-color($orange, 'dark'), 0.5));
+  }
+}
+
+textarea {
+  display: block; // Not "inline" like other fields
+}
+
+%imitate-form-label,
+label {
+  font-family: $gotham;
+  font-size: 0.875em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: wp-color($grey, 'main', 5%);
+
+  input[type="radio"] + &,
+  input[type="checkbox"] + & {
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
+
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  border: 1px solid wp-color($grey, 'bright');
+  @include border-radius(2px);
+
+  &:focus {
+    border-color: wp-color($grey, 'bright', -5%);
+  }
+}
+
+input[type="password"] {
+  // Verdana has better lookin' bullets for passwords.
+  font-family: $verdana;
+}
+
+input[type="checkbox"] {
+
+}
+
+.form-required {
+  color: wp-color($red);
+}
+
+.form-item {
+  margin-bottom: 1em;
+}
+
+/**
+ * LABELS AND FIELD ALIGNMENT
+ */
+.form-type-item,
+.form-type-textfield,
+.form-type-emailfield,
+.form-type-select,
+.form-type-password,
+.form-type-password-confirm {
+  @extend %clearfix;
+
+  label {
+    display: block;
+  }
+
+  .description {
+    color: wp-color($grey, main, 20%);
+  }
+
+  @include respond-to('wide form labels') {
+    label {
+      float: left;
+      width: 18%;
+      margin-right: 2%;
+      padding: 0.5em 0;
+    }
+
+    input {
+      float: right;
+      width: 80%;
+    }
+
+    .description {
+      float: right;
+      width: 80%;
+    }
+  }
+}
+
+// Radio buttons and checkboxes have a different output structure from the above,
+// so we treat them separately.
+.form-type-radios {
+  @extend %clearfix;
+
+  > label {
+    display: block;
+  }
+
+  .description {
+    color: wp-color($grey, main, 20%);
+  }
+
+  .form-item {
+    margin-bottom: 0.25em;
+
+    label {
+      @include transition(color 0.3s ease-out);
+    }
+
+    input:checked + label {
+      color: wp-color($blue);
+    }
+  }
+
+
+  @include respond-to('wide form labels') {
+    > label {
+      float: left;
+      width: 18%;
+      margin-right: 2%;
+      padding: 0.5em 0;
+    }
+
+    .form-radios {
+      float: right;
+      width: 80%;
+      padding: 0.25em 0;
+    }
+  }
+}
+
+// Finally, text areas
+.form-type-textarea {
+  @extend %clearfix;
+
+  > label {
+    display: block;
+  }
+
+  .description {
+    color: wp-color($grey, main, 20%);
+  }
+
+  @include respond-to('wide form labels') {
+    > label {
+      float: left;
+      width: 18%;
+      margin-right: 2%;
+      padding: 0.5em 0;
+    }
+
+    .form-textarea-wrapper {
+      float: right;
+      width: 80%;
+      padding: 0.25em 0;
+    }
+  }
+}

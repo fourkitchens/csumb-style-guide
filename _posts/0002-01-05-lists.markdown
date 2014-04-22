@@ -1,0 +1,28 @@
+---
+layout: component
+title:  "Lists"
+---
+
+{% capture ul %}
+<ul>
+  <li>Apple</li>
+  <li>Orange</li>
+  <li>Banana</li>
+  <li>Pear</li>
+</ul>
+{% endcapture %}
+
+{% capture ol %}
+<ol>
+  <li>Apple</li>
+  <li>Orange</li>
+  <li>Banana</li>
+  <li>Pear</li>
+</ol>
+{% endcapture %}
+
+### Unordered List (Bullet)
+{% include sample.html sample=ul %}
+
+### Ordered Lists (Numbered)
+{% include sample.html sample=ol %}

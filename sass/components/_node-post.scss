@@ -1,0 +1,155 @@
+/**
+ * @file _node-post.scss
+ * Styles for Journal Post nodes.
+ * Consider what should be Journal-specific and what should be general node styles instead...
+ */
+.node-post {
+  header h1 {
+    margin-top: 0;
+  }
+}
+
+
+/**
+ * Node Type: Journal Post
+ * /
+
+article.node-journal-post {
+  header, footer {
+    dl {
+      @extend .clearfix;
+      margin: 0;
+    }
+
+    dd, dt {
+      margin-left: 0;
+    }
+  }
+
+  header {
+    position: relative;
+
+    padding-bottom: 0.5em;
+    @include respond-to('journal meta small') {
+      padding-right: 64px; // Make room for the abuse icon
+    }
+    border-bottom: 2px solid wp-color($grey, 'highlight', -5%);
+    margin-bottom: 0.25em;
+
+    dt { display: none; }
+    dd {
+      display: block;
+      text-align: center;
+
+      @include respond-to('journal meta small') {
+        display: inline;
+        text-align: left;
+        margin: 0 0.5em;
+        &:first-of-type { margin-left: 0; }
+      }
+    }
+
+    .icon-abuse {
+      display: block;
+      margin-left: auto;
+      @include respond-to('journal meta small') {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 0.5em;
+    border-top: 2px solid wp-color($grey, 'highlight', -5%);
+    padding-top: 0.5em;
+
+    dl.post-meta {
+      dt {
+        text-align: center;
+        // @TODO: This include wouldn't output _any_ code at all without all these
+        // variables being redeclared here. But it wasn't throwing an error. Fix??
+        @include respond-to('journal meta small') {
+          @include grid-span(1, 1);
+          clear: left;
+        }
+      }
+
+      dd {
+        text-align: center;
+        // @TODO: This include wouldn't output _any_ code at all without all these
+        // variables being redeclared here. But it wasn't throwing an error. Fix??
+        @include respond-to('journal meta small') {
+          @include grid-span(11, 2);
+          text-align: left;
+          line-height: 32px; // If there's a second row of text, this will be awful...
+        }
+
+        // <dt/> contains an icon, so let's line it up properly:
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    dl.recommend {
+      margin-top: 0.5em;
+
+      dt {
+        display: none;
+      }
+      dd.cta {
+        text-align: center;
+
+        @include respond-to('journal meta full') {
+          @include grid-span(3, 2);
+
+          button {
+            font-size: 0.75em;
+            font-weight: 400;
+            padding: 0.375em 0.25em;
+            width: 100%;
+            margin-bottom: 1em;
+          }
+        }
+
+        @include respond-to('journal meta large') {
+          @include grid-span(2, 2);
+        }
+      }
+      dd.users {
+        @include respond-to('journal meta full') {
+          @include grid-span(8, 5);
+        }
+        @include respond-to('journal meta large') {
+          @include grid-span(9, 4);
+        }
+
+        ul, li {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+        }
+
+        ul {
+          @extend .clearfix;
+        }
+
+        li {
+          @include grid-span(2, 1, $output-style: 'float');
+          &:nth-child(6n+0) {
+            margin-right: 0;
+          }
+        }
+
+        img {
+          display: block;
+          position: relative;
+          @include border-radius(3px);
+        }
+      }
+    }
+  }
+}
+
+// */

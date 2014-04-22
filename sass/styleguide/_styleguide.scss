@@ -1,0 +1,509 @@
+// Tread lightly on this file and use very specific selectors (direct-descent or
+// classes/IDs specific to the Style Guide) to avoid influencing any sample
+// elements or bleeding between the Style Guide CSS and the production site CSS,
+// which is included in this project and should be an exact copy of the site
+// at all times.
+
+p:empty {
+  // Jekyll produces a ton of empty paragraph tags, especially around markup
+  // around the {% assign %} tags, wherein we're stashing code samples... It's
+  // actually quite annoying and I can't get rid of all of them. So...
+  // this is a thing that I'm doing...
+  display: none;
+}
+
+// We have visited and unvisited link samples, which we want to show accurately.
+a[href*="worldpulse.com"] { @extend a:visited; }
+a[href*="example.com"] { @extend a:link; }
+
+code {
+  font-size: 0.825em;
+  padding: 3px 5px;
+  border: 1px solid wp-color($grey, 'highlight', -5%);
+  @include border-radius(3px);
+  background-color: rgba(wp-color($grey, 'highlight', 5%), 0.75);
+}
+
+body {
+  background: wp-color($grey, 'highlight');
+}
+
+.styleguide-container {
+  position: relative;
+
+  header, footer {
+    padding: 0.5em;
+
+    > div {
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+  }
+
+  > header {
+    background-color: wp-color($red, 'dark');
+    @include box-shadow(1px 0 5px rgba(0,0,0,0.2));
+    color: $white;
+    margin-bottom: 1em;
+
+    @include respond-to('fixed header') {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    #logo {
+      max-width: 280px;
+    }
+  }
+
+  > footer {
+    margin-top: 2em;
+    color: #999;
+    font-size: 0.75em;
+    border-top: 1px solid wp-color($grey, 'bright');
+  }
+
+  > main {
+    margin: 10px;
+    @include respond-to('sg nav side') {
+      margin-left: 0;
+      padding-left: 240px;
+    }
+    @include respond-to('fixed header') {
+      margin-top: 76px;
+    }
+  }
+
+  section {
+    padding-bottom: 1em;
+    border-bottom: 1px dotted wp-color($grey, 'bright');
+    margin-bottom: 1em;
+
+    &.heading {
+      padding-bottom: 0;
+      border-bottom: 2px solid wp-color($grey, 'bright');
+      margin-top: 4em;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  h1 + section.heading {
+    margin-top: 0;
+  }
+
+}
+
+.styleguide-content {
+  @extend %clearfix;
+  margin: 0 auto;
+  padding: 0.5em;
+  max-width: 1000px;
+}
+
+.styleguide-nav {
+  display: none;
+
+  @include respond-to('sg nav top') {
+    display: block;
+  }
+
+  @include respond-to('sg nav side') {
+    display: block;
+    position: fixed;
+    left: 10px;
+    width: 220px;
+  }
+
+  font-size: 0.875em;
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    @include border-radius(2px);
+    border-top: 1px solid wp-color($grey, 'highlight', -5%);
+    border-bottom: 1px solid wp-color($grey, 'highlight', 5%);
+    border-left: 1px solid wp-color($grey, 'bright', 5%);
+    border-right: 1px solid wp-color($grey, 'bright', 5%);
+  }
+
+  li.heading, li:not(.heading) a {
+    display: block;
+    padding: 0.5em 1em;
+    border-top: 1px solid wp-color($grey, 'highlight', 5%);
+    border-bottom: 1px solid wp-color($grey, 'highlight', -5%);
+    background-color: wp-color($grey, 'highlight');
+
+    text-decoration: none;
+    &:hover {
+      background: $white;
+    }
+  }
+
+  li:not(.heading) a {
+    background-color: wp-color($grey, 'highlight', 2.5%);
+  }
+
+  li.heading {
+    text-transform: uppercase;
+    color: wp-color($grey);
+    font-weight: bold;
+
+    &:hover {
+      background: wp-color($grey, 'highlight', -5%);
+    }
+
+    a {
+      display: block;
+      float: right;
+      text-decoration: none;
+    }
+  }
+
+  li.current a {
+    font-weight: 600;
+  }
+
+}
+
+.styleguide-index {
+  @include respond-to('sg nav side') {
+    // @include grid-span(9,4,12, $gutter: 1);
+  }
+}
+
+.styleguide-sample {
+  @extend %sg-component-frame;
+
+  .example, .code {
+    padding: 1em;
+  }
+
+  .example {
+    background-color: $white;
+  }
+
+  .code {
+    border-top: 1px solid wp-color($grey, 'bright', 5%);
+    background: wp-color($grey, 'highlight', 2.5%);
+    code {
+      // Override the <code/> styles for these syntax highlighted blocks
+      font-size: inherit;
+      color: inherit;
+      padding: inherit;
+      border: none;
+      background-color: transparent;
+    }
+    pre {
+      margin: 0;
+      font-size: 0.75em;
+    }
+  }
+}
+
+.status-green {
+  // To demonstrate this color, which is not shown in the swatches.
+  color: wp-color($green);
+}
+.crimson {
+  color: wp-color($red);
+}
+
+.styleguide-swatches {
+  @extend %clearfix;
+
+  @include respond-to('sg swatches large') {
+    @include sg-component-frame-mixin;
+  }
+
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    overflow: hidden; // So that the box-shadow around .main only extends vertically
+
+    @include respond-to('sg swatches small') {
+      @include sg-component-frame-mixin;
+      margin: 0 0 1em 0;
+    }
+
+    @include respond-to('sg swatches medium') {
+      @include sg-component-frame-mixin;
+      margin: 0 0 1em 0;
+    }
+
+    @include respond-to('sg swatches large') {
+      @include grid-span(1,0,5, $gutter: 0, $output-style: 'float');
+      &:last-child { margin-right: 0; }
+    }
+
+    $swatches: (purple $purple) (blue $blue) (orange $orange) (red $red) ('grey' $grey) (green $green);
+    @each $swatch in $swatches {
+      $name: nth($swatch, 1); // The text label
+      $color: nth($swatch, 2); // The color array
+      &.#{$name} {
+        .title {
+          background-color: $white;
+          color: wp-color($color);
+        }
+        .dark {
+          background-color: wp-color($color, 'dark');
+          span:after { content: wp-color($color, 'dark') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: wp-color($color, 'dark', 5%); }
+          .low { background-color: wp-color($color, 'dark', -5%); }
+        }
+        .main {
+          background-color: wp-color($color);
+          span:after { content: wp-color($color) + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: wp-color($color, 'main', 5%); }
+          .low { background-color: wp-color($color, 'main', -5%); }
+        }
+        .light {
+          background-color: wp-color($color, 'bright');
+          span:after { content: wp-color($color, 'bright') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: wp-color($color, 'bright', 5%); }
+          .low { background-color: wp-color($color, 'bright', -5%); }
+        }
+        .highlight {
+          background-color: wp-color($color, 'highlight');
+          span:after { content: wp-color($color, 'highlight') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: wp-color($color, 'highlight', 5%); }
+          .low { background-color: wp-color($color, 'highlight', -5%); }
+        }
+      }
+    }
+
+    li.highlight span:after {
+      color: wp-color($grey, 'dark');
+      @include text-shadow(1px 1px 0 rgba(255,255,255,0.5));
+    }
+
+    &:last-child {
+      @include respond-to('sg swatches large') {
+        li { border-right: 0 !important; }
+      }
+    }
+  }
+
+  li {
+    position: relative;
+    padding: 1em;
+    text-align: center;
+    color: $white;
+
+    @include respond-to('sg swatches small') {
+      &.dark, &.main, &.light, &.highlight {
+        @include grid-span(1,0,2, $gutter: 0, $output-style: 'float');
+      }
+
+      &.title {
+        z-index: 50; // To pop it over the box-shadow on .main
+        padding: 1em;
+      }
+
+      &.main &.highlight {
+        margin-right: 0;
+      }
+
+      &.dark, &.main {
+        .accent { top: 0; }
+        padding: 1.75em 0 1em 0; // to make room for the accents
+      }
+
+      &.light, &.highlight {
+        .accent { bottom: 0; }
+        padding: 1em 0 1.75em 0; // to make room for the accents
+      }
+    }
+
+    @include respond-to('sg swatches medium') {
+      &.dark, &.main, &.light, &.highlight {
+        padding: 1em 0 1.75em 0; // to make room for the accents
+        @include grid-span(1,0,4, $gutter: 0, $output-style: 'float');
+      }
+
+      &.title {
+        z-index: 50; // To pop it over the box-shadow on .main
+        padding: 1em;
+      }
+
+      &.highlight {
+        margin-right: 0;
+      }
+    }
+
+    @include respond-to('sg swatches large') {
+      padding: 1em 25% 1em 0; // to make room for the accents
+      border-right: 1px solid wp-color($grey, 'highlight', 5%);
+      &.title {
+        padding: 1em 0;
+        border-right: 1px solid wp-color($grey, 'highlight', -5%);
+      }
+    }
+
+
+    &.main {
+      z-index: 25;
+      @include box-shadow(0px 0px 15px rgba(0,0,0,0.85));
+    }
+
+    span {
+      position: relative;
+      z-index: 50;
+
+      &:after {
+        @include text-shadow(1px 1px 0 rgba(0,0,0,0.5));
+      }
+    }
+  }
+
+  .accent {
+    position: absolute;
+
+    @include respond-to('sg swatches small') {
+      height: 0.75em;
+      // -- bottom: 0; -- See above, there are position-specific locations for these
+
+      &.low {
+        left: 0;
+        right: 50%;
+      }
+
+      &.high {
+        left: 50%;
+        right: 0;
+      }
+    }
+    @include respond-to('sg swatches medium') {
+      height: 0.75em;
+      bottom: 0;
+
+      &.low {
+        left: 0;
+        right: 50%;
+      }
+
+      &.high {
+        left: 50%;
+        right: 0;
+      }
+    }
+
+    @include respond-to('sg swatches large') {
+      right: 0;
+
+      width: 25%;
+
+      &.low {
+        top: 0;
+        bottom: 50%;
+      }
+
+      &.high {
+        top: 50%;
+        bottom: 0;
+      }
+    }
+
+  }
+
+
+  .title {
+    font-style: italic;
+  }
+}
+
+.styleguide-typography {
+  $families: (whitney $whitney 400) (merriweather $merriweather 400) (archer $archer 400);
+  @each $family in $families {
+    $face: nth($family, 1);
+    $stack: nth($family, 2);
+    $weight: nth($family, 3);
+    .#{$face} {
+      &, h3 {
+        font-family: $stack;
+        font-weight: $weight;
+      }
+    }
+  }
+
+  .typeface {
+    @extend %sg-component-frame;
+    overflow: hidden; // For the large typeface previews
+
+    background: $white;
+    padding: 1em;
+
+    h3 {
+      font-size: 3em;
+      margin: 0;
+      a {
+        color: wp-color($blue) !important; // No color overrides from :visited or anything else on this display.
+        text-decoration: none;
+      }
+    }
+
+    .purpose {
+      text-align: center;
+      padding: 0.5em;
+      border-top: 1px solid wp-color($grey, 'highlight');
+      border-bottom: 1px solid wp-color($grey, 'highlight');
+      margin: 0.5em 0.75em;
+
+      @include respond-to('sg typeplate large') {
+        padding: 1em 1.5em;
+        margin: 1em 1.5em;
+      }
+    }
+
+    .largesample {
+      position: relative;
+      left: -150%;
+      width: 400%;
+      margin: 16px 0;
+      text-align: center;
+      $white-space: nowrap;
+      overflow: hidden;
+      color: wp-color($grey, 'bright');
+    }
+
+    @include respond-to('sg typeplate small') {
+      .largesample {
+        height: 1.15 * 2em; // "three lines tall"
+        font-size: 4.25em;
+        line-height: 1.15;
+        letter-spacing: -3px;
+      }
+    }
+
+    @include respond-to('sg typeplate large') {
+      .largesample {
+        height: 1.125 * 3em; // "three lines tall"
+        font-size: 6.75em;
+        line-height: 1.125;
+        letter-spacing: -4px;
+      }
+    }
+
+    &.whitney .largesample { font-style: italic; }
+    &.archer .largesample { font-style: italic; }
+    &.gotham .largesample { text-transform: uppercase; font-weight: 600; }
+  }
+}

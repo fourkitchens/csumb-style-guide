@@ -1,0 +1,149 @@
+/**
+ * @file _logo.scss.
+ * The logo for the site.
+ */
+
+%worldpulse-logo {
+  // The glow can't be an SVG, so we have to use the PNG, which is only this wide:
+  max-width: 425px;
+  display: block;
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    text-indent: -1000px;
+    overflow: hidden;
+
+    height: 0;
+    padding-bottom: (100/450) * 100%; // This is how intrinsic ratio works.
+
+    background: {
+      size: contain;
+      position: center center;
+      repeat: no-repeat;
+    }
+  }
+}
+
+.logo-crimson-glow {
+  @extend %worldpulse-logo;
+  .logo {
+    background: {
+      color: transparent;
+      image: image-url('logos/logo-crimson-glow.png');
+    }
+
+    @include for-legacy-browser('ie', "6", "7", 1) {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale')";
+    }
+
+
+    @include respond-to('hi res') {
+      background-image: image-url('logos/logo-crimson-glow-2x.png');
+    }
+  }
+}
+
+.logo-crimson-solid {
+  @extend %worldpulse-logo;
+  #{nest('.no-js, .no-svg', '& .logo')} {
+    background: {
+      color: transparent;
+      image: image-url('logos/logo-crimson-solid.png');
+    }
+
+    @include for-legacy-browser('ie', "6", "7", 1) {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale')";
+    }
+
+    @include respond-to('hi res') { background-image: image-url('logos/logo-crimson-solid-2x.png'); }
+  }
+
+  .svg & .logo {
+    background-image: image-url('logos/logo-crimson-solid.svg');
+  }
+}
+
+.logo-white-glow {
+  @extend %worldpulse-logo;
+  .logo, &.crimson-gradient .logo:after {
+    background: {
+      color: wp-color($red, 'dark');
+      image: image-url('logos/logo-white-glow.png');
+    }
+
+    @include for-legacy-browser('ie', "6", "7", 1) {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale')";
+    }
+
+    @include respond-to('hi res') {
+      background-image: image-url('logos/logo-white-glow-2x.png');
+    }
+  }
+}
+
+.logo-white-solid {
+  @extend %worldpulse-logo;
+
+  #{nest('.no-js, .no-svg', '& .logo, &.crimson-gradient .logo:after')} {
+    background: {
+      color: wp-color($red, 'dark');
+      image: image-url('logos/logo-white-solid.png');
+    }
+
+    @include for-legacy-browser('ie', "6", "7", 1) {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale')";
+    }
+
+    @include respond-to('hi res') { background-image: image-url('logos/logo-white-solid-2x.png'); }
+  }
+
+  #{nest('.svg', '& .logo, &.crimson-gradient .logo:after')} {
+    background-color: wp-color($red, 'dark');
+    background-image: image-url('logos/logo-white-solid.svg');
+  }
+}
+
+
+.logo-white-solid, .logo-white-glow {
+  &.bright-crimson .logo {
+    background-color: wp-color($red);
+  }
+
+  &.crimson-gradient .logo {
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+
+    &:before, &:after {
+      content: " "; // To make it show up.
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:before {
+      @include background-image(linear-gradient(
+        wp-color($red),
+        wp-color($red, 'main', -5%) 30%,
+        wp-color($red, 'dark', 5%) 70%,
+        wp-color($red, 'dark')
+      ));
+    }
+
+    &:after {
+      background-color: transparent !important;
+    }
+  }
+}
