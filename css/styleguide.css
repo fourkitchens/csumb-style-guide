@@ -8,8 +8,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  color: #574b4b;
-  background-color: #574b4b;
+  color: #8f864f;
+  background-color: #8f864f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,13 +90,13 @@ em {
 
 ::-moz-selection {
   background: black;
-  color: #fefefe;
+  color: #f5f4ee;
   text-shadow: none;
 }
 
 ::selection {
   background: black;
-  color: #fefefe;
+  color: #f5f4ee;
   text-shadow: none;
 }
 
@@ -149,7 +149,7 @@ blockquote cite:before {
 }
 
 .styleguide-sample, .styleguide-typography .typeface {
-  border: 1px solid #d6cbcb;
+  border: 1px solid #dddac7;
   border-radius: 3px;
   margin: 1em auto;
 }
@@ -167,13 +167,13 @@ p:empty {
 code {
   font-size: 0.825em;
   padding: 3px 5px;
-  border: 1px solid #e8e0e0;
+  border: 1px solid #e3e0ce;
   border-radius: 3px;
-  background-color: rgba(254, 254, 254, 0.75);
+  background-color: rgba(245, 244, 238, 0.75);
 }
 
 body {
-  background: #f3efef;
+  background: #eceade;
 }
 
 .styleguide-container {
@@ -190,7 +190,7 @@ body {
   background-color: #001e54;
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  color: #fefefe;
+  color: #f5f4ee;
   margin-bottom: 1em;
 }
 @media (min-width: 45em) {
@@ -207,6 +207,10 @@ body {
   color: #fff;
   text-decoration: none;
 }
+.styleguide-container > header a h1 {
+  margin: 10px;
+  color: #fff;
+}
 .styleguide-container > header #logo {
   max-width: 280px;
 }
@@ -214,7 +218,7 @@ body {
   margin-top: 2em;
   color: #999;
   font-size: 0.75em;
-  border-top: 1px solid #d6cbcb;
+  border-top: 1px solid #dddac7;
 }
 .styleguide-container > main {
   margin: 10px;
@@ -232,12 +236,12 @@ body {
 }
 .styleguide-container section {
   padding-bottom: 1em;
-  border-bottom: 1px dotted #d6cbcb;
+  border-bottom: 1px dotted #dddac7;
   margin-bottom: 1em;
 }
 .styleguide-container section.heading {
   padding-bottom: 0;
-  border-bottom: 2px solid #d6cbcb;
+  border-bottom: 2px solid #dddac7;
   margin-top: 4em;
 }
 .styleguide-container section:last-child {
@@ -277,32 +281,32 @@ body {
 }
 .styleguide-nav ul {
   border-radius: 2px;
-  border-top: 1px solid #e8e0e0;
-  border-bottom: 1px solid #fefefe;
-  border-left: 1px solid #e1d9d9;
-  border-right: 1px solid #e1d9d9;
+  border-top: 1px solid #e3e0ce;
+  border-bottom: 1px solid #f5f4ee;
+  border-left: 1px solid #e7e4d7;
+  border-right: 1px solid #e7e4d7;
 }
 .styleguide-nav li.heading, .styleguide-nav li:not(.heading) a {
   display: block;
   padding: 0.5em 1em;
-  border-top: 1px solid #fefefe;
-  border-bottom: 1px solid #e8e0e0;
-  background-color: #f3efef;
+  border-top: 1px solid #f5f4ee;
+  border-bottom: 1px solid #e3e0ce;
+  background-color: #eceade;
   text-decoration: none;
 }
 .styleguide-nav li.heading:hover, .styleguide-nav li:not(.heading) a:hover {
-  background: #fefefe;
+  background: #f5f4ee;
 }
 .styleguide-nav li:not(.heading) a {
-  background-color: #f8f6f6;
+  background-color: #f1efe6;
 }
 .styleguide-nav li.heading {
   text-transform: uppercase;
-  color: #574b4b;
+  color: #8f864f;
   font-weight: bold;
 }
 .styleguide-nav li.heading:hover {
-  background: #e8e0e0;
+  background: #e3e0ce;
 }
 .styleguide-nav li.heading a {
   display: block;
@@ -317,11 +321,11 @@ body {
   padding: 1em;
 }
 .styleguide-sample .example {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
 }
 .styleguide-sample .code {
-  border-top: 1px solid #e1d9d9;
-  background: #f8f6f6;
+  border-top: 1px solid #e7e4d7;
+  background: #f1efe6;
 }
 .styleguide-sample .code code {
   font-size: inherit;
@@ -345,7 +349,7 @@ body {
 
 @media (min-width: 47.5em) {
   .styleguide-swatches {
-    border: 1px solid #d6cbcb;
+    border: 1px solid #dddac7;
     border-radius: 3px;
     margin: 1em auto;
   }
@@ -358,7 +362,7 @@ body {
 }
 @media (max-width: 34.9375em) {
   .styleguide-swatches ol {
-    border: 1px solid #d6cbcb;
+    border: 1px solid #dddac7;
     border-radius: 3px;
     margin: 1em auto;
     margin: 0 0 1em 0;
@@ -366,7 +370,7 @@ body {
 }
 @media (min-width: 35em) and (max-width: 47.4375em) {
   .styleguide-swatches ol {
-    border: 1px solid #d6cbcb;
+    border: 1px solid #dddac7;
     border-radius: 3px;
     margin: 1em auto;
     margin: 0 0 1em 0;
@@ -389,7 +393,7 @@ body {
   }
 }
 .styleguide-swatches ol.blue .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: #1f346b;
 }
 .styleguide-swatches ol.blue .dark {
@@ -441,7 +445,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.yellow .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: #ffe85c;
 }
 .styleguide-swatches ol.yellow .dark {
@@ -493,7 +497,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.green .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: #029555;
 }
 .styleguide-swatches ol.green .dark {
@@ -545,7 +549,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.tan .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: #8f864f;
 }
 .styleguide-swatches ol.tan .dark {
@@ -597,59 +601,59 @@ body {
   background-color: #e3e0ce;
 }
 .styleguide-swatches ol.grey .title {
-  background-color: #fefefe;
-  color: #574b4b;
+  background-color: #f5f4ee;
+  color: #8f864f;
 }
 .styleguide-swatches ol.grey .dark {
-  background-color: #2b2121;
+  background-color: #39351b;
 }
 .styleguide-swatches ol.grey .dark span:after {
-  content: "#2b2121";
+  content: "#39351b";
 }
 .styleguide-swatches ol.grey .dark .high {
-  background-color: #392c2c;
+  background-color: #4a4523;
 }
 .styleguide-swatches ol.grey .dark .low {
-  background-color: #1d1616;
+  background-color: #282513;
 }
 .styleguide-swatches ol.grey .main {
-  background-color: #574b4b;
+  background-color: #8f864f;
 }
 .styleguide-swatches ol.grey .main span:after {
-  content: "#574b4b";
+  content: "#8f864f";
 }
 .styleguide-swatches ol.grey .main .high {
-  background-color: #655757;
+  background-color: #9f9558;
 }
 .styleguide-swatches ol.grey .main .low {
-  background-color: #493f3f;
+  background-color: #7f7746;
 }
 .styleguide-swatches ol.grey .light {
-  background-color: #d6cbcb;
+  background-color: #dddac7;
 }
 .styleguide-swatches ol.grey .light span:after {
-  content: "#d6cbcb";
+  content: "#dddac7";
 }
 .styleguide-swatches ol.grey .light .high {
-  background-color: #e1d9d9;
+  background-color: #e7e4d7;
 }
 .styleguide-swatches ol.grey .light .low {
-  background-color: #cbbdbd;
+  background-color: #d3d0b7;
 }
 .styleguide-swatches ol.grey .highlight {
-  background-color: #f3efef;
+  background-color: #eceade;
 }
 .styleguide-swatches ol.grey .highlight span:after {
-  content: "#f3efef";
+  content: "#eceade";
 }
 .styleguide-swatches ol.grey .highlight .high {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
 }
 .styleguide-swatches ol.grey .highlight .low {
-  background-color: #e8e0e0;
+  background-color: #e3e0ce;
 }
 .styleguide-swatches ol.purple .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: black;
 }
 .styleguide-swatches ol.purple .dark {
@@ -701,7 +705,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.orange .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: black;
 }
 .styleguide-swatches ol.orange .dark {
@@ -753,7 +757,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.red .title {
-  background-color: #fefefe;
+  background-color: #f5f4ee;
   color: black;
 }
 .styleguide-swatches ol.red .dark {
@@ -805,7 +809,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol li.highlight span:after {
-  color: #2b2121;
+  color: #39351b;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 47.5em) {
@@ -817,7 +821,7 @@ body {
   position: relative;
   padding: 1em;
   text-align: center;
-  color: #fefefe;
+  color: #f5f4ee;
 }
 @media (max-width: 34.9375em) {
   .styleguide-swatches li.dark, .styleguide-swatches li.main, .styleguide-swatches li.light, .styleguide-swatches li.highlight {
@@ -875,11 +879,11 @@ body {
 @media (min-width: 47.5em) {
   .styleguide-swatches li {
     padding: 1em 25% 1em 0;
-    border-right: 1px solid #fefefe;
+    border-right: 1px solid #f5f4ee;
   }
   .styleguide-swatches li.title {
     padding: 1em 0;
-    border-right: 1px solid #e8e0e0;
+    border-right: 1px solid #e3e0ce;
   }
 }
 .styleguide-swatches li.main {
@@ -956,7 +960,7 @@ body {
 }
 .styleguide-typography .typeface {
   overflow: hidden;
-  background: #fefefe;
+  background: #f5f4ee;
   padding: 1em;
 }
 .styleguide-typography .typeface h3 {
@@ -970,8 +974,8 @@ body {
 .styleguide-typography .typeface .purpose {
   text-align: center;
   padding: 0.5em;
-  border-top: 1px solid #f3efef;
-  border-bottom: 1px solid #f3efef;
+  border-top: 1px solid #eceade;
+  border-bottom: 1px solid #eceade;
   margin: 0.5em 0.75em;
 }
 @media (min-width: 36.25em) {
@@ -987,7 +991,7 @@ body {
   margin: 16px 0;
   text-align: center;
   overflow: hidden;
-  color: #d6cbcb;
+  color: #dddac7;
 }
 @media (max-width: 36.1875em) {
   .styleguide-typography .typeface .largesample {

@@ -422,8 +422,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  color: #574b4b;
-  background-color: #574b4b;
+  color: #8f864f;
+  background-color: #8f864f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -504,13 +504,13 @@ em {
 
 ::-moz-selection {
   background: black;
-  color: #fefefe;
+  color: #f5f4ee;
   text-shadow: none;
 }
 
 ::selection {
   background: black;
-  color: #fefefe;
+  color: #f5f4ee;
   text-shadow: none;
 }
 
@@ -564,7 +564,7 @@ blockquote cite:before {
 
 body {
   padding: .5em;
-  background-color: #fefefe;
+  background-color: #f5f4ee;
 }
 
 p:first-child {
