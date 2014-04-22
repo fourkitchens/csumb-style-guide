@@ -34,16 +34,16 @@
 //           +/-5% is preferred, but other values are used on RARE OCCASION.
 @function color($color, $value: 'main', $adjustment: 0) {
   @if type-of($color) != 'map' {
-    @warn '@function wp-color expects first argument to be a map: purple, red, orange, blue, grey, or green.';
+    @warn '@function color expects first argument to be a map: purple, red, orange, blue, grey, tan, yellow, or green.';
   }
 
   @if type-of($value) != 'string' {
     @if type-of($value) == 'number' and $value > 0 and $value < 5 {
       $value: nth(('dark', 'main', 'bright', 'highlight'), $value);
-      @warn '@function wp-color now uses value strings, not integers: dark, main* (default), bright, or highlight. Assumed ' + $value + '.';
+      @warn '@function color now uses value strings, not integers: dark, main* (default), bright, or highlight. Assumed ' + $value + '.';
     }
     @else {
-      @warn '@function wp-color expects second argument [optional] to be a string: dark, main* (default), bright, or highlight. "' + $value + '" provided.';
+      @warn '@function color expects second argument [optional] to be a string: dark, main* (default), bright, or highlight. "' + $value + '" provided.';
     }
   }
 

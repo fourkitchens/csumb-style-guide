@@ -25,35 +25,35 @@ h1, h2 {
 h4, h5, h6 {
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b00911;
+  color: black;
 }
 
 h1 {
-  color: #1394d8;
+  color: #1c2f61;
 }
 
 h2 {
-  color: #149ce4;
+  color: #1f346b;
 }
 
 h3 {
-  color: #149ce4;
+  color: #1f346b;
 }
 
 a:link, a[href*="example.com"] {
-  color: #149ce4;
+  color: #1f346b;
 }
 a:visited, a[href*="csumb.edu"] {
-  color: #e7242e;
+  color: #1bc37a;
 }
 a:visited:hover, a[href*="csumb.edu"]:hover, a:visited:focus, a[href*="csumb.edu"]:focus {
-  color: #b00911;
+  color: black;
 }
 a:hover, a:focus {
-  color: #0f76ac;
+  color: #001e54;
 }
 a:active {
-  color: #71060b;
+  color: black;
 }
 
 ul.inline, ol.inline {
@@ -89,13 +89,13 @@ em {
 }
 
 ::-moz-selection {
-  background: #e7242e;
+  background: black;
   color: #fefefe;
   text-shadow: none;
 }
 
 ::selection {
-  background: #e7242e;
+  background: black;
   color: #fefefe;
   text-shadow: none;
 }
@@ -107,7 +107,7 @@ code, kbd, pre, samp {
 blockquote {
   position: relative;
   font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #965100;
+  color: black;
   quotes: "\201C" "\201D" "\2018" "\2019";
   border-left: 0;
   padding: 0 40px;
@@ -117,7 +117,7 @@ blockquote:before, blockquote:after, blockquote cite {
   font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-style: italic;
   font-weight: 400;
-  color: #af5f00;
+  color: black;
 }
 blockquote:before, blockquote:after {
   position: absolute;
@@ -187,7 +187,7 @@ body {
   max-width: 1000px;
 }
 .styleguide-container > header {
-  background-color: #0f76ac;
+  background-color: #001e54;
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   color: #fefefe;
@@ -336,11 +336,11 @@ body {
 }
 
 .status-green {
-  color: #04982c;
+  color: #029555;
 }
 
 .crimson {
-  color: #b00911;
+  color: black;
 }
 
 @media (min-width: 47.5em) {
@@ -388,213 +388,213 @@ body {
     margin-right: 0;
   }
 }
-.styleguide-swatches ol.purple .title {
-  background-color: #fefefe;
-  color: #b00911;
-}
-.styleguide-swatches ol.purple .dark {
-  background-color: #71060b;
-}
-.styleguide-swatches ol.purple .dark span:after {
-  content: "#71060b";
-}
-.styleguide-swatches ol.purple .dark .high {
-  background-color: #89070d;
-}
-.styleguide-swatches ol.purple .dark .low {
-  background-color: #590509;
-}
-.styleguide-swatches ol.purple .main {
-  background-color: #b00911;
-}
-.styleguide-swatches ol.purple .main span:after {
-  content: "#b00911";
-}
-.styleguide-swatches ol.purple .main .high {
-  background-color: #c80a13;
-}
-.styleguide-swatches ol.purple .main .low {
-  background-color: #98080f;
-}
-.styleguide-swatches ol.purple .light {
-  background-color: #e7242e;
-}
-.styleguide-swatches ol.purple .light span:after {
-  content: "#e7242e";
-}
-.styleguide-swatches ol.purple .light .high {
-  background-color: #ea3b44;
-}
-.styleguide-swatches ol.purple .light .low {
-  background-color: #da1822;
-}
-.styleguide-swatches ol.purple .highlight {
-  background-color: #ec9498;
-}
-.styleguide-swatches ol.purple .highlight span:after {
-  content: "#ec9498";
-}
-.styleguide-swatches ol.purple .highlight .high {
-  background-color: #f0aaad;
-}
-.styleguide-swatches ol.purple .highlight .low {
-  background-color: #e87e83;
-}
 .styleguide-swatches ol.blue .title {
   background-color: #fefefe;
-  color: #149ce4;
+  color: #1f346b;
 }
 .styleguide-swatches ol.blue .dark {
-  background-color: #0f76ac;
+  background-color: #001e54;
 }
 .styleguide-swatches ol.blue .dark span:after {
-  content: "#0f76ac";
+  content: "#001e54";
 }
 .styleguide-swatches ol.blue .dark .high {
-  background-color: #1186c3;
+  background-color: #00276e;
 }
 .styleguide-swatches ol.blue .dark .low {
-  background-color: #0d6695;
+  background-color: #00153a;
 }
 .styleguide-swatches ol.blue .main {
-  background-color: #149ce4;
+  background-color: #1f346b;
 }
 .styleguide-swatches ol.blue .main span:after {
-  content: "#149ce4";
+  content: "#1f346b";
 }
 .styleguide-swatches ol.blue .main .high {
-  background-color: #26a7ec;
+  background-color: #253e7f;
 }
 .styleguide-swatches ol.blue .main .low {
-  background-color: #128ccd;
+  background-color: #192a57;
 }
 .styleguide-swatches ol.blue .light {
-  background-color: #63bbf1;
+  background-color: black;
 }
 .styleguide-swatches ol.blue .light span:after {
-  content: "#63bbf1";
+  content: "black";
 }
 .styleguide-swatches ol.blue .light .high {
-  background-color: #7ac5f3;
+  background-color: #0d0d0d;
 }
 .styleguide-swatches ol.blue .light .low {
-  background-color: #4cb1ef;
+  background-color: black;
 }
 .styleguide-swatches ol.blue .highlight {
-  background-color: #a0d6f6;
+  background-color: black;
 }
 .styleguide-swatches ol.blue .highlight span:after {
-  content: "#a0d6f6";
+  content: "black";
 }
 .styleguide-swatches ol.blue .highlight .high {
-  background-color: #b7e0f8;
+  background-color: #0d0d0d;
 }
 .styleguide-swatches ol.blue .highlight .low {
-  background-color: #89ccf4;
+  background-color: black;
 }
-.styleguide-swatches ol.orange .title {
+.styleguide-swatches ol.yellow .title {
   background-color: #fefefe;
-  color: #fc8800;
+  color: #ffe85c;
 }
-.styleguide-swatches ol.orange .dark {
-  background-color: #af5f00;
+.styleguide-swatches ol.yellow .dark {
+  background-color: #d7be25;
 }
-.styleguide-swatches ol.orange .dark span:after {
-  content: "#af5f00";
+.styleguide-swatches ol.yellow .dark span:after {
+  content: "#d7be25";
 }
-.styleguide-swatches ol.orange .dark .high {
-  background-color: #c96d00;
+.styleguide-swatches ol.yellow .dark .high {
+  background-color: #ddc639;
 }
-.styleguide-swatches ol.orange .dark .low {
-  background-color: #965100;
+.styleguide-swatches ol.yellow .dark .low {
+  background-color: #c1ab21;
 }
-.styleguide-swatches ol.orange .main {
-  background-color: #fc8800;
+.styleguide-swatches ol.yellow .main {
+  background-color: #ffe85c;
 }
-.styleguide-swatches ol.orange .main span:after {
-  content: "#fc8800";
+.styleguide-swatches ol.yellow .main span:after {
+  content: "#ffe85c";
 }
-.styleguide-swatches ol.orange .main .high {
-  background-color: #ff9417;
+.styleguide-swatches ol.yellow .main .high {
+  background-color: #ffec76;
 }
-.styleguide-swatches ol.orange .main .low {
-  background-color: #e37a00;
+.styleguide-swatches ol.yellow .main .low {
+  background-color: #ffe443;
 }
-.styleguide-swatches ol.orange .light {
-  background-color: #ffa73f;
+.styleguide-swatches ol.yellow .light {
+  background-color: black;
 }
-.styleguide-swatches ol.orange .light span:after {
-  content: "#ffa73f";
+.styleguide-swatches ol.yellow .light span:after {
+  content: "black";
 }
-.styleguide-swatches ol.orange .light .high {
-  background-color: #ffb359;
+.styleguide-swatches ol.yellow .light .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.orange .light .low {
-  background-color: #ff9b25;
+.styleguide-swatches ol.yellow .light .low {
+  background-color: black;
 }
-.styleguide-swatches ol.orange .highlight {
-  background-color: #ffd19b;
+.styleguide-swatches ol.yellow .highlight {
+  background-color: black;
 }
-.styleguide-swatches ol.orange .highlight span:after {
-  content: "#ffd19b";
+.styleguide-swatches ol.yellow .highlight span:after {
+  content: "black";
 }
-.styleguide-swatches ol.orange .highlight .high {
-  background-color: #ffddb4;
+.styleguide-swatches ol.yellow .highlight .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.orange .highlight .low {
-  background-color: #ffc582;
+.styleguide-swatches ol.yellow .highlight .low {
+  background-color: black;
 }
-.styleguide-swatches ol.red .title {
+.styleguide-swatches ol.green .title {
   background-color: #fefefe;
-  color: #b00911;
+  color: #029555;
 }
-.styleguide-swatches ol.red .dark {
-  background-color: #71060b;
+.styleguide-swatches ol.green .dark {
+  background-color: black;
 }
-.styleguide-swatches ol.red .dark span:after {
-  content: "#71060b";
+.styleguide-swatches ol.green .dark span:after {
+  content: "black";
 }
-.styleguide-swatches ol.red .dark .high {
-  background-color: #89070d;
+.styleguide-swatches ol.green .dark .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.red .dark .low {
-  background-color: #590509;
+.styleguide-swatches ol.green .dark .low {
+  background-color: black;
 }
-.styleguide-swatches ol.red .main {
-  background-color: #b00911;
+.styleguide-swatches ol.green .main {
+  background-color: #029555;
 }
-.styleguide-swatches ol.red .main span:after {
-  content: "#b00911";
+.styleguide-swatches ol.green .main span:after {
+  content: "#029555";
 }
-.styleguide-swatches ol.red .main .high {
-  background-color: #c80a13;
+.styleguide-swatches ol.green .main .high {
+  background-color: #02ae63;
 }
-.styleguide-swatches ol.red .main .low {
-  background-color: #98080f;
+.styleguide-swatches ol.green .main .low {
+  background-color: #027c47;
 }
-.styleguide-swatches ol.red .light {
-  background-color: #e7242e;
+.styleguide-swatches ol.green .light {
+  background-color: #1bc37a;
 }
-.styleguide-swatches ol.red .light span:after {
-  content: "#e7242e";
+.styleguide-swatches ol.green .light span:after {
+  content: "#1bc37a";
 }
-.styleguide-swatches ol.red .light .high {
-  background-color: #ea3b44;
+.styleguide-swatches ol.green .light .high {
+  background-color: #1ed988;
 }
-.styleguide-swatches ol.red .light .low {
-  background-color: #da1822;
+.styleguide-swatches ol.green .light .low {
+  background-color: #18ad6c;
 }
-.styleguide-swatches ol.red .highlight {
-  background-color: #ec9498;
+.styleguide-swatches ol.green .highlight {
+  background-color: black;
 }
-.styleguide-swatches ol.red .highlight span:after {
-  content: "#ec9498";
+.styleguide-swatches ol.green .highlight span:after {
+  content: "black";
 }
-.styleguide-swatches ol.red .highlight .high {
-  background-color: #f0aaad;
+.styleguide-swatches ol.green .highlight .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.red .highlight .low {
-  background-color: #e87e83;
+.styleguide-swatches ol.green .highlight .low {
+  background-color: black;
+}
+.styleguide-swatches ol.tan .title {
+  background-color: #fefefe;
+  color: #8f864f;
+}
+.styleguide-swatches ol.tan .dark {
+  background-color: #39351b;
+}
+.styleguide-swatches ol.tan .dark span:after {
+  content: "#39351b";
+}
+.styleguide-swatches ol.tan .dark .high {
+  background-color: #4a4523;
+}
+.styleguide-swatches ol.tan .dark .low {
+  background-color: #282513;
+}
+.styleguide-swatches ol.tan .main {
+  background-color: #8f864f;
+}
+.styleguide-swatches ol.tan .main span:after {
+  content: "#8f864f";
+}
+.styleguide-swatches ol.tan .main .high {
+  background-color: #9f9558;
+}
+.styleguide-swatches ol.tan .main .low {
+  background-color: #7f7746;
+}
+.styleguide-swatches ol.tan .light {
+  background-color: #dddac7;
+}
+.styleguide-swatches ol.tan .light span:after {
+  content: "#dddac7";
+}
+.styleguide-swatches ol.tan .light .high {
+  background-color: #e7e4d7;
+}
+.styleguide-swatches ol.tan .light .low {
+  background-color: #d3d0b7;
+}
+.styleguide-swatches ol.tan .highlight {
+  background-color: #eceade;
+}
+.styleguide-swatches ol.tan .highlight span:after {
+  content: "#eceade";
+}
+.styleguide-swatches ol.tan .highlight .high {
+  background-color: #f5f4ee;
+}
+.styleguide-swatches ol.tan .highlight .low {
+  background-color: #e3e0ce;
 }
 .styleguide-swatches ol.grey .title {
   background-color: #fefefe;
@@ -648,57 +648,161 @@ body {
 .styleguide-swatches ol.grey .highlight .low {
   background-color: #e8e0e0;
 }
-.styleguide-swatches ol.green .title {
+.styleguide-swatches ol.purple .title {
   background-color: #fefefe;
-  color: #04982c;
+  color: black;
 }
-.styleguide-swatches ol.green .dark {
-  background-color: #005918;
+.styleguide-swatches ol.purple .dark {
+  background-color: black;
 }
-.styleguide-swatches ol.green .dark span:after {
-  content: "#005918";
+.styleguide-swatches ol.purple .dark span:after {
+  content: "black";
 }
-.styleguide-swatches ol.green .dark .high {
-  background-color: #00721f;
+.styleguide-swatches ol.purple .dark .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.green .dark .low {
-  background-color: #003f11;
+.styleguide-swatches ol.purple .dark .low {
+  background-color: black;
 }
-.styleguide-swatches ol.green .main {
-  background-color: #04982c;
+.styleguide-swatches ol.purple .main {
+  background-color: black;
 }
-.styleguide-swatches ol.green .main span:after {
-  content: "#04982c";
+.styleguide-swatches ol.purple .main span:after {
+  content: "black";
 }
-.styleguide-swatches ol.green .main .high {
-  background-color: #05b133;
+.styleguide-swatches ol.purple .main .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.green .main .low {
-  background-color: #037f25;
+.styleguide-swatches ol.purple .main .low {
+  background-color: black;
 }
-.styleguide-swatches ol.green .light {
-  background-color: #2bcc57;
+.styleguide-swatches ol.purple .light {
+  background-color: black;
 }
-.styleguide-swatches ol.green .light span:after {
-  content: "#2bcc57";
+.styleguide-swatches ol.purple .light span:after {
+  content: "black";
 }
-.styleguide-swatches ol.green .light .high {
-  background-color: #3bd665;
+.styleguide-swatches ol.purple .light .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.green .light .low {
-  background-color: #27b74e;
+.styleguide-swatches ol.purple .light .low {
+  background-color: black;
 }
-.styleguide-swatches ol.green .highlight {
-  background-color: #8adda1;
+.styleguide-swatches ol.purple .highlight {
+  background-color: black;
 }
-.styleguide-swatches ol.green .highlight span:after {
-  content: "#8adda1";
+.styleguide-swatches ol.purple .highlight span:after {
+  content: "black";
 }
-.styleguide-swatches ol.green .highlight .high {
-  background-color: #9ee3b1;
+.styleguide-swatches ol.purple .highlight .high {
+  background-color: #0d0d0d;
 }
-.styleguide-swatches ol.green .highlight .low {
-  background-color: #76d791;
+.styleguide-swatches ol.purple .highlight .low {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .title {
+  background-color: #fefefe;
+  color: black;
+}
+.styleguide-swatches ol.orange .dark {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .dark span:after {
+  content: "black";
+}
+.styleguide-swatches ol.orange .dark .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.orange .dark .low {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .main {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .main span:after {
+  content: "black";
+}
+.styleguide-swatches ol.orange .main .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.orange .main .low {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .light {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .light span:after {
+  content: "black";
+}
+.styleguide-swatches ol.orange .light .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.orange .light .low {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .highlight {
+  background-color: black;
+}
+.styleguide-swatches ol.orange .highlight span:after {
+  content: "black";
+}
+.styleguide-swatches ol.orange .highlight .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.orange .highlight .low {
+  background-color: black;
+}
+.styleguide-swatches ol.red .title {
+  background-color: #fefefe;
+  color: black;
+}
+.styleguide-swatches ol.red .dark {
+  background-color: black;
+}
+.styleguide-swatches ol.red .dark span:after {
+  content: "black";
+}
+.styleguide-swatches ol.red .dark .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.red .dark .low {
+  background-color: black;
+}
+.styleguide-swatches ol.red .main {
+  background-color: black;
+}
+.styleguide-swatches ol.red .main span:after {
+  content: "black";
+}
+.styleguide-swatches ol.red .main .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.red .main .low {
+  background-color: black;
+}
+.styleguide-swatches ol.red .light {
+  background-color: black;
+}
+.styleguide-swatches ol.red .light span:after {
+  content: "black";
+}
+.styleguide-swatches ol.red .light .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.red .light .low {
+  background-color: black;
+}
+.styleguide-swatches ol.red .highlight {
+  background-color: black;
+}
+.styleguide-swatches ol.red .highlight span:after {
+  content: "black";
+}
+.styleguide-swatches ol.red .highlight .high {
+  background-color: #0d0d0d;
+}
+.styleguide-swatches ol.red .highlight .low {
+  background-color: black;
 }
 .styleguide-swatches ol li.highlight span:after {
   color: #2b2121;
@@ -860,7 +964,7 @@ body {
   margin: 0;
 }
 .styleguide-typography .typeface h3 a {
-  color: #149ce4 !important;
+  color: #1f346b !important;
   text-decoration: none;
 }
 .styleguide-typography .typeface .purpose {

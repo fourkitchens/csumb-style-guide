@@ -65,32 +65,32 @@ $font-body-weight: 300; // Verlag is pulled down in 300 and 600 weights.
 // World Pulse Next Gen Colors:
   // They've asked for some adjustments on the violet hue --- once this settles,
   // flatten it back into specific hex value.
-$purple:(
-  dark:      #71060b,
-  main:      #b00911,
-  bright:    #e7242e,
-  highlight: #ec9498
+$blue:(
+  dark:      #001e54,
+  main:      #1f346b,
+  bright:    #000000,
+  highlight: #000000
 );
 
-$red:   (
-  dark:      #71060b,
-  main:      #b00911,
-  bright:    #e7242e,
-  highlight: #ec9498
+$yellow:   (
+  dark:      #d7be25,
+  main:      #ffe85c,
+  bright:    #000000,
+  highlight: #000000
 );
 
-$orange:(
-  dark:      #af5f00,
-  main:      #fc8800,
-  bright:    #ffa73f,
-  highlight: #ffd19b
+$green:(
+  dark:      #000000,
+  main:      #029555,
+  bright:    #1bc37a,
+  highlight: #000000
 );
 
-$blue:  (
-  dark:      #0f76ac,
-  main:      #149ce4,
-  bright:    #63bbf1,
-  highlight: #a0d6f6
+$tan:  (
+  dark:      #39351b,
+  main:      #8f864f,
+  bright:    #dddac7,
+  highlight: #eceade
 );
 
 $grey:  (
@@ -100,17 +100,32 @@ $grey:  (
   highlight: #f3efef
 );
 
-$green: (
-  dark:      #005918,
-  main:      #04982c,
-  bright:    #2bcc57,
-  highlight: #8adda1
+///Need to remove these colors, once all instances are removed from Sass files
+
+$red:  (
+  dark:      #000000,
+  main:      #000000,
+  bright:    #000000,
+  highlight: #000000
+);
+
+$purple:  (
+  dark:      #000000,
+  main:      #000000,
+  bright:    #000000,
+  highlight: #000000
+);
+
+$orange:  (
+  dark:      #000000,
+  main:      #000000,
+  bright:    #000000,
+  highlight: #000000
 );
 
 
 $white          : color($grey, 'highlight', 5%);
 $black          : color($grey, 'dark', -5%);
-
 
 
 // Standard colors: for standard 4K and other brand colors.
@@ -134,8 +149,8 @@ $social-colors:(
 
 // Base color variables.
 $link           : color($blue);
-$visited        : color($purple, 'bright');
-$selection-bg   : color($purple, 'bright');
+$visited        : color($green, 'bright');
+$selection-bg   : color($yellow, 'bright');
 $selection      : $white;
 
 // The amount lists, blockquotes and comments are indented.

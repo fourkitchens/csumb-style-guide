@@ -254,7 +254,7 @@ body {
       &:last-child { margin-right: 0; }
     }
 
-    $swatches: (purple $purple) (blue $blue) (orange $orange) (red $red) ('grey' $grey) (green $green);
+    $swatches: (blue $blue) (yellow $yellow) (green $green) (tan $tan) ('grey' $grey) (purple $purple) (orange $orange) (red $red);
     @each $swatch in $swatches {
       $name: nth($swatch, 1); // The text label
       $color: nth($swatch, 2); // The color array

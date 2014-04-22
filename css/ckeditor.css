@@ -439,35 +439,35 @@ h1, h2 {
 h4, h5, h6 {
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b00911;
+  color: black;
 }
 
 h1 {
-  color: #1394d8;
+  color: #1c2f61;
 }
 
 h2 {
-  color: #149ce4;
+  color: #1f346b;
 }
 
 h3 {
-  color: #149ce4;
+  color: #1f346b;
 }
 
 a:link {
-  color: #149ce4;
+  color: #1f346b;
 }
 a:visited {
-  color: #e7242e;
+  color: #1bc37a;
 }
 a:visited:hover, a:visited:focus {
-  color: #b00911;
+  color: black;
 }
 a:hover, a:focus {
-  color: #0f76ac;
+  color: #001e54;
 }
 a:active {
-  color: #71060b;
+  color: black;
 }
 
 ul.inline, ol.inline {
@@ -503,13 +503,13 @@ em {
 }
 
 ::-moz-selection {
-  background: #e7242e;
+  background: black;
   color: #fefefe;
   text-shadow: none;
 }
 
 ::selection {
-  background: #e7242e;
+  background: black;
   color: #fefefe;
   text-shadow: none;
 }
@@ -521,7 +521,7 @@ code, kbd, pre, samp {
 blockquote {
   position: relative;
   font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: #965100;
+  color: black;
   quotes: "\201C" "\201D" "\2018" "\2019";
   border-left: 0;
   padding: 0 40px;
@@ -531,7 +531,7 @@ blockquote:before, blockquote:after, blockquote cite {
   font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-style: italic;
   font-weight: 400;
-  color: #af5f00;
+  color: black;
 }
 blockquote:before, blockquote:after {
   position: absolute;

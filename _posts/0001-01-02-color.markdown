@@ -3,8 +3,8 @@ layout: component
 title:  "Colors"
 ---
 
-{% assign colors = "purple,red,orange,blue,grey" | split:"," %}
-{% assign names = "Violet,Crimson,Mandarin,Freshwater,Warm Slate" | split:"," %}
+{% assign colors = "blue,yellow,green,tan,grey" | split:"," %}
+{% assign names = "Ocean,Mustard,Grass,Sand,Warm Slate" | split:"," %}
 {% assign values = "dark,main,light,highlight" | split:"," %}
 
 <div class="styleguide-swatches">
