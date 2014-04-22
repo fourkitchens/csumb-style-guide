@@ -1,6 +1,6 @@
 # CSUMB style guide
 
-Style guide for the new worldpulse.com
+Style guide for the new csumb.edu
 
 * Jekyll
 * Grunt
