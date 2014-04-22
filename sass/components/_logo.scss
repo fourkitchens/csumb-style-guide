@@ -90,7 +90,7 @@
 
   #{nest('.no-js, .no-svg', '& .logo, &.crimson-gradient .logo:after')} {
     background: {
-      color: wp-color($red, 'dark');
+      color: color($blue, 'dark');
       image: image-url('logos/logo-white-solid.png');
     }
 
@@ -103,7 +103,7 @@
   }
 
   #{nest('.svg', '& .logo, &.crimson-gradient .logo:after')} {
-    background-color: wp-color($red, 'dark');
+    background-color: color($blue, 'dark');
     background-image: image-url('logos/logo-white-solid.svg');
   }
 }

@@ -37,6 +37,7 @@ $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Project-specific fonts
 // Put any font families here that are specific to your project.
+$trade:           'TradeGothicNextW01-Cond', $helvetica;
 $whitney:         'Whitney SSm A', 'Whitney SSm B', $helvetica;
 $gotham:          'Gotham SSm A', 'Gotham SSm B', $helvetica;
 $archer:          'Archer SSm A', 'Archer SSm B', $helvetica;
@@ -107,8 +108,8 @@ $green: (
 );
 
 
-$white          : wp-color($grey, 'highlight', 5%);
-$black          : wp-color($grey, 'dark', -5%);
+$white          : color($grey, 'highlight', 5%);
+$black          : color($grey, 'dark', -5%);
 
 
 
@@ -132,9 +133,9 @@ $social-colors:(
 
 
 // Base color variables.
-$link           : wp-color($blue);
-$visited        : wp-color($purple, 'bright');
-$selection-bg   : wp-color($purple, 'bright');
+$link           : color($blue);
+$visited        : color($purple, 'bright');
+$selection-bg   : color($purple, 'bright');
 $selection      : $white;
 
 // The amount lists, blockquotes and comments are indented.

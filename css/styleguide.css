@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -187,7 +187,7 @@ body {
   max-width: 1000px;
 }
 .styleguide-container > header {
-  background-color: #71060b;
+  background-color: #0f76ac;
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   color: #fefefe;

@@ -442,7 +442,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 600;
   line-height: 1.125;
 }
@@ -1202,8 +1202,8 @@ input.action-delete:focus {
  * The design for the header.
  */
 #header {
-  background-color: #71060b;
-  border-bottom: 1px solid #590509;
+  background-color: #0f76ac;
+  border-bottom: 1px solid #0d6695;
   -moz-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
@@ -1255,13 +1255,13 @@ input.action-delete:focus {
 }
 
 .no-js .logo-white-solid .logo, .no-js .logo-white-solid.crimson-gradient .logo:after, .no-svg .logo-white-solid .logo, .no-svg .logo-white-solid.crimson-gradient .logo:after {
-  background-color: #71060b;
+  background-color: #0f76ac;
   background-image: url('../images/logos/logo-white-solid.png');
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logo.gif',sizingMethod='scale')";
 }
 .svg .logo-white-solid .logo, .svg .logo-white-solid.crimson-gradient .logo:after {
-  background-color: #71060b;
+  background-color: #0f76ac;
   background-image: url('../images/logos/logo-white-solid.svg');
 }
 
