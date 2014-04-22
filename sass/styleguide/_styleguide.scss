@@ -13,19 +13,19 @@ p:empty {
 }
 
 // We have visited and unvisited link samples, which we want to show accurately.
-a[href*="worldpulse.com"] { @extend a:visited; }
+a[href*="csumb.edu"] { @extend a:visited; }
 a[href*="example.com"] { @extend a:link; }
 
 code {
   font-size: 0.825em;
   padding: 3px 5px;
-  border: 1px solid wp-color($grey, 'highlight', -5%);
+  border: 1px solid color($grey, 'highlight', -5%);
   @include border-radius(3px);
-  background-color: rgba(wp-color($grey, 'highlight', 5%), 0.75);
+  background-color: rgba(color($grey, 'highlight', 5%), 0.75);
 }
 
 body {
-  background: wp-color($grey, 'highlight');
+  background: color($grey, 'highlight');
 }
 
 .styleguide-container {
@@ -69,7 +69,7 @@ body {
     margin-top: 2em;
     color: #999;
     font-size: 0.75em;
-    border-top: 1px solid wp-color($grey, 'bright');
+    border-top: 1px solid color($grey, 'bright');
   }
 
   > main {
@@ -85,12 +85,12 @@ body {
 
   section {
     padding-bottom: 1em;
-    border-bottom: 1px dotted wp-color($grey, 'bright');
+    border-bottom: 1px dotted color($grey, 'bright');
     margin-bottom: 1em;
 
     &.heading {
       padding-bottom: 0;
-      border-bottom: 2px solid wp-color($grey, 'bright');
+      border-bottom: 2px solid color($grey, 'bright');
       margin-top: 4em;
     }
 
@@ -136,18 +136,18 @@ body {
 
   ul {
     @include border-radius(2px);
-    border-top: 1px solid wp-color($grey, 'highlight', -5%);
-    border-bottom: 1px solid wp-color($grey, 'highlight', 5%);
-    border-left: 1px solid wp-color($grey, 'bright', 5%);
-    border-right: 1px solid wp-color($grey, 'bright', 5%);
+    border-top: 1px solid color($grey, 'highlight', -5%);
+    border-bottom: 1px solid color($grey, 'highlight', 5%);
+    border-left: 1px solid color($grey, 'bright', 5%);
+    border-right: 1px solid color($grey, 'bright', 5%);
   }
 
   li.heading, li:not(.heading) a {
     display: block;
     padding: 0.5em 1em;
-    border-top: 1px solid wp-color($grey, 'highlight', 5%);
-    border-bottom: 1px solid wp-color($grey, 'highlight', -5%);
-    background-color: wp-color($grey, 'highlight');
+    border-top: 1px solid color($grey, 'highlight', 5%);
+    border-bottom: 1px solid color($grey, 'highlight', -5%);
+    background-color: color($grey, 'highlight');
 
     text-decoration: none;
     &:hover {
@@ -156,16 +156,16 @@ body {
   }
 
   li:not(.heading) a {
-    background-color: wp-color($grey, 'highlight', 2.5%);
+    background-color: color($grey, 'highlight', 2.5%);
   }
 
   li.heading {
     text-transform: uppercase;
-    color: wp-color($grey);
+    color: color($grey);
     font-weight: bold;
 
     &:hover {
-      background: wp-color($grey, 'highlight', -5%);
+      background: color($grey, 'highlight', -5%);
     }
 
     a {
@@ -199,8 +199,8 @@ body {
   }
 
   .code {
-    border-top: 1px solid wp-color($grey, 'bright', 5%);
-    background: wp-color($grey, 'highlight', 2.5%);
+    border-top: 1px solid color($grey, 'bright', 5%);
+    background: color($grey, 'highlight', 2.5%);
     code {
       // Override the <code/> styles for these syntax highlighted blocks
       font-size: inherit;
@@ -218,10 +218,10 @@ body {
 
 .status-green {
   // To demonstrate this color, which is not shown in the swatches.
-  color: wp-color($green);
+  color: color($green);
 }
 .crimson {
-  color: wp-color($red);
+  color: color($red);
 }
 
 .styleguide-swatches {
@@ -261,37 +261,37 @@ body {
       &.#{$name} {
         .title {
           background-color: $white;
-          color: wp-color($color);
+          color: color($color);
         }
         .dark {
-          background-color: wp-color($color, 'dark');
-          span:after { content: wp-color($color, 'dark') + ''; } // '' causes Sass to quote the string instead of output hex value
-          .high { background-color: wp-color($color, 'dark', 5%); }
-          .low { background-color: wp-color($color, 'dark', -5%); }
+          background-color: color($color, 'dark');
+          span:after { content: color($color, 'dark') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: color($color, 'dark', 5%); }
+          .low { background-color: color($color, 'dark', -5%); }
         }
         .main {
-          background-color: wp-color($color);
-          span:after { content: wp-color($color) + ''; } // '' causes Sass to quote the string instead of output hex value
-          .high { background-color: wp-color($color, 'main', 5%); }
-          .low { background-color: wp-color($color, 'main', -5%); }
+          background-color: color($color);
+          span:after { content: color($color) + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: color($color, 'main', 5%); }
+          .low { background-color: color($color, 'main', -5%); }
         }
         .light {
-          background-color: wp-color($color, 'bright');
-          span:after { content: wp-color($color, 'bright') + ''; } // '' causes Sass to quote the string instead of output hex value
-          .high { background-color: wp-color($color, 'bright', 5%); }
-          .low { background-color: wp-color($color, 'bright', -5%); }
+          background-color: color($color, 'bright');
+          span:after { content: color($color, 'bright') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: color($color, 'bright', 5%); }
+          .low { background-color: color($color, 'bright', -5%); }
         }
         .highlight {
-          background-color: wp-color($color, 'highlight');
-          span:after { content: wp-color($color, 'highlight') + ''; } // '' causes Sass to quote the string instead of output hex value
-          .high { background-color: wp-color($color, 'highlight', 5%); }
-          .low { background-color: wp-color($color, 'highlight', -5%); }
+          background-color: color($color, 'highlight');
+          span:after { content: color($color, 'highlight') + ''; } // '' causes Sass to quote the string instead of output hex value
+          .high { background-color: color($color, 'highlight', 5%); }
+          .low { background-color: color($color, 'highlight', -5%); }
         }
       }
     }
 
     li.highlight span:after {
-      color: wp-color($grey, 'dark');
+      color: color($grey, 'dark');
       @include text-shadow(1px 1px 0 rgba(255,255,255,0.5));
     }
 
@@ -351,10 +351,10 @@ body {
 
     @include respond-to('sg swatches large') {
       padding: 1em 25% 1em 0; // to make room for the accents
-      border-right: 1px solid wp-color($grey, 'highlight', 5%);
+      border-right: 1px solid color($grey, 'highlight', 5%);
       &.title {
         padding: 1em 0;
-        border-right: 1px solid wp-color($grey, 'highlight', -5%);
+        border-right: 1px solid color($grey, 'highlight', -5%);
       }
     }
 
@@ -455,7 +455,7 @@ body {
       font-size: 3em;
       margin: 0;
       a {
-        color: wp-color($blue) !important; // No color overrides from :visited or anything else on this display.
+        color: color($blue) !important; // No color overrides from :visited or anything else on this display.
         text-decoration: none;
       }
     }
@@ -463,8 +463,8 @@ body {
     .purpose {
       text-align: center;
       padding: 0.5em;
-      border-top: 1px solid wp-color($grey, 'highlight');
-      border-bottom: 1px solid wp-color($grey, 'highlight');
+      border-top: 1px solid color($grey, 'highlight');
+      border-bottom: 1px solid color($grey, 'highlight');
       margin: 0.5em 0.75em;
 
       @include respond-to('sg typeplate large') {
@@ -481,7 +481,7 @@ body {
       text-align: center;
       $white-space: nowrap;
       overflow: hidden;
-      color: wp-color($grey, 'bright');
+      color: color($grey, 'bright');
     }
 
     @include respond-to('sg typeplate small') {

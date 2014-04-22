@@ -7,8 +7,8 @@ body {
   font-weight: $font-body-weight;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: wp-color($grey);
-  background-color: wp-color($grey, main);
+  color: color($grey);
+  background-color: color($grey, main);
 }
 
 // Headings
@@ -31,19 +31,19 @@ body {
 #{headings(4,6)} {
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: wp-color($red);
+  color: color($red);
 }
 
 h1 {
-  color: wp-color($purple, main, -2.5%);
+  color: color($blue, main, -2.5%);
 }
 
 h2 {
-  color: wp-color($purple);
+  color: color($blue);
 }
 
 h3 {
-  color: wp-color($purple);
+  color: color($blue);
 }
 
 h4 {
@@ -72,16 +72,16 @@ a {
   &:visited {
     color: $visited;
     &:hover, &:focus {
-      color: wp-color($purple);
+      color: color($purple);
     }
   }
 
   &:hover, &:focus {
-    color: wp-color($blue, dark);
+    color: color($blue, dark);
   }
 
   &:active {
-    color: wp-color($red, dark);
+    color: color($red, dark);
   }
 }
 
@@ -157,7 +157,7 @@ blockquote {
   position: relative;
 
   font-family: $archer;
-  color: wp-color($orange, 'dark', -5%);
+  color: color($orange, 'dark', -5%);
 
   quotes: "\201C""\201D""\2018""\2019";
   border-left: 0;
@@ -168,7 +168,7 @@ blockquote {
     font-family: $archer;
     font-style: italic;
     font-weight: 400;
-    color: wp-color($orange, 'dark');
+    color: color($orange, 'dark');
   }
 
   &:before, &:after {

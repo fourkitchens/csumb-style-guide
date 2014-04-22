@@ -1,6 +1,0 @@
----
-layout: component
-title:  "Time and Date Formats"
----
-
-_This discussion is in progresss._

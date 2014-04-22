@@ -29,24 +29,24 @@ h4, h5, h6 {
 }
 
 h1 {
-  color: #a40810;
+  color: #1394d8;
 }
 
 h2 {
-  color: #b00911;
+  color: #149ce4;
 }
 
 h3 {
-  color: #b00911;
+  color: #149ce4;
 }
 
 a:link, a[href*="example.com"] {
   color: #149ce4;
 }
-a:visited, a[href*="worldpulse.com"] {
+a:visited, a[href*="csumb.edu"] {
   color: #e7242e;
 }
-a:visited:hover, a[href*="worldpulse.com"]:hover, a:visited:focus, a[href*="worldpulse.com"]:focus {
+a:visited:hover, a[href*="csumb.edu"]:hover, a:visited:focus, a[href*="csumb.edu"]:focus {
   color: #b00911;
 }
 a:hover, a:focus {
