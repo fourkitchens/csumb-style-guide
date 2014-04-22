@@ -1,4 +1,4 @@
-# World Pulse style guide
+# CSUMB style guide
 
 Style guide for the new worldpulse.com
 
