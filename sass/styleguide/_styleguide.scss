@@ -435,7 +435,7 @@ body {
 }
 
 .styleguide-typography {
-  $families: (whitney $whitney 400) (merriweather $merriweather 400) (archer $archer 400);
+  $families: (trade $trade 400) (merriweather $merriweather 400);
   @each $family in $families {
     $face: nth($family, 1);
     $stack: nth($family, 2);
@@ -476,6 +476,9 @@ body {
         margin: 1em 1.5em;
       }
     }
+    
+    &.trade .purpose { font-size: 2em;line-height:1.6em;text-align: left; }
+    &.merriweather .purpose {text-align: left;line-height:1.8em; }
 
     .largesample {
       position: relative;
@@ -506,8 +509,8 @@ body {
       }
     }
 
-    &.whitney .largesample { font-style: italic; }
-    &.archer .largesample { font-style: italic; }
-    &.gotham .largesample { text-transform: uppercase; font-weight: 600; }
+    &.trade .largesample { font-size: 7em;letter-spacing:-3px; }
+    &.merriweather .largesample { font-size: 2em;letter-spacing:-1px;line-height:1.5em;height: 1.125 * 4em; }
+    //&.gotham .largesample { text-transform: uppercase; font-weight: 600; }
   }
 }

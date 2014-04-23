@@ -946,16 +946,12 @@ body {
   font-style: italic;
 }
 
-.styleguide-typography .whitney, .styleguide-typography .whitney h3 {
-  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+.styleguide-typography .trade, .styleguide-typography .trade h3 {
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 400;
 }
 .styleguide-typography .merriweather, .styleguide-typography .merriweather h3 {
   font-family: "Merriweather", Georgia, serif;
-  font-weight: 400;
-}
-.styleguide-typography .archer, .styleguide-typography .archer h3 {
-  font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 400;
 }
 .styleguide-typography .typeface {
@@ -984,6 +980,15 @@ body {
     margin: 1em 1.5em;
   }
 }
+.styleguide-typography .typeface.trade .purpose {
+  font-size: 2em;
+  line-height: 1.6em;
+  text-align: left;
+}
+.styleguide-typography .typeface.merriweather .purpose {
+  text-align: left;
+  line-height: 1.8em;
+}
 .styleguide-typography .typeface .largesample {
   position: relative;
   left: -150%;
@@ -1009,13 +1014,13 @@ body {
     letter-spacing: -4px;
   }
 }
-.styleguide-typography .typeface.whitney .largesample {
-  font-style: italic;
+.styleguide-typography .typeface.trade .largesample {
+  font-size: 7em;
+  letter-spacing: -3px;
 }
-.styleguide-typography .typeface.archer .largesample {
-  font-style: italic;
-}
-.styleguide-typography .typeface.gotham .largesample {
-  text-transform: uppercase;
-  font-weight: 600;
+.styleguide-typography .typeface.merriweather .largesample {
+  font-size: 2em;
+  letter-spacing: -1px;
+  line-height: 1.5em;
+  height: 4.5em;
 }
