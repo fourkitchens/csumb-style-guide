@@ -51,6 +51,7 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+  color: color($tan, 'dark');
 }
 
 h5 {
@@ -75,7 +76,7 @@ a {
   &:visited {
     color: $visited;
     &:hover, &:focus {
-      color: color($tan, dark);
+      color: color($blue, dark);
     }
   }
 
@@ -84,7 +85,11 @@ a {
   }
 
   &:active {
-    color: color($yellow, dark);
+    color: color($blue, dark);
+  }
+  
+  &.link-bold {
+    font-weight: 700;
   }
 }
 

@@ -432,7 +432,7 @@ body {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #39351b;
   background-color: #f5f4ee;
 }
@@ -464,22 +464,26 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+  color: #39351b;
 }
 
 a:link {
   color: #1f346b;
 }
 a:visited {
-  color: #8f864f;
+  color: #1f346b;
 }
 a:visited:hover, a:visited:focus {
-  color: #39351b;
+  color: #001e54;
 }
 a:hover, a:focus {
   color: #001e54;
 }
 a:active {
-  color: #d7be25;
+  color: #001e54;
+}
+a.link-bold {
+  font-weight: 700;
 }
 
 ul.inline, ol.inline {
@@ -515,14 +519,14 @@ em {
 }
 
 ::-moz-selection {
-  background: white;
-  color: #f5f4ee;
+  background: #ffe85c;
+  color: #39351b;
   text-shadow: none;
 }
 
 ::selection {
-  background: white;
-  color: #f5f4ee;
+  background: #ffe85c;
+  color: #39351b;
   text-shadow: none;
 }
 

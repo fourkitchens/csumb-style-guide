@@ -4,8 +4,7 @@ title:  "Links"
 ---
 
 {% capture a %}
-  Links may appear as visited, like <a href="http://www.csumb.edu">Cal State Monterey Bay</a>,
-  or unvisited, like <a href="http://www.example.com">this site you've never been to</a>.
+  <a class="link-bold" href="http://www.csumb.edu">Cal State Monterey Bay</a>
 {% endcapture %}
 
 {% include sample.html sample=a %}
