@@ -4,7 +4,7 @@ title:  "Links"
 ---
 
 {% capture a %}
-  Links may appear as visited, like <a href="http://www.worldpulse.com">World Pulse</a>,
+  Links may appear as visited, like <a href="http://www.csumb.edu">Cal State Monterey Bay</a>,
   or unvisited, like <a href="http://www.example.com">this site you've never been to</a>.
 {% endcapture %}
 

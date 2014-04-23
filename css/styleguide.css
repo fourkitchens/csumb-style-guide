@@ -8,8 +8,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  color: #8f864f;
-  background-color: #8f864f;
+  color: #39351b;
+  background-color: #f5f4ee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,42 +18,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.125;
 }
 
-h1, h2 {
-  letter-spacing: -1px;
-}
-
-h4, h5, h6 {
-  letter-spacing: 3px;
+h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: black;
 }
 
 h1 {
-  color: #1c2f61;
+  color: #029555;
+  font-size: 2em;
 }
 
 h2 {
-  color: #1f346b;
+  color: #029555;
+  font-size: 1.6em;
 }
 
 h3 {
-  color: #1f346b;
+  color: #029555;
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 a:link, a[href*="example.com"] {
   color: #1f346b;
 }
 a:visited, a[href*="csumb.edu"] {
-  color: #1bc37a;
+  color: #8f864f;
 }
 a:visited:hover, a[href*="csumb.edu"]:hover, a:visited:focus, a[href*="csumb.edu"]:focus {
-  color: black;
+  color: #39351b;
 }
 a:hover, a:focus {
   color: #001e54;
 }
 a:active {
-  color: black;
+  color: #d7be25;
 }
 
 ul.inline, ol.inline {
@@ -89,13 +90,13 @@ em {
 }
 
 ::-moz-selection {
-  background: black;
+  background: white;
   color: #f5f4ee;
   text-shadow: none;
 }
 
 ::selection {
-  background: black;
+  background: white;
   color: #f5f4ee;
   text-shadow: none;
 }
@@ -421,28 +422,28 @@ body {
   background-color: #192a57;
 }
 .styleguide-swatches ol.blue .light {
-  background-color: black;
+  background-color: #3b559a;
 }
 .styleguide-swatches ol.blue .light span:after {
-  content: "black";
+  content: "#3b559a";
 }
 .styleguide-swatches ol.blue .light .high {
-  background-color: #0d0d0d;
+  background-color: #425fac;
 }
 .styleguide-swatches ol.blue .light .low {
-  background-color: black;
+  background-color: #344b88;
 }
 .styleguide-swatches ol.blue .highlight {
-  background-color: black;
+  background-color: white;
 }
 .styleguide-swatches ol.blue .highlight span:after {
-  content: "black";
+  content: "white";
 }
 .styleguide-swatches ol.blue .highlight .high {
-  background-color: #0d0d0d;
+  background-color: white;
 }
 .styleguide-swatches ol.blue .highlight .low {
-  background-color: black;
+  background-color: #f2f2f2;
 }
 .styleguide-swatches ol.yellow .title {
   background-color: #f5f4ee;
@@ -473,44 +474,44 @@ body {
   background-color: #ffe443;
 }
 .styleguide-swatches ol.yellow .light {
-  background-color: black;
+  background-color: white;
 }
 .styleguide-swatches ol.yellow .light span:after {
-  content: "black";
+  content: "white";
 }
 .styleguide-swatches ol.yellow .light .high {
-  background-color: #0d0d0d;
+  background-color: white;
 }
 .styleguide-swatches ol.yellow .light .low {
-  background-color: black;
+  background-color: #f2f2f2;
 }
 .styleguide-swatches ol.yellow .highlight {
-  background-color: black;
+  background-color: white;
 }
 .styleguide-swatches ol.yellow .highlight span:after {
-  content: "black";
+  content: "white";
 }
 .styleguide-swatches ol.yellow .highlight .high {
-  background-color: #0d0d0d;
+  background-color: white;
 }
 .styleguide-swatches ol.yellow .highlight .low {
-  background-color: black;
+  background-color: #f2f2f2;
 }
 .styleguide-swatches ol.green .title {
   background-color: #f5f4ee;
   color: #029555;
 }
 .styleguide-swatches ol.green .dark {
-  background-color: black;
+  background-color: white;
 }
 .styleguide-swatches ol.green .dark span:after {
-  content: "black";
+  content: "white";
 }
 .styleguide-swatches ol.green .dark .high {
-  background-color: #0d0d0d;
+  background-color: white;
 }
 .styleguide-swatches ol.green .dark .low {
-  background-color: black;
+  background-color: #f2f2f2;
 }
 .styleguide-swatches ol.green .main {
   background-color: #029555;
@@ -537,16 +538,16 @@ body {
   background-color: #18ad6c;
 }
 .styleguide-swatches ol.green .highlight {
-  background-color: black;
+  background-color: white;
 }
 .styleguide-swatches ol.green .highlight span:after {
-  content: "black";
+  content: "white";
 }
 .styleguide-swatches ol.green .highlight .high {
-  background-color: #0d0d0d;
+  background-color: white;
 }
 .styleguide-swatches ol.green .highlight .low {
-  background-color: black;
+  background-color: #f2f2f2;
 }
 .styleguide-swatches ol.tan .title {
   background-color: #f5f4ee;

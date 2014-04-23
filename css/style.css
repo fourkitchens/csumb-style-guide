@@ -433,8 +433,8 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
-  color: #8f864f;
-  background-color: #8f864f;
+  color: #39351b;
+  background-color: #f5f4ee;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -443,42 +443,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.125;
 }
 
-h1, h2 {
-  letter-spacing: -1px;
-}
-
-h4, h5, h6 {
-  letter-spacing: 3px;
+h3, h4, h5, h6 {
   text-transform: uppercase;
-  color: black;
 }
 
 h1 {
-  color: #1c2f61;
+  color: #029555;
+  font-size: 2em;
 }
 
 h2 {
-  color: #1f346b;
+  color: #029555;
+  font-size: 1.6em;
 }
 
 h3 {
-  color: #1f346b;
+  color: #029555;
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 a:link {
   color: #1f346b;
 }
 a:visited {
-  color: #1bc37a;
+  color: #8f864f;
 }
 a:visited:hover, a:visited:focus {
-  color: black;
+  color: #39351b;
 }
 a:hover, a:focus {
   color: #001e54;
 }
 a:active {
-  color: black;
+  color: #d7be25;
 }
 
 ul.inline, ol.inline {
@@ -514,13 +515,13 @@ em {
 }
 
 ::-moz-selection {
-  background: black;
+  background: white;
   color: #f5f4ee;
   text-shadow: none;
 }
 
 ::selection {
-  background: black;
+  background: white;
   color: #f5f4ee;
   text-shadow: none;
 }
@@ -928,10 +929,10 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-bottom: 0.5em;
 }
 .messages.status {
-  border-color: black;
+  border-color: white;
   background-color: #029555;
-  color: #262626;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  color: white;
+  text-shadow: 1px 1px 0 rgba(242, 242, 242, 0.5);
 }
 .messages.status a {
   color: #f5f4ee;

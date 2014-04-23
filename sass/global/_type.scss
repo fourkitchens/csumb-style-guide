@@ -7,8 +7,8 @@ body {
   font-weight: $font-body-weight;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  color: color($grey);
-  background-color: color($grey, main);
+  color: color($tan, dark);
+  background-color: $white;
 }
 
 // Headings
@@ -26,28 +26,31 @@ body {
 }
 
 #{headings(1,2)} {
-  letter-spacing: -1px;
 }
-#{headings(4,6)} {
-  letter-spacing: 3px;
+
+#{headings(3,6)} {
+  //letter-spacing: 3px;
   text-transform: uppercase;
-  color: color($red);
 }
 
 h1 {
-  color: color($blue, main, -2.5%);
+  color: color($green);
+  font-size: 2em;
 }
 
 h2 {
-  color: color($blue);
+  color: color($green);
+  font-size: 1.6em;
 }
 
 h3 {
-  color: color($blue);
+  color: color($green);
+  font-size: 1.4em;
+  
 }
 
 h4 {
-
+  font-size: 1.2em;
 }
 
 h5 {
@@ -72,7 +75,7 @@ a {
   &:visited {
     color: $visited;
     &:hover, &:focus {
-      color: color($purple);
+      color: color($tan, dark);
     }
   }
 
@@ -81,7 +84,7 @@ a {
   }
 
   &:active {
-    color: color($red, dark);
+    color: color($yellow, dark);
   }
 }
 
