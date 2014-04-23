@@ -14,7 +14,7 @@ fieldset {
 
   > legend {
     padding: 0 1em;
-    font-family: $gotham;
+    font-family: $trade;
     font-weight: 600;
     color: wp-color($tan, main);
   }
@@ -56,9 +56,9 @@ textarea {
 
 %imitate-form-label,
 label {
-  font-family: $gotham;
-  font-size: 0.875em;
-  font-weight: bold;
+  font-family: $trade;
+  font-size: 1em;
+  font-weight: bolder;
   color: wp-color($tan, main);
   input[type="radio"] + &,
   input[type="checkbox"] + & {

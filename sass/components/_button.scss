@@ -9,21 +9,22 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 %button {
-  font-family: $gotham;
+  font-family: $trade;
   text-transform: uppercase;
-  font-size: 0.875em;
+  font-size: 1em;
   font-weight: 400;
-  padding: 1em 2em;
+  padding: .75em 1.75em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-right: 0.5em;
-
-  color: wp-color($green, 'dark');
-  @include text-shadow(1px 1px 0 rgba(wp-color($yellow, 'dark'), 0.5));
+  letter-spacing: .12em;
+  color: wp-color($yellow, 'dark', -30%);
+  @include box-shadow(0 1px 2px rgba(wp-color($grey, 'dark', 10%), 0.8));
+  @include text-shadow(1px 1px 0 rgba(wp-color($yellow, 'dark', -10%), 0.5));
 
   &[disabled] {
     font-weight: 400;
-    color: wp-color($grey, 'main', 5%);
+    color: wp-color($yellow, 'dark', -15%);
     @include text-shadow(none);
   }
 
@@ -35,7 +36,7 @@ input[type="button"],
 
   @include border-radius(4px);
   border: {
-    width: 0px 0px 2px 0px;
+    width: 0px 0px 1px 0px;
     style: solid;
     color: wp-color($yellow, 'dark', -5%);
   }
@@ -43,16 +44,17 @@ input[type="button"],
   &:hover, &:focus {
     background-color: wp-color($yellow, 'main');
     @include background-image(linear-gradient(
-      wp-color($yellow, 'main', 6%) 75%,
-      wp-color($yellow, 'main')
+      wp-color($yellow, 'main') 75%,
+      wp-color($yellow, 'main', -2%)
     ));
     border-color: wp-color($yellow, 'dark', -10%);
   }
 
   &[disabled], &[disabled]:hover {
-    background-color: wp-color($grey, 'highlight', -10%);
+    background-color: wp-color($yellow, 'main', 20%);
     @include background-image(none);
-    border-color: wp-color($grey, 'highlight', -12.5%);
+    border-color: wp-color($yellow, 'main', 5%);
+    @include box-shadow(0 1px 2px rgba(wp-color($grey, 'dark', 15%), 0.4) inset);
   }
 
   &:focus {
@@ -78,11 +80,11 @@ input.action-submit { // The input. is necessary here to override the above rule
   @include text-shadow(1px 1px 0 wp-color($green, 'main'));
 
   &:hover, &:focus {
-    border-color: wp-color($green, 'main', -12%);
+    border-color: wp-color($green, 'main', -15%);
     background-color: wp-color($green, 'main', -12%);
     @include background-image(linear-gradient(
-      wp-color($green, 'bright', -2%) 75%,
-      wp-color($green, 'bright', -8%)
+      wp-color($green, 'bright', -8%) 75%,
+      wp-color($green, 'bright', -12%)
     ));
   }
 
@@ -101,33 +103,29 @@ input.action-submit { // The input. is necessary here to override the above rule
 %btn-negative,
 .btn-negative,
 input.action-delete {
-  background-color: wp-color($red);
+  background-color: wp-color($grey);
   @include background-image(linear-gradient(
-    wp-color($red, 'main', 5%),
-    wp-color($red) 30%,
-    wp-color($red) 70%,
-    wp-color($red, 'main', -2.5%)
+    wp-color($grey, 'bright') 75%,
+    wp-color($grey, 'bright', -10%)
   ));
-  border-color: wp-color($red, 'main', -5%);
-  color: $white;
-  @include text-shadow(1px 1px 0 wp-color($red, 'dark'));
+  border-color: wp-color($grey, 'bright', -30%);
+  color: wp-color($grey, 'dark');
+  @include text-shadow(1px 1px 0 wp-color($grey, 'bright'));
 
   &:hover, &:focus {
-    border-color: wp-color($red, 'main', -5%);
-    background-color: wp-color($red, 'main', 5%);
+    border-color: wp-color($grey, 'bright', -15%);
+    background-color: wp-color($grey, 'bright', 5%);
     @include background-image(linear-gradient(
-      wp-color($red, 'main', 10%),
-      wp-color($red, 'main', 5%) 30%,
-      wp-color($red, 'main', 5%) 70%,
-      wp-color($red)
+      wp-color($grey, 'highlight', -2%) 75%,
+      wp-color($grey, 'highlight', -10%)
     ));
   }
 
   &[disabled], &[disabled]:hover {
-    background-color: mix( wp-color($red), wp-color($grey, 'bright'));
+    background-color: mix( wp-color($grey, 'highlight'), wp-color($grey, 'bright'));
     @include background-image(none);
-    border-color: darken(mix(wp-color($red), wp-color($grey, 'bright')), 5%);
-    color: $white;
+    border-color: darken(mix(wp-color($grey, 'highlight'), wp-color($grey, 'bright')), 10%);
+    color: wp-color($grey, 'dark', 15%);
   }
 
   &:focus {
@@ -137,85 +135,77 @@ input.action-delete {
 
 %btn-aux1,
 .btn-aux1 {
-  background-color: wp-color($purple);
+  background-color: wp-color($blue);
   @include background-image(linear-gradient(
-    wp-color($purple, 'main', 5%),
-    wp-color($purple) 30%,
-    wp-color($purple) 70%,
-    wp-color($purple, 'main', -2.5%)
+    wp-color($blue, 'main') 75%,
+    wp-color($blue, 'dark')
   ));
-  border-color: wp-color($purple, 'main', -5%);
+  border-color: wp-color($blue, 'main', -30%);
   color: $white;
-  @include text-shadow(1px 1px 0 wp-color($purple, 'dark'));
+  @include text-shadow(1px 1px 0 wp-color($blue, 'dark'));
 
   &:hover, &:focus {
-    border-color: wp-color($purple, 'main', -5%);
-    background-color: wp-color($purple, 'main', 5%);
+    border-color: wp-color($blue, 'main', -15%);
+    background-color: wp-color($blue, 'main', 5%);
     @include background-image(linear-gradient(
-      wp-color($purple, 'main', 10%),
-      wp-color($purple, 'main', 5%) 30%,
-      wp-color($purple, 'main', 5%) 70%,
-      wp-color($purple)
+      wp-color($blue, 'main', 10%) 75%,
+      wp-color($blue, 'dark', 10%)
     ));
   }
 
   &[disabled], &[disabled]:hover {
-    background-color: mix( wp-color($purple), wp-color($grey, 'bright'));
+    background-color: mix( wp-color($blue), wp-color($grey, 'bright'));
     @include background-image(none);
-    border-color: darken(mix(wp-color($purple), wp-color($grey, 'bright')), 5%);
+    border-color: darken(mix(wp-color($blue), wp-color($grey, 'bright')), 5%);
     color: $white;
   }
 
   &:focus {
-    @include box-shadow(0 0 4px rgba(wp-color($purple), 0.5));
+    @include box-shadow(0 0 4px rgba(wp-color($blue), 0.5));
   }
 }
 
 %btn-aux2,
 .btn-aux2 {
-  background-color: wp-color($orange);
+  background-color: wp-color($grey);
   @include background-image(linear-gradient(
-    wp-color($orange, 'main', 5%),
-    wp-color($orange) 30%,
-    wp-color($orange) 70%,
-    wp-color($orange, 'main', -2.5%)
+    wp-color($grey, 'highlight') 88%,
+    wp-color($grey, 'highlight', -10%)
   ));
-  border-color: wp-color($orange, 'main', -5%);
-  color: $white;
-  @include text-shadow(1px 1px 0 wp-color($orange, 'dark'));
+  border-color: wp-color($grey, 'highlight', -20%);
+  color: wp-color($grey, 'dark', 10%);
+  @include text-shadow(1px 1px 0 wp-color($grey, 'highlight'));
 
   &:hover, &:focus {
-    border-color: wp-color($orange, 'main', -5%);
-    background-color: wp-color($orange, 'main', 5%);
+    border-color: wp-color($grey, 'bright', -5%);
+    background-color: wp-color($grey, 'bright', 5%);
     @include background-image(linear-gradient(
-      wp-color($orange, 'main', 10%),
-      wp-color($orange, 'main', 5%) 30%,
-      wp-color($orange, 'main', 5%) 70%,
-      wp-color($orange)
+      wp-color($grey, 'bright', -2%) 90%,
+      wp-color($grey, 'bright', -5%)
     ));
   }
 
   &[disabled], &[disabled]:hover {
-    background-color: mix( wp-color($orange), wp-color($grey, 'bright'));
+    background-color: mix( wp-color($grey, 'highlight'), wp-color($grey, 'bright'));
     @include background-image(none);
-    border-color: darken(mix(wp-color($orange), wp-color($grey, 'bright')), 5%);
-    color: $white;
+    border-color: darken(mix(wp-color($grey, 'highlight'), wp-color($grey, 'bright')), 5%);
+    color: wp-color($grey, 'dark', 15%);
   }
 
   &:focus {
-    @include box-shadow(0 0 4px rgba(wp-color($orange), 0.5));
+    @include box-shadow(0 0 4px rgba(wp-color($grey), 0.5));
   }
 }
 
 %btn-large,
 .btn-large {
-  font-size: 1.125em;
-  padding: 0.5em 0.625em;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
 }
 
 %btn-small,
 .btn-small {
-  font-size: 0.75em;
+  font-size: 0.938em;
   font-weight: 400;
-  padding: 0.375em 0.25em;
+  padding: 0.25em 0.75em;
 }
