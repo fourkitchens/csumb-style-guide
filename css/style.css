@@ -577,7 +577,7 @@ blockquote cite:before {
 * Form elements: Inputs, buttons, etc.
 */
 fieldset {
-  border: 1px solid #e7e5d6;
+  border: 1px solid #8f864f;
   border-bottom-width: 2px;
   border-radius: 3px;
   margin-bottom: 1em;
@@ -587,7 +587,7 @@ fieldset > legend {
   padding: 0 1em;
   font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 600;
-  color: #c0bb97;
+  color: #8f864f;
 }
 
 input,
@@ -620,15 +620,8 @@ textarea {
 label {
   font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-size: 0.875em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #9f9558;
-}
-#user-profile-form input[type="radio"] + .password-strength-title, #user-profile-form input[type="checkbox"] + .password-strength-title, input[type="radio"] +
-label, input[type="checkbox"] +
-label {
-  letter-spacing: 0;
-  text-transform: none;
+  font-weight: bold;
+  color: #8f864f;
 }
 
 input[type="text"],
@@ -636,15 +629,14 @@ input[type="password"],
 input[type="email"],
 textarea,
 select {
-  border: 1px solid #dddac7;
-  border-radius: 2px;
+  border: 1px solid #8f864f;
 }
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #d3d0b7;
+  border-color: #39351b;
 }
 
 input[type="password"] {
@@ -1049,24 +1041,23 @@ input[type="button"] {
   font-family: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
   font-size: 0.875em;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 0.375em 0.625em;
+  font-weight: 400;
+  padding: 1em 2em;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   margin-right: 0.5em;
-  color: #8f864f;
-  text-shadow: 1px 1px 0 rgba(236, 234, 222, 0.5);
-  background-color: #dddac7;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U3ZTRkNyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZGRkYWM3Ii8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNkZGRhYzciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOGQ1YmYiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  color: black;
+  text-shadow: 1px 1px 0 rgba(215, 190, 37, 0.5);
+  background-color: #ffe85c;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmZmYxOTkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmU4NWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: -moz-linear-gradient(#e7e4d7, #dddac7 30%, #dddac7 70%, #d8d5bf);
-  background-image: -webkit-linear-gradient(#e7e4d7, #dddac7 30%, #dddac7 70%, #d8d5bf);
-  background-image: linear-gradient(#e7e4d7, #dddac7 30%, #dddac7 70%, #d8d5bf);
+  background-image: -moz-linear-gradient(#fff199 75%, #ffe85c);
+  background-image: -webkit-linear-gradient(#fff199 75%, #ffe85c);
+  background-image: linear-gradient(#fff199 75%, #ffe85c);
   border-radius: 4px;
-  border-width: 1px 1px 3px 1px;
+  border-width: 0px 0px 2px 0px;
   border-style: solid;
-  border-color: #d3d0b7;
+  border-color: #c1ab21;
 }
 .button[disabled],
 button[disabled],
@@ -1086,13 +1077,13 @@ input[type="reset"]:hover,
 input[type="reset"]:focus,
 input[type="button"]:hover,
 input[type="button"]:focus {
-  background-color: #e7e4d7;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YwZWZlNyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZTdlNGQ3Ii8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiNlN2U0ZDciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZGRhYzciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-color: #ffe85c;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmZmVjN2IiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmU4NWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: -moz-linear-gradient(#f0efe7, #e7e4d7 30%, #e7e4d7 70%, #dddac7);
-  background-image: -webkit-linear-gradient(#f0efe7, #e7e4d7 30%, #e7e4d7 70%, #dddac7);
-  background-image: linear-gradient(#f0efe7, #e7e4d7 30%, #e7e4d7 70%, #dddac7);
-  border-color: #cac5a7;
+  background-image: -moz-linear-gradient(#ffec7b 75%, #ffe85c);
+  background-image: -webkit-linear-gradient(#ffec7b 75%, #ffe85c);
+  background-image: linear-gradient(#ffec7b 75%, #ffe85c);
+  border-color: #ab981e;
 }
 .button[disabled], .button[disabled]:hover,
 button[disabled],
@@ -1123,41 +1114,41 @@ a.button {
 
 .btn-primary,
 input.action-submit {
-  background-color: #1f346b;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI1M2U3ZiIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMWYzNDZiIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiMxZjM0NmIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYzJmNjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-color: #029555;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMxYmMzN2EiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxOGFkNmMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: -moz-linear-gradient(#253e7f, #1f346b 30%, #1f346b 70%, #1c2f61);
-  background-image: -webkit-linear-gradient(#253e7f, #1f346b 30%, #1f346b 70%, #1c2f61);
-  background-image: linear-gradient(#253e7f, #1f346b 30%, #1f346b 70%, #1c2f61);
-  border-color: #192a57;
+  background-image: -moz-linear-gradient(#1bc37a 75%, #18ad6c);
+  background-image: -webkit-linear-gradient(#1bc37a 75%, #18ad6c);
+  background-image: linear-gradient(#1bc37a 75%, #18ad6c);
+  border-color: #016338;
   color: #f5f4ee;
-  text-shadow: 1px 1px 0 #001e54;
+  text-shadow: 1px 1px 0 #029555;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 input.action-submit:hover,
 input.action-submit:focus {
-  border-color: #192a57;
-  background-color: #253e7f;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJhNDc5MyIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMjUzZTdmIi8+PHN0b3Agb2Zmc2V0PSI3MCUiIHN0b3AtY29sb3I9IiMyNTNlN2YiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxZjM0NmIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  border-color: #015933;
+  background-color: #015933;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMxYWJhNzQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNjlmNjQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: -moz-linear-gradient(#2a4793, #253e7f 30%, #253e7f 70%, #1f346b);
-  background-image: -webkit-linear-gradient(#2a4793, #253e7f 30%, #253e7f 70%, #1f346b);
-  background-image: linear-gradient(#2a4793, #253e7f 30%, #253e7f 70%, #1f346b);
+  background-image: -moz-linear-gradient(#1aba74 75%, #169f64);
+  background-image: -webkit-linear-gradient(#1aba74 75%, #169f64);
+  background-image: linear-gradient(#1aba74 75%, #169f64);
 }
 .btn-primary[disabled],
 .btn-primary[disabled]:hover,
 input.action-submit[disabled],
 input.action-submit[disabled]:hover {
-  background-color: #7e8799;
+  background-color: #6fb78e;
   background-image: none;
-  border-color: #707a8e;
+  border-color: #5eae81;
   color: #f5f4ee;
 }
 .btn-primary:focus,
 input.action-submit:focus {
-  -webkit-box-shadow: 0 0 4px rgba(31, 52, 107, 0.5);
-  box-shadow: 0 0 4px rgba(31, 52, 107, 0.5);
+  -webkit-box-shadow: 0 0 4px rgba(2, 149, 85, 0.5);
+  box-shadow: 0 0 4px rgba(2, 149, 85, 0.5);
 }
 
 .btn-negative,
