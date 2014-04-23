@@ -6,7 +6,7 @@ form {
 }
 
 fieldset {
-  border: 1px solid wp-color($grey, highlight, -2.5%);
+  border: 1px solid wp-color($tan, main);
   border-bottom-width: 2px;
   @include border-radius(3px);
   margin-bottom: 1em;
@@ -14,9 +14,9 @@ fieldset {
 
   > legend {
     padding: 0 1em;
-    font-family: $gotham;
+    font-family: $trade;
     font-weight: 600;
-    color: wp-color($grey, bright, -15%);
+    color: wp-color($tan, main);
   }
 }
 
@@ -56,16 +56,12 @@ textarea {
 
 %imitate-form-label,
 label {
-  font-family: $gotham;
-  font-size: 0.875em;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: wp-color($grey, 'main', 5%);
-
+  font-family: $trade;
+  font-size: 1em;
+  font-weight: bolder;
+  color: wp-color($tan, main);
   input[type="radio"] + &,
   input[type="checkbox"] + & {
-    letter-spacing: 0;
-    text-transform: none;
   }
 }
 
@@ -76,11 +72,9 @@ input[type="password"],
 input[type="email"],
 textarea,
 select {
-  border: 1px solid wp-color($grey, 'bright');
-  @include border-radius(2px);
-
+  border: 1px solid wp-color($tan, main);
   &:focus {
-    border-color: wp-color($grey, 'bright', -5%);
+    border-color: wp-color($tan, dark);
   }
 }
 
