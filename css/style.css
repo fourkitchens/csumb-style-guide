@@ -1191,8 +1191,8 @@ input.action-delete[disabled]:hover {
 }
 .btn-negative:focus,
 input.action-delete:focus {
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 4px rgba(143, 134, 79, 0.5);
+  box-shadow: 0 0 4px rgba(143, 134, 79, 0.5);
 }
 
 .btn-aux1 {

@@ -129,7 +129,7 @@ input.action-delete {
   }
 
   &:focus {
-    @include box-shadow(0 0 4px rgba(wp-color($red), 0.5));
+    @include box-shadow(0 0 4px rgba(wp-color($grey), 0.5));
   }
 }
 
