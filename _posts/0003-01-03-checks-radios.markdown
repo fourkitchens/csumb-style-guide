@@ -4,7 +4,7 @@ title:  "Checkboxes and Radio Buttons"
 ---
 
 {% capture c %}
-<form action="#">
+<form action="#" class="checkbox">
   <div>
     <input type="checkbox" name="checkboxes[a]" value="a" id="radio-a">
     <label for="radio-a">Nisl elementum mi</label>
@@ -21,7 +21,7 @@ title:  "Checkboxes and Radio Buttons"
 {% endcapture %}
 
 {% capture r %}
-<form action="#">
+<form action="#" class="radio">
   <div>
     <input type="radio" name="radios" value="d" id="radio-d">
     <label for="radio-d">Nisl elementum mi</label>
