@@ -917,7 +917,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   border-width: 1px 1px 2px 1px;
   border-style: solid;
   border-radius: 2px;
-  padding: 0.5em;
+  padding: 0.75em;
   margin-bottom: 0.5em;
 }
 .messages.status {
@@ -930,17 +930,18 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   color: #f5f4ee;
 }
 .messages.warning {
-  border-color: black;
-  background-color: black;
-  color: #262626;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+  border-color: #ffe85c;
+  background-color: #ffe64f;
+  color: #807116;
+  text-shadow: 1px 1px 0 rgba(255, 228, 67, 0.5);
 }
 .messages.warning a, .messages.warning a:visited {
-  color: #f5f4ee;
+  color: #544b0f;
+  font-weight: bolder;
 }
 .messages.error {
-  border-color: black;
-  background-color: black;
+  border-color: #e0c418;
+  background-color: #b29c13;
   color: #262626;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
