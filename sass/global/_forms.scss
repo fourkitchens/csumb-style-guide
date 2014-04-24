@@ -15,7 +15,6 @@ fieldset {
   > legend {
     padding: 0 1em;
     font-family: $trade;
-    font-weight: 600;
     color: wp-color($tan, main);
   }
 }
@@ -38,15 +37,15 @@ select,
 textarea {
   max-width: 100%;
   font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
-  padding: 0.375em;
+  padding: 0.55em;
   outline: 0;
   background-color: wp-color($grey, 'highlight', 5%);
 
   @include transition(box-shadow 0.3s ease-out, border 0.3s ease-out);
   &:focus {
-    border-color: wp-color($orange, 'dark');
-    background-color: #ffffff; // Yes, this is the *one time* we're calling out pure white.
-    @include box-shadow(0 0 4px rgba(wp-color($orange, 'dark'), 0.5));
+    border-color: wp-color($green, 'main', 10%);
+    background-color: #fff;
+    @include box-shadow(0 0 5px rgba(wp-color($green, 'bright'), 0.8));
   }
 }
 
@@ -56,16 +55,13 @@ textarea {
 
 %imitate-form-label,
 label {
-  font-family: $trade;
-  font-size: 1em;
-  font-weight: bolder;
+  font-family: $trade-reg;
+  font-size: 1.3em;
   color: wp-color($tan, main);
   input[type="radio"] + &,
   input[type="checkbox"] + & {
   }
 }
-
-
 
 input[type="text"],
 input[type="password"],
@@ -74,7 +70,9 @@ textarea,
 select {
   border: 1px solid wp-color($tan, main);
   &:focus {
-    border-color: wp-color($tan, dark);
+    border-color: wp-color($green, 'main', 10%);
+    background-color: #fff;
+    @include box-shadow(0 0 5px rgba(wp-color($green, 'bright'), 0.8));
   }
 }
 
@@ -83,10 +81,63 @@ input[type="password"] {
   font-family: $verdana;
 }
 
-input[type="checkbox"] {
+// Custom Styling for Radios and Checkboxes - using this method: http://www.hongkiat.com/blog/css3-checkbox-radio/
 
+// Checkboxes
+.checkbox, 
+.radio {
+  label {
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 1.5em;
+    line-height: 1em;
+    &:before {
+      content: "";  
+      display: inline-block;  
+      width: 16px;  
+      height: 16px;  
+      margin-right: 1em;  
+      position: absolute;  
+      left: 0;  
+      bottom: 1px;
+      background-color: wp-color($tan, 'main', 35%);
+    }
+  }
 }
-
+.checkbox {
+  label:before {
+    @include border-radius(4px); 
+    @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
+  }
+  input[type=checkbox] {
+    display: none;
+    &:checked + label:before {
+      content: "\2713";  
+      color: wp-color($green, 'main', -14%); 
+      font-size: 15px;  
+      text-align: center;  
+      line-height: 15px;  
+    }
+  }
+}
+// Radios
+.radio {
+  label:before {
+    @include border-radius(8px); 
+    @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked + label:before {
+      content: "\2022";  
+      color: wp-color($green, 'main', -14%);  
+      font-size: 30px;  
+      text-align: center;  
+      line-height: 16px;
+    }
+  }
+}
 .form-required {
   color: wp-color($red);
 }
@@ -185,7 +236,7 @@ input[type="checkbox"] {
   }
 
   .description {
-    color: wp-color($grey, main, 20%);
+    color: wp-color($tan, main, 20%);
   }
 
   @include respond-to('wide form labels') {
