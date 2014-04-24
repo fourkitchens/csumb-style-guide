@@ -105,7 +105,7 @@ $grey:  (
 /// Status Message colors
 $status: (
   success:   #02c948,
-  warning:   #d4c902, 
+  warning:   #e8dc02, 
   error:     #b5010d      
 );
 
@@ -133,8 +133,8 @@ $orange:  (
 );
 
 
-$white          : color($grey, 'highlight', 5%);
-$black          : color($grey, 'dark', -5%);
+$white          : #fff;
+$black          : #000;
 
 
 // Standard colors: for standard 4K and other brand colors.

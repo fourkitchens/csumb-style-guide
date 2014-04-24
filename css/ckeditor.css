@@ -423,7 +423,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #39351b;
-  background-color: #f5f4ee;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -505,13 +505,13 @@ em {
 
 ::-moz-selection {
   background: white;
-  color: #f5f4ee;
+  color: white;
   text-shadow: none;
 }
 
 ::selection {
   background: white;
-  color: #f5f4ee;
+  color: white;
   text-shadow: none;
 }
 

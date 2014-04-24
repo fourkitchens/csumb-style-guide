@@ -9,7 +9,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #39351b;
-  background-color: #f5f4ee;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -91,13 +91,13 @@ em {
 
 ::-moz-selection {
   background: white;
-  color: #f5f4ee;
+  color: white;
   text-shadow: none;
 }
 
 ::selection {
   background: white;
-  color: #f5f4ee;
+  color: white;
   text-shadow: none;
 }
 
@@ -191,7 +191,7 @@ body {
   background-color: #001e54;
   -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  color: #f5f4ee;
+  color: white;
   margin-bottom: 1em;
 }
 @media (min-width: 45em) {
@@ -296,7 +296,7 @@ body {
   text-decoration: none;
 }
 .styleguide-nav li.heading:hover, .styleguide-nav li:not(.heading) a:hover {
-  background: #f5f4ee;
+  background: white;
 }
 .styleguide-nav li:not(.heading) a {
   background-color: #f1efe6;
@@ -322,7 +322,7 @@ body {
   padding: 1em;
 }
 .styleguide-sample .example {
-  background-color: #f5f4ee;
+  background-color: white;
 }
 .styleguide-sample .code {
   border-top: 1px solid #e7e4d7;
@@ -394,7 +394,7 @@ body {
   }
 }
 .styleguide-swatches ol.blue .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: #1f346b;
 }
 .styleguide-swatches ol.blue .dark {
@@ -446,7 +446,7 @@ body {
   background-color: #f2f2f2;
 }
 .styleguide-swatches ol.yellow .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: #ffe85c;
 }
 .styleguide-swatches ol.yellow .dark {
@@ -498,7 +498,7 @@ body {
   background-color: #f2f2f2;
 }
 .styleguide-swatches ol.green .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: #029555;
 }
 .styleguide-swatches ol.green .dark {
@@ -550,7 +550,7 @@ body {
   background-color: #f2f2f2;
 }
 .styleguide-swatches ol.tan .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: #8f864f;
 }
 .styleguide-swatches ol.tan .dark {
@@ -602,7 +602,7 @@ body {
   background-color: #e3e0ce;
 }
 .styleguide-swatches ol.grey .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: #8f864f;
 }
 .styleguide-swatches ol.grey .dark {
@@ -654,7 +654,7 @@ body {
   background-color: #e3e0ce;
 }
 .styleguide-swatches ol.purple .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: black;
 }
 .styleguide-swatches ol.purple .dark {
@@ -706,7 +706,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.orange .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: black;
 }
 .styleguide-swatches ol.orange .dark {
@@ -758,7 +758,7 @@ body {
   background-color: black;
 }
 .styleguide-swatches ol.red .title {
-  background-color: #f5f4ee;
+  background-color: white;
   color: black;
 }
 .styleguide-swatches ol.red .dark {
@@ -822,7 +822,7 @@ body {
   position: relative;
   padding: 1em;
   text-align: center;
-  color: #f5f4ee;
+  color: white;
 }
 @media (max-width: 34.9375em) {
   .styleguide-swatches li.dark, .styleguide-swatches li.main, .styleguide-swatches li.light, .styleguide-swatches li.highlight {
@@ -957,7 +957,7 @@ body {
 }
 .styleguide-typography .typeface {
   overflow: hidden;
-  background: #f5f4ee;
+  background: white;
   padding: 1em;
 }
 .styleguide-typography .typeface h3 {

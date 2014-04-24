@@ -43,5 +43,3 @@ title:  "Checkboxes and Radio Buttons"
 ### Radio Buttons
 {% include sample.html sample=r %}
 
-_@TODO: Can styles [using this technique](http://www.hongkiat.com/blog/css3-checkbox-radio/)
-like this be applied?_
