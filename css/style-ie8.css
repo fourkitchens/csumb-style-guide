@@ -631,8 +631,8 @@ textarea {
 
 #user-profile-form .password-strength-title,
 label {
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-size: 1em;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 1.3em;
   color: #8f864f;
 }
 
@@ -659,14 +659,16 @@ input[type="password"] {
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }
 
-.checkbox label {
+.checkbox label,
+.radio label {
   display: inline-block;
   cursor: pointer;
   position: relative;
   padding-left: 1.5em;
-  line-height: 1.2em;
+  line-height: 1em;
 }
-.checkbox label:before {
+.checkbox label:before,
+.radio label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -676,6 +678,9 @@ input[type="password"] {
   left: 0;
   bottom: 1px;
   background-color: #d8d4b8;
+}
+
+.checkbox label:before {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -694,23 +699,7 @@ input[type="password"] {
   line-height: 15px;
 }
 
-.radio label {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 1.5em;
-  line-height: 1em;
-}
 .radio label:before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 1em;
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  background-color: #d8d4b8;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -726,7 +715,7 @@ input[type="password"] {
   color: #014f2d;
   font-size: 30px;
   text-align: center;
-  line-height: 18px;
+  line-height: 16px;
 }
 
 .form-required {

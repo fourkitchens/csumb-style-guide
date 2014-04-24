@@ -55,15 +55,13 @@ textarea {
 
 %imitate-form-label,
 label {
-  font-family: $trade;
-  font-size: 1em;
+  font-family: $trade-reg;
+  font-size: 1.3em;
   color: wp-color($tan, main);
   input[type="radio"] + &,
   input[type="checkbox"] + & {
   }
 }
-
-
 
 input[type="text"],
 input[type="password"],
@@ -83,28 +81,32 @@ input[type="password"] {
   font-family: $verdana;
 }
 
-
-// Custom Styling for Radios and Checkboxes- 
+// Custom Styling for Radios and Checkboxes - using this method: http://www.hongkiat.com/blog/css3-checkbox-radio/
 
 // Checkboxes
-.checkbox {
+.checkbox, 
+.radio {
   label {
     display: inline-block;  
     cursor: pointer;  
     position: relative;  
     padding-left: 1.5em;
-    line-height: 1.2em;
+    line-height: 1em;
+    &:before {
+      content: "";  
+      display: inline-block;  
+      width: 16px;  
+      height: 16px;  
+      margin-right: 1em;  
+      position: absolute;  
+      left: 0;  
+      bottom: 1px;
+      background-color: wp-color($tan, 'main', 35%);
+    }
   }
+}
+.checkbox {
   label:before {
-    content: "";  
-    display: inline-block;  
-    width: 16px;  
-    height: 16px;  
-    margin-right: 1em;  
-    position: absolute;  
-    left: 0;  
-    bottom: 1px;
-    background-color: wp-color($tan, 'main', 35%);
     @include border-radius(4px); 
     @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
@@ -121,23 +123,7 @@ input[type="password"] {
 }
 // Radios
 .radio {
-  label {
-    display: inline-block;  
-    cursor: pointer;  
-    position: relative;  
-    padding-left: 1.5em; 
-    line-height: 1em;
-  }
   label:before {
-    content: "";  
-    display: inline-block;  
-    width: 16px;  
-    height: 16px;  
-    margin-right: 1em;  
-    position: absolute;  
-    left: 0;  
-    bottom: 1px;
-    background-color: wp-color($tan, 'main', 35%);
     @include border-radius(8px); 
     @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
@@ -148,7 +134,7 @@ input[type="password"] {
       color: wp-color($green, 'main', -14%);  
       font-size: 30px;  
       text-align: center;  
-      line-height: 18px;
+      line-height: 16px;
     }
   }
 }
