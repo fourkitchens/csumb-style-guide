@@ -488,7 +488,7 @@ body {
       text-align: center;
       $white-space: nowrap;
       overflow: hidden;
-      color: color($grey, 'bright');
+      color: color($tan, 'bright');
     }
 
     @include respond-to('sg typeplate small') {

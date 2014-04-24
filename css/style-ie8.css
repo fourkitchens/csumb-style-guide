@@ -436,7 +436,7 @@ body {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #39351b;
   background-color: white;
 }
@@ -468,22 +468,26 @@ h3 {
 
 h4 {
   font-size: 1.2em;
+  color: #39351b;
 }
 
 a:link {
   color: #1f346b;
 }
 a:visited {
-  color: #8f864f;
+  color: #1f346b;
 }
 a:visited:hover, a:visited:focus {
-  color: #39351b;
+  color: #001e54;
 }
 a:hover, a:focus {
   color: #001e54;
 }
 a:active {
-  color: #d7be25;
+  color: #001e54;
+}
+a.link-bold {
+  font-weight: 700;
 }
 
 ul.inline, ol.inline {
@@ -519,14 +523,14 @@ em {
 }
 
 ::-moz-selection {
-  background: white;
-  color: white;
+  background: #ffe85c;
+  color: #39351b;
   text-shadow: none;
 }
 
 ::selection {
-  background: white;
-  color: white;
+  background: #ffe85c;
+  color: #39351b;
   text-shadow: none;
 }
 
@@ -593,7 +597,6 @@ fieldset {
 fieldset > legend {
   padding: 0 1em;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-weight: 600;
   color: #8f864f;
 }
 
@@ -603,7 +606,7 @@ select,
 textarea {
   max-width: 100%;
   font-family: "Merriweather", Georgia, serif;
-  padding: 0.375em;
+  padding: 0.55em;
   outline: 0;
   background-color: #f5f4ee;
   -moz-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
@@ -615,11 +618,11 @@ input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-  border-color: black;
-  background-color: #ffffff;
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-color: #03c772;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
 }
 
 textarea {
@@ -628,9 +631,8 @@ textarea {
 
 #user-profile-form .password-strength-title,
 label {
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-size: 1em;
-  font-weight: bolder;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 1.3em;
   color: #8f864f;
 }
 
@@ -646,11 +648,74 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #39351b;
+  border-color: #03c772;
+  background-color: #fff;
+  -moz-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
 }
 
 input[type="password"] {
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+.checkbox label,
+.radio label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.5em;
+  line-height: 1em;
+}
+.checkbox label:before,
+.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 1em;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #d8d4b8;
+}
+
+.checkbox label:before {
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+  box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+}
+.checkbox input[type=checkbox] {
+  display: none;
+}
+.checkbox input[type=checkbox]:checked + label:before {
+  content: "\2713";
+  color: #014f2d;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.radio label:before {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -moz-box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+  -webkit-box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+  box-shadow: 0 1px 1px rgba(109, 101, 52, 0.8) inset;
+}
+.radio input[type="radio"] {
+  display: none;
+}
+.radio input[type="radio"]:checked + label:before {
+  content: "\2022";
+  color: #014f2d;
+  font-size: 30px;
+  text-align: center;
+  line-height: 16px;
 }
 
 .form-required {

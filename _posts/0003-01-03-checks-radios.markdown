@@ -4,35 +4,35 @@ title:  "Checkboxes and Radio Buttons"
 ---
 
 {% capture c %}
-<form action="#">
+<form action="#" class="checkbox">
   <div>
-    <input type="checkbox" name="checkboxes[a]" value="a">
-    <label>Nisl elementum mi</label>
+    <input type="checkbox" name="checkboxes[a]" value="a" id="radio-a">
+    <label for="radio-a">Nisl elementum mi</label>
   </div>
   <div>
-    <input type="checkbox" name="checkboxes[b]" value="b" checked="checked">
-    <label>Nisl elementum mi</label>
+    <input type="checkbox" name="checkboxes[b]" value="b" checked="checked" id="radio-b">
+    <label for="radio-b">Nisl elementum mi</label>
   </div>
   <div>
-    <input type="checkbox" name="checkboxes[c]" value="c">
-    <label>Nisl elementum mi</label>
+    <input type="checkbox" name="checkboxes[c]" value="c" id="radio-c">
+    <label for="radio-c">Nisl elementum mi</label>
   </div>
 </form>
 {% endcapture %}
 
 {% capture r %}
-<form action="#">
+<form action="#" class="radio">
   <div>
-    <input type="radio" name="radios" value="a">
-    <label>Nisl elementum mi</label>
+    <input type="radio" name="radios" value="d" id="radio-d">
+    <label for="radio-d">Nisl elementum mi</label>
   </div>
   <div>
-    <input type="radio" name="radios" value="b" checked="checked">
-    <label>Nisl elementum mi</label>
+    <input type="radio" name="radios" value="e" checked="checked" id="radio-e">
+    <label for="radio-e">Nisl elementum mi</label>
   </div>
   <div>
-    <input type="radio" name="radios" value="c">
-    <label>Nisl elementum mi</label>
+    <input type="radio" name="radios" value="f" id="radio-f">
+    <label for="radio-f">Nisl elementum mi</label>
   </div>
 </form>
 {% endcapture %}

@@ -8,7 +8,7 @@ $max-width:   1280px;
 // Font faces, stacks and sizes.
 
 $base-font-size:   16px;
-$base-line-height: 1.5;
+$base-line-height: 1.8;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -158,9 +158,9 @@ $social-colors:(
 
 // Base color variables.
 $link           : color($blue);
-$visited        : color($tan);
-$selection-bg   : color($yellow, 'bright');
-$selection      : $white;
+$visited        : color($blue);
+$selection-bg   : color($yellow);
+$selection      : color($tan, dark);
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 2em;
