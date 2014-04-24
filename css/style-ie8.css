@@ -620,9 +620,9 @@ select:focus,
 textarea:focus {
   border-color: #03c772;
   background-color: #fff;
-  -moz-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
-  -webkit-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
-  box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  -moz-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
 }
 
 textarea {
@@ -650,24 +650,20 @@ textarea:focus,
 select:focus {
   border-color: #03c772;
   background-color: #fff;
-  -moz-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
-  -webkit-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
-  box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  -moz-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
 }
 
 input[type="password"] {
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
-
-#component-checks-radios label {
-  position: relative;
+.checkbox label {
   padding-left: 1.5em;
+  position: relative;
 }
-#component-checks-radios label:before {
+.checkbox label:before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -676,17 +672,46 @@ input[type="checkbox"] {
   position: absolute;
   left: 0;
   bottom: 1px;
-  background-color: #39351b;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #014f2d;
+}
+.checkbox input[type=checkbox] {
+  display: none;
+}
+.checkbox input[type=checkbox]:checked + label:before {
+  content: "\2713";
+  color: #c7f7e2;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+}
+
+.radio label {
+  position: relative;
+  padding-left: 1.5em;
+}
+.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: .75em;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #014f2d;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-#component-checks-radios input[type="radio"] {
+.radio input[type="radio"] {
   display: none;
 }
-#component-checks-radios input[type="radio"]:checked + label:before {
+.radio input[type="radio"]:checked + label:before {
   content: "\2022";
-  color: #1bc37a;
+  color: #c7f7e2;
   font-size: 30px;
   text-align: center;
   line-height: 18px;

@@ -45,7 +45,7 @@ textarea {
   &:focus {
     border-color: wp-color($green, 'main', 10%);
     background-color: #fff;
-    @include box-shadow(0 2px 5px rgba(wp-color($green, 'bright'), 0.8));
+    @include box-shadow(0 0 5px rgba(wp-color($green, 'bright'), 0.8));
   }
 }
 
@@ -74,7 +74,7 @@ select {
   &:focus {
     border-color: wp-color($green, 'main', 10%);
     background-color: #fff;
-    @include box-shadow(0 2px 5px rgba(wp-color($green, 'bright'), 0.8));
+    @include box-shadow(0 0 5px rgba(wp-color($green, 'bright'), 0.8));
   }
 }
 
@@ -83,11 +83,40 @@ input[type="password"] {
   font-family: $verdana;
 }
 
-input[type="checkbox"] {
-  display: none;
-}
 
-#component-checks-radios {
+// Custom Styling for Radios and Checkboxes- 
+
+// Checkboxes
+.checkbox {
+  label {
+    padding-left: 1.5em;
+    position: relative;
+  }
+  label:before {
+    content: "";  
+    display: inline-block;  
+    width: 16px;  
+    height: 16px;  
+    margin-right: .75em;  
+    position: absolute;  
+    left: 0;  
+    bottom: 1px;
+    @include border-radius(4px); 
+    background-color: wp-color($green, 'main', -14%);  
+  }
+  input[type=checkbox] {
+    display: none;
+    &:checked + label:before {
+      content: "\2713";  
+      color: wp-color($green, 'bright', 44%);  
+      font-size: 15px;  
+      text-align: center;  
+      line-height: 15px;  
+    }
+  }
+}
+// Radios
+.radio {
   label {
     position: relative;
     padding-left: 1.5em;
@@ -101,14 +130,14 @@ input[type="checkbox"] {
     position: absolute;  
     left: 0;  
     bottom: 1px;
-    background-color:wp-color($grey, 'dark');
+    background-color:wp-color($green, 'main', -14%);
     @include border-radius(8px);  
   }
   input[type="radio"] {
     display: none;
     &:checked + label:before {
       content: "\2022";  
-      color: wp-color($green, 'bright');  
+      color: wp-color($green, 'bright', 44%);  
       font-size: 30px;  
       text-align: center;  
       line-height: 18px;  
