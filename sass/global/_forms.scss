@@ -89,26 +89,30 @@ input[type="password"] {
 // Checkboxes
 .checkbox {
   label {
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
     padding-left: 1.5em;
-    position: relative;
+    line-height: 1.2em;
   }
   label:before {
     content: "";  
     display: inline-block;  
     width: 16px;  
     height: 16px;  
-    margin-right: .75em;  
+    margin-right: 1em;  
     position: absolute;  
     left: 0;  
     bottom: 1px;
+    background-color: wp-color($tan, 'main', 35%);
     @include border-radius(4px); 
-    background-color: wp-color($green, 'main', -14%);  
+    @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
   input[type=checkbox] {
     display: none;
     &:checked + label:before {
       content: "\2713";  
-      color: wp-color($green, 'bright', 44%);  
+      color: wp-color($green, 'main', -14%); 
       font-size: 15px;  
       text-align: center;  
       line-height: 15px;  
@@ -118,29 +122,33 @@ input[type="password"] {
 // Radios
 .radio {
   label {
-    position: relative;
-    padding-left: 1.5em;
+    display: inline-block;  
+    cursor: pointer;  
+    position: relative;  
+    padding-left: 1.5em; 
+    line-height: 1em;
   }
   label:before {
     content: "";  
     display: inline-block;  
     width: 16px;  
     height: 16px;  
-    margin-right: .75em;  
+    margin-right: 1em;  
     position: absolute;  
     left: 0;  
     bottom: 1px;
-    background-color:wp-color($green, 'main', -14%);
-    @include border-radius(8px);  
+    background-color: wp-color($tan, 'main', 35%);
+    @include border-radius(8px); 
+    @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
   input[type="radio"] {
     display: none;
     &:checked + label:before {
       content: "\2022";  
-      color: wp-color($green, 'bright', 44%);  
+      color: wp-color($green, 'main', -14%);  
       font-size: 30px;  
       text-align: center;  
-      line-height: 18px;  
+      line-height: 18px;
     }
   }
 }
