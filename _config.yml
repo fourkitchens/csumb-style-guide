@@ -1,4 +1,4 @@
-name: World Pulse Style Guide
+name: CSUMB Style Guide
 markdown: redcarpet
 redcarpet:
   extensions: ["tables"]
