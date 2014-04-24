@@ -855,12 +855,12 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  padding: 0.75em;
+  padding: 0.5em;
   margin-bottom: 0.5em;
 }
 .messages.status {
-  border-color: white;
-  background-color: #029555;
+  border-color: #019736;
+  background-color: #02c948;
   color: white;
   text-shadow: 1px 1px 0 rgba(242, 242, 242, 0.5);
 }
@@ -868,18 +868,17 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   color: #f5f4ee;
 }
 .messages.warning {
-  border-color: #ffe85c;
-  background-color: #ffe64f;
-  color: #807116;
-  text-shadow: 1px 1px 0 rgba(255, 228, 67, 0.5);
+  border-color: #a19902;
+  background-color: #d4c902;
+  color: #262626;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }
 .messages.warning a, .messages.warning a:visited {
-  color: #544b0f;
-  font-weight: bolder;
+  color: #f5f4ee;
 }
 .messages.error {
-  border-color: #e0c418;
-  background-color: #b29c13;
+  border-color: #b5010d, -10%;
+  background-color: #b5010d;
   color: #262626;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
 }

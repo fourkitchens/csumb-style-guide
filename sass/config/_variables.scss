@@ -102,6 +102,13 @@ $grey:  (
   highlight: #eceade
 );
 
+/// Status Message colors
+$status: (
+  success:   #02c948,
+  warning:   #d4c902, 
+  error:     #b5010d      
+);
+
 ///Need to remove these colors, once all instances are removed from Sass files
 
 $red:  (
