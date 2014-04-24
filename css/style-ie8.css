@@ -597,7 +597,6 @@ fieldset {
 fieldset > legend {
   padding: 0 1em;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-weight: 600;
   color: #8f864f;
 }
 
@@ -607,7 +606,7 @@ select,
 textarea {
   max-width: 100%;
   font-family: "Merriweather", Georgia, serif;
-  padding: 0.375em;
+  padding: 0.55em;
   outline: 0;
   background-color: #f5f4ee;
   -moz-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
@@ -619,11 +618,11 @@ input:focus,
 button:focus,
 select:focus,
 textarea:focus {
-  border-color: black;
-  background-color: #ffffff;
-  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-color: #03c772;
+  background-color: #fff;
+  -moz-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
 }
 
 textarea {
@@ -634,7 +633,6 @@ textarea {
 label {
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-size: 1em;
-  font-weight: bolder;
   color: #8f864f;
 }
 
@@ -650,11 +648,48 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #39351b;
+  border-color: #03c772;
+  background-color: #fff;
+  -moz-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  -webkit-box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
+  box-shadow: 0 2px 5px rgba(27, 195, 122, 0.8);
 }
 
 input[type="password"] {
   font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+#component-checks-radios label {
+  position: relative;
+  padding-left: 1.5em;
+}
+#component-checks-radios label:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: .75em;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  background-color: #39351b;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+#component-checks-radios input[type="radio"] {
+  display: none;
+}
+#component-checks-radios input[type="radio"]:checked + label:before {
+  content: "\2022";
+  color: #1bc37a;
+  font-size: 30px;
+  text-align: center;
+  line-height: 18px;
 }
 
 .form-required {
