@@ -1341,10 +1341,9 @@ input.action-delete:focus {
  * The design for the header.
  */
 #header {
-  background-color: #cfc9a8;
+  background-color: #001e54;
   color: #f5f4ee;
   padding: 0;
-  background-image: url(../images/photos/header-students.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   width: 100%;
@@ -1359,6 +1358,7 @@ input.action-delete:focus {
 @media (min-width: 70em) {
   #header {
     min-height: 535px;
+    background-image: url(../images/photos/header-students.jpg);
   }
 }
 #header .top {
@@ -1397,12 +1397,12 @@ input.action-delete:focus {
   float: left;
 }
 #header .user-login {
-  width: 23.40426%;
+  width: 31.91489%;
   clear: right;
   float: left;
   margin-left: 0;
   margin-right: 2.12766%;
-  padding: 0;
+  padding-right: 1em;
   margin: 0;
   border-right: 1px solid #f5f4ee;
 }
@@ -1412,8 +1412,11 @@ input.action-delete:focus {
   margin-right: 0;
   margin-left: 2.12766%;
 }
+#header .user-login button {
+  float: right;
+}
 #header .block-search {
-  width: 74.46809%;
+  width: 65.95745%;
   clear: right;
   float: right;
   margin-right: 0;
@@ -1854,7 +1857,7 @@ a.icon-reply:hover {
  */
 #footer {
   color: #dddac7;
-  background-color: #aba166;
+  background-color: #8f864f;
   width: 100%;
   float: right;
   margin-left: 0;

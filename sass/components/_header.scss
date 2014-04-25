@@ -5,15 +5,15 @@
 
 #header {
   @include add-grid(12); // Add a 12 grid here to lay things out.
-  background-color: color($tan, 'main', 30%);
+  background-color: color($blue, 'dark');
   color: $white;
   padding: 0;
-  background-image:url(../images/photos/header-students.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   @include grid-span(12,1);
   @include respond-to("journal meta large") {
     min-height: 535px;
+    background-image:url(../images/photos/header-students.jpg);
   } 
   .top {
     @include grid-span(12,1);
@@ -29,13 +29,16 @@
     }
   }
   .user-login {
-    @include grid-span(3,1, $output-style:'float');
-    padding: 0;
+    @include grid-span(4,1, $output-style:'float');
+    padding-right: 1em;
     margin: 0;
     border-right:1px solid $white;
+    button {
+      float: right;
+    }
   }
   .block-search {
-    @include grid-span(9,4, $output-style:'float');
+    @include grid-span(8,5, $output-style:'float');
     padding-left: 1em;
     input {
       @include border-radius(6px);

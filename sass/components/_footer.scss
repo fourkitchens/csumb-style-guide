@@ -4,7 +4,7 @@
  */
 #footer {
   color: wp-color($grey, bright);
-  background-color: wp-color($tan, 'main', 10%);
+  background-color: wp-color($tan, 'main');
   @include add-grid(12);
   @include grid-span(12,1);
   padding: 1em;
