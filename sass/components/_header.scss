@@ -4,8 +4,82 @@
  */
 
 #header {
-  background-color: color($blue, dark);
-  border-bottom: 1px solid color($blue, dark, -5%);
-  @include box-shadow(1px 0 5px rgba(0,0,0,0.2));
+  @include add-grid(12); // Add a 12 grid here to lay things out.
+  background-color: color($tan, 'main', 30%);
   color: $white;
+  padding: 0;
+  background-image:url(../images/photos/header-students.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  @include grid-span(12,1);
+  @include respond-to("journal meta large") {
+    min-height: 535px;
+  } 
+  .top {
+    @include grid-span(12,1);
+    padding: 1.5em 1.5em 0;
+
+    .logo {
+      @include grid-span(7,1);
+    }
+    .actions {
+      padding: .5em 0 0;
+      @include grid-span(5,8);
+      font-family: $trade-reg;
+    }
+  }
+  .user-login {
+    @include grid-span(3,1, $output-style:'float');
+    padding: 0;
+    margin: 0;
+    border-right:1px solid $white;
+  }
+  .block-search {
+    @include grid-span(9,4, $output-style:'float');
+    padding-left: 1em;
+    input {
+      @include border-radius(6px);
+      width: 100%;
+      margin-top: 0.3em;
+    }
+  }
+  nav {
+    @include grid-span(12,1); 
+    @include respond-to("journal meta large") {
+      margin-top: 20em;
+    } 
+  }
+  .main-menu {
+    background-color: rgba($white, 0.8);
+    padding: 1.2em;
+    @include grid-span(12,1);
+    margin: 0 0 1.5em;
+    @extend %clearfix;
+
+    li {
+      float: left;
+      display: inline;
+      list-style: none;
+      font-family: $trade-bold;
+      letter-spacing: .05em;
+      font-size: 1em;
+      text-transform: uppercase;
+      a {
+        color: wp-color($blue, 'dark');
+        text-decoration: none;
+        padding: .6em 1.2em;
+        @include border-radius(4px);
+        margin-right: 1.2em; 
+        display: block;
+        &:hover {
+          color: darken($white, 15%);
+          background-color: wp-color($blue, 'main', 15%);
+        }
+        &.active{
+          background-color: wp-color($blue, 'dark');
+          color: $white;
+        }
+      }
+    }
+  }
 }

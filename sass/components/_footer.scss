@@ -2,10 +2,60 @@
  * @file _footer.scss
  * The design for the footer partials.
  */
-
 #footer {
-  border-top: 1px solid wp-color($grey, dark);
-  padding-top: .5em;
   color: wp-color($grey, bright);
+  background-color: wp-color($tan, 'main', 10%);
+  @include add-grid(12);
+  @include grid-span(12,1);
+  padding: 1em;
+  position: relative;
+  @extend %clearfix;
+  ul {
+    li {
+      list-style: none;
+    }
+  }
 }
-
+.menu {
+  font-family: $trade-bold;
+  @include grid-span(8,1);
+  padding:0;
+  margin: 0;
+  .column{
+    @include grid-span(4,1, $output-style:'float', $gutter:0);
+  }
+  li {
+    margin: 0 0 .275em;
+    a {
+      color: wp-color($tan, 'dark');
+      text-decoration: none;
+    }
+    a:hover {
+      color: wp-color($tan, 'dark', 10%);
+    }
+  }
+} 
+.donate {
+  font-family: $trade-reg;
+  @include grid-span(4,9);
+  padding: 0;
+  button {
+    @include grid-span(12,1);
+  }
+  .links {
+    @include grid-span(12,1);
+    padding: 0;
+    margin: 0;
+    li {
+      text-align: right;
+      @include grid-span(6,1, $output-style:'float', $gutter:0);
+    }    
+    a {
+      color: wp-color($tan, 'dark');
+      text-decoration: none;
+    }
+    a:hover {
+      color: wp-color($tan, 'dark', 10%);
+    }
+  }
+}

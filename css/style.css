@@ -419,6 +419,9 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
+#header .main-menu:after,
+#main:after,
+#footer:after,
 #user-profile-form .password-strength:after {
   content: "";
   display: table;
@@ -603,6 +606,7 @@ textarea {
   padding: 0.55em;
   outline: 0;
   background-color: #f5f4ee;
+  color: #8f864f;
   -webkit-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
   transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
 }
@@ -612,6 +616,7 @@ select:focus,
 textarea:focus {
   border-color: #03c772;
   background-color: #fff;
+  color: #39351b;
   -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
   box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
 }
@@ -1336,10 +1341,145 @@ input.action-delete:focus {
  * The design for the header.
  */
 #header {
+  background-color: #cfc9a8;
+  color: #f5f4ee;
+  padding: 0;
+  background-image: url(../images/photos/header-students.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header {
+  float: left;
+}
+@media (min-width: 70em) {
+  #header {
+    min-height: 535px;
+  }
+}
+#header .top {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 1.5em 1.5em 0;
+}
+[dir="rtl"] #header .top {
+  float: left;
+}
+#header .top .logo {
+  width: 57.44681%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header .top .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header .top .actions {
+  padding: .5em 0 0;
+  width: 40.42553%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+[dir="rtl"] #header .top .actions {
+  float: left;
+}
+#header .user-login {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  padding: 0;
+  margin: 0;
+  border-right: 1px solid #f5f4ee;
+}
+[dir="rtl"] #header .user-login {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+#header .block-search {
+  width: 74.46809%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  padding-left: 1em;
+}
+[dir="rtl"] #header .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header .block-search input {
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 0.3em;
+}
+#header nav {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header nav {
+  float: left;
+}
+@media (min-width: 70em) {
+  #header nav {
+    margin-top: 20em;
+  }
+}
+#header .main-menu {
+  background-color: rgba(245, 244, 238, 0.8);
+  padding: 1.2em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin: 0 0 1.5em;
+}
+[dir="rtl"] #header .main-menu {
+  float: left;
+}
+#header .main-menu li {
+  float: left;
+  display: inline;
+  list-style: none;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  letter-spacing: .05em;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+#header .main-menu li a {
+  color: #001e54;
+  text-decoration: none;
+  padding: .6em 1.2em;
+  border-radius: 4px;
+  margin-right: 1.2em;
+  display: block;
+}
+#header .main-menu li a:hover {
+  color: #d9d5be;
+  background-color: #3051a6;
+}
+#header .main-menu li a.active {
   background-color: #001e54;
-  border-bottom: 1px solid #00153a;
-  -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   color: #f5f4ee;
 }
 
@@ -1447,10 +1587,17 @@ input.action-delete:focus {
  */
 #main {
   background-color: #eceade;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #main {
+  float: left;
 }
 #main .main-container {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
 }
 
 /**
@@ -1706,9 +1853,112 @@ a.icon-reply:hover {
  * The design for the footer partials.
  */
 #footer {
-  border-top: 1px solid #39351b;
-  padding-top: .5em;
   color: #dddac7;
+  background-color: #aba166;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 1em;
+  position: relative;
+}
+[dir="rtl"] #footer {
+  float: left;
+}
+#footer ul li {
+  list-style: none;
+}
+
+.menu {
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  width: 65.95745%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  padding: 0;
+  margin: 0;
+}
+[dir="rtl"] .menu {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+.menu .column {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 0%;
+}
+[dir="rtl"] .menu .column {
+  clear: left;
+  float: right;
+}
+.menu li {
+  margin: 0 0 .275em;
+}
+.menu li a {
+  color: #39351b;
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: #5c552b;
+}
+
+.donate {
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  width: 31.91489%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 0;
+}
+[dir="rtl"] .donate {
+  float: left;
+}
+.donate button {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .donate button {
+  float: left;
+}
+.donate .links {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 0;
+  margin: 0;
+}
+[dir="rtl"] .donate .links {
+  float: left;
+}
+.donate .links li {
+  text-align: right;
+  width: 50%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 0%;
+}
+[dir="rtl"] .donate .links li {
+  clear: left;
+  float: right;
+}
+.donate .links a {
+  color: #39351b;
+  text-decoration: none;
+}
+.donate .links a:hover {
+  color: #5c552b;
 }
 
 /**
