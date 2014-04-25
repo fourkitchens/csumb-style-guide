@@ -1367,7 +1367,7 @@ input.action-delete:focus {
   float: left;
 }
 #header .main-menu {
-  background-color: rgba(245, 244, 238, 0.8);
+  background-color: rgba(245, 244, 238, 0.75);
   padding: 1.2em;
   width: 100%;
   float: right;
@@ -1693,7 +1693,7 @@ a.icon-reply:hover {
  */
 #footer {
   color: #dddac7;
-  background-color: #8f864f;
+  background-color: #cac5a7;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1739,11 +1739,11 @@ a.icon-reply:hover {
   margin: 0 0 .275em;
 }
 .menu li a {
-  color: #39351b;
+  color: #001e54;
   text-decoration: none;
 }
 .menu li a:hover {
-  color: #5c552b;
+  color: #003087;
 }
 
 .donate {
@@ -1793,11 +1793,11 @@ a.icon-reply:hover {
   float: right;
 }
 .donate .links a {
-  color: #39351b;
+  color: #001e54;
   text-decoration: none;
 }
 .donate .links a:hover {
-  color: #5c552b;
+  color: #003087;
 }
 
 /**

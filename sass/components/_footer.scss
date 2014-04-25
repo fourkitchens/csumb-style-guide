@@ -2,9 +2,10 @@
  * @file _footer.scss
  * The design for the footer partials.
  */
+
 #footer {
   color: wp-color($grey, bright);
-  background-color: wp-color($tan, 'main');
+  background-color: wp-color($tan, 'bright', -10%);
   @include add-grid(12);
   @include grid-span(12,1);
   padding: 1em;
@@ -27,11 +28,11 @@
   li {
     margin: 0 0 .275em;
     a {
-      color: wp-color($tan, 'dark');
+      color: wp-color($blue, 'dark');
       text-decoration: none;
     }
     a:hover {
-      color: wp-color($tan, 'dark', 10%);
+      color: wp-color($blue, 'dark', 10%);
     }
   }
 } 
@@ -51,11 +52,11 @@
       @include grid-span(6,1, $output-style:'float', $gutter:0);
     }    
     a {
-      color: wp-color($tan, 'dark');
+      color: wp-color($blue, 'dark');
       text-decoration: none;
     }
     a:hover {
-      color: wp-color($tan, 'dark', 10%);
+      color: wp-color($blue, 'dark', 10%);
     }
   }
 }
