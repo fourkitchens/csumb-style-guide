@@ -11,8 +11,7 @@ ul.pager {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
-
-  font-size: 0.875em;
+  font-size: 1em;
 }
 
 ul.primary, ul.pager {
@@ -25,19 +24,18 @@ ul.primary, ul.pager {
   margin-top: 1em;
   margin-bottom: 1em;
   white-space: nowrap;
-
+  font-family: $trade-reg;
 
   li {
     display: block;
     float: left;
-
-    font-size: 0.875em;
+    font-size: 1em;
     @include respond-to('pager tiny') { font-size: 0.75em; }
     @include respond-to('pager full') { font-size: 0.925em; }
 
     &:first-child, &.first {
       a {
-        border-left-color: wp-color($grey, 'highlight', -5%);
+        border-left-color: wp-color($grey, 'bright', -18%);
         @include border-radius(2px 0 0 2px);
       }
     }
@@ -51,23 +49,23 @@ ul.primary, ul.pager {
     a, &.pager-ellipsis, &.pager-current {
       display: block;
       @include transition(border 0.2s ease-out, background 0.2s ease-out);
-
-      color: wp-color($grey);
-      background-color: wp-color($grey, 'highlight', 2.5%);
-      border: 1px solid wp-color($grey, 'highlight', -5%);
-      border-bottom-width: 2px;
-      border-left-color: wp-color($grey, 'highlight', 5%);
-
-
-      padding: 0.5em 1em;
+      color: wp-color($blue);
+      border-right: 1px solid wp-color($grey, 'bright', -18%);
+      border-left-width: 1px;
+      padding: 1em 2em;
       text-decoration: none;
+      background-color: wp-color($grey);
+      @include background-image(linear-gradient(
+        wp-color($grey, 'bright') 32%,
+        wp-color($grey, 'bright', -5%)
+      ));
     }
 
     &.pager-previous a {
       // At the smallest breakpoint, pager-previous is the "first" visible
       // link, so we need to copy in styles from li:first-child a defined above
       @include respond-to('pager tiny') {
-        border-left-color: wp-color($grey, 'highlight', -5%);
+        border-left-color: wp-color($grey, 'bright', -18%);
         @include border-radius(2px 0 0 2px);
       }
     }
@@ -75,7 +73,6 @@ ul.primary, ul.pager {
     &.pager-item a, &.pager-ellipsis {
       padding-left: 0.625em;
       padding-right: 0.625em;
-
       display: none;
       @include respond-to('pager mini') {}
       @include respond-to('pager limited') { display: block; }
@@ -95,16 +92,20 @@ ul.primary, ul.pager {
     }
 
     a:hover {
-      background-color: wp-color($grey, 'highlight', 5%);
-      border-bottom-color: wp-color($purple, 'highlight');
+      background-color: wp-color($grey, 'bright', 5%);
+      @include background-image(linear-gradient(
+        wp-color($grey, 'highlight', -2%) 32%,
+        wp-color($grey, 'highlight', -10%)
+      ));
     }
 
     &.active a, &.pager-current {
-      font-weight: 600;
-      color: wp-color($purple);
-      background-color: wp-color($grey, 'highlight', 5%);
-      border-color: wp-color($grey, 'bright', 5%);
-      border-bottom-color: wp-color($purple, 'bright');
+      font-family: $trade-bold; // make active items bold
+      @include box-shadow(1px 1px 6px rgba(wp-color($tan,'dark'), 0.6) inset);
+      @include background-image(none);
+      background-color: wp-color($grey, 'bright', 10%);
+      border-color: wp-color($grey, 'bright', -10%);
+      color: wp-color($blue, 'dark', 15%);
     }
   }
 }
