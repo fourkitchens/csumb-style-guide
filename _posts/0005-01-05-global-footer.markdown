@@ -19,10 +19,14 @@ title:  "Global Header & Footer"
   </div>
   <nav>
     <ul class="main-menu">
-      <li><a href="#" title="Item 1">Menu Item</a></li>
-      <li><a href="#" title="Item 2" class="active">Menu Item</a></li>
-      <li><a href="#" title="Item 3">Menu Item</a></li>
-      <li><a href="#" title="Item 4">Menu Item</a></li>
+      <li><a href="#" title="Item 1">About</a></li>
+      <li><a href="#" title="Item 2" class="active">Admissions</a></li>
+      <li><a href="#" title="Item 3">Costs &amp; Aid </a></li>
+      <li><a href="#" title="Item 4">Academics</a></li>
+      <li><a href="#" title="Item 4">Campus Life</a></li>
+      <li><a href="#" title="Item 4">Doing What Matters</a></li>
+      <li><a href="#" title="Item 4">Employee Resources</a></li>
+      <li><a href="#" title="Item 4">Alumni</a></li>
     </ul>
   </nav>
 </header>

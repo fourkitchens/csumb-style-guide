@@ -6,6 +6,11 @@ layout: default
 {% assign my_id = page.id %}
 
 <div class="styleguide-content">
+  <nav class="full-layout-nav">
+    <ul>
+      <li class="heading"><a href="header-footer-prototype.html">Title</a></li>
+    </ul>
+  </nav>
   <nav class="styleguide-nav"><ul>
     {% for post in site.posts reversed %}
       {% assign post_chapter = post.date | date: "%Y" | plus:0 %}
@@ -18,7 +23,6 @@ layout: default
       {% endif %}
     {% endfor %}
   </ul></nav>
-
   <div class="styleguide-index">
     <h1>{{ my_chapter }}. {{ page.title }}</h1>
 
