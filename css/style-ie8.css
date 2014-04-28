@@ -1046,6 +1046,16 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 
 /**
+ * Prototype for Student Dashboard.
+ */
+.notification {
+  border: 1px solid black;
+}
+.notification .got-it {
+  float: right;
+}
+
+/**
  * @file _button.scss
  *   All styles that have to do with buttons on the site.
  */
@@ -1411,7 +1421,7 @@ input.action-delete:focus {
 /**
  * Icons
  */
-.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply {
+.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply, .icon-cross {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -1427,15 +1437,15 @@ input.action-delete:focus {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply {
+.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply, .backgroundsize .icon-small.icon-cross {
   height: 24px;
   width: 24px;
   line-height: 24px;
 }
-.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply {
+.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply, .svg .icon-cross {
   background-size: 120%;
 }
-.show-tooltip.icon-abuse:after, .show-tooltip.icon-cc:after, .show-tooltip.icon-friends:after, .show-tooltip.icon-private:after, .show-tooltip.icon-public:after, .show-tooltip.icon-region:after, .show-tooltip.icon-tags:after, .show-tooltip.icon-edit:after, .show-tooltip.icon-delete:after, .show-tooltip.icon-reply:after {
+.show-tooltip.icon-abuse:after, .show-tooltip.icon-cc:after, .show-tooltip.icon-friends:after, .show-tooltip.icon-private:after, .show-tooltip.icon-public:after, .show-tooltip.icon-region:after, .show-tooltip.icon-tags:after, .show-tooltip.icon-edit:after, .show-tooltip.icon-delete:after, .show-tooltip.icon-reply:after, .show-tooltip.icon-cross:after {
   position: absolute;
   display: none;
   z-index: 1000;
@@ -1455,7 +1465,7 @@ input.action-delete:focus {
   padding: 0.5em 0.25em;
   background-color: #f5f4ee;
 }
-.show-tooltip.icon-abuse:focus:after, .show-tooltip.icon-cc:focus:after, .show-tooltip.icon-friends:focus:after, .show-tooltip.icon-private:focus:after, .show-tooltip.icon-public:focus:after, .show-tooltip.icon-region:focus:after, .show-tooltip.icon-tags:focus:after, .show-tooltip.icon-edit:focus:after, .show-tooltip.icon-delete:focus:after, .show-tooltip.icon-reply:focus:after, .show-tooltip.icon-abuse:hover:after, .show-tooltip.icon-cc:hover:after, .show-tooltip.icon-friends:hover:after, .show-tooltip.icon-private:hover:after, .show-tooltip.icon-public:hover:after, .show-tooltip.icon-region:hover:after, .show-tooltip.icon-tags:hover:after, .show-tooltip.icon-edit:hover:after, .show-tooltip.icon-delete:hover:after, .show-tooltip.icon-reply:hover:after {
+.show-tooltip.icon-abuse:focus:after, .show-tooltip.icon-cc:focus:after, .show-tooltip.icon-friends:focus:after, .show-tooltip.icon-private:focus:after, .show-tooltip.icon-public:focus:after, .show-tooltip.icon-region:focus:after, .show-tooltip.icon-tags:focus:after, .show-tooltip.icon-edit:focus:after, .show-tooltip.icon-delete:focus:after, .show-tooltip.icon-reply:focus:after, .show-tooltip.icon-cross:focus:after, .show-tooltip.icon-abuse:hover:after, .show-tooltip.icon-cc:hover:after, .show-tooltip.icon-friends:hover:after, .show-tooltip.icon-private:hover:after, .show-tooltip.icon-public:hover:after, .show-tooltip.icon-region:hover:after, .show-tooltip.icon-tags:hover:after, .show-tooltip.icon-edit:hover:after, .show-tooltip.icon-delete:hover:after, .show-tooltip.icon-reply:hover:after, .show-tooltip.icon-cross:hover:after {
   display: block;
 }
 
@@ -1572,6 +1582,20 @@ a.icon-reply:hover {
 }
 .svg a.icon-reply:hover {
   background-image: url('../images/icons/icon-reply-hover.svg');
+}
+
+.icon-cross {
+  background-image: url('../images/icons/icon-cross-32.png');
+}
+.svg .icon-cross {
+  background-image: url('../images/icons/icon-cross.svg');
+}
+
+a.icon-cross:hover {
+  background-image: url('../images/icons/icon-cross-32-hover.png');
+}
+.svg a.icon-cross:hover {
+  background-image: url('../images/icons/icon-cross-hover.svg');
 }
 
 /**

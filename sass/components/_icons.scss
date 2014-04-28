@@ -88,6 +88,7 @@ $icons: // All icons
   "edit"
   "delete"
   "reply"
+  "cross"
 ;
 
 $hovers: // Icons which have images for a hover-state. Although Compass throws
@@ -98,6 +99,7 @@ $hovers: // Icons which have images for a hover-state. Although Compass throws
   "edit"
   "delete"
   "reply"
+  "cross"
 ;
 
 @each $icon in $icons {
