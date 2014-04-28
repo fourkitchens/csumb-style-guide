@@ -6,11 +6,11 @@ title:  "Breadcrumbs"
 {% capture bc %}
 <h2 class="element-invisible">You are here</h2>
 <div class="breadcrumb">
-  <a href="#">Home</a> &raquo;
-  <a href="#">Administration</a> &raquo;
-  <a href="#">Configuration</a> &raquo;
-  <a href="#">Content authoring</a> &raquo;
-  <a href="#">Text formats</a>
+  <a href="#">Home</a> &#10095;
+  <a href="#">Administration</a> &#10095;
+  <a href="#">Configuration</a> &#10095;
+  <a href="#">Content authoring</a> &#10095;
+  <a href="#" class="active">Text formats</a>
 </div>
 {% endcapture %}
 
