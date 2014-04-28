@@ -21,7 +21,7 @@ body {
 
 #{headings()} {
   font-family: $trade;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.125;
 }
 
@@ -29,7 +29,6 @@ body {
 }
 
 #{headings(3,6)} {
-  //letter-spacing: 3px;
   text-transform: uppercase;
 }
 

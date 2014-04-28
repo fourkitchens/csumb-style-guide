@@ -58,7 +58,7 @@ $font-body:        $merriweather;
 $font-monospace:   $monospace;
 $form-font-family: $merriweather;
 
-$font-body-weight: 300; // Verlag is pulled down in 300 and 600 weights.
+$font-body-weight: 400;
 
 //
 // Colors, etc.
@@ -102,6 +102,13 @@ $grey:  (
   highlight: #eceade
 );
 
+/// Status Message colors
+$status: (
+  success:   #02c948,
+  warning:   #e8dc02, 
+  error:     #b5010d      
+);
+
 ///Need to remove these colors, once all instances are removed from Sass files
 
 $red:  (
@@ -126,8 +133,8 @@ $orange:  (
 );
 
 
-$white          : color($grey, 'highlight', 5%);
-$black          : color($grey, 'dark', -5%);
+$white          : #fff;
+$black          : #000;
 
 
 // Standard colors: for standard 4K and other brand colors.
