@@ -4,8 +4,10 @@
  */
 
 .prototype-grid {
-  @include add-grid(12); // Add a 12 grid here to lay things out.
   .wrapper {
+    @include add-grid(12); // Add a 12 grid here to lay things out.
+  }
+  .limiter {
     max-width: 68em;
     margin: 0 auto;
   }

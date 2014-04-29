@@ -4,21 +4,23 @@
  */
 
 #header {
-  @include add-grid(12); // Add a 12 grid here to lay things out.
-  background-color: color($blue, 'dark');
   color: $white;
   padding: 0;
-  background-repeat: no-repeat;
-  background-position: top center;
   @include grid-span(12,1);
-  @include respond-to("journal meta large") {
-    min-height: 535px;
-    background-image:url(../images/photos/header-students.jpg);
-  } 
+  .header-image {
+    width: 100%;
+    max-width: 1600px;
+    background-image: url(../images/photos/header-students.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 0 auto;
+    @extend %clearfix;
+  }
   .top {
     @include grid-span(12,1);
     padding: 1.5em 1.5em 0;
-
     .logo {
       @include grid-span(7,1);
     }
@@ -26,6 +28,9 @@
       padding: .5em 0 0;
       @include grid-span(5,8);
       font-family: $trade-reg;
+      @include respond-to("navigation second") {
+        display: none;
+      }
     }
   }
   .user-login {
@@ -46,43 +51,153 @@
       margin-top: 0.3em;
     }
   }
-  nav {
-    @include grid-span(12,1); 
-    @include respond-to("journal meta large") {
+  #pull { // responsive navigation trigger hamburger 
+    display: none;  
+    @include respond-to("navigation second") {
+      display: block;
+      background-color: color($blue, 'main');
+      width:20%;
+      position: relative;
+      float: left;
+      &:after {
+        content:"";
+        background: url('../images/icons/nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        left: 15px;
+        top: 10px;
+      }
+    }
+  }      
+  .navigation {   
+    @extend %clearfix;
+    @include respond-to("navigation full") {
       margin-top: 20em;
     } 
+    @include respond-to("navigation first") {
+      margin-top: 12em;
+    }
+    @include respond-to("navigation second") {
+      margin-top: 6em;
+    } 
+    width: 100%;
+    background-color: rgba($white, 0.75);
+    padding: 1em 0;
+    margin: 0 auto 1.5em;
+    float: left;
   }
   .main-menu {
-    background-color: rgba($white, 0.75);
-    padding: 1.2em;
+    @include respond-to("navigation second") {
+      display: none;
+      height: auto;
+    }
     @include grid-span(12,1);
-    margin: 0 0 1.5em;
-    @extend %clearfix;
-
     li {
       float: left;
       display: inline;
       list-style: none;
       font-family: $trade-bold;
-      letter-spacing: .05em;
-      font-size: 1em;
       text-transform: uppercase;
+      &.mobile {
+        display: none;
+        @include respond-to("navigation second") {
+          display: block;
+          width: 40%;
+          float: right;
+        }
+      }
       a {
         color: wp-color($blue, 'dark');
         text-decoration: none;
-        padding: .6em 1.2em;
+        letter-spacing: .05em;
+        font-size: 1em;
+        padding: .5em 1em;
         @include border-radius(4px);
-        margin-right: 1.2em; 
+        margin-right: .5em; 
         display: block;
+        @include respond-to("navigation first") {
+          padding: .3em .8em;
+          margin-right: 0;
+          font-size: .8em;
+        }
         &:hover {
           color: darken($white, 15%);
           background-color: wp-color($blue, 'main', 15%);
         }
-        &.active{
-          background-color: wp-color($blue, 'dark');
-          color: $white;
-        }
       }
     }
   }
+  // horizontal drop-down styles
+  .cbp-hrmenu {
+    width: 100%;
+    ul {
+      margin: 0;
+      padding: 0 1em;
+      list-style-type: none; 
+      li {        
+        &.cbp-hropen {
+          a {
+            color: $white;
+            background-color:color($blue, 'dark');
+            @include border-radius(0);
+            &:hover {
+              color: $white;
+              background-color:color($blue, 'dark');
+            }
+          }
+        } 
+      }
+    }
+    .cbp-hrsub {
+      display: none;
+      position: absolute;
+      background-color:color($blue, 'dark'); 
+      width: 100%;
+      left: 0;
+      ul {
+        li {
+          a {
+            color: $white;
+            background-color: none;
+            @include border-radius(4px);
+            text-transform: none;
+            &:hover {
+              color: darken($white, 10%);
+              background-color: color($blue, 'dark', -10%);
+            }
+          }              
+        }
+      }    
+    } 
+    .cbp-hrsub-inner {
+      width: 90%;
+      max-width: 70em;
+      margin: 0 auto;
+      padding: 0 1.875em;
+    }
+  }
+  .cbp-hrmenu > ul > li {
+    display: inline-block;
+  } 
+  .cbp-hrmenu > ul > li > a {
+    display: inline-block;
+  }
+
+  .cbp-hropen .cbp-hrsub {
+    display: block;
+    padding: 1em 0;
+  }
+
+  .cbp-hrmenu .cbp-hrsub-inner:before,
+  .cbp-hrmenu .cbp-hrsub-inner:after {
+    content: " ";
+    display: table;
+  }
+
+  .cbp-hrmenu .cbp-hrsub-inner:after {
+    clear: both;
+  }
 }
+

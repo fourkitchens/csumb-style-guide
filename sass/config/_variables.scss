@@ -226,3 +226,10 @@ $breakpoints: add-breakpoint('two col large', 800px);
 $breakpoints: add-breakpoint('comment indent', 1000px);
 $breakpoints: add-breakpoint('comment indent limited', 800px);
 $breakpoints: add-breakpoint('comment indent mobile', 400px 799px);
+
+// Specific to full page prototypes
+$breakpoints: add-breakpoint('navigation second', max-width 770px);
+$breakpoints: add-breakpoint('navigation first', max-width 1042px);
+$breakpoints: add-breakpoint('navigation full', min-width 1042px);
+
+$breakpoints: add-breakpoint('footer first', max-width 700px);

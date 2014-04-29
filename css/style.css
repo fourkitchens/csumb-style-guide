@@ -419,7 +419,8 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
-#header .main-menu:after,
+#header .header-image:after,
+#header .navigation:after,
 #main:after,
 #footer:after,
 #user-profile-form .password-strength:after {
@@ -1134,7 +1135,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
  * @file _prototype_layouts.scss
  * A full-width layout that doesn't factor in the left sidebar.
  */
-.prototype-grid .wrapper {
+.prototype-grid .limiter {
   max-width: 68em;
   margin: 0 auto;
 }
@@ -1387,11 +1388,8 @@ input.action-delete:focus {
  * The design for the header.
  */
 #header {
-  background-color: #001e54;
   color: white;
   padding: 0;
-  background-repeat: no-repeat;
-  background-position: top center;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1401,11 +1399,15 @@ input.action-delete:focus {
 [dir="rtl"] #header {
   float: left;
 }
-@media (min-width: 70em) {
-  #header {
-    min-height: 535px;
-    background-image: url(../images/photos/header-students.jpg);
-  }
+#header .header-image {
+  width: 100%;
+  max-width: 1600px;
+  background-image: url(../images/photos/header-students.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
 }
 #header .top {
   width: 100%;
@@ -1441,6 +1443,11 @@ input.action-delete:focus {
 }
 [dir="rtl"] #header .top .actions {
   float: left;
+}
+@media (max-width: 48.125em) {
+  #header .top .actions {
+    display: none;
+  }
 }
 #header .user-login {
   width: 31.91489%;
@@ -1478,30 +1485,62 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
-#header nav {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
+#header #pull {
+  display: none;
 }
-[dir="rtl"] #header nav {
+@media (max-width: 48.125em) {
+  #header #pull {
+    display: block;
+    background-color: #1f346b;
+    width: 20%;
+    position: relative;
+    float: left;
+  }
+  #header #pull:after {
+    content: "";
+    background: url("../images/icons/nav-icon.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 10px;
+  }
+}
+#header .navigation {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1em 0;
+  margin: 0 auto 1.5em;
   float: left;
 }
-@media (min-width: 70em) {
-  #header nav {
+@media (min-width: 65.125em) {
+  #header .navigation {
     margin-top: 20em;
   }
 }
+@media (max-width: 65.125em) {
+  #header .navigation {
+    margin-top: 12em;
+  }
+}
+@media (max-width: 48.125em) {
+  #header .navigation {
+    margin-top: 6em;
+  }
+}
 #header .main-menu {
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 1.2em;
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  margin: 0 0 1.5em;
+}
+@media (max-width: 48.125em) {
+  #header .main-menu {
+    display: none;
+    height: auto;
+  }
 }
 [dir="rtl"] #header .main-menu {
   float: left;
@@ -1511,25 +1550,96 @@ input.action-delete:focus {
   display: inline;
   list-style: none;
   font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  letter-spacing: .05em;
-  font-size: 1em;
   text-transform: uppercase;
+}
+#header .main-menu li.mobile {
+  display: none;
+}
+@media (max-width: 48.125em) {
+  #header .main-menu li.mobile {
+    display: block;
+    width: 40%;
+    float: right;
+  }
 }
 #header .main-menu li a {
   color: #001e54;
   text-decoration: none;
-  padding: .6em 1.2em;
+  letter-spacing: .05em;
+  font-size: 1em;
+  padding: .5em 1em;
   border-radius: 4px;
-  margin-right: 1.2em;
+  margin-right: .5em;
   display: block;
+}
+@media (max-width: 65.125em) {
+  #header .main-menu li a {
+    padding: .3em .8em;
+    margin-right: 0;
+    font-size: .8em;
+  }
 }
 #header .main-menu li a:hover {
   color: #d9d9d9;
   background-color: #3051a6;
 }
-#header .main-menu li a.active {
-  background-color: #001e54;
+#header .cbp-hrmenu {
+  width: 100%;
+}
+#header .cbp-hrmenu ul {
+  margin: 0;
+  padding: 0 1em;
+  list-style-type: none;
+}
+#header .cbp-hrmenu ul li.cbp-hropen a {
   color: white;
+  background-color: #001e54;
+  border-radius: 0;
+}
+#header .cbp-hrmenu ul li.cbp-hropen a:hover {
+  color: white;
+  background-color: #001e54;
+}
+#header .cbp-hrmenu .cbp-hrsub {
+  display: none;
+  position: absolute;
+  background-color: #001e54;
+  width: 100%;
+  left: 0;
+}
+#header .cbp-hrmenu .cbp-hrsub ul li a {
+  color: white;
+  background-color: none;
+  border-radius: 4px;
+  text-transform: none;
+}
+#header .cbp-hrmenu .cbp-hrsub ul li a:hover {
+  color: #e6e6e6;
+  background-color: #000c21;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner {
+  width: 90%;
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 1.875em;
+}
+#header .cbp-hrmenu > ul > li {
+  display: inline-block;
+}
+#header .cbp-hrmenu > ul > li > a {
+  display: inline-block;
+}
+#header .cbp-hropen .cbp-hrsub {
+  display: block;
+  padding: 1em 0;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner:before,
+#header .cbp-hrmenu .cbp-hrsub-inner:after {
+  content: " ";
+  display: table;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner:after {
+  clear: both;
 }
 
 /**
@@ -1934,16 +2044,69 @@ a.icon-reply:hover {
   margin-left: -100%;
   margin-right: 0;
 }
-.menu .column {
+.menu .item1,
+.menu .item2,
+.menu .item3 {
   width: 33.33333%;
   clear: right;
   float: left;
   margin-left: 0;
   margin-right: 0%;
 }
-[dir="rtl"] .menu .column {
+[dir="rtl"] .menu .item1, [dir="rtl"]
+.menu .item2, [dir="rtl"]
+.menu .item3 {
   clear: left;
   float: right;
+}
+.menu .item4,
+.menu .item5,
+.menu .item6 {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] .menu .item4, [dir="rtl"]
+.menu .item5, [dir="rtl"]
+.menu .item6 {
+  clear: left;
+  float: right;
+  margin-left: 0%;
+}
+.menu .item7,
+.menu .item8,
+.menu .item9 {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] .menu .item7, [dir="rtl"]
+.menu .item8, [dir="rtl"]
+.menu .item9 {
+  clear: left;
+  float: right;
+  margin-left: 0%;
+}
+@media (max-width: 43.75em) {
+  .menu .item1,
+  .menu .item2,
+  .menu .item3,
+  .menu .item4,
+  .menu .item5 {
+    width: 50%;
+    float: left;
+  }
+}
+@media (max-width: 43.75em) {
+  .menu .item6,
+  .menu .item7,
+  .menu .item8,
+  .menu .item9 {
+    width: 50%;
+    float: left;
+  }
 }
 .menu li {
   margin: 0 0 .275em;

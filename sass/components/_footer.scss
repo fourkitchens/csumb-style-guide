@@ -22,8 +22,39 @@
   @include grid-span(8,1);
   padding:0;
   margin: 0;
-  .column{
+  .item1,
+  .item2,
+  .item3 {
     @include grid-span(4,1, $output-style:'float', $gutter:0);
+  }
+  .item4,
+  .item5,
+  .item6 {
+    @include grid-span(4,5, $output-style:'float', $gutter:0);
+  }
+  .item7,
+  .item8,
+  .item9 {
+    @include grid-span(4,10, $output-style:'float', $gutter:0);
+  }
+  .item1,
+  .item2,
+  .item3,
+  .item4,
+  .item5 {
+    @include respond-to("footer first") {
+      width: 50%;
+      float: left;
+    }
+  }
+  .item6,
+  .item7,
+  .item8,
+  .item9 {
+    @include respond-to("footer first") {
+      width: 50%;
+      float: left;
+    }
   }
   li {
     margin: 0 0 .275em;
