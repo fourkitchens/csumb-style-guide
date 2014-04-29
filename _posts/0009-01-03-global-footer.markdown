@@ -1,10 +1,10 @@
 ---
-layout: component
+layout: prototype
 title:  "Global Header & Footer"
 ---
 <header id="header">
   <div class="top">
-    <a class="logo" href="#" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-white.png" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
+    <a class="logo" href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-white.png" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
     <div class="actions">
       <div class="user-login">
         <button class="btn-negative btn-small">Login</button>
@@ -23,10 +23,9 @@ title:  "Global Header & Footer"
       <li><a href="#" title="Item 2" class="active">Admissions</a></li>
       <li><a href="#" title="Item 3">Costs &amp; Aid </a></li>
       <li><a href="#" title="Item 4">Academics</a></li>
-      <li><a href="#" title="Item 4">Campus Life</a></li>
-      <li><a href="#" title="Item 4">Doing What Matters</a></li>
-      <li><a href="#" title="Item 4">Employee Resources</a></li>
-      <li><a href="#" title="Item 4">Alumni</a></li>
+      <li><a href="#" title="Item 5">Campus Life</a></li>
+      <li><a href="#" title="Item 6">Employee Resources</a></li>
+      <li><a href="#" title="Item 7">Alumni</a></li>
     </ul>
   </nav>
 </header>

@@ -1,0 +1,12 @@
+/**
+ * @file _prototype_layouts.scss
+ * A full-width layout that doesn't factor in the left sidebar.
+ */
+
+.prototype-grid {
+  @include add-grid(12); // Add a 12 grid here to lay things out.
+  .wrapper {
+    max-width: 65em;
+    margin: 0 auto;
+  }
+}

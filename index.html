@@ -4,16 +4,23 @@ title: Style Guide Index
 ---
 
 <div class="styleguide-content">
-  <nav class="styleguide-nav collapse"><ul>
-    {% for post in site.posts reversed %}
-      {% if post.layout == "heading" %}
-        <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }} <!-- <a href="{{ post.url }}">&rarr;</a> --></li>
-      {% else %}
-        <li><a href="#{{ post.id | remove_first:'/' | replace:'/','-' | replace:' ','-' }}">{{ post.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul></nav>
-
+  <nav class="styleguide-nav collapse">
+  <h2>Elements</h2>
+    <ul>
+      {% for post in site.posts reversed %}
+        {% if post.layout == "heading" %}
+          <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }} <!-- <a href="{{ post.url }}">&rarr;</a> --></li>
+        {% else %}
+          <li><a href="#{{ post.id | remove_first:'/' | replace:'/','-' | replace:' ','-' }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  <h2>Prototypes</h2>
+    <ul>
+      <li><a href="/component/0009-studentdashboard.html">Student Dashboard</a></li>
+      <li><a href="/component/0009-global-footer.html">Header and Footer</a></li>
+    </ul>
+  </nav>
   <div class="styleguide-index">
     <h1>All Components</h1>
 

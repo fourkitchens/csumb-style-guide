@@ -1,0 +1,7 @@
+/**
+ * @file _prototype_layouts.scss
+ * A full-width layout that doesn't factor in the left sidebar.
+ */
+.prototype-grid .styleguide-content {
+  max-width: 65em;
+}
