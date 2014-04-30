@@ -42,7 +42,7 @@
   .item3,
   .item4,
   .item5 {
-    @include respond-to("footer first") {
+    @include respond-to("footer small") {
       width: 50%;
       float: left;
     }
@@ -51,7 +51,7 @@
   .item7,
   .item8,
   .item9 {
-    @include respond-to("footer first") {
+    @include respond-to("footer small") {
       width: 50%;
       float: left;
     }
@@ -81,6 +81,9 @@
     li {
       text-align: right;
       @include grid-span(6,1, $output-style:'float', $gutter:0);
+      @include respond-to("footer small") {
+        width: 100%;
+      }
     }    
     a {
       color: wp-color($blue, 'dark');

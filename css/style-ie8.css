@@ -423,8 +423,6 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
-#header .header-image:after,
-#header .navigation:after,
 #main:after,
 #footer:after,
 #user-profile-form .password-strength:after {
@@ -1058,6 +1056,8 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 .prototype-grid .limiter {
   max-width: 68em;
   margin: 0 auto;
+  position: relative;
+  display: block;
 }
 
 /**
@@ -1316,6 +1316,20 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
+.header-image {
+  width: 100%;
+  height: 550px;
+  background-image: url(../images/photos/header-students.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: auto;
+  z-index: -1;
+}
+
 #header {
   color: white;
   padding: 0;
@@ -1328,41 +1342,24 @@ input.action-delete:focus {
 [dir="rtl"] #header {
   float: left;
 }
-#header .header-image {
-  width: 100%;
-  max-width: 1600px;
-  background-image: url(../images/photos/header-students.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  margin: 0 auto;
-}
-#header .top {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding: 1.5em 1.5em 0;
-}
-[dir="rtl"] #header .top {
-  float: left;
-}
-#header .top .logo {
+#header .logo {
   width: 57.44681%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  display: block;
 }
-[dir="rtl"] #header .top .logo {
+[dir="rtl"] #header .logo {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
-#header .top .actions {
-  padding: .5em 0 0;
+#header .actions {
+  padding-top: 1.5em;
+  padding-right: 1.5em;
   width: 40.42553%;
   float: right;
   margin-left: 0;
@@ -1370,7 +1367,7 @@ input.action-delete:focus {
   clear: none;
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-[dir="rtl"] #header .top .actions {
+[dir="rtl"] #header .actions {
   float: left;
 }
 #header .user-login {
@@ -1411,7 +1408,22 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
-#header #pull {
+#header #pull-nav {
+  display: none;
+}
+#header #pull-nav span {
+  display: none;
+}
+#header #pull-user {
+  display: none;
+}
+#header #pull-user span {
+  display: none;
+}
+#header #pull-search {
+  display: none;
+}
+#header #pull-search span {
   display: none;
 }
 #header .navigation {
@@ -1420,6 +1432,9 @@ input.action-delete:focus {
   padding: 1em 0;
   margin: 0 auto 1.5em;
   float: left;
+  position: relative;
+  display: block;
+  z-index: 2;
 }
 #header .main-menu {
   width: 100%;
@@ -1437,9 +1452,6 @@ input.action-delete:focus {
   list-style: none;
   font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
-}
-#header .main-menu li.mobile {
-  display: none;
 }
 #header .main-menu li a {
   color: #001e54;
@@ -1462,7 +1474,7 @@ input.action-delete:focus {
 }
 #header .cbp-hrmenu ul {
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
   list-style-type: none;
 }
 #header .cbp-hrmenu ul li.cbp-hropen a {
@@ -1496,10 +1508,10 @@ input.action-delete:focus {
   background-color: #000c21;
 }
 #header .cbp-hrmenu .cbp-hrsub-inner {
-  width: 90%;
+  width: 100%;
   max-width: 70em;
   margin: 0 auto;
-  padding: 0 1.875em;
+  padding: 0;
 }
 #header .cbp-hrmenu > ul > li {
   display: inline-block;
@@ -1509,7 +1521,7 @@ input.action-delete:focus {
 }
 #header .cbp-hropen .cbp-hrsub {
   display: block;
-  padding: 1em 0;
+  padding: 1em;
 }
 #header .cbp-hrmenu .cbp-hrsub-inner:before,
 #header .cbp-hrmenu .cbp-hrsub-inner:after {

@@ -3,34 +3,46 @@
  * The design for the header.
  */
 
+.header-image {
+  width: 100%;
+  height: 550px;
+  background-image: url(../images/photos/header-students.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top:0;
+  right: auto;
+  left: auto;
+  z-index: -1;
+}
 #header {
   color: $white;
   padding: 0;
   @include grid-span(12,1);
-  .header-image {
-    width: 100%;
-    max-width: 1600px;
-    background-image: url(../images/photos/header-students.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin: 0 auto;
-    @extend %clearfix;
+  @include respond-to("navigation small") {
+    background-color: rgba($black, 0.75);
   }
-  .top {
-    @include grid-span(12,1);
-    padding: 1.5em 1.5em 0;
-    .logo {
-      @include grid-span(7,1);
+  .logo {
+    @include grid-span(7,1);
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    display: block;
+    @include respond-to("navigation small") {
+      width: 100%;
     }
-    .actions {
-      padding: .5em 0 0;
-      @include grid-span(5,8);
-      font-family: $trade-reg;
-      @include respond-to("navigation second") {
-        display: none;
-      }
+  }
+  .actions {
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    @include grid-span(5,8);
+    font-family: $trade-reg;
+    @include respond-to("navigation small") {
+      width: 40%;
+      margin-top: 8em;
+      margin-bottom: 1.5em;
+      background-color: rgba($white, 0.75);
+      padding: 1em 0;
     }
   }
   .user-login {
@@ -40,6 +52,9 @@
     border-right:1px solid $white;
     button {
       float: right;
+      @include respond-to("navigation small") {
+        display: none;
+      }  
     }
   }
   .block-search {
@@ -50,46 +65,106 @@
       width: 100%;
       margin-top: 0.3em;
     }
+    .form-item-search-block-form {
+     @include respond-to("navigation small") {
+        display: none;
+        padding-right: 1em;
+      }     
+    }
   }
-  #pull { // responsive navigation trigger hamburger 
-    display: none;  
-    @include respond-to("navigation second") {
+  #pull-nav { // responsive navigation trigger hamburger 
+    display: none;
+    span {
+      display: none;
+    }    
+    @include respond-to("navigation small") {
       display: block;
-      background-color: color($blue, 'main');
-      width:20%;
+      width:100%;
       position: relative;
       float: left;
+      height: 55px;
       &:after {
         content:"";
-        background: url('../images/icons/nav-icon.png') no-repeat;
-        width: 30px;
-        height: 30px;
+        background: url('../images/icons/icon-menu.png') no-repeat;
+        width: 40px;
+        height: 40px;
         display: inline-block;
         position: absolute;
-        left: 15px;
+        left: 10px;
         top: 10px;
       }
     }
-  }      
-  .navigation {   
-    @extend %clearfix;
-    @include respond-to("navigation full") {
-      margin-top: 20em;
-    } 
-    @include respond-to("navigation first") {
-      margin-top: 12em;
+  }
+  #pull-user { // responsive navigation trigger user icon
+  display: none;
+  span {
+    display: none;
+  }    
+  @include respond-to("navigation small") {
+    display: block;
+    width:100%;
+    position: relative;
+    float: left;
+    height: 55px;
+    &:after {
+      content:"";
+      background: url('../images/icons/icon-user.png') no-repeat;
+      width: 40px;
+      height: 40px;
+      display: inline-block;
+      position: absolute;
+      left: 10px;
+      top: 10px;
     }
-    @include respond-to("navigation second") {
-      margin-top: 6em;
-    } 
+  }
+}
+  #pull-search { // responsive navigation trigger search slidedown 
+    display: none;
+    span {
+      display: none;
+    }  
+    @include respond-to("navigation small") {
+      display: block;
+      width:100%;
+      position: relative;
+      float: left;
+      padding-left: 55px;
+      height: 55px;
+      &:after {
+        content:"";
+        background: url('../images/icons/icon-search.png') no-repeat;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+    }
+  }        
+  .navigation {   
     width: 100%;
     background-color: rgba($white, 0.75);
     padding: 1em 0;
     margin: 0 auto 1.5em;
     float: left;
+    position: relative;
+    display: block;
+    z-index: 2;
+    @include respond-to("navigation full") {
+      margin-top: 20em;
+    }
+    @include respond-to("navigation medium") {
+      margin-top: 10em;
+    }    
+    @include respond-to("navigation small") {
+      margin-top: 8em;
+      float: left;
+      width: 60%;
+    }
   }
   .main-menu {
-    @include respond-to("navigation second") {
+    @include respond-to("navigation small") {
       display: none;
       height: auto;
     }
@@ -100,13 +175,10 @@
       list-style: none;
       font-family: $trade-bold;
       text-transform: uppercase;
-      &.mobile {
-        display: none;
-        @include respond-to("navigation second") {
-          display: block;
-          width: 40%;
-          float: right;
-        }
+      @include respond-to("navigation small") {
+        width: 100%;
+        display: block;
+        float: left;
       }
       a {
         color: wp-color($blue, 'dark');
@@ -117,10 +189,10 @@
         @include border-radius(4px);
         margin-right: .5em; 
         display: block;
-        @include respond-to("navigation first") {
+        @include respond-to("navigation medium") {
           padding: .3em .8em;
           margin-right: 0;
-          font-size: .8em;
+          font-size: .9em;
         }
         &:hover {
           color: darken($white, 15%);
@@ -134,9 +206,14 @@
     width: 100%;
     ul {
       margin: 0;
-      padding: 0 1em;
+      padding: 0;
       list-style-type: none; 
-      li {        
+      li { 
+        @include respond-to("navigation small") {
+          width: 100%;
+          display: block;
+          float: left;
+        }
         &.cbp-hropen {
           a {
             color: $white;
@@ -158,6 +235,11 @@
       left: 0;
       ul {
         li {
+          @include respond-to("navigation small") {
+            width: 100%;
+            display: block;
+            float: left;
+          }          
           a {
             color: $white;
             background-color: none;
@@ -172,22 +254,28 @@
       }    
     } 
     .cbp-hrsub-inner {
-      width: 90%;
+      width: 100%;
       max-width: 70em;
       margin: 0 auto;
-      padding: 0 1.875em;
+      padding: 0;
     }
   }
   .cbp-hrmenu > ul > li {
     display: inline-block;
+    @include respond-to("navigation small") {
+      display: block;
+    }
   } 
   .cbp-hrmenu > ul > li > a {
     display: inline-block;
+    @include respond-to("navigation small") {
+      display: block;
+    }
   }
 
   .cbp-hropen .cbp-hrsub {
     display: block;
-    padding: 1em 0;
+    padding: 1em;
   }
 
   .cbp-hrmenu .cbp-hrsub-inner:before,
