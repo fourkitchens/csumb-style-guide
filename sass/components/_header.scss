@@ -194,6 +194,11 @@
           margin-right: 0;
           font-size: .9em;
         }
+        @include respond-to("navigation small") {
+          @include border-radius(0);
+          font-size: 1em;
+          padding: .5em 1em;
+        }
         &:hover {
           color: darken($white, 15%);
           background-color: wp-color($blue, 'main', 15%);
