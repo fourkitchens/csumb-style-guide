@@ -1,11 +1,59 @@
 /**
  * Prototype for Student Dashboard.
  */
- 
-.notification {
-  border: 1px solid $black;
-  .got-it {
-    float: right;
+#notification-list {
+  margin: 0;
+  padding: 0; 
+  .notification {
+    list-style-type: none;
+    border: 1px solid $black;
+    padding: 1em;
+    .got-it {
+      float: right;
+      font-family: $trade-reg;
+      font-size: 18px;
+      a {
+        margin: 0 0 3px 3px;
+      }
+    }
+    h3 {
+      margin: 0;
+    }
+    p {
+      margin-top: .5em;
+      margin-bottom: 0;
+    }
+    .timestamp {
+      font-size: 14px;
+      color: color($tan, main);
+    }
   }
 }
 
+#event-list {
+  margin: 0;
+  padding: 0;
+  .event {
+    list-style-type: none;
+    border: 1px solid $black;
+    padding: 1em;
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin-top: .5em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+#widget-section {
+  .widget {
+    background-color: color($tan, dark);
+    display: block;
+    padding: 1em;
+    h3 {
+      margin: 0;
+    }
+  }
+}
