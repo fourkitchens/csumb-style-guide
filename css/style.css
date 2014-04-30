@@ -1436,6 +1436,7 @@ input.action-delete:focus {
 @media (max-width: 49.5em) {
   #header .logo {
     width: 100%;
+    margin: 0 auto;
   }
 }
 #header .actions {
@@ -1453,9 +1454,9 @@ input.action-delete:focus {
 }
 @media (max-width: 49.5em) {
   #header .actions {
-    width: 40%;
-    margin-top: 12em;
-    margin-bottom: 1.5em;
+    display: none;
+    width: 100%;
+    margin-top: 0;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 1em 0;
   }
@@ -1502,90 +1503,56 @@ input.action-delete:focus {
   margin-top: 0.3em;
 }
 @media (max-width: 49.5em) {
-  #header .block-search .form-item-search-block-form {
-    display: none;
-    padding-right: 1em;
+  #header .block-search {
+    padding: 0 1em;
+    width: 100%;
   }
 }
-#header #pull-nav {
+#header .toggles {
+  margin: 6em 0 0;
+  float: left;
   display: none;
-}
-#header #pull-nav span {
-  display: none;
+  width: 100%;
+  padding: 0 2em;
+  background-color: rgba(255, 255, 255, 0.75);
 }
 @media (max-width: 49.5em) {
-  #header #pull-nav {
+  #header .toggles {
     display: block;
-    width: 100%;
-    position: relative;
-    float: left;
-    height: 55px;
-  }
-  #header #pull-nav:after {
-    content: "";
-    background: url("../images/icons/icon-menu.png") no-repeat;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
   }
 }
-#header #pull-user {
+#header .toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+#header .toggles li a {
+  display: block;
+  height: 60px;
+  width: 80px;
+  background-repeat: no-repeat;
+  background-position: 22px 15px;
+  padding: 1em 0;
+}
+#header .toggles li a span {
   display: none;
 }
-#header #pull-user span {
-  display: none;
+#header .toggles li a.menu {
+  background-image: url("../images/icons/icon-menu.png");
 }
-@media (max-width: 49.5em) {
-  #header #pull-user {
-    display: block;
-    width: 100%;
-    position: relative;
-    float: left;
-    height: 55px;
-  }
-  #header #pull-user:after {
-    content: "";
-    background: url("../images/icons/icon-user.png") no-repeat;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
+#header .toggles li a.user {
+  background-image: url("../images/icons/icon-user.png");
 }
-#header #pull-search {
-  display: none;
+#header .toggles li a.search {
+  background-image: url("../images/icons/icon-search.png");
 }
-#header #pull-search span {
-  display: none;
-}
-@media (max-width: 49.5em) {
-  #header #pull-search {
-    display: block;
-    width: 100%;
-    position: relative;
-    float: left;
-    padding-left: 55px;
-    height: 55px;
-  }
-  #header #pull-search:after {
-    content: "";
-    background: url("../images/icons/icon-search.png") no-repeat;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-  }
+#header .toggles li a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #header .navigation {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 1em 0;
   margin: 0 auto 1.5em;
   float: left;
@@ -1605,9 +1572,10 @@ input.action-delete:focus {
 }
 @media (max-width: 49.5em) {
   #header .navigation {
-    margin-top: 12em;
+    margin: 0;
     float: left;
-    width: 60%;
+    display: none;
+    width: 100%;
   }
 }
 #header .main-menu {
@@ -1616,12 +1584,6 @@ input.action-delete:focus {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-}
-@media (max-width: 49.5em) {
-  #header .main-menu {
-    display: none;
-    height: auto;
-  }
 }
 [dir="rtl"] #header .main-menu {
   float: left;

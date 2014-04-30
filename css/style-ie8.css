@@ -1408,27 +1408,46 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
-#header #pull-nav {
+#header .toggles {
+  margin: 6em 0 0;
+  float: left;
+  display: none;
+  width: 100%;
+  padding: 0 2em;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+#header .toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+#header .toggles li a {
+  display: block;
+  height: 60px;
+  width: 80px;
+  background-repeat: no-repeat;
+  background-position: 22px 15px;
+  padding: 1em 0;
+}
+#header .toggles li a span {
   display: none;
 }
-#header #pull-nav span {
-  display: none;
+#header .toggles li a.menu {
+  background-image: url("../images/icons/icon-menu.png");
 }
-#header #pull-user {
-  display: none;
+#header .toggles li a.user {
+  background-image: url("../images/icons/icon-user.png");
 }
-#header #pull-user span {
-  display: none;
+#header .toggles li a.search {
+  background-image: url("../images/icons/icon-search.png");
 }
-#header #pull-search {
-  display: none;
-}
-#header #pull-search span {
-  display: none;
+#header .toggles li a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #header .navigation {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 1em 0;
   margin: 0 auto 1.5em;
   float: left;

@@ -1,10 +1,10 @@
 $(function() {
   var pullNav    = $('#pull-nav');
-    menu    = $('nav ul.main-menu');
+    menu    = $('.navigation');
     menuHeight  = menu.height();
   
   var pullSearch    = $('#pull-search');
-    search    = $('.form-item-search-block-form');
+    search    = $('.actions');
     searchHeight  = search.height();
 
   $(pullNav).on('click', function(e) {

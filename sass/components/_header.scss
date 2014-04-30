@@ -31,6 +31,7 @@
     display: block;
     @include respond-to("navigation small") {
       width: 100%;
+      margin: 0 auto;
     }
   }
   .actions {
@@ -39,9 +40,9 @@
     @include grid-span(5,8);
     font-family: $trade-reg;
     @include respond-to("navigation small") {
-      width: 40%;
-      margin-top: 12em;
-      margin-bottom: 1.5em;
+      display: none;
+      width: 100%;
+      margin-top: 0;
       background-color: rgba($white, 0.75);
       padding: 1em 0;
     }
@@ -66,86 +67,54 @@
       width: 100%;
       margin-top: 0.3em;
     }
-    .form-item-search-block-form {
-     @include respond-to("navigation small") {
-        display: none;
-        padding-right: 1em;
-      }     
-    }
-  }
-  #pull-nav { // responsive navigation trigger hamburger 
-    display: none;
-    span {
-      display: none;
-    }    
     @include respond-to("navigation small") {
-      display: block;
-      width:100%;
-      position: relative;
-      float: left;
-      height: 55px;
-      &:after {
-        content:"";
-        background: url('../images/icons/icon-menu.png') no-repeat;
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        position: absolute;
-        left: 10px;
-        top: 10px;
-      }
+      padding:0 1em;
+      width: 100%;
     }
   }
-  #pull-user { // responsive navigation trigger user icon
-  display: none;
-  span {
-    display: none;
-  }    
-  @include respond-to("navigation small") {
-    display: block;
-    width:100%;
-    position: relative;
+  .toggles {
+    margin: 6em 0 0;
     float: left;
-    height: 55px;
-    &:after {
-      content:"";
-      background: url('../images/icons/icon-user.png') no-repeat;
-      width: 40px;
-      height: 40px;
-      display: inline-block;
-      position: absolute;
-      left: 10px;
-      top: 10px;
-    }
-  }
-}
-  #pull-search { // responsive navigation trigger search slidedown 
     display: none;
-    span {
-      display: none;
-    }  
+    width: 100%;
+    padding: 0 2em;
+    background-color: rgba($white, 0.75);
     @include respond-to("navigation small") {
       display: block;
-      width:100%;
-      position: relative;
+    }
+    li {
+      list-style-type: none;
       float: left;
-      padding-left: 55px;
-      height: 55px;
-      &:after {
-        content:"";
-        background: url('../images/icons/icon-search.png') no-repeat;
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        position: absolute;
-        left: 10px;
-        top: 10px;
+      display: inline;
+      position: relative;
+      a {
+        display: block;
+        height: 60px;
+        width: 80px;
+        background-repeat: no-repeat;
+        background-position: 22px 15px;
+        padding: 1em 0;
+        span {
+          display: none;
+        }
+        &.menu {
+          background-image: url('../images/icons/icon-menu.png');          
+        }
+        &.user {
+          background-image: url('../images/icons/icon-user.png');
+        }
+        &.search {
+          background-image: url('../images/icons/icon-search.png');
+        }
+        &:hover {
+          background-color: rgba($white, 0.90);
+        }
       }
     }
-  }        
+  }  
   .navigation {   
     width: 100%;
-    background-color: rgba($white, 0.75);
+    background-color: rgba($white, 0.90);
     padding: 1em 0;
     margin: 0 auto 1.5em;
     float: left;
@@ -159,16 +128,13 @@
       margin-top: 10em;
     }    
     @include respond-to("navigation small") {
-      margin-top: 12em;
+      margin: 0;
       float: left;
-      width: 60%;
+      display: none;
+      width: 100%;
     }
   }
   .main-menu {
-    @include respond-to("navigation small") {
-      display: none;
-      height: auto;
-    }
     @include grid-span(12,1);
     li {
       float: left;

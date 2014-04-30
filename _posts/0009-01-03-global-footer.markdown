@@ -6,13 +6,16 @@ title:  "Global Header & Footer"
 <header id="header">
   <div class="limiter">
     <a class="logo" href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-white.png" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
+    <ul class="toggles">
+      <li><a id="pull-nav" href="#" class="menu"><span>Menu</span></a></li>
+      <li><a id="pull-user" href="#" class="user"><span>User</span></a></li>
+      <li><a id="pull-search" href="#" class="search"><span>Search</span></a></li>
+    </ul>
     <div class="actions">
       <div class="user-login">
-        <a id="pull-user" href="#"><span>User</span></a>
         <button class="btn-negative btn-small">Login</button>
       </div>
       <div class="block-search">
-        <a id="pull-search" href="#"><span>Search</span></a>
         <div class="form-item-search-block-form">
           <label class="element-invisible">Search </label>
           <input placeholder="Search CSUMB" type="text" name="search_block_form" class="form-text">
@@ -21,8 +24,7 @@ title:  "Global Header & Footer"
     </div>
   </div>
   <div class="navigation">
-    <div class="limiter"> 
-      <a id="pull-nav" href="#"><span>Menu</span></a>
+    <div class="limiter">
       <nav id="cbp-hrmenu" class="cbp-hrmenu">
         <ul class="main-menu">
           <li class="menu-item item-1"><a href="#" title="Item 1">About</a>
