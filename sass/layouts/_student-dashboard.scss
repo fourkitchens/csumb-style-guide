@@ -1,59 +1,108 @@
 /**
  * Prototype for Student Dashboard.
  */
-#notification-list {
-  margin: 0;
-  padding: 0; 
-  .notification {
-    list-style-type: none;
-    border: 1px solid $black;
-    padding: 1em;
-    .got-it {
-      float: right;
-      font-family: $trade-reg;
-      font-size: 18px;
-      a {
-        margin: 0 0 3px 3px;
+.dashboard-top {
+  @include clearfix;
+  padding: 4em 0;
+  #notification-section {
+    @include grid-span(7,1);
+    #notification-list {
+      margin: 0;
+      padding: 0; 
+      .notification {
+        margin-bottom: 1px;
+        background-color: $white;
+        list-style-type: none;
+        border: 1px solid color($tan, bright);
+        padding: 1em;
+        .got-it {
+          float: right;
+          font-family: $trade-reg;
+          font-size: 18px;
+          margin-top: -5px;
+          a {
+            margin: 0 0 3px 3px;
+          }
+        }
+        h2 {
+          margin: 0;
+        }
+        p {
+          margin-top: 1em;
+          margin-bottom: 0;
+        }
+        .timestamp {
+          font-size: 14px;
+          color: color($tan, main);
+        }
       }
     }
-    h3 {
-      margin: 0;
-    }
-    p {
-      margin-top: .5em;
-      margin-bottom: 0;
-    }
-    .timestamp {
-      font-size: 14px;
-      color: color($tan, main);
+    button {
+      width: 100%;
     }
   }
-}
-
-#event-list {
-  margin: 0;
-  padding: 0;
-  .event {
-    list-style-type: none;
-    border: 1px solid $black;
-    padding: 1em;
-    h2 {
+  
+  #event-section {
+    @include grid-span(5,8);
+    #event-list {
       margin: 0;
-    }
-    p {
-      margin-top: .5em;
-      margin-bottom: 0;
+      padding: 0;
+      .event {
+        list-style-type: none;
+        clear: both;
+        @include clearfix;
+        margin-bottom: 1em;
+        img {
+        float: left; 
+        margin-right: 1em;
+        }
+        h2 {
+          color: color($blue, main);
+          margin:0;
+        }
+        p {
+          margin-top: .5em;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
 
 #widget-section {
+  @include grid-span(12);
+  background-color: $white;
+  padding: 4em 0;
+  @include clearfix;
+  .classes {
+    @include grid-span(4,1);
+  }
+  .ottercard {
+    @include grid-span(4,5);
+  }
+  .library {
+    @include grid-span(4,9);
+  }
   .widget {
-    background-color: color($tan, dark);
+    border: 1px solid #BEB995;
+    background-color: color($tan, bright);
     display: block;
-    padding: 1em;
-    h3 {
+    padding: 2em;
+    h1 {
       margin: 0;
+      color: color($tan, dark);
+      a {
+        background-size: 100%;
+        margin: 0 10px 0 0;
+        color: color($tan, main);
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .open {
+      float: right;
+      margin-top: -12px;
     }
   }
 }
