@@ -2,19 +2,20 @@
  * @file _header.scss
  * The design for the header.
  */
-
-.header-image {
-  width: 100%;
-  height: 550px;
-  background-image: url(../images/photos/header-students.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top:0;
-  right: auto;
-  left: auto;
-  z-index: -1;
+.prototype-grid {
+  .header-image {
+    width: 100%;
+    height: 550px;
+    background-image: url(../images/photos/header-students.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    right: auto;
+    left: auto;
+    z-index: -1;
+  }
 }
 #header {
   color: $white;
@@ -39,7 +40,7 @@
     font-family: $trade-reg;
     @include respond-to("navigation small") {
       width: 40%;
-      margin-top: 8em;
+      margin-top: 12em;
       margin-bottom: 1.5em;
       background-color: rgba($white, 0.75);
       padding: 1em 0;
@@ -158,7 +159,7 @@
       margin-top: 10em;
     }    
     @include respond-to("navigation small") {
-      margin-top: 8em;
+      margin-top: 12em;
       float: left;
       width: 60%;
     }

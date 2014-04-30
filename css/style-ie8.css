@@ -1316,7 +1316,7 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
-.header-image {
+.prototype-grid .header-image {
   width: 100%;
   height: 550px;
   background-image: url(../images/photos/header-students.jpg);
