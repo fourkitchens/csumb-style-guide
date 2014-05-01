@@ -25,10 +25,10 @@ title:  "Global Header & Footer"
   </div>
   <div class="navigation">
     <div class="limiter">
-      <nav id="cbp-hrmenu" class="cbp-hrmenu">
-        <ul class="main-menu">
+      <nav id="cbp-hrmenu" class="cbp-hrmenu dl-menuwrapper">
+        <ul class="main-menu dl-menu">
           <li class="menu-item item-1"><a href="#" title="Item 1">About</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -44,7 +44,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-2"><a href="#" title="Item 2">Admissions</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -60,7 +60,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-3"><a href="#" title="Item 3">Costs &amp; Aid </a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -76,7 +76,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-4"><a href="#" title="Item 4">Academics</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -92,7 +92,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-5"><a href="#" title="Item 5">Campus Life</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -108,7 +108,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-6"><a href="#" title="Item 6">Employee Resources</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>
@@ -124,7 +124,7 @@ title:  "Global Header & Footer"
             </div>
           </li>
           <li class="menu-item item-7"><a href="#" title="Item 7" >Alumni</a>
-            <div class="cbp-hrsub">
+            <div class="cbp-hrsub dl-submenu">
               <div class="cbp-hrsub-inner">
                 <div>
                   <ul>

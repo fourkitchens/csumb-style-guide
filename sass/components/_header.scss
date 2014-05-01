@@ -2,6 +2,18 @@
  * @file _header.scss
  * The design for the header.
  */
+
+ @font-face {
+  font-family: 'icomoon';
+  src:url('../fonts/icomoon.eot');
+  src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff') format('woff'),
+    url('../fonts/icomoon.ttf') format('truetype'),
+    url('../fonts/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .prototype-grid {
   .header-image {
     width: 100%;
@@ -205,6 +217,10 @@
       background-color:color($blue, 'dark'); 
       width: 100%;
       left: 0;
+      @include respond-to("navigation small") { // make the submenu relative at small sizes
+        position: relative;
+        float: left;
+      }
       ul {
         li {
           @include respond-to("navigation small") {
@@ -260,4 +276,3 @@
     clear: both;
   }
 }
-
