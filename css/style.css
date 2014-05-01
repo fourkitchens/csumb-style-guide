@@ -2129,8 +2129,7 @@ a.icon-reply:hover {
 #footer ul li {
   list-style: none;
 }
-
-.menu {
+#footer .menu {
   font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   width: 65.95745%;
   float: left;
@@ -2140,87 +2139,92 @@ a.icon-reply:hover {
   padding: 0;
   margin: 0;
 }
-[dir="rtl"] .menu {
+[dir="rtl"] #footer .menu {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
-.menu .item1,
-.menu .item2,
-.menu .item3 {
+@media (max-width: 25em) {
+  #footer .menu {
+    width: 100%;
+    margin: 1em 0;
+  }
+}
+#footer .menu .item1,
+#footer .menu .item2,
+#footer .menu .item3 {
   width: 33.33333%;
   clear: right;
   float: left;
   margin-left: 0;
   margin-right: 0%;
 }
-[dir="rtl"] .menu .item1, [dir="rtl"]
-.menu .item2, [dir="rtl"]
-.menu .item3 {
+[dir="rtl"] #footer .menu .item1, [dir="rtl"]
+#footer .menu .item2, [dir="rtl"]
+#footer .menu .item3 {
   clear: left;
   float: right;
 }
-.menu .item4,
-.menu .item5,
-.menu .item6 {
+#footer .menu .item4,
+#footer .menu .item5,
+#footer .menu .item6 {
   width: 33.33333%;
   clear: right;
   float: left;
   margin-right: 0%;
 }
-[dir="rtl"] .menu .item4, [dir="rtl"]
-.menu .item5, [dir="rtl"]
-.menu .item6 {
+[dir="rtl"] #footer .menu .item4, [dir="rtl"]
+#footer .menu .item5, [dir="rtl"]
+#footer .menu .item6 {
   clear: left;
   float: right;
   margin-left: 0%;
 }
-.menu .item7,
-.menu .item8,
-.menu .item9 {
+#footer .menu .item7,
+#footer .menu .item8,
+#footer .menu .item9 {
   width: 33.33333%;
   clear: right;
   float: left;
   margin-right: 0%;
 }
-[dir="rtl"] .menu .item7, [dir="rtl"]
-.menu .item8, [dir="rtl"]
-.menu .item9 {
+[dir="rtl"] #footer .menu .item7, [dir="rtl"]
+#footer .menu .item8, [dir="rtl"]
+#footer .menu .item9 {
   clear: left;
   float: right;
   margin-left: 0%;
 }
 @media (max-width: 43.75em) {
-  .menu .item1,
-  .menu .item2,
-  .menu .item3,
-  .menu .item4,
-  .menu .item5 {
+  #footer .menu .item1,
+  #footer .menu .item2,
+  #footer .menu .item3,
+  #footer .menu .item4,
+  #footer .menu .item5 {
     width: 50%;
     float: left;
   }
 }
 @media (max-width: 43.75em) {
-  .menu .item6,
-  .menu .item7,
-  .menu .item8,
-  .menu .item9 {
+  #footer .menu .item6,
+  #footer .menu .item7,
+  #footer .menu .item8,
+  #footer .menu .item9 {
     width: 50%;
     float: left;
   }
 }
-.menu li {
+#footer .menu li {
   margin: 0 0 .275em;
 }
-.menu li a {
+#footer .menu li a {
   color: #001e54;
   text-decoration: none;
 }
-.menu li a:hover {
+#footer .menu li a:hover {
   color: #003087;
 }
-
-.donate {
+#footer .donate {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   width: 31.91489%;
   float: right;
@@ -2229,20 +2233,25 @@ a.icon-reply:hover {
   clear: none;
   padding: 0;
 }
-[dir="rtl"] .donate {
+[dir="rtl"] #footer .donate {
   float: left;
 }
-.donate button {
+@media (max-width: 25em) {
+  #footer .donate {
+    width: 100%;
+  }
+}
+#footer .donate button {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .donate button {
+[dir="rtl"] #footer .donate button {
   float: left;
 }
-.donate .links {
+#footer .donate .links {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -2251,10 +2260,10 @@ a.icon-reply:hover {
   padding: 0;
   margin: 0;
 }
-[dir="rtl"] .donate .links {
+[dir="rtl"] #footer .donate .links {
   float: left;
 }
-.donate .links li {
+#footer .donate .links li {
   text-align: right;
   width: 50%;
   clear: right;
@@ -2262,20 +2271,25 @@ a.icon-reply:hover {
   margin-left: 0;
   margin-right: 0%;
 }
-[dir="rtl"] .donate .links li {
+[dir="rtl"] #footer .donate .links li {
   clear: left;
   float: right;
 }
 @media (max-width: 43.75em) {
-  .donate .links li {
+  #footer .donate .links li {
     width: 100%;
   }
 }
-.donate .links a {
+@media (max-width: 25em) {
+  #footer .donate .links li {
+    text-align: center;
+  }
+}
+#footer .donate .links a {
   color: #001e54;
   text-decoration: none;
 }
-.donate .links a:hover {
+#footer .donate .links a:hover {
   color: #003087;
 }
 
