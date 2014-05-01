@@ -1387,16 +1387,8 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 .prototype-grid .header-image {
   width: 100%;
-  height: 550px;
   background-image: url(../images/photos/header-students.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -1406,6 +1398,22 @@ input.action-delete:focus {
   right: auto;
   left: auto;
   z-index: -1;
+}
+@media (min-width: 65.125em) {
+  .prototype-grid .header-image {
+    height: 565px;
+    background-position: 0% 20%;
+  }
+}
+@media (max-width: 65.125em) {
+  .prototype-grid .header-image {
+    height: 500px;
+  }
+}
+@media (max-width: 49.5em) {
+  .prototype-grid .header-image {
+    height: 400px;
+  }
 }
 
 #header {
@@ -1444,6 +1452,8 @@ input.action-delete:focus {
   #header .logo {
     width: 100%;
     margin: 0 auto;
+    padding: 8em 2em 2em;
+    text-align: center;
   }
 }
 #header .actions {
@@ -1516,11 +1526,11 @@ input.action-delete:focus {
   }
 }
 #header .toggles {
-  margin: 6em 0 0;
+  margin: 4em 0 0;
   float: left;
   display: none;
   width: 100%;
-  padding: 0 2em;
+  padding: 0;
   background-color: rgba(255, 255, 255, 0.75);
 }
 @media (max-width: 49.5em) {
@@ -1533,13 +1543,14 @@ input.action-delete:focus {
   float: left;
   display: inline;
   position: relative;
+  width: 33.33%;
 }
 #header .toggles li a {
   display: block;
   height: 60px;
-  width: 80px;
+  width: 100%;
   background-repeat: no-repeat;
-  background-position: 22px 15px;
+  background-position: 50% 50%;
   padding: 1em 0;
 }
 #header .toggles li a span {
@@ -1574,15 +1585,16 @@ input.action-delete:focus {
 }
 @media (max-width: 65.125em) {
   #header .navigation {
-    margin-top: 10em;
+    margin-top: 13em;
   }
 }
 @media (max-width: 49.5em) {
   #header .navigation {
     margin: 0;
+    padding: 0;
     float: left;
     display: none;
-    width: 100%;
+    background-color: white;
   }
 }
 #header .main-menu {
@@ -1630,7 +1642,7 @@ input.action-delete:focus {
   #header .main-menu li a {
     border-radius: 0;
     font-size: 1em;
-    padding: .5em 1em;
+    padding: 1em;
   }
 }
 #header .main-menu li a:hover {
@@ -1716,6 +1728,11 @@ input.action-delete:focus {
 #header .cbp-hropen .cbp-hrsub {
   display: block;
   padding: 1em;
+}
+@media (max-width: 49.5em) {
+  #header .cbp-hropen .cbp-hrsub {
+    padding: 0;
+  }
 }
 #header .cbp-hrmenu .cbp-hrsub-inner:before,
 #header .cbp-hrmenu .cbp-hrsub-inner:after {
