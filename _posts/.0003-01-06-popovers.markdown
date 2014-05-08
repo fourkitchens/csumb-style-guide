@@ -1,0 +1,13 @@
+---
+layout: component
+title:  "Popovers"
+---
+
+{% capture b1 %}
+  <div class="popover-primary">tour</div>
+  <button>Next</button>
+  
+{% endcapture %}
+
+### Popover for Tours
+{% include sample.html sample=b1 %}

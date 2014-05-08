@@ -64,9 +64,8 @@ $font-body-weight: 400;
 // Colors, etc.
 //
 
-// World Pulse Next Gen Colors:
-  // They've asked for some adjustments on the violet hue --- once this settles,
-  // flatten it back into specific hex value.
+// CSUMB Colors:
+
 $blue:(
   dark:      #001e54,
   main:      #1f346b,
@@ -82,7 +81,7 @@ $yellow:   (
 );
 
 $green:(
-  dark:      #ffffff,
+  dark:      #07633B,
   main:      #029555,
   bright:    #1bc37a,
   highlight: #ffffff
@@ -92,6 +91,7 @@ $tan:  (
   dark:      #39351b,
   main:      #8f864f,
   bright:    #dddac7,
+  light:     #F3F2E8,
   highlight: #eceade
 );
 
@@ -181,8 +181,6 @@ $indent-amount: 2em;
 
 // Makes these only applicable to the two column stylguide.
 @include add-grid(1);
-@include add-grid(6 3 at 600px);
-@include add-grid(8 3 at 800px);
 
 
 // Define our gutters.

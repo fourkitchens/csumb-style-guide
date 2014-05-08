@@ -1,0 +1,208 @@
+/**
+ * Prototype for Student Dashboard.
+ */
+
+$container-padding: 1190px;
+$notifications: 1006px;
+$widget-two-column: 1088px;
+$widget-one-column: 695px;
+
+.wrapper {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+  @include breakpoint ($container-padding) {
+    padding-right: 0em !important;
+    padding-left: 0em !important;
+  }
+}
+.dashboard-top {
+  @include clearfix;
+  padding: 4em 0;
+  #notification-section {
+    @include grid-span(12,1);
+    @include breakpoint ($notifications) {
+      @include grid-span(7,1);
+    }
+    #notification-list {
+      margin: 0;
+      padding: 0; 
+      .notification {
+        margin-bottom: 1px;
+        background-color: $white;
+        list-style-type: none;
+        border: 1px solid color($tan, bright);
+        padding: 1em;
+        .got-it {
+          float: right;
+          font-family: $trade-reg;
+          font-size: 18px;
+          margin-top: -5px;
+          a {
+            margin: 0 0 3px 3px;
+          }
+        }
+        h2 {
+          margin: 0;
+        }
+        p {
+          margin-top: 1em;
+          margin-bottom: 0;
+        }
+        .timestamp {
+          font-size: 14px;
+          color: color($tan, main);
+        }
+      }
+      .notification-disabled {
+        margin-bottom: 1px;
+        background-color: color($tan, light);
+        list-style-type: none;
+        border: 1px solid color($tan, 'highlight', -10%);
+        padding: 1em;
+        .read {
+          float: right;
+          font-family: $trade-reg;
+          font-size: 18px;
+          margin-top: -5px;
+          color: color($tan, main);
+          a {
+            margin: 0 0 3px 3px;
+          }
+        }
+
+        h2 {
+          margin: 0;
+          color: color($green, dark);
+        }
+        p {
+          margin-top: 1em;
+          margin-bottom: 0;
+        }
+        .timestamp {
+          font-size: 14px;
+          color: color($tan, main);
+        }
+      }
+    }
+    button {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+  }
+  
+  #event-section {
+    @include grid-span(12,1);
+    margin-top: 3em;
+    border-top: 1px solid color($tan, main);
+    padding-top: 2em;
+    @include breakpoint ($notifications) {
+      @include grid-span(5,8);
+      margin-top: 0;
+      border-top: none;
+      padding-top: 0;
+    }
+    #event-list {
+      margin: 0;
+      padding: 0;
+      .event {
+        list-style-type: none;
+        clear: both;
+        @include clearfix;
+        margin-bottom: 1em;
+        img {
+        float: left; 
+        margin-right: 1em;
+        }
+        h2 {
+          color: color($blue, main);
+          margin:0;
+        }
+        p {
+          margin-top: .5em;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+#widget-section {
+  @include grid-span(12);
+  background-color: $white;
+  padding: 4em 0;
+  @include clearfix;
+  .classes {
+    @include grid-span(12,1);
+    @include breakpoint ($widget-one-column) {
+      @include grid-span(6,1);
+    }
+    @include breakpoint ($widget-two-column) {
+      @include grid-span(4,1);
+    }
+  }
+  .ottercard {
+    @include grid-span(12,1);
+    @include breakpoint ($widget-one-column) {
+      @include grid-span(6,7);
+    }
+    @include breakpoint ($widget-two-column) {
+      @include grid-span(4,5);
+    }  
+  }
+  .library {
+    @include grid-span(12,1);
+    @include breakpoint ($widget-one-column) {
+      @include grid-span(6,1);
+      clear: right;
+    }
+    @include breakpoint ($widget-two-column) {
+      @include grid-span(4,9);
+      clear: none;
+    }  
+  }  
+  .print {
+    @include grid-span(12,1);
+    clear: right;
+    @include breakpoint ($widget-one-column) {
+      @include grid-span(6,7);
+    }
+    @include breakpoint ($widget-two-column) {
+      @include grid-span(4,1);
+      clear: right;
+    }
+  } 
+  .dining {
+    @include grid-span(12,1);
+    clear: right;
+    @include breakpoint ($widget-one-column) {
+      @include grid-span(6,1);
+      clear: right;
+    }
+    @include breakpoint ($widget-two-column) {
+      @include grid-span(4,5);
+    }  
+  }
+  .widget {
+    margin-top: 1.5em;
+    border: 1px solid #BEB995;
+    background-color: color($tan, bright);
+    display: block;
+    padding: 2em;
+    h3 {
+      margin: 0;
+      color: color($tan, dark);
+      a {
+        background-size: 118%;
+        margin: 0 10px 0 0;
+        color: color($tan, main);
+      }
+    }
+    p {
+      margin-bottom: 0;
+    }
+    .open {
+      float: right;
+      margin-top: -12px;
+    }
+  }
+}

@@ -4,13 +4,15 @@
  */
 
 .prototype-grid {
-  .wrapper {
     @include add-grid(12); // Add a 12 grid here to lay things out.
-  }
   .limiter {
     max-width: 68em;
     margin: 0 auto;
     position: relative;
     display: block;
+  }
+  .wrapper {
+    max-width: 68em;
+    margin: 0 auto;
   }
 }

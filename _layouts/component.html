@@ -4,24 +4,30 @@ layout: default
 
 <div class="styleguide-content">
   <nav class="styleguide-nav collapse">
+    <h2>Elements</h2>
     <ul>
-    {% for post in site.posts reversed %}
-      {% if post.layout == "heading" %}
-        <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }} <!-- <a href="{{ post.url }}">&rarr;</a> --></li>
-      {% elsif post.url == page.url %}
-        <li class="current"><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% else %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-      {% endif %}
-    {% endfor %}
+      {% for post in site.posts reversed %}
+        {% if post.layout == "heading" %}
+          <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }} <!-- <a href="{{ post.url }}">&rarr;</a> --></li>
+        {% elsif post.url == page.url %}
+          <li class="current"><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% else %}
+          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    <h2>Prototypes</h2>
+    <ul>
+      <li><a href="/student-dashboard.html">Student Dashboard</a></li>
     </ul>
   </nav>
+  
   <div class="styleguide-index">
-    <h1>{{ page.title }}</h1>
+  <h1>{{ page.title }}</h1>
 
-    <div class="component">
+  <div class="component">
     {{ content }}
-    </div>
+  </div>
 
   </div>
 </div>

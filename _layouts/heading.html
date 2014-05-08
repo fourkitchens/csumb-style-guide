@@ -11,18 +11,22 @@ layout: default
       <li class="heading"><a href="header-footer-prototype.html">Title</a></li>
     </ul>
   </nav>
-  <nav class="styleguide-nav"><ul>
-    {% for post in site.posts reversed %}
-      {% assign post_chapter = post.date | date: "%Y" | plus:0 %}
-      {% if my_chapter == post_chapter %}
-        {% if post.layout == "heading" %}
-          <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }}</li>
-        {% else %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+  <nav class="styleguide-nav">
+    <ul>
+      {% for post in site.posts reversed %}
+        {% assign post_chapter = post.date | date: "%Y" | plus:0 %}
+        {% if my_chapter == post_chapter %}
+          {% if post.layout == "heading" %}
+            <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }}</li>
+          {% else %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
-  </ul></nav>
+      {% endfor %}
+    </ul>
+  </nav>
+  
   <div class="styleguide-index">
     <h1>{{ my_chapter }}. {{ page.title }}</h1>
 
