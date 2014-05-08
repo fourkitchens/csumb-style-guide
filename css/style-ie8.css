@@ -423,6 +423,8 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
+#main:after,
+#footer:after,
 #user-profile-form .password-strength:after {
   content: "";
   display: table;
@@ -609,6 +611,7 @@ textarea {
   padding: 0.55em;
   outline: 0;
   background-color: #f5f4ee;
+  color: #8f864f;
   -moz-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
   -o-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
   -webkit-transition: box-shadow 0.3s ease-out, border 0.3s ease-out;
@@ -620,6 +623,7 @@ select:focus,
 textarea:focus {
   border-color: #03c772;
   background-color: #fff;
+  color: #39351b;
   -moz-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
   -webkit-box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
   box-shadow: 0 0 5px rgba(27, 195, 122, 0.8);
@@ -1049,6 +1053,12 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
  * @file _prototype_layouts.scss
  * A full-width layout that doesn't factor in the left sidebar.
  */
+.prototype-grid .limiter {
+  max-width: 68em;
+  margin: 0 auto;
+  position: relative;
+  display: block;
+}
 .prototype-grid .wrapper {
   max-width: 68em;
   margin: 0 auto;
@@ -1533,13 +1543,239 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
+.prototype-grid .header-image {
+  width: 100%;
+  background-image: url(../images/photos/header-students.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: auto;
+  z-index: -1;
+}
+
 #header {
-  background-color: #001e54;
-  border-bottom: 1px solid #00153a;
-  -moz-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
   color: white;
+  padding: 0;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header {
+  float: left;
+}
+#header .logo {
+  width: 57.44681%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  padding-top: 1.5em;
+  padding-left: 1.5em;
+  display: block;
+}
+[dir="rtl"] #header .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header .actions {
+  padding-top: 1.5em;
+  padding-right: 1.5em;
+  width: 40.42553%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+[dir="rtl"] #header .actions {
+  float: left;
+}
+#header .user-login {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  padding-right: 1em;
+  margin: 0;
+  border-right: 1px solid white;
+}
+[dir="rtl"] #header .user-login {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+#header .user-login button {
+  float: right;
+}
+#header .block-search {
+  width: 65.95745%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  padding-left: 1em;
+}
+[dir="rtl"] #header .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header .block-search input {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 100%;
+  margin-top: 0.3em;
+}
+#header .toggles {
+  margin: 4em 0 0;
+  float: left;
+  display: none;
+  width: 100%;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+#header .toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+  width: 33.33%;
+}
+#header .toggles li a {
+  display: block;
+  height: 60px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  padding: 1em 0;
+}
+#header .toggles li a span {
+  display: none;
+}
+#header .toggles li a.menu {
+  background-image: url("../images/icons/icon-menu.png");
+}
+#header .toggles li a.user {
+  background-image: url("../images/icons/icon-user.png");
+}
+#header .toggles li a.search {
+  background-image: url("../images/icons/icon-search.png");
+}
+#header .toggles li a:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#header .navigation {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1em 0;
+  margin: 0 auto 1.5em;
+  float: left;
+  position: relative;
+  display: block;
+  z-index: 2;
+}
+#header .main-menu {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .main-menu {
+  float: left;
+}
+#header .main-menu li {
+  float: left;
+  display: inline;
+  list-style: none;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-transform: uppercase;
+}
+#header .main-menu li a {
+  color: #001e54;
+  text-decoration: none;
+  letter-spacing: .05em;
+  font-size: 1em;
+  padding: .5em 1em;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  margin-right: .5em;
+  display: block;
+}
+#header .main-menu li a:hover {
+  color: #d9d9d9;
+  background-color: #3051a6;
+}
+#header .cbp-hrmenu {
+  width: 100%;
+}
+#header .cbp-hrmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#header .cbp-hrmenu ul li.cbp-hropen a {
+  color: white;
+  background-color: #001e54;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+#header .cbp-hrmenu ul li.cbp-hropen a:hover {
+  color: white;
+  background-color: #001e54;
+}
+#header .cbp-hrmenu .cbp-hrsub {
+  display: none;
+  position: absolute;
+  background-color: #001e54;
+  width: 100%;
+  left: 0;
+}
+#header .cbp-hrmenu .cbp-hrsub ul li a {
+  color: white;
+  background-color: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-transform: none;
+}
+#header .cbp-hrmenu .cbp-hrsub ul li a:hover {
+  color: #e6e6e6;
+  background-color: #000c21;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner {
+  width: 100%;
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0;
+}
+#header .cbp-hrmenu > ul > li {
+  display: inline-block;
+}
+#header .cbp-hrmenu > ul > li > a {
+  display: inline-block;
+}
+#header .cbp-hropen .cbp-hrsub {
+  display: block;
+  padding: 1em;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner:before,
+#header .cbp-hrmenu .cbp-hrsub-inner:after {
+  content: " ";
+  display: table;
+}
+#header .cbp-hrmenu .cbp-hrsub-inner:after {
+  clear: both;
 }
 
 /**
@@ -1634,10 +1870,17 @@ input.action-delete:focus {
  */
 #main {
   background-color: #eceade;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #main {
+  float: left;
 }
 #main .main-container {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em;
 }
 
 /**
@@ -1848,9 +2091,144 @@ a.icon-checkmark:hover {
  * The design for the footer partials.
  */
 #footer {
-  border-top: 1px solid #39351b;
-  padding-top: .5em;
   color: #dddac7;
+  background-color: #cac5a7;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 1em;
+  position: relative;
+}
+[dir="rtl"] #footer {
+  float: left;
+}
+#footer ul li {
+  list-style: none;
+}
+#footer .menu {
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  width: 65.95745%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  padding: 0;
+  margin: 0;
+}
+[dir="rtl"] #footer .menu {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#footer .menu .item1,
+#footer .menu .item2,
+#footer .menu .item3 {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 0%;
+}
+[dir="rtl"] #footer .menu .item1, [dir="rtl"]
+#footer .menu .item2, [dir="rtl"]
+#footer .menu .item3 {
+  clear: left;
+  float: right;
+}
+#footer .menu .item4,
+#footer .menu .item5,
+#footer .menu .item6 {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] #footer .menu .item4, [dir="rtl"]
+#footer .menu .item5, [dir="rtl"]
+#footer .menu .item6 {
+  clear: left;
+  float: right;
+  margin-left: 0%;
+}
+#footer .menu .item7,
+#footer .menu .item8,
+#footer .menu .item9 {
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] #footer .menu .item7, [dir="rtl"]
+#footer .menu .item8, [dir="rtl"]
+#footer .menu .item9 {
+  clear: left;
+  float: right;
+  margin-left: 0%;
+}
+#footer .menu li {
+  margin: 0 0 .275em;
+}
+#footer .menu li a {
+  color: #001e54;
+  text-decoration: none;
+}
+#footer .menu li a:hover {
+  color: #003087;
+}
+#footer .donate {
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  width: 31.91489%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 0;
+}
+[dir="rtl"] #footer .donate {
+  float: left;
+}
+#footer .donate button {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #footer .donate button {
+  float: left;
+}
+#footer .donate .links {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding: 0;
+  margin: 0;
+}
+[dir="rtl"] #footer .donate .links {
+  float: left;
+}
+#footer .donate .links li {
+  text-align: right;
+  width: 50%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 0%;
+}
+[dir="rtl"] #footer .donate .links li {
+  clear: left;
+  float: right;
+}
+#footer .donate .links a {
+  color: #001e54;
+  text-decoration: none;
+}
+#footer .donate .links a:hover {
+  color: #003087;
 }
 
 /**

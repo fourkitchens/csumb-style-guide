@@ -4,8 +4,104 @@
  */
 
 #footer {
-  border-top: 1px solid wp-color($grey, dark);
-  padding-top: .5em;
   color: wp-color($grey, bright);
+  background-color: wp-color($tan, 'bright', -10%);
+  @include add-grid(12);
+  @include grid-span(12,1);
+  padding: 1em;
+  position: relative;
+  @extend %clearfix;
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+  .menu {
+    font-family: $trade-bold;
+    @include grid-span(8,1);
+    padding:0;
+    margin: 0;
+    @include respond-to("footer smallest") {
+      width: 100%;
+      margin: 1em 0;
+    }
+    .item1,
+    .item2,
+    .item3 {
+      @include grid-span(4,1, $output-style:'float', $gutter:0);
+    }
+    .item4,
+    .item5,
+    .item6 {
+      @include grid-span(4,5, $output-style:'float', $gutter:0);
+    }
+    .item7,
+    .item8,
+    .item9 {
+      @include grid-span(4,10, $output-style:'float', $gutter:0);
+    }
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+      @include respond-to("footer small") {
+        width: 50%;
+        float: left;
+      }
+    }
+    .item6,
+    .item7,
+    .item8,
+    .item9 {
+      @include respond-to("footer small") {
+        width: 50%;
+        float: left;
+      }  
+    }
+    li {
+      margin: 0 0 .275em;
+      a {
+        color: wp-color($blue, 'dark');
+        text-decoration: none;
+      }
+      a:hover {
+        color: wp-color($blue, 'dark', 10%);
+      }
+    }
+  } 
+  .donate {
+    font-family: $trade-reg;
+    @include grid-span(4,9);
+    padding: 0;
+    @include respond-to("footer smallest") {
+      width: 100%;
+    }
+    button {
+      @include grid-span(12,1);
+    }
+    .links {
+      @include grid-span(12,1);
+      padding: 0;
+      margin: 0;
+      li {
+        text-align: right;
+        @include grid-span(6,1, $output-style:'float', $gutter:0);
+        @include respond-to("footer small") {
+          width: 100%;
+        }
+        @include respond-to("footer smallest") {
+          text-align: center;
+        }
+      }    
+      a {
+        color: wp-color($blue, 'dark');
+        text-decoration: none;
+      }
+      a:hover {
+        color: wp-color($blue, 'dark', 10%);
+      }
+    }
+  }
 }
 

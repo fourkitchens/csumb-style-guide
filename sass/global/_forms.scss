@@ -40,11 +40,13 @@ textarea {
   padding: 0.55em;
   outline: 0;
   background-color: wp-color($grey, 'highlight', 5%);
+  color: wp-color($tan, 'main');
 
   @include transition(box-shadow 0.3s ease-out, border 0.3s ease-out);
   &:focus {
     border-color: wp-color($green, 'main', 10%);
     background-color: #fff;
+    color: wp-color($tan, 'dark');
     @include box-shadow(0 0 5px rgba(wp-color($green, 'bright'), 0.8));
   }
 }

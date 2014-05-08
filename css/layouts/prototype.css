@@ -1,0 +1,51 @@
+/*
+Syntax error: Invalid CSS after "prototype-grid": expected "{", was ""
+        on line 6 of /Users/joetower/www/csumb-style-guide/sass/layouts/prototype.scss
+
+1: /Users/joetower/www/csumb-style-guide/sass/layouts/prototype.scss
+
+Backtrace:
+/Users/joetower/www/csumb-style-guide/sass/layouts/prototype.scss:6
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:1306:in `expected'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:1242:in `expected'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:1237:in `tok!'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:635:in `block'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:629:in `ruleset'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:654:in `block_child'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:644:in `block_contents'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:116:in `stylesheet'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/scss/parser.rb:41:in `parse'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/engine.rb:409:in `_to_tree'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/sass-3.3.4/lib/sass/engine.rb:274:in `render'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:166:in `block in compile'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/logger.rb:46:in `red'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:165:in `compile'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:144:in `compile_if_required'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:129:in `block (2 levels) in run'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `each'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:127:in `block in run'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:153:in `timed'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/compiler.rb:126:in `run'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/compiler.rb:24:in `compile'
+/Users/joetower/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/forwardable.rb:183:in `compile'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:101:in `sass_modified'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:89:in `sass_callback'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `call'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/watch.rb:14:in `run_callback'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:69:in `block in listen_callback'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `each'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/compass-1.0.0.alpha.19/lib/compass/watcher/project_watcher.rb:66:in `listen_callback'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
+/Users/joetower/.rvm/gems/ruby-2.1.1/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"prototype-grid\": expected \"{\", was \"\"\A         on line 6 of /Users/joetower/www/csumb-style-guide/sass/layouts/prototype.scss\A \A 1: /Users/joetower/www/csumb-style-guide/sass/layouts/prototype.scss"; }
