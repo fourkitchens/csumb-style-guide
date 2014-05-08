@@ -5,11 +5,10 @@
 
 #main {
   background-color: color($grey, highlight);
+  @extend %clearfix;
+  @include grid-span(12,1);
 
   .main-container {
-    padding: {
-      top: 1em;
-      bottom: 1em;
-    }
+    padding: 1em;
   }
 }

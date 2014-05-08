@@ -4,7 +4,7 @@ title:  "Colors"
 ---
 
 {% assign colors = "blue,yellow,green,tan" | split:"," %}
-{% assign names = "Ocean,Mustard,Grass,Sand" | split:"," %}
+{% assign names = "Bay Blue,Honey Bee,Valley Green,Golden Sand" | split:"," %}
 {% assign values = "dark,main,light,highlight" | split:"," %}
 
 <div class="styleguide-swatches">

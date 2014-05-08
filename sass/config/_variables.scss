@@ -64,9 +64,8 @@ $font-body-weight: 400;
 // Colors, etc.
 //
 
-// World Pulse Next Gen Colors:
-  // They've asked for some adjustments on the violet hue --- once this settles,
-  // flatten it back into specific hex value.
+// CSUMB Colors:
+
 $blue:(
   dark:      #001e54,
   main:      #1f346b,
@@ -82,7 +81,7 @@ $yellow:   (
 );
 
 $green:(
-  dark:      #ffffff,
+  dark:      #07633B,
   main:      #029555,
   bright:    #1bc37a,
   highlight: #ffffff
@@ -92,6 +91,7 @@ $tan:  (
   dark:      #39351b,
   main:      #8f864f,
   bright:    #dddac7,
+  light:     #F3F2E8,
   highlight: #eceade
 );
 
@@ -179,9 +179,9 @@ $indent-amount: 2em;
 @include sgs-change('include clearfix',   false);
 @include sgs-change('direction',          'both');
 
+// Makes these only applicable to the two column stylguide.
 @include add-grid(1);
-@include add-grid(6 3 at 600px);
-@include add-grid(8 3 at 800px);
+
 
 // Define our gutters.
 @include add-gutter(1/3);
@@ -226,3 +226,11 @@ $breakpoints: add-breakpoint('two col large', 800px);
 $breakpoints: add-breakpoint('comment indent', 1000px);
 $breakpoints: add-breakpoint('comment indent limited', 800px);
 $breakpoints: add-breakpoint('comment indent mobile', 400px 799px);
+
+// Specific to full page prototypes
+$breakpoints: add-breakpoint('navigation small', max-width 792px);
+$breakpoints: add-breakpoint('navigation medium', max-width 1042px);
+$breakpoints: add-breakpoint('navigation full', min-width 1042px);
+
+$breakpoints: add-breakpoint('footer smallest', max-width 400px);
+$breakpoints: add-breakpoint('footer small', max-width 700px);

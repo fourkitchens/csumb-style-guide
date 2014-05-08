@@ -3,9 +3,281 @@
  * The design for the header.
  */
 
+ .prototype-grid {
+  .header-image {
+    width: 100%;
+    background-image: url(../images/photos/header-students.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0;
+    right: auto;
+    left: auto;
+    z-index: -1;
+    @include respond-to("navigation full") {
+      height: 565px;
+      background-position: 0% 20%;
+    }
+    @include respond-to("navigation medium") {
+      height: 500px;
+    }
+    @include respond-to("navigation small") {
+      height: 400px;
+    }
+  }
+}
 #header {
-  background-color: color($blue, dark);
-  border-bottom: 1px solid color($blue, dark, -5%);
-  @include box-shadow(1px 0 5px rgba(0,0,0,0.2));
   color: $white;
+  padding: 0;
+  @include grid-span(12,1);
+  @include respond-to("navigation small") {
+    background-color: rgba($black, 0.75);
+  }
+  .logo {
+    @include grid-span(7,1);
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    display: block;
+    @include respond-to("navigation small") {
+      width: 100%;
+      margin: 0 auto;
+      padding:8em 2em 2em; 
+      text-align: center;
+    }
+  }
+  .actions {
+    padding-top: 1.5em;
+    padding-right: 1.5em;
+    @include grid-span(5,8);
+    font-family: $trade-reg;
+    @include respond-to("navigation small") {
+      display: none;
+      width: 100%;
+      margin-top: 0;
+      background-color: rgba($white, 0.75);
+      padding: 1em 0;
+    }
+  }
+  .user-login {
+    @include grid-span(4,1, $output-style:'float');
+    padding-right: 1em;
+    margin: 0;
+    border-right:1px solid $white;
+    button {
+      float: right;
+      @include respond-to("navigation small") {
+        display: none;
+      }  
+    }
+  }
+  .block-search {
+    @include grid-span(8,5, $output-style:'float');
+    padding-left: 1em;
+    input {
+      @include border-radius(6px);
+      width: 100%;
+      margin-top: 0.3em;
+    }
+    @include respond-to("navigation small") {
+      padding:0 1em;
+      width: 100%;
+    }
+  }
+  .toggles {
+    margin: 4em 0 0;
+    float: left;
+    display: none;
+    width: 100%;
+    padding: 0;
+    background-color: rgba($white, 0.75);
+    @include respond-to("navigation small") {
+      display: block;
+    }
+    li {
+      list-style-type: none;
+      float: left;
+      display: inline;
+      position: relative;
+      width: 33.33%;
+      a {
+        display: block;
+        height: 60px;
+        width:100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        padding: 1em 0;
+        span {
+          display: none;
+        }
+        &.menu {
+          background-image: url('../images/icons/icon-menu.png');          
+        }
+        &.user {
+          background-image: url('../images/icons/icon-user.png');
+        }
+        &.search {
+          background-image: url('../images/icons/icon-search.png');
+        }
+        &:hover {
+          background-color: rgba($white, 0.90);
+        }
+      }
+    }
+  }  
+  .navigation {   
+    width: 100%;
+    background-color: rgba($white, 0.90);
+    padding: 1em 0;
+    margin: 0 auto 1.5em;
+    float: left;
+    position: relative;
+    display: block;
+    z-index: 2;
+    @include respond-to("navigation full") {
+      margin-top: 20em;
+    }
+    @include respond-to("navigation medium") {
+      margin-top: 13em;
+    }    
+    @include respond-to("navigation small") {
+      margin: 0;
+      padding: 0;
+      float: left;
+      display: none;
+      background-color:$white;
+    }
+  }
+  .main-menu {
+    @include grid-span(12,1);
+    li {
+      float: left;
+      display: inline;
+      list-style: none;
+      font-family: $trade-bold;
+      text-transform: uppercase;
+      @include respond-to("navigation small") {
+        width: 100%;
+        display: block;
+        float: left;
+      }
+      a {
+        color: wp-color($blue, 'dark');
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: 1em;
+        padding: .5em 1em;
+        @include border-radius(4px);
+        margin-right: .5em; 
+        display: block;
+        @include respond-to("navigation medium") {
+          padding: .3em .8em;
+          margin-right: 0;
+          font-size: .9em;
+        }
+        @include respond-to("navigation small") {
+          @include border-radius(0);
+          font-size: 1em;
+          padding: 1em;
+        }
+        &:hover {
+          color: darken($white, 15%);
+          background-color: wp-color($blue, 'main', 15%);
+        }
+      }
+    }
+  }
+  // horizontal drop-down styles
+  .cbp-hrmenu {
+    width: 100%;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none; 
+      li { 
+        @include respond-to("navigation small") {
+          width: 100%;
+          display: block;
+          float: left;
+        }
+        &.cbp-hropen {
+          a {
+            color: $white;
+            background-color:color($blue, 'dark');
+            @include border-radius(0);
+            &:hover {
+              color: $white;
+              background-color:color($blue, 'dark');
+            }
+          }
+        } 
+      }
+    }
+    .cbp-hrsub {
+      display: none;
+      position: absolute;
+      background-color:color($blue, 'dark'); 
+      width: 100%;
+      left: 0;
+      @include respond-to("navigation small") { // make the submenu relative at small sizes
+        position: relative;
+        float: left;
+      }
+      ul {
+        li {
+          @include respond-to("navigation small") {
+            width: 100%;
+            display: block;
+            float: left;
+          }          
+          a {
+            color: $white;
+            background-color: none;
+            @include border-radius(4px);
+            text-transform: none;
+            &:hover {
+              color: darken($white, 10%);
+              background-color: color($blue, 'dark', -10%);
+            }
+          }              
+        }
+      }    
+    } 
+    .cbp-hrsub-inner {
+      width: 100%;
+      max-width: 70em;
+      margin: 0 auto;
+      padding: 0;
+    }
+  }
+  .cbp-hrmenu > ul > li {
+    display: inline-block;
+    @include respond-to("navigation small") {
+      display: block;
+    }
+  } 
+  .cbp-hrmenu > ul > li > a {
+    display: inline-block;
+    @include respond-to("navigation small") {
+      display: block;
+    }
+  }
+
+  .cbp-hropen .cbp-hrsub {
+    display: block;
+    padding: 1em;
+    @include respond-to("navigation small") {
+      padding: 0;
+    }
+  }
+
+  .cbp-hrmenu .cbp-hrsub-inner:before,
+  .cbp-hrmenu .cbp-hrsub-inner:after {
+    content: " ";
+    display: table;
+  }
+
+  .cbp-hrmenu .cbp-hrsub-inner:after {
+    clear: both;
+  }
 }

@@ -399,7 +399,7 @@ body {
 }
 .styleguide-swatches ol.blue .title {
   background-color: white;
-  color: #1f346b;
+  color: #001e54;
 }
 .styleguide-swatches ol.blue .dark {
   background-color: #001e54;
@@ -451,7 +451,7 @@ body {
 }
 .styleguide-swatches ol.yellow .title {
   background-color: white;
-  color: #ffe85c;
+  color: #d7be25;
 }
 .styleguide-swatches ol.yellow .dark {
   background-color: #d7be25;
@@ -503,19 +503,19 @@ body {
 }
 .styleguide-swatches ol.green .title {
   background-color: white;
-  color: #029555;
+  color: #07633b;
 }
 .styleguide-swatches ol.green .dark {
-  background-color: white;
+  background-color: #07633b;
 }
 .styleguide-swatches ol.green .dark span:after {
-  content: "white";
+  content: "#07633b";
 }
 .styleguide-swatches ol.green .dark .high {
-  background-color: white;
+  background-color: #097b49;
 }
 .styleguide-swatches ol.green .dark .low {
-  background-color: #f2f2f2;
+  background-color: #054b2d;
 }
 .styleguide-swatches ol.green .main {
   background-color: #029555;
@@ -555,7 +555,7 @@ body {
 }
 .styleguide-swatches ol.tan .title {
   background-color: white;
-  color: #8f864f;
+  color: #39351b;
 }
 .styleguide-swatches ol.tan .dark {
   background-color: #39351b;
@@ -607,7 +607,7 @@ body {
 }
 .styleguide-swatches ol.grey .title {
   background-color: white;
-  color: #8f864f;
+  color: #39351b;
 }
 .styleguide-swatches ol.grey .dark {
   background-color: #39351b;

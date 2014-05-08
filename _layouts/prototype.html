@@ -15,25 +15,17 @@
     <link rel="stylesheet" href="/css/syntax.css" />
 
   </head>
-  <body class="stylguide-grid">
-    <div class="styleguide-container">
-      <header>
-        <a href="/">
-          <h1 class="logo">CSUMB: Rethink Style Guide</h1>
-        </a>
-      </header>
-
-      <main>
+  <body class="prototype-grid">
         {{ content }}
-      </main>
-
-      <footer>
-        <div>
-          Four Kitchens | <a href="http://www.fourkitchens.com">www.fourkitchens.com</a>
-        </div>
-      </footer>
-    </div> <!-- /styleguide-container -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/styleguide-assets/js/main.js"></script>
+    <script src="/styleguide-assets/js/cbpHorizontalMenu.js"></script>
+    <script src="/styleguide-assets/js/responsive-nav.js"></script>
+    <script>
+      $(function() {
+        cbpHorizontalMenu.init();
+      });      
+    </script>
   </body>
 </html>
+

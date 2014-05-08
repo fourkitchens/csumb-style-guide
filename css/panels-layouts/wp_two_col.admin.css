@@ -19,49 +19,49 @@
  */
 @media (min-width: 37.5em) {
   .l-two-column .column-1 {
-    width: 64.28571%;
-    float: left;
-    margin-right: -100%;
+    width: 100%;
+    float: right;
     margin-left: 0;
+    margin-right: 0;
     clear: none;
   }
   [dir="rtl"] .l-two-column .column-1 {
-    float: right;
-    margin-left: -100%;
-    margin-right: 0;
+    float: left;
   }
   .l-two-column .column-2 {
-    width: 32.14286%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 133.33333%;
     clear: none;
   }
   [dir="rtl"] .l-two-column .column-2 {
-    float: left;
+    float: right;
+    margin-left: -100%;
+    margin-right: 133.33333%;
   }
 }
 @media (min-width: 50em) {
   .l-two-column .column-1 {
-    width: 66.66667%;
-    float: left;
-    margin-right: -100%;
+    width: 100%;
+    float: right;
     margin-left: 0;
+    margin-right: 0;
     clear: none;
   }
   [dir="rtl"] .l-two-column .column-1 {
-    float: right;
-    margin-left: -100%;
-    margin-right: 0;
+    float: left;
   }
   .l-two-column .column-2 {
-    width: 25%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
+    width: 100%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 200%;
     clear: none;
   }
   [dir="rtl"] .l-two-column .column-2 {
-    float: left;
+    float: right;
+    margin-left: -100%;
+    margin-right: 200%;
   }
 }
