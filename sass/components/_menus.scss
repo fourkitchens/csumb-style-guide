@@ -1,0 +1,195 @@
+/**
+* Menus - main menu, footer menu, etc.
+*/
+
+#header { // Main menu
+  .toggles {
+    margin: 4em 0 0;
+    float: left;
+    display: none;
+    width: 100%;
+    padding: 0;
+    font-family: $trade;
+    @include respond-to("navigation small") {
+      display: block;
+    }
+    li {
+      list-style-type: none;
+      float: left;
+      display: inline;
+      position: relative;
+      width: 33.33%;
+      a {
+        display: block;
+        width:100%;
+        color: color($blue, 'dark');
+        background-color: rgba($white, 0.90);
+        padding: 1em;
+        text-decoration: none;
+        text-align: center;
+        &.active {
+          background-color: $white;
+        }
+        span {
+          padding-left: 1em;
+          vertical-align: middle;
+          text-transform: uppercase;
+          @include respond-to("navigation smallest") {
+            display: block;
+            padding: .5em 0 0;
+          }
+        }
+        img {
+          vertical-align: middle;
+          @include respond-to("navigation smallest") {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+        &:hover {
+          background-color: rgba($white, 0.95);
+        }
+      }
+    }
+  }
+  .navigation {   
+    width: 100%;
+    background-color: rgba($white, 0.90);
+    margin: 0 auto 4.5em;
+    float: left;
+    position: relative;
+    display: block;
+    z-index: 2;
+    @include respond-to("navigation full") {
+      margin-top: 18em;
+    }
+    @include respond-to("navigation medium") {
+      margin-top: 13em;
+    }    
+    @include respond-to("navigation small") {
+      margin: 0;
+      padding: 0;
+      float: left;
+      display: none;
+      background-color:$white;
+    }
+  }
+  ul.menu {
+    width: 100%;
+    max-width: 68em;
+    padding: 0;
+    margin: 0 auto;
+    @extend %clearfix;
+
+    li {
+      float: left;
+      display: inline-block;
+      list-style: none;
+      font-family: $trade-bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      @include respond-to("navigation small") {
+        width: 100%;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+      &.active {
+        .submenu {
+          display: block;
+        }
+        span {
+          color: color($blue, 'dark');
+          background-color: $white;
+          @include box-shadow(0 0 4px rgba(color($blue,'dark'), 0.4));
+          &:hover {
+            color: color($blue, 'dark');
+            background-color: $white;
+          }
+        }
+      }
+      span,
+      a {
+        color: color($blue, 'dark');
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: 1em;
+        padding: 1em 1.2em;
+        display: block;
+        cursor: pointer;
+        @include respond-to("navigation medium") {
+          padding: .3em .8em;
+          margin-right: 0;
+          font-size: .9em;
+        }
+        @include respond-to("navigation small") {
+          font-size: 1em;
+          padding: 1em;
+        }
+        &:hover {
+          color: darken($white, 15%);
+          background-color: color($blue, 'main', 15%);
+        }
+      }
+      // 2nd level
+      .submenu {
+        display: none;
+        background-color: $white;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        @include respond-to("navigation small") {
+          position: relative;
+          padding: 0;
+          margin: 0;
+        }
+        ul.menu {
+          margin: 0 auto;
+          padding:.5em 1em;
+          list-style-type: none; 
+          position: relative;
+          width: 100%;
+          max-width: 68em;
+          @extend %clearfix;
+          @include respond-to("navigation small") {
+            padding: 0;
+          }
+          li { 
+            margin:0 .5em 0 0;
+            @include respond-to("navigation small") {
+              width: 100%;
+              display: block;
+              float: left;
+              margin: 0;
+              padding: 0;
+            }
+            a {
+              color: color($blue, 'main');
+              background-color: color($tan, 'main', 45%);
+              padding: .5em;
+              text-transform: none;
+              @include border-radius(4px);
+              @include respond-to("navigation small") {
+                @include border-radius(0);
+                padding: .5em 1em;
+              }
+              &:hover {
+                color: color($blue, 'main', 15%);
+                background-color: color($tan, 'main', 35%);
+              }
+              &.active {
+                background: none;
+                color: color($blue, 'main', 20%);
+                &:hover {
+                  color: color($blue, 'main', 20%);
+                }
+              }
+            }
+          }
+        }     
+      }
+    }
+  }
+}

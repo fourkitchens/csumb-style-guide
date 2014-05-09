@@ -230,9 +230,11 @@ $breakpoints: add-breakpoint('comment indent limited', 800px);
 $breakpoints: add-breakpoint('comment indent mobile', 400px 799px);
 
 // Specific to full page prototypes
+$breakpoints: add-breakpoint('navigation smallest', max-width 475px);
 $breakpoints: add-breakpoint('navigation small', max-width 792px);
 $breakpoints: add-breakpoint('navigation medium', max-width 1042px);
 $breakpoints: add-breakpoint('navigation full', min-width 1042px);
 
 $breakpoints: add-breakpoint('footer smallest', max-width 400px);
 $breakpoints: add-breakpoint('footer small', max-width 700px);
+$breakpoints: add-breakpoint('footer medium', max-width 750px);
