@@ -7,9 +7,9 @@ title:  "Global Header & Footer"
   <div class="limiter">
     <a class="logo" href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-white.png" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
     <ul class="toggles">
-      <li><a id="pull-nav" href="#" class="menu"><span>Menu</span></a></li>
-      <li><a id="pull-user" href="#" class="user"><span>User</span></a></li>
-      <li><a id="pull-search" href="#" class="search"><span>Search</span></a></li>
+      <li><a id="pull-nav" href="#" class="toggle"><img src="../images/icons/icon-menu.png" /><span>Menu</span> </a></li>
+      <li><a id="pull-user" href="user/login" class="toggle"><img src="../images/icons/icon-user.png" /><span>User</span></a></li>
+      <li><a id="pull-search" href="#" class="toggle"><img src="../images/icons/icon-search.png" /><span>Search</span></a></li>
     </ul>
     <div class="actions">
       <div class="user-login">
@@ -24,128 +24,80 @@ title:  "Global Header & Footer"
     </div>
   </div>
   <div class="navigation">
-    <div class="limiter">
-      <nav id="cbp-hrmenu" class="cbp-hrmenu dl-menuwrapper">
-        <ul class="main-menu dl-menu">
-          <li class="menu-item item-1"><a href="#" title="Item 1">About</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-2"><a href="#" title="Item 2">Admissions</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-3"><a href="#" title="Item 3">Costs &amp; Aid </a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-4"><a href="#" title="Item 4">Academics</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-5"><a href="#" title="Item 5">Campus Life</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-6"><a href="#" title="Item 6">Employee Resources</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="menu-item item-7"><a href="#" title="Item 7" >Alumni</a>
-            <div class="cbp-hrsub dl-submenu">
-              <div class="cbp-hrsub-inner">
-                <div>
-                  <ul>
-                    <li><a href="#">Item 1</a></li>
-                    <li><a href="#">Item 2</a></li>
-                    <li><a href="#">Item 3</a></li>
-                    <li><a href="#">Item 4</a></li>
-                    <li><a href="#">Item 5</a></li>
-                    <li><a href="#">Item 6</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
+    <ul class="menu">
+      <li class="menu-item item-1"><span class="nolink">About</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
         </ul>
-      </div>
-    </nav>      
+      </li>
+      <li class="menu-item item-2"><span class="nolink">Admissions</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+      <li class="menu-item item-3"><span class="nolink">Costs &amp; Aid</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+      <li class="menu-item item-4"><span class="nolink">Academics</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+      <li class="menu-item item-5"><span class="nolink">Campus Life</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+      <li class="menu-item item-6"><span class="nolink">Employee Resources</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+      <li class="menu-item item-7"><span class="nolink">Alumni</span>
+        <ul class="menu">
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          <li><a href="#">Item 4</a></li>
+          <li><a href="#">Item 5</a></li>
+          <li><a href="#">Item 6</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </header>
-
-
 <div id="main">
   <div class="limiter">
     <div class="main-container">
@@ -154,7 +106,6 @@ title:  "Global Header & Footer"
     </div>
   </div>
 </div>
-
 <footer id="footer">
   <div class="limiter">
     <ul class="menu">
