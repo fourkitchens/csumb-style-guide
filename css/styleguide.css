@@ -438,16 +438,16 @@ body {
   background-color: #344b88;
 }
 .styleguide-swatches ol.blue .highlight {
-  background-color: white;
+  background-color: #7e96d5;
 }
 .styleguide-swatches ol.blue .highlight span:after {
-  content: "white";
+  content: "#7e96d5";
 }
 .styleguide-swatches ol.blue .highlight .high {
-  background-color: white;
+  background-color: #91a6db;
 }
 .styleguide-swatches ol.blue .highlight .low {
-  background-color: #f2f2f2;
+  background-color: #6b86cf;
 }
 .styleguide-swatches ol.yellow .title {
   background-color: white;
