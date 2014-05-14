@@ -54,7 +54,7 @@
   }
   .navigation {   
     width: 100%;
-    background-color: rgba($white, 0.90);
+    background-color: rgba($white, 0.85);
     margin: 0 auto 4.5em;
     float: left;
     position: relative;
@@ -80,7 +80,15 @@
     padding: 0;
     margin: 0 auto;
     @extend %clearfix;
-
+    @include respond-to("navigation medium") {
+      padding: 0 4em;
+    }
+    @include respond-to("navigation medium padding") {
+      padding: 0 2em;
+    }
+    @include respond-to("navigation small padding") {
+      padding: 0em;
+    }
     li {
       float: left;
       display: inline-block;
@@ -101,13 +109,44 @@
           display: block;
         }
         span {
-          color: color($blue, 'dark');
-          background-color: $white;
-          @include box-shadow(0 0 4px rgba(color($blue,'dark'), 0.4));
+          color: color($blue, 'bright');
+          //background-color: $white;
+          //@include box-shadow(0 0 4px rgba(color($blue,'dark'), 0.4));
           &:hover {
             color: color($blue, 'dark');
-            background-color: $white;
+            //background-color: $white;
           }
+          &:before {
+            display: inline-block;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            content: image-url('icons/icon-dropup.svg'); 
+            width: 15px; 
+            height: 24px;        
+            vertical-align: middle;
+            color: color($blue, dark);
+          }
+        }
+        &:after {
+          top: 100%;
+          border: solid transparent;
+          content: " ";
+          position: absolute;
+          pointer-events: none;
+          border-color: transparent;
+        	width: 0; 
+        	height: 0; 
+        	border-left: 20px solid transparent;
+        	border-right: 20px solid transparent;
+        	border-bottom: 15px solid color($blue, dark);
+        	border-width: 10px;
+          margin-left: 5%;
+          margin-top: -20px;
         }
       }
       span,
@@ -120,7 +159,7 @@
         display: block;
         cursor: pointer;
         @include respond-to("navigation medium") {
-          padding: .3em .8em;
+          padding: 1em .8em;
           margin-right: 0;
           font-size: .9em;
         }
@@ -129,14 +168,32 @@
           padding: 1em;
         }
         &:hover {
-          color: darken($white, 15%);
-          background-color: color($blue, 'main', 15%);
+          color: color($blue, 'bright');
+          background-color: $white;
+        }
+      }
+      span {
+        &:before {
+          display: inline-block;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          content: image-url('icons/icon-dropdown.svg'); 
+          width: 15px; 
+          height: 24px;        
+          //margin-right: 0.3em;
+          vertical-align: middle;
+          color: color($blue, dark);
         }
       }
       // 2nd level
       .submenu {
         display: none;
-        background-color: $white;
+        background-color: color($blue, dark);
         width: 100%;
         position: absolute;
         left: 0;
@@ -147,7 +204,7 @@
         }
         ul.menu {
           margin: 0 auto;
-          padding:.5em 1em;
+          padding:0;
           list-style-type: none; 
           position: relative;
           width: 100%;
@@ -157,7 +214,6 @@
             padding: 0;
           }
           li { 
-            margin:0 .5em 0 0;
             @include respond-to("navigation small") {
               width: 100%;
               display: block;
@@ -166,21 +222,19 @@
               padding: 0;
             }
             a {
-              color: color($blue, 'main');
-              background-color: color($tan, 'main', 45%);
-              padding: .5em;
+              color: color($blue, 'highlight');
               text-transform: none;
-              @include border-radius(4px);
+              font-size: 1em;
+              line-height: 1.5em;
               @include respond-to("navigation small") {
                 @include border-radius(0);
                 padding: .5em 1em;
               }
               &:hover {
-                color: color($blue, 'main', 15%);
-                background-color: color($tan, 'main', 35%);
+                color: $white;
+                background-color: transparent;
               }
               &.active {
-                background: none;
                 color: color($blue, 'main', 20%);
                 &:hover {
                   color: color($blue, 'main', 20%);

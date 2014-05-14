@@ -1807,12 +1807,12 @@ input.action-delete:focus {
     background-position: 0% 20%;
   }
 }
-@media (max-width: 65.125em) {
+@media (max-width: 67.1875em) {
   .prototype-grid .header-image {
     height: 500px;
   }
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   .prototype-grid .header-image {
     height: 400px;
   }
@@ -1833,7 +1833,7 @@ input.action-delete:focus {
 [dir="rtl"] #header {
   float: left;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header {
     background-color: rgba(0, 0, 0, 0.75);
   }
@@ -1853,7 +1853,7 @@ input.action-delete:focus {
   margin-left: -100%;
   margin-right: 0;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .logo {
     width: 100%;
     margin: 0 auto;
@@ -1877,7 +1877,7 @@ input.action-delete:focus {
 #header .actions p {
   margin: 0;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .actions {
     display: none;
     width: 100%;
@@ -1905,7 +1905,7 @@ input.action-delete:focus {
 #header .user-login .button {
   float: right;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .user-login {
     display: none;
   }
@@ -1930,7 +1930,7 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .block-search {
     padding: 1em;
     width: 100%;
@@ -2393,7 +2393,7 @@ a.icon-checkmark:hover {
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .toggles {
     display: block;
   }
@@ -2442,7 +2442,7 @@ a.icon-checkmark:hover {
 }
 #header .navigation {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.85);
   margin: 0 auto 4.5em;
   float: left;
   position: relative;
@@ -2454,12 +2454,12 @@ a.icon-checkmark:hover {
     margin-top: 18em;
   }
 }
-@media (max-width: 65.125em) {
+@media (max-width: 67.1875em) {
   #header .navigation {
     margin-top: 13em;
   }
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header .navigation {
     margin: 0;
     padding: 0;
@@ -2474,6 +2474,21 @@ a.icon-checkmark:hover {
   padding: 0;
   margin: 0 auto;
 }
+@media (max-width: 67.1875em) {
+  #header ul.menu {
+    padding: 0 4em;
+  }
+}
+@media (max-width: 62.25em) {
+  #header ul.menu {
+    padding: 0 2em;
+  }
+}
+@media (max-width: 58.25em) {
+  #header ul.menu {
+    padding: 0em;
+  }
+}
 #header ul.menu li {
   float: left;
   display: inline-block;
@@ -2483,7 +2498,7 @@ a.icon-checkmark:hover {
   margin: 0;
   padding: 0;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li {
     width: 100%;
     display: block;
@@ -2496,14 +2511,41 @@ a.icon-checkmark:hover {
   display: block;
 }
 #header ul.menu li.active span {
-  color: #001e54;
-  background-color: white;
-  -webkit-box-shadow: 0 0 4px rgba(0, 30, 84, 0.4);
-  box-shadow: 0 0 4px rgba(0, 30, 84, 0.4);
+  color: #3b559a;
 }
 #header ul.menu li.active span:hover {
   color: #001e54;
-  background-color: white;
+}
+#header ul.menu li.active span:before {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/icons/icon-dropup.svg');
+  width: 15px;
+  height: 24px;
+  vertical-align: middle;
+  color: #001e54;
+}
+#header ul.menu li.active:after {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #001e54;
+  border-width: 10px;
+  margin-left: 5%;
+  margin-top: -20px;
 }
 #header ul.menu li span,
 #header ul.menu li a {
@@ -2515,15 +2557,15 @@ a.icon-checkmark:hover {
   display: block;
   cursor: pointer;
 }
-@media (max-width: 65.125em) {
+@media (max-width: 67.1875em) {
   #header ul.menu li span,
   #header ul.menu li a {
-    padding: .3em .8em;
+    padding: 1em .8em;
     margin-right: 0;
     font-size: .9em;
   }
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li span,
   #header ul.menu li a {
     font-size: 1em;
@@ -2532,17 +2574,32 @@ a.icon-checkmark:hover {
 }
 #header ul.menu li span:hover,
 #header ul.menu li a:hover {
-  color: #d9d9d9;
-  background-color: #3051a6;
+  color: #3b559a;
+  background-color: white;
+}
+#header ul.menu li span:before {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/icons/icon-dropdown.svg');
+  width: 15px;
+  height: 24px;
+  vertical-align: middle;
+  color: #001e54;
 }
 #header ul.menu li .submenu {
   display: none;
-  background-color: white;
+  background-color: #001e54;
   width: 100%;
   position: absolute;
   left: 0;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li .submenu {
     position: relative;
     padding: 0;
@@ -2551,21 +2608,18 @@ a.icon-checkmark:hover {
 }
 #header ul.menu li .submenu ul.menu {
   margin: 0 auto;
-  padding: .5em 1em;
+  padding: 0;
   list-style-type: none;
   position: relative;
   width: 100%;
   max-width: 68em;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu {
     padding: 0;
   }
 }
-#header ul.menu li .submenu ul.menu li {
-  margin: 0 .5em 0 0;
-}
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu li {
     width: 100%;
     display: block;
@@ -2575,24 +2629,22 @@ a.icon-checkmark:hover {
   }
 }
 #header ul.menu li .submenu ul.menu li a {
-  color: #1f346b;
-  background-color: #eae8d9;
-  padding: .5em;
+  color: #7e96d5;
   text-transform: none;
-  border-radius: 4px;
+  font-size: 1em;
+  line-height: 1.5em;
 }
-@media (max-width: 49.5em) {
+@media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu li a {
     border-radius: 0;
     padding: .5em 1em;
   }
 }
 #header ul.menu li .submenu ul.menu li a:hover {
-  color: #3051a6;
-  background-color: #d8d4b8;
+  color: white;
+  background-color: transparent;
 }
 #header ul.menu li .submenu ul.menu li a.active {
-  background: none;
   color: #365aba;
 }
 #header ul.menu li .submenu ul.menu li a.active:hover {

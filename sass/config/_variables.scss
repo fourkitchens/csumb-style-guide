@@ -70,7 +70,7 @@ $blue:(
   dark:      #001e54,
   main:      #1f346b,
   bright:    #3B559A,
-  highlight: #ffffff
+  highlight: #7E96D5
 );
 
 $yellow:   (
@@ -229,8 +229,10 @@ $breakpoints: add-breakpoint('comment indent mobile', 400px 799px);
 
 // Specific to full page prototypes
 $breakpoints: add-breakpoint('navigation smallest', max-width 475px);
-$breakpoints: add-breakpoint('navigation small', max-width 792px);
-$breakpoints: add-breakpoint('navigation medium', max-width 1042px);
+$breakpoints: add-breakpoint('navigation small', max-width 870px);
+$breakpoints: add-breakpoint('navigation small padding', max-width 932px);
+$breakpoints: add-breakpoint('navigation medium padding', max-width 996px);
+$breakpoints: add-breakpoint('navigation medium', max-width 1075px);
 $breakpoints: add-breakpoint('navigation full', min-width 1042px);
 
 $breakpoints: add-breakpoint('footer smallest', max-width 400px);

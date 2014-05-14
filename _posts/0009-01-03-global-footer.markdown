@@ -27,73 +27,47 @@ title:  "Global Header & Footer"
     <ul class="menu">
       <li class="menu-item item-1"><span class="nolink">About</span>
         <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
+          <li><a href="#">Basic Facts</a></li>
+          <li><a href="#">Why CSUMB?</a></li>
+          <li><a href="#">The Campus</a></li>
+          <li><a href="#">News & Publications</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Donate</a></li>
         </ul>
       </li>
-      <li class="menu-item item-2"><span class="nolink">Admissions</span>
-        <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
-        </ul>
+      <li class="menu-item item-2"><a>Admissions</a>
       </li>
       <li class="menu-item item-3"><span class="nolink">Costs &amp; Aid</span>
         <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
+          <li><a href="#">Costs and calculator</a></li>
+          <li><a href="#">Financial Aid</a></li>
+          <li><a href="#">Making Payments</a></li>
         </ul>
       </li>
       <li class="menu-item item-4"><span class="nolink">Academics</span>
         <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
+          <li><a href="#">Degree Programs</a></li>
+          <li><a href="#">Colleges, Schools, <br> and Departments</a></li>
+          <li><a href="#">Classes and <br> Planning</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Academic Support <br> Services</a></li>
+          <li><a href="#">Tools and <br> Resources</a></li>
         </ul>
       </li>
-      <li class="menu-item item-5"><span class="nolink">Campus Life</span>
-        <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
-        </ul>
+      <li class="menu-item item-5"><a>Campus Life</a>
       </li>
       <li class="menu-item item-6"><span class="nolink">Employee Resources</span>
         <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
+          <li><a href="#">Tools and Databases</a></li>
+          <li><a href="#">Human Resources, Benefits and Payroll</a></li>
+          <li><a href="#">Information Technology</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Housing, Dining, Parking, and Ottercard</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Faculty Resources</a></li>
         </ul>
       </li>
-      <li class="menu-item item-7"><span class="nolink">Alumni</span>
-        <ul class="menu">
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-          <li><a href="#">Item 4</a></li>
-          <li><a href="#">Item 5</a></li>
-          <li><a href="#">Item 6</a></li>
-        </ul>
+      <li class="menu-item item-7"><a>Alumni</a>
       </li>
     </ul>
   </div>
