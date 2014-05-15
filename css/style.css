@@ -2514,9 +2514,9 @@ a.icon-checkmark:hover {
   color: #3b559a;
 }
 #header ul.menu li.active span:hover {
-  color: #001e54;
+  color: #1f346b;
 }
-#header ul.menu li.active span:before {
+#header ul.menu li.active span:after {
   display: inline-block;
   speak: none;
   font-style: normal;
@@ -2549,13 +2549,14 @@ a.icon-checkmark:hover {
 }
 #header ul.menu li span,
 #header ul.menu li a {
-  color: #001e54;
+  color: #1f346b;
   text-decoration: none;
   letter-spacing: .05em;
   font-size: 1em;
   padding: 1em 1.2em;
   display: block;
   cursor: pointer;
+  transition: color 0.15s ease-in-out;
 }
 @media (max-width: 67.1875em) {
   #header ul.menu li span,
@@ -2575,9 +2576,8 @@ a.icon-checkmark:hover {
 #header ul.menu li span:hover,
 #header ul.menu li a:hover {
   color: #3b559a;
-  background-color: white;
 }
-#header ul.menu li span:before {
+#header ul.menu li span:after {
   display: inline-block;
   speak: none;
   font-style: normal;
@@ -2589,6 +2589,7 @@ a.icon-checkmark:hover {
   content: url('../images/icons/icon-dropdown.svg');
   width: 15px;
   height: 24px;
+  margin-left: 0.3em;
   vertical-align: middle;
   color: #001e54;
 }
@@ -2632,7 +2633,7 @@ a.icon-checkmark:hover {
   color: #7e96d5;
   text-transform: none;
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.4em;
 }
 @media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu li a {
