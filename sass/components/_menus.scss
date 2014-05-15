@@ -113,10 +113,10 @@
           //background-color: $white;
           //@include box-shadow(0 0 4px rgba(color($blue,'dark'), 0.4));
           &:hover {
-            color: color($blue, 'dark');
+            color: color($blue, 'main');
             //background-color: $white;
           }
-          &:before {
+          &:after {
             display: inline-block;
             speak: none;
             font-style: normal;
@@ -151,13 +151,14 @@
       }
       span,
       a {
-        color: color($blue, 'dark');
+        color: color($blue, 'main');
         text-decoration: none;
         letter-spacing: .05em;
         font-size: 1em;
         padding: 1em 1.2em;
         display: block;
         cursor: pointer;
+        transition: color 0.15s ease-in-out;
         @include respond-to("navigation medium") {
           padding: 1em .8em;
           margin-right: 0;
@@ -169,11 +170,10 @@
         }
         &:hover {
           color: color($blue, 'bright');
-          background-color: $white;
         }
       }
       span {
-        &:before {
+        &:after {
           display: inline-block;
           speak: none;
           font-style: normal;
@@ -185,7 +185,7 @@
           content: image-url('icons/icon-dropdown.svg'); 
           width: 15px; 
           height: 24px;        
-          //margin-right: 0.3em;
+          margin-left: 0.3em;
           vertical-align: middle;
           color: color($blue, dark);
         }
@@ -225,7 +225,7 @@
               color: color($blue, 'highlight');
               text-transform: none;
               font-size: 1em;
-              line-height: 1.5em;
+              line-height: 1.4em;
               @include respond-to("navigation small") {
                 @include border-radius(0);
                 padding: .5em 1em;
