@@ -157,8 +157,8 @@ $social-colors:(
 
 
 // Base color variables.
-$link           : color($blue);
-$visited        : color($blue);
+$link           : color($blue, bright);
+$visited        : color($blue, bright);
 $selection-bg   : color($yellow);
 $selection      : color($tan, dark);
 

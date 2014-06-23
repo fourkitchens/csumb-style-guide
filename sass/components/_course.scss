@@ -1,0 +1,28 @@
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+
+.course-content {
+  margin-top: 1.5em;
+  border: 1px solid #BEB995;
+  background-color: color($tan, bright);
+  display: block;
+  padding: 2em;
+  h3 {
+    margin: 0;
+    color: color($tan, dark);
+    a {
+      background-size: 118%;
+      margin: 0 10px 0 0;
+      color: color($tan, main);
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+  .open {
+    float: right;
+    margin-top: -12px;
+  }
+}

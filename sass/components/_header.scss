@@ -80,6 +80,7 @@
   .block-search {
     @include grid-span(8,5, $output-style:'float');
     padding-left: 1em;
+    padding-top: .5em;
     .form-submit {
       display: none; // find a better Drupal way to do this.
     }

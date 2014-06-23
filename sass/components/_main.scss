@@ -4,7 +4,7 @@
  */
 
 #main {
-  background-color: color($grey, highlight);
+  background-color: $white;
   @extend %clearfix;
   @include grid-span(12,1);
 

@@ -20,7 +20,6 @@ code {
   font-size: 0.825em;
   padding: 3px 5px;
   border: 1px solid color($grey, 'highlight', -5%);
-  @include border-radius(3px);
   background-color: rgba(color($grey, 'highlight', 5%), 0.75);
 }
 
@@ -58,9 +57,10 @@ body {
     a {
       color: #fff;
       text-decoration: none;
-      h1 {
+      h2 {
         margin: 10px;
         color: #fff;
+        font-size: 2em;
       }
     }
 
@@ -105,6 +105,9 @@ body {
 
   h1 + section.heading {
     margin-top: 0;
+  }
+  h2 {
+    margin-top: .8em;
   }
 
 }
@@ -170,6 +173,7 @@ body {
 
     &:hover {
       background: color($grey, 'highlight', -5%);
+      cursor: pointer;
     }
 
     a {

@@ -41,6 +41,7 @@
 @import 'layouts/l-two-column';
 @import 'layouts/prototype_layouts';
 @import 'layouts/student-dashboard';
+@import 'layouts/basic-page';
 
 ////////////////////////
 // Import compontents
@@ -63,6 +64,11 @@
 @import 'components/comment-wrapper';
 @import 'components/ckeditor_overrides';
 @import 'components/oembed';
+@import 'components/course';
+@import 'components/menu-left-sidebar';
+@import 'components/person-chunk';
+@import 'components/news-chunk';
+@import 'components/images';
 
 ////////////////////////
 // Import print

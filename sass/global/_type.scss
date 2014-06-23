@@ -11,6 +11,10 @@ body {
   background-color: $white;
 }
 
+p {
+  margin-top: 0;
+}
+
 // Headings
 //
 // To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
@@ -25,7 +29,12 @@ body {
   line-height: 1.125;
 }
 
-#{headings(1,2)} {
+#{headings(1)} {
+  margin-top: 0;
+}
+
+#{headings(2,3)} {
+  margin-top: 1.5em;
 }
 
 #{headings(3,6)} {
@@ -34,12 +43,12 @@ body {
 
 h1 {
   color: color($green);
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
   color: color($green);
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 h3 {
@@ -67,11 +76,9 @@ h6 {
 // The order of link states are based on Eric Meyer's article:
 // http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
 a {
-
   &:link {
-    color: $link;
+  color: $link;
   }
-
   &:visited {
     color: $visited;
     &:hover, &:focus {
@@ -89,6 +96,73 @@ a {
   
   &.link-bold {
     font-weight: 700;
+  }
+}
+
+// Links within content
+
+.main-container {
+  a {
+    color: $link;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid color($blue, bright);
+    &:visited {
+      color: $visited;
+      &:hover, &:focus {
+        color: color($blue, dark);
+        border-bottom: 1px solid color($blue, dark);
+      }
+    }
+  
+    &:hover, &:focus {
+      color: color($blue, dark);
+      border-bottom: 1px solid color($blue, dark);
+    }
+  
+    &:active {
+      color: color($blue, dark);
+      border-bottom: 1px solid color($blue, dark);
+    }
+    
+    &.link-bold {
+      font-weight: 700;
+    }
+  }
+}
+
+// Download Forms
+
+a.form-download {
+  border-bottom: 2px solid color($blue, bright);
+  color: $link;
+  font-weight: 700;
+  text-decoration: none;
+  &:visited {
+    color: $visited;
+    &:hover, &:focus {
+      color: color($blue, dark);
+      border-bottom: 2px solid color($blue, dark);
+    }
+  }
+
+  &:hover, &:focus {
+    color:  color($blue, dark);
+    border-bottom: 2px solid color($blue, dark);
+  }
+
+  &:active {
+    color: color($blue, dark);
+    border-bottom: 2px solid color($blue, dark);
+  }
+}
+
+p.form-icon {
+  &:before {
+    content: url("../images/icons/icon-download-form.png");
+    margin-right: 7px;
+    margin-top: 4px;
+    float: left;
   }
 }
 
@@ -161,51 +235,22 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-  position: relative;
-
-  font-family: $archer;
-  color: color($orange, 'dark', -5%);
-
-  quotes: "\201C""\201D""\2018""\2019";
-  border-left: 0;
-  padding: 0 40px;
+  font-family: $trade-reg;
+  padding: 0 .75em;
   margin: 2em 0;
+  font-size: 1.2em;
+  border-left: .5em solid color($green);
+  color: color($green);
+  line-height: 1.5em;
 
-  &:before, &:after, cite {
-    font-family: $archer;
-    font-style: italic;
-    font-weight: 400;
-    color: color($orange, 'dark');
-  }
-
-  &:before, &:after {
-    position: absolute;
-    font-size: 4em;
-    line-height: 0;
-  }
-
-  &:before {
-    top: 0.25em;
-    left: 0;
-    content: open-quote;
-  }
-
-  &:after {
-    bottom: 0;
-    right: 0;
-    content: close-quote;
-  }
-
-  cite {
-    display: block;
-    font-size: 0.875em;
-    text-align: right;
-
-    &:before { content: "\2014"; }
-  }
 }
 
 .sep {
   // Separators (probably pipe characters "|" but also small words like "by" in comment-meta)
   @include opacity(0.75);
+}
+
+.lead {
+  font-size: 1.5em;
+  line-height: 1.5em;
 }

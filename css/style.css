@@ -423,7 +423,10 @@ ul.pager:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
 #footer:after,
-#user-profile-form .password-strength:after {
+#user-profile-form .password-strength:after,
+.person-chunk:after,
+.news-chunk:after,
+.images-four-up:after {
   content: "";
   display: table;
   clear: both;
@@ -441,10 +444,22 @@ body {
   background-color: white;
 }
 
+p {
+  margin-top: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 400;
   line-height: 1.125;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2, h3 {
+  margin-top: 1.5em;
 }
 
 h3, h4, h5, h6 {
@@ -453,12 +468,12 @@ h3, h4, h5, h6 {
 
 h1 {
   color: #029555;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
   color: #029555;
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 h3 {
@@ -472,10 +487,10 @@ h4 {
 }
 
 a:link {
-  color: #1f346b;
+  color: #3b559a;
 }
 a:visited {
-  color: #1f346b;
+  color: #3b559a;
 }
 a:visited:hover, a:visited:focus {
   color: #001e54;
@@ -488,6 +503,60 @@ a:active {
 }
 a.link-bold {
   font-weight: 700;
+}
+
+.main-container a {
+  color: #3b559a;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px solid #3b559a;
+}
+.main-container a:visited {
+  color: #3b559a;
+}
+.main-container a:visited:hover, .main-container a:visited:focus {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a:hover, .main-container a:focus {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a:active {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a.link-bold {
+  font-weight: 700;
+}
+
+a.form-download {
+  border-bottom: 2px solid #3b559a;
+  color: #3b559a;
+  font-weight: 700;
+  text-decoration: none;
+}
+a.form-download:visited {
+  color: #3b559a;
+}
+a.form-download:visited:hover, a.form-download:visited:focus {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+a.form-download:hover, a.form-download:focus {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+a.form-download:active {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+
+p.form-icon:before {
+  content: url("../images/icons/icon-download-form.png");
+  margin-right: 7px;
+  margin-top: 4px;
+  float: left;
 }
 
 ul.inline, ol.inline {
@@ -539,47 +608,23 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-  position: relative;
-  font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: black;
-  quotes: "\201C" "\201D" "\2018" "\2019";
-  border-left: 0;
-  padding: 0 40px;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  padding: 0 .75em;
   margin: 2em 0;
-}
-blockquote:before, blockquote:after, blockquote cite {
-  font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  color: black;
-}
-blockquote:before, blockquote:after {
-  position: absolute;
-  font-size: 4em;
-  line-height: 0;
-}
-blockquote:before {
-  top: 0.25em;
-  left: 0;
-  content: open-quote;
-}
-blockquote:after {
-  bottom: 0;
-  right: 0;
-  content: close-quote;
-}
-blockquote cite {
-  display: block;
-  font-size: 0.875em;
-  text-align: right;
-}
-blockquote cite:before {
-  content: "\2014";
+  font-size: 1.2em;
+  border-left: 0.5em solid #029555;
+  color: #029555;
+  line-height: 1.5em;
 }
 
 .sep {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
+}
+
+.lead {
+  font-size: 1.5em;
+  line-height: 1.5em;
 }
 
 /**
@@ -1543,6 +1588,33 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 
 /**
+ * Prototype for Basic Page.
+ */
+.main-container {
+  margin-top: 2em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .main-container {
+  float: left;
+}
+@media (min-width: 54.375em) {
+  .main-container {
+    width: 73.91304%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  [dir="rtl"] .main-container {
+    float: left;
+  }
+}
+
+/**
  * @file _button.scss
  *   All styles that have to do with buttons on the site.
  */
@@ -1551,7 +1623,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 400;
@@ -1563,7 +1635,6 @@ input[type="button"] {
   color: #544b0f;
   -webkit-box-shadow: 0 1px 2px rgba(92, 85, 43, 0.8);
   box-shadow: 0 1px 2px rgba(92, 85, 43, 0.8);
-  text-shadow: 1px 1px 0 rgba(171, 152, 30, 0.5);
   background-color: #ffe85c;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiNmZmYxOTkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmU4NWMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -1708,72 +1779,6 @@ input.action-delete:focus {
   box-shadow: 0 0 4px rgba(143, 134, 79, 0.5);
 }
 
-.btn-aux1 {
-  background-color: #1f346b;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMxZjM0NmIiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDFlNTQiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -moz-linear-gradient(#1f346b 75%, #001e54);
-  background-image: -webkit-linear-gradient(#1f346b 75%, #001e54);
-  background-image: linear-gradient(#1f346b 75%, #001e54);
-  border-color: black;
-  color: white;
-  text-shadow: 1px 1px 0 #001e54;
-}
-.btn-aux1:hover,
-.btn-aux1:focus {
-  border-color: #0e1730;
-  background-color: #253e7f;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMyYTQ3OTMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDMwODciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -moz-linear-gradient(#2a4793 75%, #003087);
-  background-image: -webkit-linear-gradient(#2a4793 75%, #003087);
-  background-image: linear-gradient(#2a4793 75%, #003087);
-}
-.btn-aux1[disabled],
-.btn-aux1[disabled]:hover {
-  background-color: #7e8799;
-  background-image: none;
-  border-color: #707a8e;
-  color: white;
-}
-.btn-aux1:focus {
-  -webkit-box-shadow: 0 0 4px rgba(31, 52, 107, 0.5);
-  box-shadow: 0 0 4px rgba(31, 52, 107, 0.5);
-}
-
-.btn-aux2 {
-  background-color: #8f864f;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI4OCUiIHN0b3AtY29sb3I9IiNlY2VhZGUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkOWQ1YmUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -moz-linear-gradient(#eceade 88%, #d9d5be);
-  background-image: -webkit-linear-gradient(#eceade 88%, #d9d5be);
-  background-image: linear-gradient(#eceade 88%, #d9d5be);
-  border-color: #c7c19d;
-  color: #5c552b;
-  text-shadow: 1px 1px 0 #eceade;
-}
-.btn-aux2:hover,
-.btn-aux2:focus {
-  border-color: #d3d0b7;
-  background-color: #e7e4d7;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI5MCUiIHN0b3AtY29sb3I9IiNkOWQ2YzEiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkM2QwYjciLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -moz-linear-gradient(#d9d6c1 90%, #d3d0b7);
-  background-image: -webkit-linear-gradient(#d9d6c1 90%, #d3d0b7);
-  background-image: linear-gradient(#d9d6c1 90%, #d3d0b7);
-}
-.btn-aux2[disabled],
-.btn-aux2[disabled]:hover {
-  background-color: #e4e2d2;
-  background-image: none;
-  border-color: #dad8c2;
-  color: #6d6534;
-}
-.btn-aux2:focus {
-  -webkit-box-shadow: 0 0 4px rgba(143, 134, 79, 0.5);
-  box-shadow: 0 0 4px rgba(143, 134, 79, 0.5);
-}
-
 .btn-large {
   font-size: 1.2em;
   padding: 0.8em 1.2em;
@@ -1783,6 +1788,29 @@ input.action-delete:focus {
   font-size: 0.938em;
   font-weight: 400;
   padding: 0.25em 0.75em;
+}
+
+.btn-multiline {
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0px;
+  line-height: 1.5em;
+  padding: 0.75em 1em 1em 1em;
+  margin: 0;
+}
+.btn-multiline span {
+  font-size: 1.2em;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  line-height: 1.5em;
+}
+
+.btn-full {
+  font-size: 1.4em;
+  padding: 0.5em 1.2em;
+  width: 100%;
 }
 
 /**
@@ -1916,6 +1944,7 @@ input.action-delete:focus {
   float: right;
   margin-right: 0;
   padding-left: 1em;
+  padding-top: .5em;
 }
 [dir="rtl"] #header .block-search {
   clear: left;
@@ -2040,7 +2069,7 @@ input.action-delete:focus {
  * The main region container. Minor styles only.
  */
 #main {
-  background-color: #eceade;
+  background-color: white;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -3336,6 +3365,299 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   top: 0;
   margin: 0;
   padding: 0;
+}
+
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+.course-content {
+  margin-top: 1.5em;
+  border: 1px solid #BEB995;
+  background-color: #dddac7;
+  display: block;
+  padding: 2em;
+}
+.course-content h3 {
+  margin: 0;
+  color: #39351b;
+}
+.course-content h3 a {
+  background-size: 118%;
+  margin: 0 10px 0 0;
+  color: #8f864f;
+}
+.course-content p {
+  margin-bottom: 0;
+}
+.course-content .open {
+  float: right;
+  margin-top: -12px;
+}
+
+/**
+ * @file _menu-left-sidebar.scss
+ *   All styles that have to do with buttons on the site.
+ */
+.menu-left-sidebar {
+  margin-top: 2em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .menu-left-sidebar {
+  float: left;
+}
+@media (min-width: 54.375em) {
+  .menu-left-sidebar {
+    width: 21.73913%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  [dir="rtl"] .menu-left-sidebar {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+.menu-left-sidebar ul.menu {
+  padding: 0;
+}
+.menu-left-sidebar ul.menu li {
+  list-style: none;
+}
+.menu-left-sidebar ul.menu li a {
+  background-color: #1f346b;
+  border: none;
+  color: white;
+  display: block;
+  margin: 0 0 1px;
+  padding: 15px 20px;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-decoration: none;
+}
+.menu-left-sidebar ul.menu li a:hover, .menu-left-sidebar ul.menu li a:focus {
+  background-color: #001e54;
+}
+.menu-left-sidebar ul.menu li a:active {
+  background-color: #001e54;
+}
+
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+.person-chunk {
+  padding-top: 2em;
+}
+.person-chunk h3.name {
+  margin-top: 0;
+  margin-bottom: .2em;
+  color: #39351b;
+  text-transform: none;
+}
+.person-chunk h4.title {
+  margin-top: 0;
+  text-transform: none;
+  margin-bottom: 1em;
+  color: #8f864f;
+}
+.person-chunk p.person-description {
+  margin-bottom: 0;
+}
+.person-chunk h3, .person-chunk h4, .person-chunk p {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  clear: both;
+}
+[dir="rtl"] .person-chunk h3, [dir="rtl"] .person-chunk h4, [dir="rtl"] .person-chunk p {
+  float: left;
+}
+@media (min-width: 37.5em) {
+  .person-chunk h3, .person-chunk h4, .person-chunk p {
+    width: 82.97872%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  [dir="rtl"] .person-chunk h3, [dir="rtl"] .person-chunk h4, [dir="rtl"] .person-chunk p {
+    float: left;
+  }
+}
+.person-chunk img {
+  width: 48.93617%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  padding-bottom: 1.5em;
+}
+[dir="rtl"] .person-chunk img {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+@media (min-width: 37.5em) {
+  .person-chunk img {
+    width: 14.89362%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  [dir="rtl"] .person-chunk img {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+.news-chunk {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-bottom: 1.5em;
+  padding-top: 2em;
+}
+[dir="rtl"] .news-chunk {
+  float: left;
+}
+@media (min-width: 37.5em) {
+  .news-chunk {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    margin: 0;
+    padding-right: 10px;
+  }
+  [dir="rtl"] .news-chunk {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+.news-chunk a {
+  border: 0 !important;
+}
+.news-chunk a h3.news-title {
+  margin-top: 0;
+  margin-bottom: .2em;
+  color: #39351b;
+  text-transform: none;
+}
+.news-chunk a h4.news-category {
+  margin-top: 0;
+  text-transform: none;
+  margin-bottom: 1em;
+  color: #8f864f;
+}
+
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+.images-one-up {
+  padding-bottom: 1.5em;
+}
+
+.images-two-up {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-bottom: 1.5em;
+}
+[dir="rtl"] .images-two-up {
+  float: left;
+}
+@media (min-width: 37.5em) {
+  .images-two-up {
+    width: 48.93617%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    margin: 0;
+    padding-right: 10px;
+  }
+  [dir="rtl"] .images-two-up {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+
+.images-three-up {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-bottom: 1.5em;
+}
+[dir="rtl"] .images-three-up {
+  float: left;
+}
+@media (min-width: 37.5em) {
+  .images-three-up {
+    width: 31.91489%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    margin: 0;
+    padding-right: 10px;
+  }
+  [dir="rtl"] .images-three-up {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+
+.images-four-up {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-bottom: 1.5em;
+}
+[dir="rtl"] .images-four-up {
+  float: left;
+}
+@media (min-width: 37.5em) {
+  .images-four-up {
+    width: 23.40426%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    margin: 0;
+    padding-right: 10px;
+  }
+  [dir="rtl"] .images-four-up {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
 }
 
 /**

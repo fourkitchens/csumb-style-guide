@@ -1,0 +1,39 @@
+/**
+ * @file _course.scss
+ *   All styles that have to do with buttons on the site.
+ */
+$person-chunk-column: 600px; //Match mobile menu breakpoint
+
+.person-chunk {
+  @extend %clearfix;
+  padding-top: 2em;
+  h3.name {
+    margin-top: 0;
+    margin-bottom: .2em;
+    color: color($tan, dark);
+    text-transform: none;
+  }
+  h4.title {
+    margin-top: 0;
+    text-transform: none;
+    margin-bottom: 1em;
+    color: color($tan);
+  }
+  p.person-description {
+    margin-bottom: 0;
+  }
+  h3,h4,p {
+    @include grid-span(12,1);
+    clear: both;
+    @include breakpoint ($person-chunk-column) {
+        @include grid-span(10,3);
+    }
+  }
+  img {
+    @include grid-span(6,1);
+    padding-bottom: 1.5em;
+    @include breakpoint ($person-chunk-column) {
+        @include grid-span(2,1);
+    }
+  }
+}
