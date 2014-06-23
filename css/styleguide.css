@@ -12,10 +12,22 @@ body {
   background-color: white;
 }
 
+p {
+  margin-top: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-weight: 400;
   line-height: 1.125;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2, h3 {
+  margin-top: 1.5em;
 }
 
 h3, h4, h5, h6 {
@@ -24,12 +36,12 @@ h3, h4, h5, h6 {
 
 h1 {
   color: #029555;
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 h2 {
   color: #029555;
-  font-size: 1.6em;
+  font-size: 2em;
 }
 
 h3 {
@@ -43,10 +55,10 @@ h4 {
 }
 
 a:link, a[href*="example.com"] {
-  color: #1f346b;
+  color: #3b559a;
 }
 a:visited, a[href*="csumb.edu"] {
-  color: #1f346b;
+  color: #3b559a;
 }
 a:visited:hover, a[href*="csumb.edu"]:hover, a:visited:focus, a[href*="csumb.edu"]:focus {
   color: #001e54;
@@ -59,6 +71,60 @@ a:active {
 }
 a.link-bold {
   font-weight: 700;
+}
+
+.main-container a {
+  color: #3b559a;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px solid #3b559a;
+}
+.main-container a:visited, .main-container a[href*="csumb.edu"] {
+  color: #3b559a;
+}
+.main-container a:visited:hover, .main-container a[href*="csumb.edu"]:hover, .main-container a:visited:focus, .main-container a[href*="csumb.edu"]:focus {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a:hover, .main-container a:focus {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a:active {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
+}
+.main-container a.link-bold {
+  font-weight: 700;
+}
+
+a.form-download {
+  border-bottom: 2px solid #3b559a;
+  color: #3b559a;
+  font-weight: 700;
+  text-decoration: none;
+}
+a.form-download:visited, a.form-download[href*="csumb.edu"] {
+  color: #3b559a;
+}
+a.form-download:visited:hover, a.form-download[href*="csumb.edu"]:hover, a.form-download:visited:focus, a.form-download[href*="csumb.edu"]:focus {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+a.form-download:hover, a.form-download:focus {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+a.form-download:active {
+  color: #001e54;
+  border-bottom: 2px solid #001e54;
+}
+
+p.form-icon:before {
+  content: url("../images/icons/icon-download-form.png");
+  margin-right: 7px;
+  margin-top: 4px;
+  float: left;
 }
 
 ul.inline, ol.inline {
@@ -110,42 +176,13 @@ code, kbd, pre, samp {
 }
 
 blockquote {
-  position: relative;
-  font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  color: black;
-  quotes: "\201C" "\201D" "\2018" "\2019";
-  border-left: 0;
-  padding: 0 40px;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  padding: 0 .75em;
   margin: 2em 0;
-}
-blockquote:before, blockquote:after, blockquote cite {
-  font-family: "Archer SSm A", "Archer SSm B", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-style: italic;
-  font-weight: 400;
-  color: black;
-}
-blockquote:before, blockquote:after {
-  position: absolute;
-  font-size: 4em;
-  line-height: 0;
-}
-blockquote:before {
-  top: 0.25em;
-  left: 0;
-  content: open-quote;
-}
-blockquote:after {
-  bottom: 0;
-  right: 0;
-  content: close-quote;
-}
-blockquote cite {
-  display: block;
-  font-size: 0.875em;
-  text-align: right;
-}
-blockquote cite:before {
-  content: "\2014";
+  font-size: 1.2em;
+  border-left: 0.5em solid #029555;
+  color: #029555;
+  line-height: 1.5em;
 }
 
 .sep {
@@ -153,9 +190,13 @@ blockquote cite:before {
   opacity: 0.75;
 }
 
+.lead {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
 .styleguide-sample, .styleguide-typography .typeface {
   border: 1px solid #dddac7;
-  border-radius: 3px;
   margin: 1em auto;
 }
 
@@ -173,7 +214,6 @@ code {
   font-size: 0.825em;
   padding: 3px 5px;
   border: 1px solid #e3e0ce;
-  border-radius: 3px;
   background-color: rgba(245, 244, 238, 0.75);
 }
 
@@ -212,9 +252,10 @@ body {
   color: #fff;
   text-decoration: none;
 }
-.styleguide-container > header a h1 {
+.styleguide-container > header a h2 {
   margin: 10px;
   color: #fff;
+  font-size: 2em;
 }
 .styleguide-container > header #logo {
   max-width: 280px;
@@ -254,6 +295,9 @@ body {
 }
 .styleguide-container h1 + section.heading {
   margin-top: 0;
+}
+.styleguide-container h2 {
+  margin-top: .8em;
 }
 
 .styleguide-content {
@@ -312,6 +356,7 @@ body {
 }
 .styleguide-nav li.heading:hover {
   background: #e3e0ce;
+  cursor: pointer;
 }
 .styleguide-nav li.heading a {
   display: block;
@@ -355,7 +400,6 @@ body {
 @media (min-width: 47.5em) {
   .styleguide-swatches {
     border: 1px solid #dddac7;
-    border-radius: 3px;
     margin: 1em auto;
   }
 }
@@ -368,7 +412,6 @@ body {
 @media (max-width: 34.9375em) {
   .styleguide-swatches ol {
     border: 1px solid #dddac7;
-    border-radius: 3px;
     margin: 1em auto;
     margin: 0 0 1em 0;
   }
@@ -376,7 +419,6 @@ body {
 @media (min-width: 35em) and (max-width: 47.4375em) {
   .styleguide-swatches ol {
     border: 1px solid #dddac7;
-    border-radius: 3px;
     margin: 1em auto;
     margin: 0 0 1em 0;
   }

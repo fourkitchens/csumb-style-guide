@@ -1,0 +1,6 @@
+---
+layout: heading
+title:  "Other Components"
+---
+
+These are other components specific to CSUMB content

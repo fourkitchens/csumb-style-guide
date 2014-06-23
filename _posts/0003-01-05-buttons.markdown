@@ -24,14 +24,17 @@ title:  "Buttons"
 
 {% capture b3 %}
 <form action="#">
-  <button class="btn-aux1">Auxiliary</button>
-  <button class="btn-aux1" disabled>Auxiliary</button>
-  <button class="btn-aux2">Auxiliary</button>
-  <button class="btn-aux2" disabled>Auxiliary</button>
+  <button class="btn-multiline btn-primary"><span>Donate</span></br>Support students like us</button>
 </form>
 {% endcapture %}
 
-_Class names are subject to change, particularly in this area._
+{% capture b4 %}
+<form action="#">
+  <button class="btn-full btn-primary">Full Width Call to Action</button>
+  <button class="btn-full btn-negative">Yes, sign me up for this program</button>
+</form>
+{% endcapture %}
+
 
 ### Primary and Negative/Destructive Buttons
 {% include sample.html sample=b1 %}
@@ -50,14 +53,12 @@ Primarily, buttons are presented in one of three ways:
 Buttons may be produced in various sizes on a limited basis, although the
 preference is Standard
 
-### Extra Buttons / CTAs
+### Multiline Buttons
 {% include sample.html sample=b3 %}
 
-Two auxiliary classes of buttons are available, leveraging the remaining
-[colors in the palette]({% post_url 0001-01-02-color %}). These should not
-appear on any primary forms, but may instead be used for CTAs and other
-secondary interactive features. For example, "Recommend" on _Journal_ posts.
+Content limitations are necessary for multiline buttons.
 
-_These class names should be changed once a more suitable purpose or class of
-action is determined. Usage of these buttons because the implementor likes the
-color is strongly discouraged._
+### Full Width Buttons
+{% include sample.html sample=b4 %}
+
+Full width buttons fill the entire content area, spanning the same number of columns as the content. In some cases, it may be too wide, use your judgement.
