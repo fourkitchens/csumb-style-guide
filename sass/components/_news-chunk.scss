@@ -1,7 +1,7 @@
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _news-chunk.scss
  */
+
 $news-chunk-column: 600px; //Match mobile menu breakpoint
 
 .news-chunk {
@@ -27,6 +27,7 @@ $news-chunk-column: 600px; //Match mobile menu breakpoint
       text-transform: none;
       margin-bottom: 1em;
       color: color($tan);
+      text-transform: uppercase;
     }
     img {
     }

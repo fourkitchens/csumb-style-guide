@@ -1,6 +1,5 @@
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _images.scss
  */
 $images-one-up: 600px;
 $images-two-up: 600px;
@@ -39,5 +38,4 @@ $images-four-up: 600px;
     margin: 0;
     padding-right: 10px;
   }
-  @extend %clearfix;
 }

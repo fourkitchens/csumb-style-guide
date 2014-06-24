@@ -1,17 +1,19 @@
 /**
  * @file _course.scss
- *   All styles that have to do with buttons on the site.
  */
 
-.course-content {
-  margin-top: 1.5em;
+$course: 600px; //Match mobile menu breakpoint
+
+.course {
+  clear: both;
+  margin-bottom: 1em;
   border: 1px solid #BEB995;
   background-color: color($tan, bright);
   display: block;
-  padding: 2em;
+  padding: 2em; 
   h3 {
-    margin: 0;
     color: color($tan, dark);
+    margin-top: 0;
     a {
       background-size: 118%;
       margin: 0 10px 0 0;
@@ -21,8 +23,20 @@
   p {
     margin-bottom: 0;
   }
-  .open {
+  .hours {
+    font-weight: 700;
+  }
+  .description {
+    margin-bottom: 1em;
+  }
+  .open, .closed {
     float: right;
     margin-top: -12px;
+    a {
+      border: none;
+      &:hover {
+        border: none;
+      }
+    }
   }
 }
