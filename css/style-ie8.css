@@ -2888,44 +2888,49 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 /**
  * @file _images.scss
  */
-.images-one-up {
-  padding-bottom: 1.5em;
+.images-one-up, .caption-one-up {
+  padding-bottom: .5em;
 }
 
-.images-two-up {
+.images-two-up, .caption-two-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-two-up {
+[dir="rtl"] .images-two-up, [dir="rtl"] .caption-two-up {
   float: left;
 }
 
-.images-three-up {
+.images-three-up, .caption-three-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-three-up {
+[dir="rtl"] .images-three-up, [dir="rtl"] .caption-three-up {
   float: left;
 }
 
-.images-four-up {
+.images-four-up, .caption-four-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-four-up {
+[dir="rtl"] .images-four-up, [dir="rtl"] .caption-four-up {
   float: left;
+}
+
+.caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
+  font-size: .8em;
+  margin-bottom: 1.5em;
 }
 
 /**
