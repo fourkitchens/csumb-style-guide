@@ -178,10 +178,10 @@ code, kbd, pre, samp {
 blockquote {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 0 .75em;
-  margin: 2em 0;
+  margin: 2em 0 2em 1em;
   font-size: 1.2em;
-  border-left: 0.5em solid #029555;
-  color: #029555;
+  border-left: 0.5em solid #d7be25;
+  color: #8f864f;
   line-height: 1.5em;
 }
 

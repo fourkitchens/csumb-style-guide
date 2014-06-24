@@ -237,12 +237,11 @@ code, kbd, pre, samp {
 blockquote {
   font-family: $trade-reg;
   padding: 0 .75em;
-  margin: 2em 0;
+  margin: 2em 0 2em 1em;
   font-size: 1.2em;
-  border-left: .5em solid color($green);
-  color: color($green);
+  border-left: .5em solid color($yellow, dark);
+  color: color($tan);
   line-height: 1.5em;
-
 }
 
 .sep {
