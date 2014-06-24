@@ -1,0 +1,17 @@
+/**
+ * @file _related-content.scss
+ */
+
+$related-content: 600px; //Match mobile menu breakpoint
+
+.related-content {
+  @extend %clearfix;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}

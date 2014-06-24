@@ -430,7 +430,8 @@ ul.pager:after,
 #user-profile-form .password-strength:after,
 .person-chunk:after,
 .news-chunk:after,
-.contact:after {
+.contact:after,
+.related-content:after {
   content: "";
   display: table;
   clear: both;
@@ -1551,8 +1552,7 @@ input.action-delete:focus {
 
 .btn-full {
   font-size: 1.4em;
-  padding: 0.5em 1.2em;
-  width: 100%;
+  padding: 0.5em 2em;
 }
 
 /**
@@ -2812,6 +2812,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
  */
 .person-chunk {
   padding-top: 2em;
+  clear: both;
 }
 .person-chunk h3.name {
   margin-top: 0;
@@ -2977,6 +2978,20 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   margin-right: 7px;
   margin-top: 4px;
   float: left;
+}
+
+/**
+ * @file _related-content.scss
+ */
+.related-content {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.related-content h3 {
+  margin-top: 0;
+}
+.related-content p {
+  margin-bottom: 1em;
 }
 
 /**
