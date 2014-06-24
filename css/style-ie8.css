@@ -2868,19 +2868,19 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 [dir="rtl"] .news-chunk {
   float: left;
 }
-.news-chunk a {
-  border: 0 !important;
-}
-.news-chunk a h3.news-title {
+.news-chunk h3.news-title {
   margin-top: 0;
-  margin-bottom: .2em;
-  color: #39351b;
+  margin-bottom: .4em;
   text-transform: none;
+  line-height: 1.3em;
 }
-.news-chunk a h4.news-category {
+.news-chunk h3.news-title a {
+  border: none;
+}
+.news-chunk h4.news-category {
   margin-top: 0;
   text-transform: none;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   color: #8f864f;
   text-transform: uppercase;
 }
