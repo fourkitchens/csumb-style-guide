@@ -430,7 +430,7 @@ ul.pager:after,
 #user-profile-form .password-strength:after,
 .person-chunk:after,
 .news-chunk:after,
-.images-four-up:after {
+.contact:after {
   content: "";
   display: table;
   clear: both;
@@ -1769,7 +1769,7 @@ input.action-delete:focus {
 /**
  * Icons
  */
-.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply, .icon-x, .icon-open, .icon-checkmark, .icon-dining, .icon-schedule, .icon-library, .icon-printing, .icon-ottercard {
+.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply, .icon-x, .icon-open, .icon-close, .icon-checkmark, .icon-dining, .icon-schedule, .icon-library, .icon-printing, .icon-ottercard, .icon-email, .icon-phone {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -1785,12 +1785,12 @@ input.action-delete:focus {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply, .backgroundsize .icon-small.icon-x, .backgroundsize .icon-small.icon-open, .backgroundsize .icon-small.icon-checkmark, .backgroundsize .icon-small.icon-dining, .backgroundsize .icon-small.icon-schedule, .backgroundsize .icon-small.icon-library, .backgroundsize .icon-small.icon-printing, .backgroundsize .icon-small.icon-ottercard {
+.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply, .backgroundsize .icon-small.icon-x, .backgroundsize .icon-small.icon-open, .backgroundsize .icon-small.icon-close, .backgroundsize .icon-small.icon-checkmark, .backgroundsize .icon-small.icon-dining, .backgroundsize .icon-small.icon-schedule, .backgroundsize .icon-small.icon-library, .backgroundsize .icon-small.icon-printing, .backgroundsize .icon-small.icon-ottercard, .backgroundsize .icon-small.icon-email, .backgroundsize .icon-small.icon-phone {
   height: 24px;
   width: 24px;
   line-height: 24px;
 }
-.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply, .svg .icon-x, .svg .icon-open, .svg .icon-checkmark, .svg .icon-dining, .svg .icon-schedule, .svg .icon-library, .svg .icon-printing, .svg .icon-ottercard {
+.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply, .svg .icon-x, .svg .icon-open, .svg .icon-close, .svg .icon-checkmark, .svg .icon-dining, .svg .icon-schedule, .svg .icon-library, .svg .icon-printing, .svg .icon-ottercard, .svg .icon-email, .svg .icon-phone {
   background-size: 60%;
 }
 
@@ -1920,6 +1920,13 @@ a.icon-x:hover {
   background-image: url('../images/icons/icon-open.svg');
 }
 
+.icon-close {
+  background-image: url('../images/icons/icon-close-32.png');
+}
+.svg .icon-close {
+  background-image: url('../images/icons/icon-close.svg');
+}
+
 .icon-checkmark {
   background-image: url('../images/icons/icon-checkmark-32.png');
 }
@@ -1967,6 +1974,20 @@ a.icon-checkmark:hover {
 }
 .svg .icon-ottercard {
   background-image: url('../images/icons/icon-ottercard.svg');
+}
+
+.icon-email {
+  background-image: url('../images/icons/icon-email-32.png');
+}
+.svg .icon-email {
+  background-image: url('../images/icons/icon-email.svg');
+}
+
+.icon-phone {
+  background-image: url('../images/icons/icon-phone-32.png');
+}
+.svg .icon-phone {
+  background-image: url('../images/icons/icon-phone.svg');
 }
 
 /**
@@ -2710,30 +2731,42 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 
 /**
  * @file _course.scss
- *   All styles that have to do with buttons on the site.
  */
-.course-content {
-  margin-top: 1.5em;
+.course {
+  clear: both;
+  margin-bottom: 1em;
   border: 1px solid #BEB995;
   background-color: #dddac7;
   display: block;
   padding: 2em;
 }
-.course-content h3 {
-  margin: 0;
+.course h3 {
   color: #39351b;
+  margin-top: 0;
 }
-.course-content h3 a {
+.course h3 a {
   background-size: 118%;
   margin: 0 10px 0 0;
   color: #8f864f;
 }
-.course-content p {
+.course p {
   margin-bottom: 0;
 }
-.course-content .open {
+.course .hours {
+  font-weight: 700;
+}
+.course .description {
+  margin-bottom: 1em;
+}
+.course .open, .course .closed {
   float: right;
   margin-top: -12px;
+}
+.course .open a, .course .closed a {
+  border: none;
+}
+.course .open a:hover, .course .closed a:hover {
+  border: none;
 }
 
 /**
@@ -2775,8 +2808,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file person-chunk.scss
  */
 .person-chunk {
   padding-top: 2em;
@@ -2822,8 +2854,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _news-chunk.scss
  */
 .news-chunk {
   width: 100%;
@@ -2837,63 +2868,114 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 [dir="rtl"] .news-chunk {
   float: left;
 }
-.news-chunk a {
-  border: 0 !important;
-}
-.news-chunk a h3.news-title {
+.news-chunk h3.news-title {
   margin-top: 0;
-  margin-bottom: .2em;
-  color: #39351b;
+  margin-bottom: .4em;
   text-transform: none;
+  line-height: 1.3em;
 }
-.news-chunk a h4.news-category {
+.news-chunk h3.news-title a {
+  border: none;
+}
+.news-chunk h4.news-category {
   margin-top: 0;
   text-transform: none;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   color: #8f864f;
+  text-transform: uppercase;
 }
 
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _images.scss
  */
-.images-one-up {
-  padding-bottom: 1.5em;
+.images-one-up, .caption-one-up {
+  padding-bottom: .5em;
 }
 
-.images-two-up {
+.images-two-up, .caption-two-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-two-up {
+[dir="rtl"] .images-two-up, [dir="rtl"] .caption-two-up {
   float: left;
 }
 
-.images-three-up {
+.images-three-up, .caption-three-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-three-up {
+[dir="rtl"] .images-three-up, [dir="rtl"] .caption-three-up {
   float: left;
 }
 
-.images-four-up {
+.images-four-up, .caption-four-up {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
 }
-[dir="rtl"] .images-four-up {
+[dir="rtl"] .images-four-up, [dir="rtl"] .caption-four-up {
+  float: left;
+}
+
+.caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
+  font-size: .8em;
+  margin-bottom: 1.5em;
+}
+
+/**
+ * @file _map.scss
+ */
+.map {
+  clear: both;
+  margin-top: 2em;
+}
+.map h3 {
+  color: #39351b;
+  margin-top: 0;
+  text-transform: none;
+}
+.map h4 {
+  margin-bottom: 0;
+  color: #8f864f;
+  text-transform: uppercase;
+}
+
+/**
+ * @file _contact.scss
+ */
+.contact {
+  margin-top: 2em;
+}
+.contact h3 {
+  color: #39351b;
+  margin-top: 0;
+}
+.contact p {
+  margin-bottom: 1em;
+  float: left;
+  margin-right: 3em;
+}
+.contact .contact-phone:before {
+  content: url("../images/icons/icon-phone.png");
+  margin-right: 7px;
+  margin-top: 4px;
+  float: left;
+}
+.contact .contact-email:before {
+  content: url("../images/icons/icon-email.png");
+  margin-right: 7px;
+  margin-top: 4px;
   float: left;
 }
 

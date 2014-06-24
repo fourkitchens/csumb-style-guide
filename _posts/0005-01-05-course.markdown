@@ -4,15 +4,15 @@ title:  "Course"
 ---
 
 {% capture course %}
-<div class="course-content">
+<div class="course">
   <div class="open">
     <a class="icon-open"></a>
   </div>
   <h3>BIO 101: Introduction to the Science of Life</h3>
   <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Spring Semester: MWF 10-12pm</p>
-  <p>Fall Semester: MWF 10-12pm</p>
-  <p><a>View in schedule</a></p>
+  <p class="hours">Spring Semester: MWF 10-12pm</p>
+  <p class="hours">Fall Semester: MWF 10-12pm</p>
+  <p><a href="csumb.edu">View in schedule</a></p>
 </div>
 {% endcapture %}
 

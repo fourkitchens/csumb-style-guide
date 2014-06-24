@@ -1,19 +1,18 @@
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _images.scss
  */
 $images-one-up: 600px;
 $images-two-up: 600px;
 $images-three-up: 600px;
 $images-four-up: 600px;
 
-.images-one-up {
-  padding-bottom: 1.5em;
+.images-one-up, .caption-one-up {
+  padding-bottom: .5em;
 }
 
-.images-two-up {
+.images-two-up, .caption-two-up {
   @include grid-span(12);
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
   @include breakpoint ($images-two-up) {
     @include grid-span(6);
     margin: 0;
@@ -21,9 +20,9 @@ $images-four-up: 600px;
   }
 }
 
-.images-three-up {
+.images-three-up, .caption-three-up {
   @include grid-span(12);
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
   @include breakpoint ($images-three-up) {
     @include grid-span(4);
     margin: 0;
@@ -31,13 +30,17 @@ $images-four-up: 600px;
   }
 }
 
-.images-four-up {
+.images-four-up, .caption-four-up {
   @include grid-span(12);
-  padding-bottom: 1.5em;
+  padding-bottom: .5em;
   @include breakpoint ($images-four-up) {
     @include grid-span(3);
     margin: 0;
     padding-right: 10px;
   }
-  @extend %clearfix;
+}
+
+.caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
+  font-size: .8em;
+  margin-bottom: 1.5em;
 }

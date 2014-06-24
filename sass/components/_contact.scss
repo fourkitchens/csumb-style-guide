@@ -1,0 +1,35 @@
+/**
+ * @file _contact.scss
+ */
+
+$contact: 600px; //Match mobile menu breakpoint
+
+.contact {
+  @extend %clearfix;
+  margin-top: 2em;
+  h3 {
+    color: color($tan, dark);
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 1em;
+    float: left;
+    margin-right: 3em;
+  }
+  .contact-phone {
+    &:before {
+      content: url("../images/icons/icon-phone.png");
+      margin-right: 7px;
+      margin-top: 4px;
+      float: left;
+    }
+  }
+  .contact-email {
+    &:before {
+      content: url("../images/icons/icon-email.png");
+      margin-right: 7px;
+      margin-top: 4px;
+      float: left;
+    }
+  }
+}

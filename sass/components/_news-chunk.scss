@@ -1,7 +1,7 @@
 /**
- * @file _course.scss
- *   All styles that have to do with buttons on the site.
+ * @file _news-chunk.scss
  */
+
 $news-chunk-column: 600px; //Match mobile menu breakpoint
 
 .news-chunk {
@@ -14,21 +14,22 @@ $news-chunk-column: 600px; //Match mobile menu breakpoint
     }
   @extend %clearfix;
   padding-top: 2em;
-  a {
-  border: 0 !important;
-    h3.news-title {
-      margin-top: 0;
-      margin-bottom: .2em;
-      color: color($tan, dark);
-      text-transform: none;
+  h3.news-title {
+    margin-top: 0;
+    margin-bottom: .4em;
+    text-transform: none;
+    line-height: 1.3em;
+    a {
+      border: none;
     }
-    h4.news-category {
-      margin-top: 0;
-      text-transform: none;
-      margin-bottom: 1em;
-      color: color($tan);
-    }
-    img {
-    }
+  }
+  h4.news-category {
+    margin-top: 0;
+    text-transform: none;
+    margin-bottom: .5em;
+    color: color($tan);
+    text-transform: uppercase;
+  }
+  img {
   }
 }
