@@ -19,9 +19,6 @@ $news-chunk-column: 600px; //Match mobile menu breakpoint
     margin-bottom: .4em;
     text-transform: none;
     line-height: 1.3em;
-    a {
-      border: none;
-    }
   }
   h4.news-category {
     margin-top: 0;
@@ -30,6 +27,7 @@ $news-chunk-column: 600px; //Match mobile menu breakpoint
     color: color($tan);
     text-transform: uppercase;
   }
-  img {
+  a { 
+      border: none !important;
   }
 }

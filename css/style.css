@@ -629,6 +629,7 @@ blockquote {
 blockquote p {
   font-size: 22px;
   line-height: 32px;
+  margin-bottom: .5em;
 }
 
 .sep {
@@ -3652,15 +3653,15 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   text-transform: none;
   line-height: 1.3em;
 }
-.news-chunk h3.news-title a {
-  border: none;
-}
 .news-chunk h4.news-category {
   margin-top: 0;
   text-transform: none;
   margin-bottom: .5em;
   color: #8f864f;
   text-transform: uppercase;
+}
+.news-chunk a {
+  border: none !important;
 }
 
 /**
