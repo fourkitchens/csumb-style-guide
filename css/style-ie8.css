@@ -440,6 +440,14 @@ ul.pager:after,
 /**
 * Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
 */
+/** 
+* Fix this!
+*/
+.main-container ul, .main-container ol {
+  font-size: 18px;
+  line-height: 30px;
+}
+
 body {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 400;
@@ -451,6 +459,8 @@ body {
 
 p {
   margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -483,11 +493,11 @@ h2 {
 
 h3 {
   color: #029555;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #39351b;
 }
 
@@ -616,10 +626,13 @@ blockquote {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 0 .75em;
   margin: 2em 0 2em 1em;
-  font-size: 1.2em;
   border-left: 0.5em solid #d7be25;
   color: #8f864f;
   line-height: 1.5em;
+}
+blockquote p {
+  font-size: 22px;
+  line-height: 32px;
 }
 
 .sep {
@@ -1347,6 +1360,24 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
 }
 [dir="rtl"] .main-container {
+  float: left;
+}
+
+.clear-h2 {
+  clear: both;
+}
+
+.main-container2 {
+  margin-top: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .main-container2 {
   float: left;
 }
 
@@ -2740,17 +2771,19 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   display: block;
   padding: 2em;
 }
-.course h3 {
+.course h4 {
   color: #39351b;
   margin-top: 0;
+  margin-bottom: 0;
 }
-.course h3 a {
+.course h4 a {
   background-size: 118%;
   margin: 0 10px 0 0;
   color: #8f864f;
 }
 .course p {
   margin-bottom: 0;
+  margin-top: 1em;
 }
 .course .hours {
   font-weight: 700;
@@ -2894,7 +2927,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   padding-right: 10px;
 }
 .images-one-up p, .caption-one-up p {
-  font-size: .8em;
+  font-size: 15px;
   margin-bottom: 1.5em;
 }
 
@@ -2910,7 +2943,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   float: left;
 }
 .images-two-up p, .caption-two-up p {
-  font-size: .8em;
+  font-size: 15px;
   margin-bottom: 1.5em;
 }
 
@@ -2926,7 +2959,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   float: left;
 }
 .images-three-up p, .caption-three-up p {
-  font-size: .8em;
+  font-size: 15px;
   margin-bottom: 1.5em;
 }
 
@@ -2942,7 +2975,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   float: left;
 }
 .images-four-up p, .caption-four-up p {
-  font-size: .8em;
+  font-size: 15px;
   margin-bottom: 1.5em;
 }
 

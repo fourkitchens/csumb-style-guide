@@ -11,9 +11,10 @@ $course: 600px; //Match mobile menu breakpoint
   background-color: color($tan, bright);
   display: block;
   padding: 2em; 
-  h3 {
+  h4 {
     color: color($tan, dark);
     margin-top: 0;
+    margin-bottom: 0;
     a {
       background-size: 118%;
       margin: 0 10px 0 0;
@@ -22,6 +23,7 @@ $course: 600px; //Match mobile menu breakpoint
   }
   p {
     margin-bottom: 0;
+    margin-top: 1em;
   }
   .hours {
     font-weight: 700;

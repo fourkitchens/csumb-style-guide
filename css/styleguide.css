@@ -3,6 +3,14 @@
 /**
 * Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
 */
+/** 
+* Fix this!
+*/
+.main-container ul, .main-container ol {
+  font-size: 18px;
+  line-height: 30px;
+}
+
 body {
   font-family: "Merriweather", Georgia, serif;
   font-weight: 400;
@@ -14,6 +22,8 @@ body {
 
 p {
   margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,11 +56,11 @@ h2 {
 
 h3 {
   color: #029555;
-  font-size: 1.4em;
+  font-size: 1.6em;
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #39351b;
 }
 
@@ -179,10 +189,13 @@ blockquote {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   padding: 0 .75em;
   margin: 2em 0 2em 1em;
-  font-size: 1.2em;
   border-left: 0.5em solid #d7be25;
   color: #8f864f;
   line-height: 1.5em;
+}
+blockquote p {
+  font-size: 22px;
+  line-height: 32px;
 }
 
 .sep {

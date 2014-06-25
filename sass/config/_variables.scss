@@ -35,20 +35,23 @@ $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
-// Project-specific fonts
-// Put any font families here that are specific to your project.
+// CSUMB fonts
 $trade:           'TradeGothicNextW01-Cond', $helvetica;
 $trade-reg:       'Trade Gothic Next W01', $helvetica;
 $trade-bold:      'TradeGothicNextW01-Bold 693229', $helvetica;
+
+//Not used by CSUMB StyleGuide, left from previous version
 $whitney:         'Whitney SSm A', 'Whitney SSm B', $helvetica;
 $gotham:          'Gotham SSm A', 'Gotham SSm B', $helvetica;
 $archer:          'Archer SSm A', 'Archer SSm B', $helvetica;
 $monospace:       'Consolas', 'Monaco', $courier;
 
 // Google web fonts
+//Not used by CSUMB StyleGuide, left from previous version
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
 $source-sans: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+// IS used by CSUMB!
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,700);
 $merriweather: 'Merriweather', Georgia, serif;
 

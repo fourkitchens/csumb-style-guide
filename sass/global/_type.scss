@@ -2,6 +2,17 @@
 * Typography: Headings, body text, lists, code, and more for a versatile and durable typography system.
 */
 
+/** 
+* Fix this!
+*/
+
+.main-container {
+  ul, ol {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
 body {
   font-family: $font-body;
   font-weight: $font-body-weight;
@@ -13,6 +24,8 @@ body {
 
 p {
   margin-top: 0;
+  font-size: 18px;
+  line-height: 30px;
 }
 
 // Headings
@@ -53,12 +66,12 @@ h2 {
 
 h3 {
   color: color($green);
-  font-size: 1.4em;
+  font-size: 1.6em;
   
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: color($tan, 'dark');
 }
 
@@ -238,10 +251,13 @@ blockquote {
   font-family: $trade-reg;
   padding: 0 .75em;
   margin: 2em 0 2em 1em;
-  font-size: 1.2em;
   border-left: .5em solid color($yellow, dark);
   color: color($tan);
   line-height: 1.5em;
+  p {
+    font-size: 22px;
+    line-height: 32px;  
+  }
 }
 
 .sep {
