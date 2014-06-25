@@ -2891,6 +2891,11 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
  */
 .images-one-up, .caption-one-up {
   padding-bottom: .5em;
+  padding-right: 10px;
+}
+.images-one-up p, .caption-one-up p {
+  font-size: .8em;
+  margin-bottom: 1.5em;
 }
 
 .images-two-up, .caption-two-up {
@@ -2904,6 +2909,10 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 [dir="rtl"] .images-two-up, [dir="rtl"] .caption-two-up {
   float: left;
 }
+.images-two-up p, .caption-two-up p {
+  font-size: .8em;
+  margin-bottom: 1.5em;
+}
 
 .images-three-up, .caption-three-up {
   width: 100%;
@@ -2915,6 +2924,10 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 [dir="rtl"] .images-three-up, [dir="rtl"] .caption-three-up {
   float: left;
+}
+.images-three-up p, .caption-three-up p {
+  font-size: .8em;
+  margin-bottom: 1.5em;
 }
 
 .images-four-up, .caption-four-up {
@@ -2928,14 +2941,9 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 [dir="rtl"] .images-four-up, [dir="rtl"] .caption-four-up {
   float: left;
 }
-
-.caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
+.images-four-up p, .caption-four-up p {
   font-size: .8em;
   margin-bottom: 1.5em;
-}
-
-.last {
-  padding-right: 0;
 }
 
 /**
