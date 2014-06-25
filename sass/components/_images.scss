@@ -14,7 +14,7 @@ $images-four-up: 600px;
   @include grid-span(12);
   padding-bottom: .5em;
   @include breakpoint ($images-two-up) {
-    @include grid-span(6);
+    @include grid-span(6,$gutter: 0);
     margin: 0;
     padding-right: 10px;
   }
@@ -24,7 +24,7 @@ $images-four-up: 600px;
   @include grid-span(12);
   padding-bottom: .5em;
   @include breakpoint ($images-three-up) {
-    @include grid-span(4);
+    @include grid-span(4,$gutter: 0);
     margin: 0;
     padding-right: 10px;
   }
@@ -34,7 +34,7 @@ $images-four-up: 600px;
   @include grid-span(12);
   padding-bottom: .5em;
   @include breakpoint ($images-four-up) {
-    @include grid-span(3);
+    @include grid-span(3,$gutter: 0);
     margin: 0;
     padding-right: 10px;
   }
@@ -43,4 +43,8 @@ $images-four-up: 600px;
 .caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
   font-size: .8em;
   margin-bottom: 1.5em;
+}
+
+.last {
+  padding-right: 0;
 }

@@ -3636,7 +3636,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 @media (min-width: 37.5em) {
   .images-two-up, .caption-two-up {
-    width: 48.93617%;
+    width: 50%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -3664,7 +3664,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 @media (min-width: 37.5em) {
   .images-three-up, .caption-three-up {
-    width: 31.91489%;
+    width: 33.33333%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -3692,7 +3692,7 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 @media (min-width: 37.5em) {
   .images-four-up, .caption-four-up {
-    width: 23.40426%;
+    width: 25%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -3710,6 +3710,10 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 .caption-one-up, .caption-two-up, .caption-three-up, .caption-four-up {
   font-size: .8em;
   margin-bottom: 1.5em;
+}
+
+.last {
+  padding-right: 0;
 }
 
 /**

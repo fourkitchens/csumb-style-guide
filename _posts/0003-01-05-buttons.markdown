@@ -30,8 +30,8 @@ title:  "Buttons"
 
 {% capture b4 %}
 <form action="#">
-  <button class="btn-full btn-primary">Full Width Call to Action</button>
-  <button class="btn-full btn-negative">Yes, sign me up for this program</button>
+  <button class="btn-full btn-primary">Wider Call to Action</button>
+  <button class="btn-full btn-negative">Yes</button>
 </form>
 {% endcapture %}
 
@@ -61,4 +61,4 @@ Content limitations are necessary for multiline buttons.
 ### Full Width Buttons
 {% include sample.html sample=b4 %}
 
-Full width buttons fill the entire content area, spanning the same number of columns as the content. In some cases, it may be too wide, use your judgement.
+Full width buttons now just have more padding, so small words, Ex. "Yes" don't look too teeny.
