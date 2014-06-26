@@ -53,26 +53,89 @@
     }
   }
   .navigation {   
-    width: 100%;
-    background-color: rgba($white, 0.85);
-    margin: 0 auto 4.5em;
-    float: left;
     position: relative;
     display: block;
     z-index: 2;
-    @include respond-to("navigation full") {
-      margin-top: 18em;
+    &.menu-block-1,
+    &.menu-block-3 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
+      background-color: rgba($white, 0.85);
+      width: 100%;
+      margin: 0 auto 4.5em;   
+      float: left;   
     }
-    @include respond-to("navigation medium") {
-      margin-top: 13em;
+    &.menu-block-1 { // for main header template - navigation spacing JT
+      @include respond-to("navigation full") {
+        margin-top: 18em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 13em;
+      }    
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        display: none;
+        background-color:$white;
+      }      
+    }
+    &.menu-block-2 { // for header-subpage template - main nav truncated -JT
+      background-color: color($blue, main);
+      width: 100%;
+      margin: 0 auto;   
+      position: absolute; // absolute to achieve desktop markup hierarchy versus desired mobile markup hierarchy
+      ul.menu {
+        li {
+          &.active {
+            a,
+            span {
+              color: rgba($white, .5);            
+            }
+          }
+        }
+        span,
+        a {
+          color: rgba($white, 0.75);
+          letter-spacing: .05em;
+          font-size: .85em;
+          text-transform: none;
+          &:hover {
+            color: rgba($white, 1);
+          }
+        }
+      }      
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: relative;
+        display: none;
+      } 
+      .submenu {
+        background-color: color($blue, dark);
+        ul.menu {
+          li {
+            a {
+              font-size: .75em;
+            }
+          }
+        }
+      }       
     }    
-    @include respond-to("navigation small") {
-      margin: 0;
-      padding: 0;
-      float: left;
-      display: none;
-      background-color:$white;
-    }
+    &.user-menu { // for header-subpage template - JT
+      @include respond-to("navigation full") {
+        margin-top: 12em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 7em;
+      }    
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        display: none;
+        background-color:$white;
+      }      
+    }    
   }
   ul.menu {
     width: 100%;
@@ -105,16 +168,17 @@
         padding: 0;
       }
       &.active {
+        background-image: url(../images/icons/icon-active-up.svg);
+        background-position: center bottom;
+        background-repeat: no-repeat;        
         .submenu {
           display: block;
         }
         span {
           color: color($blue, 'bright');
-          //background-color: $white;
-          //@include box-shadow(0 0 4px rgba(color($blue,'dark'), 0.4));
+
           &:hover {
             color: color($blue, 'main');
-            //background-color: $white;
           }
           &:after {
             display: inline-block;
@@ -132,22 +196,22 @@
             color: color($blue, dark);
           }
         }
-        &:after {
-          top: 100%;
-          border: solid transparent;
-          content: " ";
-          position: absolute;
-          pointer-events: none;
-          border-color: transparent;
-        	width: 0; 
-        	height: 0; 
-        	border-left: 20px solid transparent;
-        	border-right: 20px solid transparent;
-        	border-bottom: 15px solid color($blue, dark);
-        	border-width: 10px;
-          margin-left: 5%;
-          margin-top: -20px;
-        }
+        // &:after { // Delete after jared reviews my alternate way of doing this above - line 152-154
+        //   top: 100%;
+        //   border: solid transparent;
+        //   content: " ";
+        //   position: absolute;
+        //   pointer-events: none;
+        //   border-color: transparent;
+        // 	width: 0; 
+        // 	height: 0; 
+        // 	border-left: 20px solid transparent;
+        // 	border-right: 20px solid transparent;
+        // 	border-bottom: 15px solid color($blue, dark);
+        // 	border-width: 10px;
+        //   margin-left: 5%;
+        //   margin-top: -20px;
+        // }
       }
       span,
       a {

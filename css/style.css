@@ -1865,7 +1865,7 @@ input.action-delete:focus {
  */
 .prototype-grid .header-image {
   width: 100%;
-  background-image: url(../images/photos/header-students.jpg);
+  background-image: url(../images/photos/header-students-big.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1891,6 +1891,9 @@ input.action-delete:focus {
     height: 400px;
   }
 }
+.prototype-grid .header-image.half {
+  background-image: url(../images/photos/header-students-two-big.jpg);
+}
 
 /**
 * Header
@@ -1910,6 +1913,17 @@ input.action-delete:focus {
 @media (max-width: 54.375em) {
   #header {
     background-color: rgba(0, 0, 0, 0.75);
+  }
+}
+#header.interior .logo {
+  padding-top: 5em;
+}
+#header.interior .actions {
+  padding-top: 4.5em;
+}
+@media (max-width: 54.375em) {
+  #header.interior .actions {
+    padding: 0;
   }
 }
 #header .logo {
@@ -2552,26 +2566,83 @@ a.icon-checkmark:hover {
   background-color: rgba(255, 255, 255, 0.95);
 }
 #header .navigation {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
-  margin: 0 auto 4.5em;
-  float: left;
   position: relative;
   display: block;
   z-index: 2;
 }
+#header .navigation.menu-block-1, #header .navigation.menu-block-3 {
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  margin: 0 auto 4.5em;
+  float: left;
+}
 @media (min-width: 65.125em) {
-  #header .navigation {
+  #header .navigation.menu-block-1 {
     margin-top: 18em;
   }
 }
 @media (max-width: 67.1875em) {
-  #header .navigation {
+  #header .navigation.menu-block-1 {
     margin-top: 13em;
   }
 }
 @media (max-width: 54.375em) {
-  #header .navigation {
+  #header .navigation.menu-block-1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: none;
+    background-color: white;
+  }
+}
+#header .navigation.menu-block-2 {
+  background-color: #1f346b;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+#header .navigation.menu-block-2 ul.menu li.active a,
+#header .navigation.menu-block-2 ul.menu li.active span {
+  color: rgba(255, 255, 255, 0.5);
+}
+#header .navigation.menu-block-2 ul.menu span,
+#header .navigation.menu-block-2 ul.menu a {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: .05em;
+  font-size: .85em;
+  text-transform: none;
+}
+#header .navigation.menu-block-2 ul.menu span:hover,
+#header .navigation.menu-block-2 ul.menu a:hover {
+  color: white;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+    display: none;
+  }
+}
+#header .navigation.menu-block-2 .submenu {
+  background-color: #001e54;
+}
+#header .navigation.menu-block-2 .submenu ul.menu li a {
+  font-size: .75em;
+}
+@media (min-width: 65.125em) {
+  #header .navigation.user-menu {
+    margin-top: 12em;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .navigation.user-menu {
+    margin-top: 7em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.user-menu {
     margin: 0;
     padding: 0;
     float: left;
@@ -2618,6 +2689,11 @@ a.icon-checkmark:hover {
     padding: 0;
   }
 }
+#header ul.menu li.active {
+  background-image: url(../images/icons/icon-active-up.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
 #header ul.menu li.active .submenu {
   display: block;
 }
@@ -2641,22 +2717,6 @@ a.icon-checkmark:hover {
   height: 24px;
   vertical-align: middle;
   color: #001e54;
-}
-#header ul.menu li.active:after {
-  top: 100%;
-  border: solid transparent;
-  content: " ";
-  position: absolute;
-  pointer-events: none;
-  border-color: transparent;
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 15px solid #001e54;
-  border-width: 10px;
-  margin-left: 5%;
-  margin-top: -20px;
 }
 #header ul.menu li span,
 #header ul.menu li a {
