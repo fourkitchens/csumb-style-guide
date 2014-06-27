@@ -48,6 +48,10 @@
     }
     &.three {
       @include grid-span(5,1);
+      @include respond-to("navigation small") {
+        float: left;
+        width: 60%;
+      }         
     }
     padding-top: 1.5em;
     padding-left: 1em;

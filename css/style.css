@@ -1944,6 +1944,12 @@ input.action-delete:focus {
   margin-right: 0;
 }
 @media (max-width: 54.375em) {
+  #header .logo.three {
+    float: left;
+    width: 60%;
+  }
+}
+@media (max-width: 54.375em) {
   #header .logo {
     margin: 0 auto;
     text-align: center;
@@ -2656,6 +2662,12 @@ a.icon-checkmark:hover {
 }
 #header .toggles.main li a:hover {
   color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 54.375em) {
+  #header .toggles.main {
+    float: right;
+    width: 40%;
+  }
 }
 #header .toggles.mobile {
   width: 100%;

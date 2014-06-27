@@ -39,6 +39,10 @@
           }   
         }
       }
+      @include respond-to("navigation small") {
+        float: right;
+        width: 40%;
+      }      
     }
     &.mobile {
       @include grid-span(12, 1);
