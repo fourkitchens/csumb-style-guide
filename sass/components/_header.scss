@@ -42,27 +42,16 @@
   @include respond-to("navigation small") {
     background-color: rgba($black, 0.75);
   }
-  &.interior { // give these more top padding because of absolute menu.
-    .logo {
-      padding-top: 5em;  
-    }
-    .actions {
-      padding-top: 4.5em;
-      @include respond-to("navigation small") {
-        padding: 0;
-      }         
-    }
-  }
   .logo {
     @include grid-span(7,1);
     padding-top: 1.5em;
     padding-left: 1em;
-    display: block;
     @include respond-to("navigation small") {
-      width: 100%;
       margin: 0 auto;
-      padding:8em 2em 2em; 
       text-align: center;
+      padding-top: 1.5em;
+      padding-left: 0;
+      padding-bottom: 1.5em;
     }
   }
   .actions {

@@ -1915,17 +1915,6 @@ input.action-delete:focus {
     background-color: rgba(0, 0, 0, 0.75);
   }
 }
-#header.interior .logo {
-  padding-top: 5em;
-}
-#header.interior .actions {
-  padding-top: 4.5em;
-}
-@media (max-width: 54.375em) {
-  #header.interior .actions {
-    padding: 0;
-  }
-}
 #header .logo {
   width: 57.44681%;
   float: left;
@@ -1934,7 +1923,6 @@ input.action-delete:focus {
   clear: none;
   padding-top: 1.5em;
   padding-left: 1em;
-  display: block;
 }
 [dir="rtl"] #header .logo {
   float: right;
@@ -1943,10 +1931,11 @@ input.action-delete:focus {
 }
 @media (max-width: 54.375em) {
   #header .logo {
-    width: 100%;
     margin: 0 auto;
-    padding: 8em 2em 2em;
     text-align: center;
+    padding-top: 1.5em;
+    padding-left: 0;
+    padding-bottom: 1.5em;
   }
 }
 #header .actions {
@@ -2541,10 +2530,8 @@ a.icon-checkmark:hover {
 * Menus - main menu, footer menu, etc.
 */
 #header .toggles {
-  margin: 4em 0 0;
-  float: left;
+  margin: 0;
   display: none;
-  width: 100%;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
@@ -2553,8 +2540,50 @@ a.icon-checkmark:hover {
     display: block;
   }
 }
+#header .toggles.main {
+  width: 40.42553%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-top: 1.5em;
+}
+[dir="rtl"] #header .toggles.main {
+  float: left;
+}
+#header .toggles.main li {
+  width: 100%;
+}
+#header .toggles.main li a {
+  color: white;
+}
+#header .toggles.main li a:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+#header .toggles.mobile {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .toggles.mobile {
+  float: left;
+}
+#header .toggles.mobile li {
+  width: 33.33%;
+}
+#header .toggles.mobile li a {
+  color: #001e54;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+#header .toggles.mobile li a:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+#header .toggles.mobile li a.active {
+  background-color: white;
+}
 #header .toggles.close {
-  margin: 0;
   border-bottom: 1px solid #b5ac02;
   -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
   box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
@@ -2564,6 +2593,7 @@ a.icon-checkmark:hover {
 }
 #header .toggles.close li a {
   background-color: #fef552;
+  color: #001e54;
 }
 #header .toggles.close li a:hover {
   background-color: #e8dc02;
@@ -2576,19 +2606,13 @@ a.icon-checkmark:hover {
   float: left;
   display: inline;
   position: relative;
-  width: 33.33%;
 }
 #header .toggles li a {
   display: block;
   width: 100%;
-  color: #001e54;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 1em;
   text-decoration: none;
   text-align: center;
-}
-#header .toggles li a.active {
-  background-color: white;
 }
 #header .toggles li a span {
   padding-left: 1em;
@@ -2610,8 +2634,8 @@ a.icon-checkmark:hover {
     margin: 0 auto;
   }
 }
-#header .toggles li a:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+#header .mobile-bar {
+  display: none;
 }
 #header .navigation-wrap {
   position: relative;
@@ -2619,12 +2643,12 @@ a.icon-checkmark:hover {
 @media (max-width: 54.375em) {
   #header .navigation-wrap {
     position: absolute;
-    top: 20%;
+    top: 0;
     left: 0;
     right: 0;
     width: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.35);
     z-index: 10;
     height: 100%;
   }
@@ -2662,7 +2686,6 @@ a.icon-checkmark:hover {
   background-color: #1f346b;
   width: 100%;
   margin: 0 auto;
-  position: absolute;
 }
 #header .navigation.menu-block-2 ul.menu li.active a,
 #header .navigation.menu-block-2 ul.menu li.active span {

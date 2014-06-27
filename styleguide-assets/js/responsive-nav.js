@@ -5,6 +5,8 @@
     $(document).ready(function () {
     var pullNav                   = $('.pull-nav'),
         menu                      = $('.navigation-wrap'),
+        pullNavTop                = $('#pull-nav-main'),
+        menuTop                   = $('.mobile-bar'),        
         pullSideMenu              = $('#pull-sidebar'),
         menuSidebar               = $('#sidebar-left'),        
         pullSearch                = $('#pull-search'),
@@ -14,6 +16,7 @@
           a.data.toggled.slideToggle('300');
         };
         pullNav.click({toggled : menu}, toggler);
+        pullNavTop.click({toggled : menuTop}, toggler);
         pullSideMenu.click({toggled : menuSidebar}, toggler);
         pullSearch.click({toggled : search}, toggler);
     });
