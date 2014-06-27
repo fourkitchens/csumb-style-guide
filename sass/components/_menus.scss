@@ -13,6 +13,23 @@
     @include respond-to("navigation small") {
       display: block;
     }
+    &.close {
+      margin: 0;
+      border-bottom: 1px solid color($status, 'warning', -10%);
+      @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
+      li {
+        width: 100%;
+        a {
+          background-color: color($status, 'warning', 20%);
+          &:hover {
+            background-color: color($status, 'warning');
+          }
+          &.active {
+            background-color: color($status, 'warning', 20%);
+          }
+        }
+      }
+    }
     li {
       list-style-type: none;
       float: left;
@@ -52,6 +69,20 @@
       }
     }
   }
+  .navigation-wrap {
+    position: relative;
+    @include respond-to("navigation small") {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: none;
+      background-color: rgba($white, 0.85);
+      z-index: 10;
+      height: 100%;
+    }
+  }
   .navigation {   
     position: relative;
     display: block;
@@ -59,8 +90,8 @@
     &.menu-block-1,
     &.menu-block-3 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
       background-color: rgba($white, 0.85);
+      margin: 0 auto 4.5em;
       width: 100%;
-      margin: 0 auto 4.5em;   
       float: left;   
     }
     &.menu-block-1 { // for main header template - navigation spacing JT
@@ -74,7 +105,6 @@
         margin: 0;
         padding: 0;
         float: left;
-        display: none;
         background-color:$white;
       }      
     }
@@ -101,6 +131,9 @@
           &:hover {
             color: rgba($white, 1);
           }
+          @include respond-to("navigation small") {
+            padding: .5em 1em;
+          }  
         }
       }      
       @include respond-to("navigation small") {
@@ -108,7 +141,6 @@
         padding: 0;
         float: left;
         position: relative;
-        display: none;
       } 
       .submenu {
         background-color: color($blue, dark);
@@ -123,16 +155,15 @@
     }    
     &.user-menu { // for header-subpage template - JT
       @include respond-to("navigation full") {
-        margin-top: 12em;
+        margin-top: 6em;
       }
       @include respond-to("navigation medium") {
-        margin-top: 7em;
+        margin-top: 2.5em;
       }    
       @include respond-to("navigation small") {
         margin: 0;
         padding: 0;
         float: left;
-        display: none;
         background-color:$white;
       }      
     }    
@@ -196,7 +227,7 @@
             color: color($blue, dark);
           }
         }
-        // &:after { // Delete after jared reviews my alternate way of doing this above - line 152-154
+        // &:after { // Delete after jared reviews my alternate way of doing this above - lines 171-173
         //   top: 100%;
         //   border: solid transparent;
         //   content: " ";

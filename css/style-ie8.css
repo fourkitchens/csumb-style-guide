@@ -1701,6 +1701,19 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
+#header .title-wrap {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  margin-top: 2em;
+  clear: both;
+}
+[dir="rtl"] #header .title-wrap {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
 
 /**
  * @file _logo.scss.
@@ -2042,6 +2055,25 @@ a.icon-checkmark:hover {
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
+#header .toggles.close {
+  margin: 0;
+  border-bottom: 1px solid #b5ac02;
+  -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
+  box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
+}
+#header .toggles.close li {
+  width: 100%;
+}
+#header .toggles.close li a {
+  background-color: #fef552;
+}
+#header .toggles.close li a:hover {
+  background-color: #e8dc02;
+}
+#header .toggles.close li a.active {
+  background-color: #fef552;
+}
 #header .toggles li {
   list-style-type: none;
   float: left;
@@ -2072,6 +2104,9 @@ a.icon-checkmark:hover {
 #header .toggles li a:hover {
   background-color: rgba(255, 255, 255, 0.95);
 }
+#header .navigation-wrap {
+  position: relative;
+}
 #header .navigation {
   position: relative;
   display: block;
@@ -2079,8 +2114,8 @@ a.icon-checkmark:hover {
 }
 #header .navigation.menu-block-1, #header .navigation.menu-block-3 {
   background-color: rgba(255, 255, 255, 0.85);
-  width: 100%;
   margin: 0 auto 4.5em;
+  width: 100%;
   float: left;
 }
 #header .navigation.menu-block-2 {

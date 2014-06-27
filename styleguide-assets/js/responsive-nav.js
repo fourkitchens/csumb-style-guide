@@ -3,25 +3,18 @@
 (function ($) {
     'use strict';
     $(document).ready(function () {
-
-    var pullNav    = $('#pull-nav');
-    var menu    = $('.navigation');
-    var menuHeight  = menu.height();
-  
-    var pullSearch    = $('#pull-search');
-    var search    = $('.actions');
-    var searchHeight  = search.height();
-
-    $(pullNav).on('click', function(e) {
-    e.preventDefault();
-    menu.slideToggle("300");
-    pullNav.toggleClass('active');
+    var pullNav                   = $('.pull-nav'),
+        menu                      = $('.navigation-wrap'),
+        pullSideMenu              = $('#pull-sidebar'),
+        menuSidebar               = $('#sidebar-left'),        
+        pullSearch                = $('#pull-search'),
+        search                    = $('.actions'),
+        toggler                   = function(a){
+          $(this).toggleClass('active');
+          a.data.toggled.slideToggle('300');
+        };
+        pullNav.click({toggled : menu}, toggler);
+        pullSideMenu.click({toggled : menuSidebar}, toggler);
+        pullSearch.click({toggled : search}, toggler);
     });
-
-    $(pullSearch).on('click', function(e) {
-      e.preventDefault();
-      search.slideToggle("300");
-      pullSearch.toggleClass('active');
-    });
- });
 })(jQuery);
