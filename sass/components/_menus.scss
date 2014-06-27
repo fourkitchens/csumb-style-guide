@@ -11,6 +11,22 @@
     @include respond-to("navigation small") {
       display: block;
     }
+    &.desktop {
+      @include grid-span(4,1, $output-style:'float');
+      display: block;
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          &:hover {
+            color: rgba($white, 0.85);
+          }   
+        }
+      }    
+      @include respond-to("navigation small") {
+        display: none;
+      }
+    }    
     &.main {
       @include grid-span(5,8);
       margin-top: 1.5em;

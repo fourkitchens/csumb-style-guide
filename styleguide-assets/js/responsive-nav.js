@@ -5,7 +5,7 @@
     $(document).ready(function () {
     var pullNav                   = $('.pull-nav'),
         menu                      = $('.navigation-wrap'),
-        pullNavTop                = $('#pull-nav-main'),
+        pullNavTop                = $('.pull-nav-main'),
         menuTop                   = $('.mobile-bar'),        
         pullSideMenu              = $('#pull-sidebar'),
         menuSidebar               = $('#sidebar-left'),        

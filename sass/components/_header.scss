@@ -43,7 +43,12 @@
     background-color: rgba($black, 0.75);
   }
   .logo {
-    @include grid-span(7,1);
+     &.two {
+      @include grid-span(7,1);
+    }
+    &.three {
+      @include grid-span(5,1);
+    }
     padding-top: 1.5em;
     padding-left: 1em;
     @include respond-to("navigation small") {
@@ -55,23 +60,39 @@
     }
   }
   .actions {
+    &.two {
+      @include grid-span(5,8);
+       @include respond-to("navigation small") {
+        width: 100%;
+      }
+    }
+    &.three {
+      @include grid-span(7,6);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }
+    }
     padding-top: 2em;
     padding-right: 1em;
-    @include grid-span(5,8);
     font-family: $trade-reg;
+    float: right;
     p {
       margin: 0;
     }
     @include respond-to("navigation small") {
       display: none;
-      width: 100%;
       margin-top: 0;
       background-color: $white;
       padding: 0;
     }
   }
   .user-login {
-    @include grid-span(4,1, $output-style:'float');
+    &.two {
+      @include grid-span(4,1);
+    }
+    &.three {
+      @include grid-span(3,5, $output-style:'float');
+    }    
     padding-right: 1em;
     margin: 0;
     border-right:1px solid $white;
@@ -83,7 +104,18 @@
     }  
   }
   .block-search {
-    @include grid-span(8,5, $output-style:'float');
+    &.two {
+      @include grid-span(8,5);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }      
+    }
+    &.three {
+      @include grid-span(5,8, $output-style:'float');
+       @include respond-to("navigation small") {
+        width: 100%;
+      }     
+    }        
     padding-left: 1em;
     padding-top: .5em;
     .form-submit {
@@ -96,7 +128,6 @@
     }
     @include respond-to("navigation small") {
       padding:1em;
-      width: 100%;
     }
   }
   .title-wrap {

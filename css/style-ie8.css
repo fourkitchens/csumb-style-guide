@@ -1623,15 +1623,29 @@ input.action-delete:focus {
   float: left;
 }
 #header .logo {
+  padding-top: 1.5em;
+  padding-left: 1em;
+}
+#header .logo.two {
   width: 57.44681%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
-  padding-top: 1.5em;
-  padding-left: 1em;
 }
-[dir="rtl"] #header .logo {
+[dir="rtl"] #header .logo.two {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header .logo.three {
+  width: 40.42553%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header .logo.three {
   float: right;
   margin-left: -100%;
   margin-right: 0;
@@ -1639,47 +1653,84 @@ input.action-delete:focus {
 #header .actions {
   padding-top: 2em;
   padding-right: 1em;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  float: right;
+}
+#header .actions.two {
   width: 40.42553%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
-[dir="rtl"] #header .actions {
+[dir="rtl"] #header .actions.two {
+  float: left;
+}
+#header .actions.three {
+  width: 57.44681%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .actions.three {
   float: left;
 }
 #header .actions p {
   margin: 0;
 }
 #header .user-login {
-  width: 31.91489%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 2.12766%;
   padding-right: 1em;
   margin: 0;
   border-right: 1px solid white;
 }
-[dir="rtl"] #header .user-login {
+#header .user-login.two {
+  width: 31.91489%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header .user-login.two {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header .user-login.three {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header .user-login.three {
   clear: left;
   float: right;
-  margin-right: 0;
   margin-left: 2.12766%;
 }
 #header .user-login .button {
   float: right;
 }
 #header .block-search {
-  width: 65.95745%;
-  clear: right;
-  float: right;
-  margin-right: 0;
   padding-left: 1em;
   padding-top: .5em;
 }
-[dir="rtl"] #header .block-search {
+#header .block-search.two {
+  width: 65.95745%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .block-search.two {
+  float: left;
+}
+#header .block-search.three {
+  width: 40.42553%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] #header .block-search.three {
   clear: left;
   float: left;
   margin-left: 0;
@@ -2045,6 +2096,29 @@ a.icon-checkmark:hover {
   display: none;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+#header .toggles.desktop {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  display: block;
+}
+[dir="rtl"] #header .toggles.desktop {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+#header .toggles.desktop li {
+  width: 100%;
+}
+#header .toggles.desktop li a {
+  color: white;
+}
+#header .toggles.desktop li a:hover {
+  color: rgba(255, 255, 255, 0.85);
 }
 #header .toggles.main {
   width: 40.42553%;
