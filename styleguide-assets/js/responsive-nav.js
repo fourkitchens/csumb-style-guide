@@ -7,8 +7,8 @@
         menu                      = $('.navigation-wrap'),
         pullNavTop                = $('.pull-nav-main'),
         menuTop                   = $('.mobile-bar'),        
-        pullSideMenu              = $('#pull-sidebar'),
-        menuSidebar               = $('#sidebar-left'),        
+        pullSideMenu              = $('.pull-sidebar'),
+        menuSidebar               = $('.menu-left-sidebar'),        
         pullSearch                = $('#pull-search'),
         search                    = $('.actions'),
         toggler                   = function(a){

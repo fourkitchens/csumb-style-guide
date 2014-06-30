@@ -1603,8 +1603,9 @@ input.action-delete:focus {
   left: auto;
   z-index: -1;
 }
-.prototype-grid .header-image.half {
+.prototype-grid .header-image.department-page {
   background-image: url(../images/photos/header-students-two-big.jpg);
+  background-position: 0 0;
 }
 
 /**
@@ -1623,117 +1624,65 @@ input.action-delete:focus {
   float: left;
 }
 #header .logo {
-  padding-top: 1.5em;
-  padding-left: 1em;
-}
-#header .logo.two {
   width: 57.44681%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
+  padding-top: 1.5em;
+  padding-left: 1em;
 }
-[dir="rtl"] #header .logo.two {
-  float: right;
-  margin-left: -100%;
-  margin-right: 0;
-}
-#header .logo.three {
-  width: 40.42553%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-}
-[dir="rtl"] #header .logo.three {
+[dir="rtl"] #header .logo {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
 #header .actions {
-  padding-top: 2em;
-  padding-right: 1em;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  float: right;
-}
-#header .actions.two {
   width: 40.42553%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-}
-[dir="rtl"] #header .actions.two {
-  float: left;
-}
-#header .actions.three {
-  width: 57.44681%;
+  padding-top: 2em;
+  padding-right: 1em;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
 }
-[dir="rtl"] #header .actions.three {
+[dir="rtl"] #header .actions {
   float: left;
 }
 #header .actions p {
   margin: 0;
 }
 #header .user-login {
-  padding-right: 1em;
-  margin: 0;
-  border-right: 1px solid white;
-}
-#header .user-login.two {
   width: 31.91489%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
+  padding-right: 1em;
+  margin: 0;
+  border-right: 1px solid white;
 }
-[dir="rtl"] #header .user-login.two {
+[dir="rtl"] #header .user-login {
   float: right;
   margin-left: -100%;
   margin-right: 0;
-}
-#header .user-login.three {
-  width: 23.40426%;
-  clear: right;
-  float: left;
-  margin-right: 2.12766%;
-}
-[dir="rtl"] #header .user-login.three {
-  clear: left;
-  float: right;
-  margin-left: 2.12766%;
 }
 #header .user-login .button {
   float: right;
 }
 #header .block-search {
-  padding-left: 1em;
-  padding-top: .5em;
-}
-#header .block-search.two {
   width: 65.95745%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  padding-left: 1em;
+  padding-top: .5em;
 }
-[dir="rtl"] #header .block-search.two {
+[dir="rtl"] #header .block-search {
   float: left;
-}
-#header .block-search.three {
-  width: 40.42553%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-}
-[dir="rtl"] #header .block-search.three {
-  clear: left;
-  float: left;
-  margin-left: 0;
 }
 #header .block-search .form-submit {
   display: none;
@@ -1744,6 +1693,50 @@ input.action-delete:focus {
   border-radius: 6px;
   width: 100%;
   margin-top: 0.3em;
+}
+#header.with-mobile .logo {
+  width: 40.42553%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header.with-mobile .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header.with-mobile .actions {
+  width: 57.44681%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header.with-mobile .actions {
+  float: left;
+}
+#header.with-mobile .user-login {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header.with-mobile .user-login {
+  clear: left;
+  float: right;
+  margin-left: 2.12766%;
+}
+#header.with-mobile .block-search {
+  width: 40.42553%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] #header.with-mobile .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
 }
 #header .title-wrap {
   width: 100%;
@@ -2097,6 +2090,27 @@ a.icon-checkmark:hover {
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
+#header .toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+#header .toggles li a {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+#header .toggles li a span {
+  padding-left: 1em;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+#header .toggles li a img {
+  vertical-align: middle;
+}
 #header .toggles.desktop {
   width: 31.91489%;
   clear: right;
@@ -2104,6 +2118,7 @@ a.icon-checkmark:hover {
   margin-left: 0;
   margin-right: 2.12766%;
   display: block;
+  padding: 0;
 }
 [dir="rtl"] #header .toggles.desktop {
   clear: left;
@@ -2116,9 +2131,25 @@ a.icon-checkmark:hover {
 }
 #header .toggles.desktop li a {
   color: white;
+  padding: .75em .25em;
 }
 #header .toggles.desktop li a:hover {
   color: rgba(255, 255, 255, 0.85);
+}
+#header .toggles.desktop li a.active {
+  -moz-box-shadow: inset 0 0 5px rgba(57, 53, 27, 0.9);
+  -webkit-box-shadow: inset 0 0 5px rgba(57, 53, 27, 0.9);
+  box-shadow: inset 0 0 5px rgba(57, 53, 27, 0.9);
+  border-color: #014a2a;
+  background-color: #015933;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMxNjlmNjQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNDhkNTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(#169f64 75%, #148d58);
+  background-image: -webkit-linear-gradient(#169f64 75%, #148d58);
+  background-image: linear-gradient(#169f64 75%, #148d58);
+}
+#header .toggles.desktop li a.active span {
+  color: #39351b;
 }
 #header .toggles.main {
   width: 40.42553%;
@@ -2146,22 +2177,25 @@ a.icon-checkmark:hover {
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  background-color: #1c2e5f;
 }
 [dir="rtl"] #header .toggles.mobile {
   float: left;
 }
 #header .toggles.mobile li {
-  width: 33.33%;
+  width: 50%;
 }
 #header .toggles.mobile li a {
-  color: #001e54;
-  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #1c2e5f;
 }
 #header .toggles.mobile li a:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: #142143;
+  color: rgba(255, 255, 255, 0.65);
 }
 #header .toggles.mobile li a.active {
-  background-color: white;
+  background-color: #253e7f;
+  color: white;
 }
 #header .toggles.close {
   border-bottom: 1px solid #b5ac02;
@@ -2182,26 +2216,42 @@ a.icon-checkmark:hover {
 #header .toggles.close li a.active {
   background-color: #fef552;
 }
-#header .toggles li {
-  list-style-type: none;
-  float: left;
-  display: inline;
-  position: relative;
-}
-#header .toggles li a {
-  display: block;
+#header .toggles.sidebar-menu {
   width: 100%;
-  padding: 1em;
-  text-decoration: none;
-  text-align: center;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
-#header .toggles li a span {
-  padding-left: 1em;
-  vertical-align: middle;
-  text-transform: uppercase;
+[dir="rtl"] #header .toggles.sidebar-menu {
+  float: left;
 }
-#header .toggles li a img {
-  vertical-align: middle;
+#header .toggles.sidebar-menu li {
+  width: 100%;
+}
+#header .toggles.sidebar-menu li a {
+  color: white;
+  background-color: #1f346b;
+}
+#header .toggles.sidebar-menu li a:hover {
+  background-color: #001e54;
+}
+#header .toggles.sidebar-menu li a.active {
+  background-color: #001e54;
+}
+#header.with-mobile .toggles.mobile {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+[dir="rtl"] #header.with-mobile .toggles.mobile {
+  float: left;
+}
+#header.with-mobile .toggles.mobile li {
+  width: 33.33%;
 }
 #header .mobile-bar {
   display: none;

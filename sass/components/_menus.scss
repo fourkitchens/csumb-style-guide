@@ -11,72 +11,6 @@
     @include respond-to("navigation small") {
       display: block;
     }
-    &.desktop {
-      @include grid-span(4,1, $output-style:'float');
-      display: block;
-      li {
-        width: 100%;
-        a {
-          color: $white;
-          &:hover {
-            color: rgba($white, 0.85);
-          }   
-        }
-      }    
-      @include respond-to("navigation small") {
-        display: none;
-      }
-    }    
-    &.main {
-      @include grid-span(5,8);
-      margin-top: 1.5em;
-      li {
-        width: 100%;
-        a {
-          color: $white;
-          &:hover {
-            color: rgba($white, 0.85);
-          }   
-        }
-      }
-      @include respond-to("navigation small") {
-        float: right;
-        width: 40%;
-      }      
-    }
-    &.mobile {
-      @include grid-span(12, 1);
-      li {
-        width: 33.33%;
-        a {
-          color: color($blue, 'dark');
-          background-color: rgba($white, 0.90);
-          &:hover {
-            background-color: rgba($white, 0.95);
-          }          
-          &.active {
-            background-color: $white;
-          }   
-        }
-      }
-    }
-    &.close {
-      border-bottom: 1px solid color($status, 'warning', -10%);
-      @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
-      li {
-        width: 100%;
-        a {
-          background-color: color($status, 'warning', 20%);
-          color: color($blue, 'dark');   
-          &:hover {
-            background-color: color($status, 'warning');
-          }
-          &.active {
-            background-color: color($status, 'warning', 20%);
-          }
-        }
-      }
-    }
     li {
       list-style-type: none;
       float: left;
@@ -106,7 +40,125 @@
         }
       }
     }
+    // all toggle class-specific styles below    
+    &.desktop { // for when the is a desktop toggle for the main menu - e.g. department pages
+      @include grid-span(4,1, $output-style:'float');
+      display: block;
+      padding: 0;
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          padding: .75em .25em;
+          &:hover {
+            color: rgba($white, 0.85);
+          }
+          &.active {
+            @include box-shadow(inset 0 0 5px rgba(color($grey, 'dark'), 0.9));
+            border-color: color($green, 'main', -15%);
+            background-color: color($green, 'main', -12%);
+            @include background-image(linear-gradient(
+              color($green, 'bright', -8%) 75%,
+              color($green, 'bright', -12%)
+            )); 
+            span {
+              color: color($grey, 'dark');
+            }           
+          }   
+        }
+      }    
+      @include respond-to("navigation small") {
+        display: none;
+      }
+    }    
+    &.main { // default styles
+      @include grid-span(5,8);
+      margin-top: 1.5em;
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          &:hover {
+            color: rgba($white, 0.85);
+          }   
+        }
+      }
+      @include respond-to("navigation small") {
+        float: right;
+        width: 40%;
+        margin-top: 4.5em;
+      }      
+    }
+    &.mobile { // top mobile toggles
+      @include grid-span(12, 1);
+      background-color: color($blue, 'main', -3%);
+      li {
+        width: 50%;
+        a {
+          color: rgba($white, 0.85);
+          background-color: color($blue, 'main', -3%);
+          &:hover {
+            background-color: color($blue, 'main', -10%);
+            color: rgba($white, 0.65);
+          }          
+          &.active {
+            background-color: color($blue, 'main', 5%);
+            color: $white;
+          }   
+        }
+      }
+    }    
+    &.close { // close button toggle for mobile fly in menu.
+      border-bottom: 1px solid color($status, 'warning', -10%);
+      @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
+      li {
+        width: 100%;
+        a {
+          background-color: color($status, 'warning', 20%);
+          color: color($blue, 'dark');   
+          &:hover {
+            background-color: color($status, 'warning');
+          }
+          &.active {
+            background-color: color($status, 'warning', 20%);
+          }
+        }
+      }
+    }
+    &.sidebar-menu { // sidebar subsection menu toggles
+      @include grid-span(12, 1);
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          background-color: color($blue, 'main');
+          &:hover {
+            background-color: color($blue, 'dark');
+          }          
+          &.active {
+            background-color: color($blue, 'dark');
+          } 
+          @include respond-to("navigation small") {
+            text-align: left;
+          } 
+          @include respond-to("navigation smallest") {
+            text-align: center;
+          }            
+        }
+      }
+    }    
   }
+  &.with-mobile { // header classed three column toggles
+    .toggles {
+      &.mobile {
+        @include grid-span(12, 1);
+        background-color: rgba($white, 0.90);
+        li {
+          width: 33.33%;
+        }
+      }
+    }
+  }  
   .mobile-bar {
     display: none;
   }
@@ -152,8 +204,14 @@
     &.menu-block-2 { // for header-subpage template - main nav truncated -JT
       background-color: color($blue, main);
       width: 100%;
-      margin: 0 auto;  
+      margin: 0 auto;
+      @include respond-to("navigation small") {
+        border-bottom: 1px solid color($blue, 'main', 5%);
+      }
       ul.menu {
+        @include respond-to("navigation small") {
+          padding: 1em 0;
+        }
         li {
           &.active {
             a,
@@ -172,7 +230,7 @@
             color: rgba($white, 1);
           }
           @include respond-to("navigation small") {
-            padding: .5em 1em;
+            padding: 1em 1.5em;
           }  
         }
       }      
@@ -185,9 +243,18 @@
       .submenu {
         background-color: color($blue, dark);
         ul.menu {
+          @include respond-to("navigation small") {
+            padding: .7em 0;
+          }
           li {
             a {
               font-size: .75em;
+            }
+            a, 
+            span {
+              @include respond-to("navigation small") {
+                padding: .5em 1.5em;
+              }  
             }
           }
         }
@@ -267,22 +334,6 @@
             color: color($blue, dark);
           }
         }
-        // &:after { // Delete after jared reviews my alternate way of doing this above - lines 171-173
-        //   top: 100%;
-        //   border: solid transparent;
-        //   content: " ";
-        //   position: absolute;
-        //   pointer-events: none;
-        //   border-color: transparent;
-        // 	width: 0; 
-        // 	height: 0; 
-        // 	border-left: 20px solid transparent;
-        // 	border-right: 20px solid transparent;
-        // 	border-bottom: 15px solid color($blue, dark);
-        // 	border-width: 10px;
-        //   margin-left: 5%;
-        //   margin-top: -20px;
-        // }
       }
       span,
       a {
