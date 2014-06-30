@@ -2089,6 +2089,7 @@ a.icon-checkmark:hover {
   display: none;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  transition: all 0.15s ease-in-out;
 }
 #header .toggles li {
   list-style-type: none;
@@ -2232,6 +2233,7 @@ a.icon-checkmark:hover {
 #header .toggles.sidebar-menu li a {
   color: white;
   background-color: #1f346b;
+  padding: 1em 1.5em;
 }
 #header .toggles.sidebar-menu li a:hover {
   background-color: #001e54;

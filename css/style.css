@@ -2607,6 +2607,7 @@ a.icon-checkmark:hover {
   display: none;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  transition: all 0.15s ease-in-out;
 }
 @media (max-width: 54.375em) {
   #header .toggles {
@@ -2777,6 +2778,7 @@ a.icon-checkmark:hover {
 #header .toggles.sidebar-menu li a {
   color: white;
   background-color: #1f346b;
+  padding: 1em 1.5em;
 }
 #header .toggles.sidebar-menu li a:hover {
   background-color: #001e54;
@@ -2822,7 +2824,7 @@ a.icon-checkmark:hover {
     right: 0;
     width: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.75);
     z-index: 10;
     height: 100%;
   }
@@ -2932,7 +2934,7 @@ a.icon-checkmark:hover {
     margin: 0;
     padding: 0;
     float: left;
-    background-color: white;
+    background-color: transparent;
   }
 }
 #header ul.menu {
@@ -2978,6 +2980,11 @@ a.icon-checkmark:hover {
   background-image: url(../images/icons/icon-active-up.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
+}
+@media (max-width: 54.375em) {
+  #header ul.menu li.active {
+    background-image: none;
+  }
 }
 #header ul.menu li.active .submenu {
   display: block;
@@ -3061,6 +3068,7 @@ a.icon-checkmark:hover {
     position: relative;
     padding: 0;
     margin: 0;
+    background-color: rgba(0, 30, 84, 0.85);
   }
 }
 #header ul.menu li .submenu ul.menu {
@@ -3073,7 +3081,7 @@ a.icon-checkmark:hover {
 }
 @media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu {
-    padding: 0;
+    padding: .8em 0;
   }
 }
 @media (max-width: 54.375em) {
@@ -3094,7 +3102,7 @@ a.icon-checkmark:hover {
 @media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu li a {
     border-radius: 0;
-    padding: .5em 1em;
+    padding: .8em 1em;
   }
 }
 #header ul.menu li .submenu ul.menu li a:hover {
@@ -3891,6 +3899,11 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   padding: 15px 20px;
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-decoration: none;
+}
+@media (max-width: 54.375em) {
+  .menu-left-sidebar ul.menu li a {
+    padding: 1em 1.5em;
+  }
 }
 .menu-left-sidebar ul.menu li a:hover, .menu-left-sidebar ul.menu li a:focus {
   background-color: #001e54;

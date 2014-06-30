@@ -31,6 +31,9 @@ $one-column: 870px; //Match mobile menu breakpoint
         padding: 15px 20px;
         font-family: $trade-reg;
         text-decoration: none;
+        @include respond-to("navigation small") {
+          padding: 1em 1.5em;
+        }
         &:hover, &:focus {
           background-color: color($blue, dark);
         }

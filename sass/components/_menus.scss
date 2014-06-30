@@ -8,6 +8,7 @@
     display: none;
     padding: 0;
     font-family: $trade;
+    transition: all 0.15s ease-in-out;
     @include respond-to("navigation small") {
       display: block;
     }
@@ -132,6 +133,7 @@
         a {
           color: $white;
           background-color: color($blue, 'main');
+          padding: 1em 1.5em;
           &:hover {
             background-color: color($blue, 'dark');
           }          
@@ -171,7 +173,7 @@
       right: 0;
       width: 100%;
       display: none;
-      background-color: rgba($white, 0.35);
+      background-color: rgba($white, 0.75);
       z-index: 10;
       height: 100%;
     }
@@ -271,7 +273,7 @@
         margin: 0;
         padding: 0;
         float: left;
-        background-color:$white;
+        background-color:transparent;
       }      
     }    
   }
@@ -308,7 +310,10 @@
       &.active {
         background-image: url(../images/icons/icon-active-up.svg);
         background-position: center bottom;
-        background-repeat: no-repeat;        
+        background-repeat: no-repeat; 
+        @include respond-to("navigation small") {
+          background-image: none;
+        }
         .submenu {
           display: block;
         }
@@ -387,6 +392,7 @@
           position: relative;
           padding: 0;
           margin: 0;
+          background-color: rgba(#001e54, 0.85);
         }
         ul.menu {
           margin: 0 auto;
@@ -397,7 +403,7 @@
           max-width: 68em;
           @extend %clearfix;
           @include respond-to("navigation small") {
-            padding: 0;
+            padding: .8em 0;
           }
           li { 
             @include respond-to("navigation small") {
@@ -414,7 +420,7 @@
               line-height: 1.4em;
               @include respond-to("navigation small") {
                 @include border-radius(0);
-                padding: .5em 1em;
+                padding: .8em 1em;
               }
               &:hover {
                 color: $white;

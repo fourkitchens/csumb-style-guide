@@ -13,7 +13,10 @@
         search                    = $('.actions'),
         toggler                   = function(a){
           $(this).toggleClass('active');
-          a.data.toggled.slideToggle('300');
+          a.data.toggled.animate({
+            height: "toggle",
+            opacity: "toggle"
+            }, "300");
         };
         pullNav.click({toggled : menu}, toggler);
         pullNavTop.click({toggled : menuTop}, toggler);
