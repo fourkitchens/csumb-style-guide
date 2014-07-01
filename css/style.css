@@ -2103,13 +2103,18 @@ input.action-delete:focus {
 @media (max-width: 54.375em) {
   #header .title-wrap {
     background-color: white;
-    padding: 1em 0;
+    padding: 2em 0 1em;
     margin-top: 0;
   }
 }
 @media (max-width: 67.1875em) {
   #header .title-wrap .breadcrumb {
     padding: 0 1em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .title-wrap .breadcrumb {
+    padding: 0 1em 1em;
   }
 }
 @media (max-width: 67.1875em) {
@@ -2607,7 +2612,6 @@ a.icon-checkmark:hover {
   display: none;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  transition: all 0.15s ease-in-out;
 }
 @media (max-width: 54.375em) {
   #header .toggles {
@@ -2626,6 +2630,7 @@ a.icon-checkmark:hover {
   padding: 1em;
   text-decoration: none;
   text-align: center;
+  transition: all 0.15s ease-in-out;
 }
 #header .toggles li a span {
   padding-left: 1em;
@@ -2718,13 +2723,18 @@ a.icon-checkmark:hover {
     margin-top: 4.5em;
   }
 }
+@media (max-width: 29.6875em) {
+  #header .toggles.main {
+    margin-bottom: 3em;
+  }
+}
 #header .toggles.mobile {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  background-color: #1c2e5f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 [dir="rtl"] #header .toggles.mobile {
   float: left;
@@ -2748,6 +2758,14 @@ a.icon-checkmark:hover {
   border-bottom: 1px solid #b5ac02;
   -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
   box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .toggles.close {
+  float: left;
 }
 #header .toggles.close li {
   width: 100%;
@@ -2762,12 +2780,16 @@ a.icon-checkmark:hover {
 #header .toggles.close li a.active {
   background-color: #fef552;
 }
+#header .toggles.close li a.active:hover {
+  background-color: #e8dc02;
+}
 #header .toggles.sidebar-menu {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 [dir="rtl"] #header .toggles.sidebar-menu {
   float: left;
@@ -2802,7 +2824,6 @@ a.icon-checkmark:hover {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 [dir="rtl"] #header.with-mobile .toggles.mobile {
   float: left;
@@ -2824,7 +2845,7 @@ a.icon-checkmark:hover {
     right: 0;
     width: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.82);
     z-index: 10;
     height: 100%;
   }
@@ -2833,9 +2854,14 @@ a.icon-checkmark:hover {
   position: relative;
   display: block;
   z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 54.375em) {
+  #header .navigation {
+    background-color: transparent;
+  }
 }
 #header .navigation.menu-block-1, #header .navigation.menu-block-3 {
-  background-color: rgba(255, 255, 255, 0.85);
   margin: 0 auto 4.5em;
   width: 100%;
   float: left;
@@ -2855,7 +2881,6 @@ a.icon-checkmark:hover {
     margin: 0;
     padding: 0;
     float: left;
-    background-color: white;
   }
 }
 #header .navigation.menu-block-2 {
@@ -2935,6 +2960,7 @@ a.icon-checkmark:hover {
     padding: 0;
     float: left;
     background-color: transparent;
+    border-top: 1px solid #fff;
   }
 }
 #header ul.menu {
@@ -2974,6 +3000,14 @@ a.icon-checkmark:hover {
     float: left;
     margin: 0;
     padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  #header ul.menu li.first {
+    border-top: 0;
+  }
+  #header ul.menu li.last {
+    border-bottom: 0;
   }
 }
 #header ul.menu li.active {
@@ -3032,8 +3066,8 @@ a.icon-checkmark:hover {
 @media (max-width: 54.375em) {
   #header ul.menu li span,
   #header ul.menu li a {
-    font-size: 1em;
-    padding: 1em;
+    font-size: 1.2em;
+    padding: 1.5em 3em 1em;
   }
 }
 #header ul.menu li span:hover,
@@ -3091,6 +3125,8 @@ a.icon-checkmark:hover {
     float: left;
     margin: 0;
     padding: 0;
+    border-bottom: none;
+    border-top: none;
   }
 }
 #header ul.menu li .submenu ul.menu li a {
@@ -3102,7 +3138,7 @@ a.icon-checkmark:hover {
 @media (max-width: 54.375em) {
   #header ul.menu li .submenu ul.menu li a {
     border-radius: 0;
-    padding: .8em 1em;
+    padding: 1em 3.5em;
   }
 }
 #header ul.menu li .submenu ul.menu li a:hover {

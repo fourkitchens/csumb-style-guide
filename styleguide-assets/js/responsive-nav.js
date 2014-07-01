@@ -16,7 +16,7 @@
           a.data.toggled.animate({
             height: "toggle",
             opacity: "toggle"
-            }, "300");
+            }, "500");
         };
         pullNav.click({toggled : menu}, toggler);
         pullNavTop.click({toggled : menuTop}, toggler);

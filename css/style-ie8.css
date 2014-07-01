@@ -2089,7 +2089,6 @@ a.icon-checkmark:hover {
   display: none;
   padding: 0;
   font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  transition: all 0.15s ease-in-out;
 }
 #header .toggles li {
   list-style-type: none;
@@ -2103,6 +2102,7 @@ a.icon-checkmark:hover {
   padding: 1em;
   text-decoration: none;
   text-align: center;
+  transition: all 0.15s ease-in-out;
 }
 #header .toggles li a span {
   padding-left: 1em;
@@ -2178,7 +2178,7 @@ a.icon-checkmark:hover {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  background-color: #1c2e5f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 [dir="rtl"] #header .toggles.mobile {
   float: left;
@@ -2203,6 +2203,14 @@ a.icon-checkmark:hover {
   -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
   box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .toggles.close {
+  float: left;
 }
 #header .toggles.close li {
   width: 100%;
@@ -2217,12 +2225,16 @@ a.icon-checkmark:hover {
 #header .toggles.close li a.active {
   background-color: #fef552;
 }
+#header .toggles.close li a.active:hover {
+  background-color: #e8dc02;
+}
 #header .toggles.sidebar-menu {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 [dir="rtl"] #header .toggles.sidebar-menu {
   float: left;
@@ -2247,7 +2259,6 @@ a.icon-checkmark:hover {
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 [dir="rtl"] #header.with-mobile .toggles.mobile {
   float: left;
@@ -2265,9 +2276,9 @@ a.icon-checkmark:hover {
   position: relative;
   display: block;
   z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
 }
 #header .navigation.menu-block-1, #header .navigation.menu-block-3 {
-  background-color: rgba(255, 255, 255, 0.85);
   margin: 0 auto 4.5em;
   width: 100%;
   float: left;

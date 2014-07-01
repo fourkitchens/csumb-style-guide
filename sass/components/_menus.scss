@@ -8,7 +8,6 @@
     display: none;
     padding: 0;
     font-family: $trade;
-    transition: all 0.15s ease-in-out;
     @include respond-to("navigation small") {
       display: block;
     }
@@ -23,6 +22,7 @@
         padding: 1em;
         text-decoration: none;
         text-align: center;
+        transition: all 0.15s ease-in-out;
         span {
           padding-left: 1em;
           vertical-align: middle;
@@ -88,11 +88,14 @@
         float: right;
         width: 40%;
         margin-top: 4.5em;
-      }      
+      }   
+      @include respond-to("navigation smallest") {
+        margin-bottom: 3em;
+      }   
     }
     &.mobile { // top mobile toggles
       @include grid-span(12, 1);
-      background-color: color($blue, 'main', -3%);
+      border-bottom: 1px solid rgba($white, 0.3);
       li {
         width: 50%;
         a {
@@ -112,6 +115,7 @@
     &.close { // close button toggle for mobile fly in menu.
       border-bottom: 1px solid color($status, 'warning', -10%);
       @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
+      @include grid-span(12, 1);
       li {
         width: 100%;
         a {
@@ -122,12 +126,16 @@
           }
           &.active {
             background-color: color($status, 'warning', 20%);
+            &:hover {
+              background-color: color($status, 'warning');
+            }
           }
         }
       }
     }
     &.sidebar-menu { // sidebar subsection menu toggles
       @include grid-span(12, 1);
+      border-bottom: 1px solid rgba($white, 0.3);
       li {
         width: 100%;
         a {
@@ -154,7 +162,6 @@
     .toggles {
       &.mobile {
         @include grid-span(12, 1);
-        background-color: rgba($white, 0.90);
         li {
           width: 33.33%;
         }
@@ -173,7 +180,7 @@
       right: 0;
       width: 100%;
       display: none;
-      background-color: rgba($white, 0.75);
+      background-color: rgba($white, 0.82);
       z-index: 10;
       height: 100%;
     }
@@ -182,9 +189,12 @@
     position: relative;
     display: block;
     z-index: 2;
+    background-color: rgba($white, 0.85);
+    @include respond-to("navigation small") {
+      background-color: transparent;
+    }
     &.menu-block-1,
     &.menu-block-3 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
-      background-color: rgba($white, 0.85);
       margin: 0 auto 4.5em;
       width: 100%;
       float: left;   
@@ -200,7 +210,6 @@
         margin: 0;
         padding: 0;
         float: left;
-        background-color:$white;
       }      
     }
     &.menu-block-2 { // for header-subpage template - main nav truncated -JT
@@ -274,6 +283,7 @@
         padding: 0;
         float: left;
         background-color:transparent;
+        border-top: 1px solid #fff;
       }      
     }    
   }
@@ -306,6 +316,14 @@
         float: left;
         margin: 0;
         padding: 0;
+        border-top: 1px solid rgba($white, 0.10);
+        border-bottom: 1px solid rgba($black, 0.15);
+        &.first {
+          border-top: 0;
+        }
+        &.last {
+          border-bottom: 0;
+        }
       }
       &.active {
         background-image: url(../images/icons/icon-active-up.svg);
@@ -356,8 +374,8 @@
           font-size: .9em;
         }
         @include respond-to("navigation small") {
-          font-size: 1em;
-          padding: 1em;
+          font-size: 1.2em;
+          padding: 1.5em 3em 1em;
         }
         &:hover {
           color: color($blue, 'bright');
@@ -412,6 +430,8 @@
               float: left;
               margin: 0;
               padding: 0;
+              border-bottom: none;
+              border-top: none;
             }
             a {
               color: color($blue, 'highlight');
@@ -420,7 +440,7 @@
               line-height: 1.4em;
               @include respond-to("navigation small") {
                 @include border-radius(0);
-                padding: .8em 1em;
+                padding: 1em 3.5em;
               }
               &:hover {
                 color: $white;

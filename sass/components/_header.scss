@@ -140,13 +140,16 @@
     clear: both;
     @include respond-to("navigation small") {
       background-color: $white;
-      padding: 1em 0;
+      padding: 2em 0 1em;
       margin-top: 0;
     }
     .breadcrumb {
       @include respond-to("navigation medium") {
         padding:0 1em; 
       }  
+      @include respond-to("navigation small") {
+        padding:0 1em 1em; 
+      }        
     }
     .page-title {
       @include respond-to("navigation medium") {
