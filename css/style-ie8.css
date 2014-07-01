@@ -520,28 +520,28 @@ a.link-bold {
   font-weight: 700;
 }
 
-.main-container a {
+.main-container a, #top-tier a {
   color: #3b559a;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 1px solid #3b559a;
 }
-.main-container a:visited {
+.main-container a:visited, #top-tier a:visited {
   color: #3b559a;
 }
-.main-container a:visited:hover, .main-container a:visited:focus {
+.main-container a:visited:hover, .main-container a:visited:focus, #top-tier a:visited:hover, #top-tier a:visited:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:hover, .main-container a:focus {
+.main-container a:hover, .main-container a:focus, #top-tier a:hover, #top-tier a:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:active {
+.main-container a:active, #top-tier a:active {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a.link-bold {
+.main-container a.link-bold, #top-tier a.link-bold {
   font-weight: 700;
 }
 
@@ -1126,6 +1126,10 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin: 0 auto;
 }
 
+.limiter {
+  padding: 0 1.5em;
+}
+
 /**
  * Prototype for Student Dashboard.
  */
@@ -1379,6 +1383,64 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
 }
 [dir="rtl"] .main-container2 {
+  float: left;
+}
+
+/**
+ * Prototype for Basic Page.
+ */
+#top-tier .limiter .main-content {
+  margin-top: 2em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #top-tier .limiter .main-content {
+  float: left;
+}
+#top-tier .limiter .secondary-content {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #top-tier .limiter .secondary-content {
+  float: left;
+}
+#top-tier .limiter .secondary-content div {
+  background-color: #f3f2e8;
+  padding: 1.5em;
+  margin: 0 0 2px 0;
+}
+
+#bottom-tier {
+  padding: 2em 0;
+  clear: both;
+  background-color: #029555;
+}
+#bottom-tier:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#bottom-tier .limiter .main-content {
+  margin-top: 2em;
+  color: white;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+#bottom-tier .limiter .main-content h2 {
+  color: #dddac7;
+}
+[dir="rtl"] #bottom-tier .limiter .main-content {
   float: left;
 }
 
@@ -2987,15 +3049,14 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   clear: both;
   margin-top: 2em;
 }
+.map h4 {
+  color: #8f864f;
+  margin: 0;
+}
 .map h3 {
   color: #39351b;
-  margin-top: 0;
-  text-transform: none;
-}
-.map h4 {
-  margin-bottom: 0;
-  color: #8f864f;
   text-transform: uppercase;
+  margin: .5em 0;
 }
 
 /**
@@ -3004,23 +3065,32 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 .contact {
   margin-top: 2em;
 }
-.contact h3 {
-  color: #39351b;
+.contact h4 {
+  color: #8f864f;
   margin-top: 0;
 }
 .contact p {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   float: left;
   margin-right: 3em;
 }
 .contact .contact-phone:before {
-  content: url("../images/icons/icon-phone.png");
+  content: url("../images/icons/icon-phone-24.png");
   margin-right: 7px;
   margin-top: 4px;
   float: left;
 }
 .contact .contact-email:before {
-  content: url("../images/icons/icon-email.png");
+  content: url("../images/icons/icon-email-24.png");
+  margin-right: 7px;
+  margin-top: 4px;
+  float: left;
+}
+.contact .contact-email a {
+  border: none;
+}
+.contact .contact-twitter:before {
+  content: url("../images/icons/icon-twitter-24.png");
   margin-right: 7px;
   margin-top: 4px;
   float: left;
@@ -3033,11 +3103,12 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.related-content h3 {
+.related-content h4 {
   margin-top: 0;
+  color: #8f864f;
 }
 .related-content p {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 /**

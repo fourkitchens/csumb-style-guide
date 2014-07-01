@@ -83,28 +83,28 @@ a.link-bold {
   font-weight: 700;
 }
 
-.main-container a {
+.main-container a, #top-tier a {
   color: #3b559a;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 1px solid #3b559a;
 }
-.main-container a:visited, .main-container a[href*="csumb.edu"] {
+.main-container a:visited, .main-container a[href*="csumb.edu"], #top-tier a:visited, #top-tier a[href*="csumb.edu"] {
   color: #3b559a;
 }
-.main-container a:visited:hover, .main-container a[href*="csumb.edu"]:hover, .main-container a:visited:focus, .main-container a[href*="csumb.edu"]:focus {
+.main-container a:visited:hover, .main-container a[href*="csumb.edu"]:hover, .main-container a:visited:focus, .main-container a[href*="csumb.edu"]:focus, #top-tier a:visited:hover, #top-tier a[href*="csumb.edu"]:hover, #top-tier a:visited:focus, #top-tier a[href*="csumb.edu"]:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:hover, .main-container a:focus {
+.main-container a:hover, .main-container a:focus, #top-tier a:hover, #top-tier a:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:active {
+.main-container a:active, #top-tier a:active {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a.link-bold {
+.main-container a.link-bold, #top-tier a.link-bold {
   font-weight: 700;
 }
 
