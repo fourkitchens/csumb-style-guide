@@ -66,6 +66,7 @@ h4 {
 
 a:link, a[href*="example.com"] {
   color: #3b559a;
+  text-decoration: none;
 }
 a:visited, a[href*="csumb.edu"] {
   color: #3b559a;
@@ -83,29 +84,32 @@ a.link-bold {
   font-weight: 700;
 }
 
-.main-container a, #top-tier a {
+#main p a, #main ul li a, #main ol li a, #main .contact a, #main .map a, #main .related-content a {
   color: #3b559a;
   cursor: pointer;
   text-decoration: none;
   border-bottom: 1px solid #3b559a;
 }
-.main-container a:visited, .main-container a[href*="csumb.edu"], #top-tier a:visited, #top-tier a[href*="csumb.edu"] {
+#main p a:visited, #main p a[href*="csumb.edu"], #main ul li a:visited, #main ul li a[href*="csumb.edu"], #main ol li a:visited, #main ol li a[href*="csumb.edu"], #main .contact a:visited, #main .contact a[href*="csumb.edu"], #main .map a:visited, #main .map a[href*="csumb.edu"], #main .related-content a:visited, #main .related-content a[href*="csumb.edu"] {
   color: #3b559a;
 }
-.main-container a:visited:hover, .main-container a[href*="csumb.edu"]:hover, .main-container a:visited:focus, .main-container a[href*="csumb.edu"]:focus, #top-tier a:visited:hover, #top-tier a[href*="csumb.edu"]:hover, #top-tier a:visited:focus, #top-tier a[href*="csumb.edu"]:focus {
+#main p a:visited:hover, #main p a[href*="csumb.edu"]:hover, #main p a:visited:focus, #main p a[href*="csumb.edu"]:focus, #main ul li a:visited:hover, #main ul li a[href*="csumb.edu"]:hover, #main ul li a:visited:focus, #main ul li a[href*="csumb.edu"]:focus, #main ol li a:visited:hover, #main ol li a[href*="csumb.edu"]:hover, #main ol li a:visited:focus, #main ol li a[href*="csumb.edu"]:focus, #main .contact a:visited:hover, #main .contact a[href*="csumb.edu"]:hover, #main .contact a:visited:focus, #main .contact a[href*="csumb.edu"]:focus, #main .map a:visited:hover, #main .map a[href*="csumb.edu"]:hover, #main .map a:visited:focus, #main .map a[href*="csumb.edu"]:focus, #main .related-content a:visited:hover, #main .related-content a[href*="csumb.edu"]:hover, #main .related-content a:visited:focus, #main .related-content a[href*="csumb.edu"]:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:hover, .main-container a:focus, #top-tier a:hover, #top-tier a:focus {
+#main p a:hover, #main p a:focus, #main ul li a:hover, #main ul li a:focus, #main ol li a:hover, #main ol li a:focus, #main .contact a:hover, #main .contact a:focus, #main .map a:hover, #main .map a:focus, #main .related-content a:hover, #main .related-content a:focus {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a:active, #top-tier a:active {
+#main p a:active, #main ul li a:active, #main ol li a:active, #main .contact a:active, #main .map a:active, #main .related-content a:active {
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.main-container a.link-bold, #top-tier a.link-bold {
+#main p a.link-bold, #main ul li a.link-bold, #main ol li a.link-bold, #main .contact a.link-bold, #main .map a.link-bold, #main .related-content a.link-bold {
   font-weight: 700;
+}
+#main .menu-left-sidebar ul li a {
+  color: white;
 }
 
 a.form-download {

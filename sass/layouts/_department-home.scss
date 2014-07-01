@@ -4,47 +4,47 @@
 
 $department-home: 800px; //Match mobile menu breakpoint
 
-#top-tier {
-  .limiter {
-    .main-content {
-      margin-top: 2em;
-      @include grid-span(12,1);
-      @include breakpoint ($department-home) {
-        @include grid-span(7,1);
-      } 
-    }
-    .secondary-content {
-      margin-top: 2em;
-      margin-bottom: 1.5em;
-      @include grid-span(12,1);
-      @include breakpoint ($department-home) {
-        @include grid-span(4,9);
-      } 
-      div {
-        background-color: color($tan, light);
-        padding: 1.5em;
-        margin: 0 0 2px 0;
+  #top-tier {
+    .limiter {
+      .main-content {
+        margin-top: 2em;
+        @include grid-span(12,1);
+        @include breakpoint ($department-home) {
+          @include grid-span(7,1);
+        } 
+      }
+      .secondary-content {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+        @include grid-span(12,1);
+        @include breakpoint ($department-home) {
+          @include grid-span(4,9);
+        } 
+        div {
+          background-color: color($tan, light);
+          padding: 1.5em;
+          margin: 0 0 2px 0;
+        }
       }
     }
   }
-}
-
-#bottom-tier {
-  padding: 2em 0;
-  @include clearfix;
-  clear: both;
-  background-color: color($green);
-  .limiter {
-    .main-content {
-      margin-top: 2em;
-      color: $white;
-      h2 {
-      color: color($tan, bright);
+  
+  #bottom-tier {
+    padding: 2em 0;
+    @include clearfix;
+    clear: both;
+    background-color: color($green);
+    .limiter {
+      .main-content {
+        margin-top: 2em;
+        color: $white;
+        h2 {
+        color: color($tan, bright);
+        }
+        @include grid-span(12,1);
+        @include breakpoint ($department-home) {
+          @include grid-span(8,3);
+        } 
       }
-      @include grid-span(12,1);
-      @include breakpoint ($department-home) {
-        @include grid-span(8,3);
-      } 
     }
   }
-}
