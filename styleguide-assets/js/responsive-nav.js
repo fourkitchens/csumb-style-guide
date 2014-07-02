@@ -9,7 +9,7 @@
         menuTop                   = $('.mobile-bar'),        
         pullSideMenu              = $('.pull-sidebar'),
         menuSidebar               = $('.menu-left-sidebar'),        
-        pullSearch                = $('#pull-search'),
+        pullSearch                = $('.pull-search'),
         search                    = $('.actions'),
         toggler                   = function(a){
           $(this).toggleClass('active');

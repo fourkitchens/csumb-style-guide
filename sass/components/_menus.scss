@@ -2,47 +2,60 @@
 * Menus - main menu, footer menu, etc.
 */
 
-#header { // Main menu
-  .toggles {
-    margin: 0;
-    display: none;
-    padding: 0;
-    font-family: $trade;
-    @include respond-to("navigation small") {
+// general toggle styles
+.toggles {
+  margin: 0;
+  display: none;
+  padding: 0;
+  font-family: $trade;
+  @include respond-to("navigation small") {
+    display: block;
+  }
+  li {
+    list-style-type: none;
+    float: left;
+    display: inline;
+    position: relative;
+    a {
       display: block;
-    }
-    li {
-      list-style-type: none;
-      float: left;
-      display: inline;
-      position: relative;
-      a {
-        display: block;
-        width:100%;
-        padding: 1em;
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.15s ease-in-out;
-        span {
-          padding-left: 1em;
-          vertical-align: middle;
-          text-transform: uppercase;
-          @include respond-to("navigation smallest") {
-            display: block;
-            padding: .5em 0 0;
-          }
+      width:100%;
+      padding: 2em .5em;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.15s ease-in-out;
+      span {
+        vertical-align: middle;
+        text-transform: uppercase;
+        @include respond-to("navigation smallest") {
+          display: block;
+          padding: .5em 0 0;
         }
-        img {
-          vertical-align: middle;
-          @include respond-to("navigation smallest") {
-            display: block;
-            margin: 0 auto;
-          }
+        &:before {
+          display:block;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          text-align: center;
+        }
+      }
+      img {
+        vertical-align: middle;
+        @include respond-to("navigation smallest") {
+          display: block;
+          margin: 0 auto;
         }
       }
     }
+  }
+}
+
+#header { 
+  .toggles {
     // all toggle class-specific styles below    
-    &.desktop { // for when the is a desktop toggle for the main menu - e.g. department pages
+    &.desktop { // desktop toggle for the main menu - e.g. department pages
       @include grid-span(4,1, $output-style:'float');
       display: block;
       padding: 0;
@@ -72,43 +85,72 @@
         display: none;
       }
     }    
-    &.main { // default styles
-      @include grid-span(5,8);
+    &.main { // desktop toggle for department/section mobile menu
+      @include grid-span(12, 1);
       margin-top: 1.5em;
       li {
         width: 100%;
         a {
-          color: $white;
+          color: $white;  
+          text-align: left;
           &:hover {
             color: rgba($white, 0.85);
           }   
+          span {
+            @include respond-to("navigation small") {
+              padding: 0 0 0 1em;
+              display: inline;
+            } 
+          }
+          img {
+            @include respond-to("navigation small") {
+              display: inline;
+            }  
+          }
         }
-      }
-      @include respond-to("navigation small") {
-        float: right;
-        width: 40%;
-        margin-top: 4.5em;
-      }   
-      @include respond-to("navigation smallest") {
-        margin-bottom: 3em;
-      }   
+      }  
     }
     &.mobile { // top mobile toggles
-      @include grid-span(12, 1);
-      border-bottom: 1px solid rgba($white, 0.3);
+      @include grid-span(6, 7, $output-style:'float');        
       li {
-        width: 50%;
+        width: 33.33%;   
         a {
-          color: rgba($white, 0.85);
-          background-color: color($blue, 'main', -3%);
+          color: color($blue, 'main', -3%);
           &:hover {
-            background-color: color($blue, 'main', -10%);
-            color: rgba($white, 0.65);
+            color: color($blue, 'main', -10%);
+            background-color: rgba($white, 0.82);
           }          
           &.active {
-            background-color: color($blue, 'main', 5%);
-            color: $white;
-          }   
+            background-color: rgba($white, 0.82);
+            color: color($blue, 'main', 10%);
+          }
+          &.pull-nav-main {
+            span {
+              display: block;
+              &:before {
+                content: image-url('../images/icons/icon-menu-blue-small.svg');        
+                vertical-align: middle;
+              }
+            }
+          }
+          &.pull-user {
+            span {
+              display: block;
+              &:before {
+                content: image-url('../images/icons/icon-user-blue-small.svg');        
+                vertical-align: middle;
+              }
+            }
+          }
+          &.pull-search {
+            span {
+              display: block;
+              &:before {
+                content: image-url('../images/icons/icon-search-blue-small.svg');        
+                vertical-align: middle;
+              }
+            }
+          }                    
         }
       }
     }    
@@ -132,42 +174,8 @@
           }
         }
       }
-    }
-    &.sidebar-menu { // sidebar subsection menu toggles
-      @include grid-span(12, 1);
-      border-bottom: 1px solid rgba($white, 0.3);
-      li {
-        width: 100%;
-        a {
-          color: $white;
-          background-color: color($blue, 'main');
-          padding: 1em 1.5em;
-          &:hover {
-            background-color: color($blue, 'dark');
-          }          
-          &.active {
-            background-color: color($blue, 'dark');
-          } 
-          @include respond-to("navigation small") {
-            text-align: left;
-          } 
-          @include respond-to("navigation smallest") {
-            text-align: center;
-          }            
-        }
-      }
-    }    
+    }   
   }
-  &.with-mobile { // header classed three column toggles
-    .toggles {
-      &.mobile {
-        @include grid-span(12, 1);
-        li {
-          width: 33.33%;
-        }
-      }
-    }
-  }  
   .mobile-bar {
     display: none;
   }
@@ -350,7 +358,7 @@
             text-transform: none;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
-            content: image-url('icons/icon-dropup.svg'); 
+            content: image-url('../images/icons/icon-dropup.svg'); 
             width: 15px; 
             height: 24px;        
             vertical-align: middle;
@@ -458,4 +466,36 @@
       }
     }
   }
+}
+
+// Sidebar Menu
+.toggles { 
+  &.sidebar-menu { // sidebar subsection menu toggles
+    @include grid-span(12, 1);
+    display: none;
+    border-bottom: 1px solid rgba($white, 0.3);
+    @include respond-to("navigation small") {
+      display: block;
+    }    
+    li {
+      width: 100%;
+      a {
+        color: $white;
+        background-color: color($blue, 'main');
+        padding: 1em 1.5em;
+        &:hover {
+          background-color: color($blue, 'dark');
+        }          
+        &.active {
+          background-color: color($blue, 'dark');
+        } 
+        @include respond-to("navigation small") {
+          text-align: left;
+        } 
+        @include respond-to("navigation smallest") {
+          text-align: center;
+        }            
+      }
+    }
+  } 
 }
