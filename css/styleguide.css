@@ -194,7 +194,7 @@ blockquote {
   padding: 0 .75em;
   margin: 2em 0 2em 1em;
   border-left: 0.5em solid #d7be25;
-  color: #8f864f;
+  color: #988f78;
   line-height: 1.5em;
 }
 blockquote p {
@@ -630,16 +630,16 @@ body {
   background-color: #282513;
 }
 .styleguide-swatches ol.tan .main {
-  background-color: #8f864f;
+  background-color: #988f78;
 }
 .styleguide-swatches ol.tan .main span:after {
-  content: "#8f864f";
+  content: "#988f78";
 }
 .styleguide-swatches ol.tan .main .high {
-  background-color: #9f9558;
+  background-color: #a39b86;
 }
 .styleguide-swatches ol.tan .main .low {
-  background-color: #7f7746;
+  background-color: #8c836b;
 }
 .styleguide-swatches ol.tan .light {
   background-color: #dddac7;
