@@ -86,6 +86,7 @@ $person-chunk-column: 600px; //Match mobile menu breakpoint
   }
   
   #profiles {
+    background-color: color($tan,light);
     @extend %clearfix;
     padding-top: 2em;
     h1 {
@@ -135,6 +136,7 @@ $person-chunk-column: 600px; //Match mobile menu breakpoint
   }
   
   #about-university {
+    background-color: color($blue,dark);
     @extend %clearfix;
   h1 {
     text-transform: uppercase;
@@ -150,21 +152,29 @@ $person-chunk-column: 600px; //Match mobile menu breakpoint
   }
   
   #social-media {
+    padding: 1em 0;
     @extend %clearfix;
-    background-color: color($green);
-   li {
-list-style-type: none;
-float: left;
-display: inline;
-position: relative;
-width: 20%;
- a {
-  border-bottom: none;
-  &:hover {
-    border-bottom: none;
-  }
- }
-  }
+    .main-container {
+      padding: 0;
+      ul {
+        font-size: 0;
+        li {
+          list-style-type: none;
+          float: left;
+          display: inline;
+          position: relative;
+          width: 19%;
+          text-align: center;
+          a {
+            background-size: 100%;
+            border-bottom: none;
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
   }
   
 }
