@@ -39,6 +39,7 @@
           text-transform: none;
           line-height: 1;
           text-align: center;
+          transition: content 0.4s ease-in-out;
         }
       }
       img {
@@ -231,6 +232,14 @@
               background-color: color($status, 'warning');
             }
           }
+          span {
+            &:before {
+              content: image-url('../images/icons/icon-cancel-blue-small.svg');        
+              vertical-align: middle;
+              padding-right: 1em;
+              display: inline-block;
+            }
+          }          
         }
       }
     }   
@@ -542,18 +551,35 @@
         color: $white;
         background-color: color($blue, 'main');
         padding: 1em 1.5em;
+        text-align: left;
         &:hover {
           background-color: color($blue, 'dark');
         }          
         &.active {
           background-color: color($blue, 'dark');
         } 
-        @include respond-to("navigation small") {
-          text-align: left;
+        &.pull-sidebar {
+          span {
+            &:before {
+              content: image-url('../images/icons/icon-menu-white-small.svg');        
+              vertical-align: middle;
+              padding-right: 1em;
+              display: inline-block;
+              transition: content 0.4s ease-in-out;
+            }
+          }
+          &.active {
+            span {
+              &:before {
+                content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                vertical-align: middle;
+                padding-right:1em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }              
+          }
         } 
-        @include respond-to("navigation smallest") {
-          text-align: center;
-        }            
       }
     }
   } 

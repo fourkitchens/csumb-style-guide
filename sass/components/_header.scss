@@ -5,38 +5,26 @@
 
  .prototype-grid {
   .header-image {
-    width: 100%;
-    background-image: url(../images/photos/header-students-big.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     top:0;
     right: auto;
     left: auto;
     z-index: -1;
-    @include respond-to("navigation full") {
-      height: 590px;
-      background-position: 0% 10%;
-    }
-    @include respond-to("navigation medium") {
-      height: 500px;
-    }
+    width: 100%;
+    height: 100%;    
     @include respond-to("navigation small") {
-      height: 400px;
-      background-position:center 80px;
-      background-color: $black;
+      top: 10%;
+    }   
+    @include respond-to("no bg-image") {
+      display: none;
+      top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
     }
   }
-  .header-image {
-    &.department-page { // section-specific bg images 
-      background-image: url(../images/photos/header-students-two-big.jpg);
-      background-position: 0 0;
-      @include respond-to("navigation small") {
-        height: 100%;
-      }
-    } 
-  } 
 }
 /**
 * Header
@@ -47,7 +35,12 @@
   @include grid-span(12,1);
   @include respond-to("navigation small") {
     background-color: rgba($black, 0.75);
+    padding-bottom: 10em;
   }
+  @include respond-to("no bg-image") {
+    padding-bottom: 0em;
+    background-color: color($tan, 'dark');    
+  }  
   .logo {
     @include grid-span(7,1);    
     padding-top: 1.5em;
@@ -116,6 +109,9 @@
     }
   }
   &.with-mobile {
+    @include respond-to("navigation small") {
+      padding-bottom: 0;
+    }
     .logo {
       @include grid-span(5,1);    
     }
@@ -227,6 +223,11 @@
     .page-title {
       @include respond-to("navigation medium") {
         padding:0 1em; 
+      }
+      h1 {
+        @include respond-to("no bg-image") {
+          color: $white;
+        }
       }
     }    
   } 

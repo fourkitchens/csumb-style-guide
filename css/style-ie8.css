@@ -1592,20 +1592,18 @@ input.action-delete:focus {
  * The design for the header.
  */
 .prototype-grid .header-image {
-  width: 100%;
-  background-image: url(../images/photos/header-students-big.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
   top: 0;
   right: auto;
   left: auto;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
-.prototype-grid .header-image.department-page {
-  background-image: url(../images/photos/header-students-two-big.jpg);
-  background-position: 0 0;
+.prototype-grid .header-image img {
+  width: 100%;
+  height: auto;
+  position: relative;
 }
 
 /**
@@ -2189,6 +2187,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   text-align: center;
+  transition: content 0.4s ease-in-out;
 }
 .toggles li a img {
   vertical-align: middle;
@@ -2357,6 +2356,12 @@ a.icon-checkmark:hover {
 }
 #header .toggles.close li a.active:hover {
   background-color: #e8dc02;
+}
+#header .toggles.close li a span:before {
+  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
 }
 #header .mobile-bar {
   display: none;
@@ -2527,12 +2532,27 @@ a.icon-checkmark:hover {
   color: white;
   background-color: #1f346b;
   padding: 1em 1.5em;
+  text-align: left;
 }
 .toggles.sidebar-menu li a:hover {
   background-color: #001e54;
 }
 .toggles.sidebar-menu li a.active {
   background-color: #001e54;
+}
+.toggles.sidebar-menu li a.pull-sidebar span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+.toggles.sidebar-menu li a.pull-sidebar.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 
 /**
@@ -2549,6 +2569,7 @@ a.icon-checkmark:hover {
   clear: none;
   padding: 1em;
   position: relative;
+  margin-top: 2em;
 }
 [dir="rtl"] #footer {
   float: left;
