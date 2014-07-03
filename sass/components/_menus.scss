@@ -53,6 +53,7 @@
   }
 }
 
+// Menus in the Header section
 #header { 
   .toggles {
     // all toggle class-specific styles below    
@@ -80,7 +81,8 @@
               color: color($grey, 'dark');
             }           
           }
-          &.pull-nav-main {
+          &.pull-nav-main,
+          &.pull-nav-desktop {
             span {
               &:before {
                 content: image-url('../images/icons/icon-menu-white-small.svg');        
@@ -244,8 +246,14 @@
       }
     }   
   }
-  .mobile-bar {
+  .mobile-bar,
+  .desktop-bar {
     display: none;
+  }
+  .desktop-bar {
+    @include respond-to("navigation small") {
+      display: none !important;
+    }
   }
   .navigation-wrap {
     position: relative;
@@ -346,7 +354,44 @@
           }
         }
       }       
-    }    
+    }
+    &.menu-block-4 { // for desktop menu only - main nav truncated -JT
+      background-color: rgba($white, 0.85);
+      width: 100%;
+      margin: 0 auto;
+      ul.desktop-menu {
+        @include respond-to("navigation small") {
+          padding: 1em 0;
+        }
+        li {
+          &.active {
+            a,
+            span {
+              color: color($blue, 'dark');            
+            }
+          }
+        }
+        span,
+        a {
+          color: color($blue, 'main');            
+          letter-spacing: .05em;
+          font-size: .85em;
+          text-transform: none;
+          &:hover {
+            color: color($blue, 'main', 15%);            
+          }
+          @include respond-to("navigation small") {
+            padding: 1em 1.5em;
+          }  
+        }
+      }      
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: relative;
+      } 
+    }               
     &.user-menu { // for header-subpage template - JT
       @include respond-to("navigation full") {
         margin-top: 6em;
@@ -363,7 +408,7 @@
       }      
     }    
   }
-  ul.menu {
+  ul.menu { // Main menu styles
     width: 100%;
     max-width: 68em;
     padding: 0;
@@ -531,11 +576,141 @@
             }
           }
         }     
-      }
+      }         
     }
   }
+  ul.desktop-menu { // tabbed menu
+    width: 100%;
+    max-width: 68em;
+    padding: 0;
+    margin: 0 auto;
+    @extend %clearfix;
+    @include respond-to("navigation medium") {
+      padding: 0 4em;
+    }
+    @include respond-to("navigation medium padding") {
+      padding: 0 2em;
+    }
+    @include respond-to("navigation small padding") {
+      padding: 0em;
+    }
+    li {
+      float: left;
+      display: inline-block;
+      list-style: none;
+      font-family: $trade-bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      &.active {
+        background-image: url(../images/icons/icon-active-up.svg);
+        background-position: center bottom;
+        background-repeat: no-repeat; 
+        @include respond-to("navigation small") {
+          background-image: none;
+        }
+        span {
+          color: color($blue, 'bright');
+          &:hover {
+            color: color($blue, 'main');
+          }
+          &:after {
+            display: inline-block;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            content: image-url('../images/icons/icon-dropup.svg'); 
+            width: 15px; 
+            height: 24px;        
+            vertical-align: middle;
+            color: color($blue, dark);
+          }
+        }
+      }
+      span,
+      a {
+        color: color($blue, 'main');
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: 1em;
+        padding: 1em 1.2em;
+        display: block;
+        cursor: pointer;
+        transition: color 0.15s ease-in-out;
+        @include respond-to("navigation medium") {
+          padding: 1em .8em;
+          margin-right: 0;
+          font-size: .9em;
+        }
+        @include respond-to("navigation small") {
+          font-size: 1.2em;
+          padding: 1.5em 3em 1em;
+        }
+        &:hover {
+          color: color($blue, 'bright');
+        }
+      }
+      span {
+        &:after {
+          display: inline-block;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          content: image-url('../images/icons/icon-dropdown.svg'); 
+          width: 15px; 
+          height: 24px;        
+          margin-left: 0.3em;
+          vertical-align: middle;
+          color: color($blue, 'dark');
+        }
+      }           
+    }
+  }
+  .desktop-bar {
+    .panels {
+      width: 100%;
+      float: left;
+      position: relative;
+      background-color: $white;
+      border-top: 4px solid color($blue,'dark');
+      .panel {
+        display: none;
+        ul {
+          width: 100%;
+          float: left;
+          padding: 0;
+          margin: 0;
+          li {
+            list-style-type: none;
+            float: left;
+            display: inline;
+            position: relative;
+            list-style: none;
+            font-family: $trade-bold;     
+            padding: 0;
+            margin: 0;       
+            a {
+              display: block;
+              width:100%;
+              padding: .5em 1em;
+              text-decoration: none;
+              text-align: center;
+              transition: all 0.15s ease-in-out;
+            }
+          }
+        }
+      }      
+    }      
+  }  
 }
-
 // Sidebar Menu
 .toggles { 
   &.sidebar-menu { // sidebar subsection menu toggles
