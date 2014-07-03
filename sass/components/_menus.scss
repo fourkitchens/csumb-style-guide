@@ -62,23 +62,44 @@
       li {
         width: 100%;
         a {
-          color: $white;
-          padding: .75em .25em;
+          color: $white;  
+          text-align: center;
+          float: left;
+          padding: 1em;
+          width: 100%;
+          background-color: rgba($white, 0.05);
           &:hover {
             color: rgba($white, 0.85);
-          }
+            background-color: rgba($white, 0.15);
+          } 
           &.active {
             @include box-shadow(inset 0 0 5px rgba(color($grey, 'dark'), 0.9));
-            border-color: color($green, 'main', -15%);
-            background-color: color($green, 'main', -12%);
-            @include background-image(linear-gradient(
-              color($green, 'bright', -8%) 75%,
-              color($green, 'bright', -12%)
-            )); 
+            background-color: rgba($white, 0.25);
             span {
               color: color($grey, 'dark');
             }           
-          }   
+          }
+          &.pull-nav-main {
+            span {
+              &:before {
+                content: image-url('../images/icons/icon-menu-white-small.svg');        
+                vertical-align: middle;
+                padding-right: 1em;
+                display: inline-block;
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  vertical-align: middle;
+                  padding-right:1em;
+                  display: inline-block;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }
+          }             
         }
       }    
       @include respond-to("navigation small") {
@@ -93,8 +114,13 @@
         a {
           color: $white;  
           text-align: left;
+          float: left;
+          padding: 1em;
+          width: auto;
+          background-color: rgba($white, 0.05);
           &:hover {
             color: rgba($white, 0.85);
+            background-color: rgba($white, 0.15);
           }   
           span {
             @include respond-to("navigation small") {
@@ -111,11 +137,26 @@
       }  
     }
     &.mobile { // top mobile toggles
-      @include grid-span(6, 7, $output-style:'float');        
+      @include grid-span(6, 7, $output-style:'float');     
+      @include respond-to("navigation smallest") {
+        float: right;
+        width: 60%;    
+      } 
       li {
         width: 33.33%;   
+        &.first {
+          @include respond-to("navigation smallest") {
+            width: 100%;
+          }          
+        }
+        @include respond-to("navigation smallest") {
+          width: 50%;
+        }
         a {
           color: color($blue, 'main', -3%);
+          @include respond-to("navigation smallest") {
+            padding: .5em;
+          }          
           &:hover {
             color: color($blue, 'main', -10%);
             background-color: rgba($white, 0.82);
@@ -132,6 +173,15 @@
                 vertical-align: middle;
               }
             }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-blue-small.svg');        
+                  vertical-align: middle;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }            
           }
           &.pull-user {
             span {
@@ -150,6 +200,15 @@
                 vertical-align: middle;
               }
             }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-blue-small.svg');        
+                  vertical-align: middle;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }             
           }                    
         }
       }
@@ -188,7 +247,7 @@
       right: 0;
       width: 100%;
       display: none;
-      background-color: rgba($white, 0.82);
+      background-color: rgba($white, 0.85);
       z-index: 10;
       height: 100%;
     }

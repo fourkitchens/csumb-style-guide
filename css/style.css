@@ -2096,7 +2096,7 @@ input.action-delete:focus {
   clear: right;
   float: right;
   margin-right: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
 }
 [dir="rtl"] #header .mobile-wrap {
   clear: left;
@@ -2124,6 +2124,11 @@ input.action-delete:focus {
     float: left;
   }
 }
+@media (max-width: 29.6875em) {
+  #header .mobile-wrap .logo-mobile {
+    display: none;
+  }
+}
 #header .mobile-wrap .logo-mobile img {
   max-width: 270px;
   max-height: 72px;
@@ -2140,8 +2145,8 @@ input.action-delete:focus {
 #header .mobile-wrap .logo-mobile a {
   display: block;
   float: left;
-  padding-top: 2em;
-  padding-left: 2em;
+  padding-top: 1em;
+  padding-left: 1em;
 }
 @media (max-width: 29.6875em) {
   #header .mobile-wrap .logo-mobile a {
@@ -2150,6 +2155,30 @@ input.action-delete:focus {
     text-align: center;
     padding: 2em 0;
   }
+}
+#header .mobile-wrap .logo-mobile-small {
+  display: none;
+  position: relative;
+  float: left;
+  width: 40%;
+}
+@media (max-width: 29.6875em) {
+  #header .mobile-wrap .logo-mobile-small {
+    display: block;
+  }
+}
+#header .mobile-wrap .logo-mobile-small img {
+  max-width: 195px;
+  max-height: 70px;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+#header .mobile-wrap .logo-mobile-small a {
+  display: block;
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
 }
 #header .mobile-wrap .actions {
   width: 100%;
@@ -2754,24 +2783,36 @@ a.icon-checkmark:hover {
 }
 #header .toggles.desktop li a {
   color: white;
-  padding: .75em .25em;
+  text-align: center;
+  float: left;
+  padding: 1em;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 #header .toggles.desktop li a:hover {
   color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 #header .toggles.desktop li a.active {
   -webkit-box-shadow: inset 0 0 5px rgba(57, 53, 27, 0.9);
   box-shadow: inset 0 0 5px rgba(57, 53, 27, 0.9);
-  border-color: #014a2a;
-  background-color: #015933;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI3NSUiIHN0b3AtY29sb3I9IiMxNjlmNjQiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxNDhkNTgiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -moz-linear-gradient(#169f64 75%, #148d58);
-  background-image: -webkit-linear-gradient(#169f64 75%, #148d58);
-  background-image: linear-gradient(#169f64 75%, #148d58);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 #header .toggles.desktop li a.active span {
   color: #39351b;
+}
+#header .toggles.desktop li a.pull-nav-main span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+}
+#header .toggles.desktop li a.pull-nav-main.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 @media (max-width: 54.375em) {
   #header .toggles.desktop {
@@ -2795,9 +2836,14 @@ a.icon-checkmark:hover {
 #header .toggles.main li a {
   color: white;
   text-align: left;
+  float: left;
+  padding: 1em;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 #header .toggles.main li a:hover {
   color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 @media (max-width: 54.375em) {
   #header .toggles.main li a span {
@@ -2821,11 +2867,32 @@ a.icon-checkmark:hover {
   float: left;
   margin-left: 0;
 }
+@media (max-width: 29.6875em) {
+  #header .toggles.mobile {
+    float: right;
+    width: 60%;
+  }
+}
 #header .toggles.mobile li {
   width: 33.33%;
 }
+@media (max-width: 29.6875em) {
+  #header .toggles.mobile li.first {
+    width: 100%;
+  }
+}
+@media (max-width: 29.6875em) {
+  #header .toggles.mobile li {
+    width: 50%;
+  }
+}
 #header .toggles.mobile li a {
   color: #1c2e5f;
+}
+@media (max-width: 29.6875em) {
+  #header .toggles.mobile li a {
+    padding: .5em;
+  }
 }
 #header .toggles.mobile li a:hover {
   color: #142143;
@@ -2842,6 +2909,11 @@ a.icon-checkmark:hover {
   content: url('../images/../images/icons/icon-menu-blue-small.svg');
   vertical-align: middle;
 }
+#header .toggles.mobile li a.pull-nav-main.active span:before {
+  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
+  vertical-align: middle;
+  transition: content 0.4s ease-in-out;
+}
 #header .toggles.mobile li a.pull-user span {
   display: block;
 }
@@ -2855,6 +2927,11 @@ a.icon-checkmark:hover {
 #header .toggles.mobile li a.pull-search span:before {
   content: url('../images/../images/icons/icon-search-blue-small.svg');
   vertical-align: middle;
+}
+#header .toggles.mobile li a.pull-search.active span:before {
+  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
+  vertical-align: middle;
+  transition: content 0.4s ease-in-out;
 }
 #header .toggles.close {
   border-bottom: 1px solid #b5ac02;
@@ -2899,7 +2976,7 @@ a.icon-checkmark:hover {
     right: 0;
     width: 100%;
     display: none;
-    background-color: rgba(255, 255, 255, 0.82);
+    background-color: rgba(255, 255, 255, 0.85);
     z-index: 10;
     height: 100%;
   }

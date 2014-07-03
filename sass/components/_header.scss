@@ -140,7 +140,7 @@
   }
   .mobile-wrap {
     @include grid-span(12,1, $output-style:'float');
-    background-color: rgba($white, 0.80);
+    background-color: $white;
     .logo-mobile {
       display: none;
       position: relative;
@@ -148,6 +148,9 @@
       @include respond-to("navigation small") {
         display: block; 
         float: left;
+      }
+      @include respond-to("navigation smallest") {
+        display: none;
       }
       img {
         max-width: 270px;
@@ -163,8 +166,8 @@
       a {
         display: block; 
         float: left;
-        padding-top: 2em;
-        padding-left: 2em;
+        padding-top: 1em;
+        padding-left: 1em;
         @include respond-to("navigation smallest") {
           float: none;
           margin: 0 auto;
@@ -173,6 +176,28 @@
         }
       }   
     } 
+    .logo-mobile-small {
+      display: none;
+      position: relative;
+      float: left;
+      width: 40%;      
+      @include respond-to("navigation smallest") {
+        display: block;
+      }    
+      img {
+        max-width: 195px;
+        max-height: 70px;
+        float: left;
+        width: 100%;
+        height: auto;
+      }  
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+      }          
+    }    
     .actions {
       width: 100%;
     }
