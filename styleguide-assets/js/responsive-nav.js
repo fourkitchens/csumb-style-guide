@@ -3,25 +3,32 @@
 (function ($) {
     'use strict';
     $(document).ready(function () {
+    var pullNavTop                = $('.pull-nav-main'),
+        menuTop                   = $('.mobile-bar'),        
+        pullNavDesktop            = $('.pull-nav-desktop'),
+        menuDesktop               = $('.desktop-bar'),
+        pullSideMenu              = $('.pull-sidebar'),
+        menuSidebar               = $('.menu-left-sidebar'),        
+        pullSearch                = $('.pull-search'),
+        search                    = $('.actions'),
+        toggler                   = function(a){
+          $(this).toggleClass('active');
+          a.data.toggled.animate({
+            height: "toggle",
+            opacity: "toggle"
+            }, "500");
+        };      
+        pullNavTop.click({toggled : menuTop}, toggler);
+        pullNavDesktop.click({toggled : menuDesktop}, toggler);
+        pullSideMenu.click({toggled : menuSidebar}, toggler);
+        pullSearch.click({toggled : search}, toggler);
+       });
 
-    var pullNav    = $('#pull-nav');
-    var menu    = $('.navigation');
-    var menuHeight  = menu.height();
-  
-    var pullSearch    = $('#pull-search');
-    var search    = $('.actions');
-    var searchHeight  = search.height();
-
-    $(pullNav).on('click', function(e) {
-    e.preventDefault();
-    menu.slideToggle("300");
-    pullNav.toggleClass('active');
-    });
-
-    $(pullSearch).on('click', function(e) {
-      e.preventDefault();
-      search.slideToggle("300");
-      pullSearch.toggleClass('active');
-    });
- });
+    var pullNav                   = $('.pull-nav'),
+        menu                      = $('.navigation-wrap'),
+        togglez              = function(twidth){
+          $(this).toggleClass('active');
+          twidth.data.toggledWidth.toggle("slide");
+        };  
+        pullNav.click({toggledWidth : menu}, togglez);
 })(jQuery);

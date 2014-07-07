@@ -5,25 +5,24 @@
 
  .prototype-grid {
   .header-image {
-    width: 100%;
-    background-image: url(../images/photos/header-students.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     top:0;
     right: auto;
     left: auto;
     z-index: -1;
-    @include respond-to("navigation full") {
-      height: 590px;
-      background-position: 0% 20%;
-    }
-    @include respond-to("navigation medium") {
-      height: 500px;
-    }
+    width: 100%;
+    height: 100%;    
     @include respond-to("navigation small") {
-      height: 400px;
+      top: 10%;
+    }   
+    @include respond-to("no bg-image") {
+      display: none;
+      top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
     }
   }
 }
@@ -36,37 +35,53 @@
   @include grid-span(12,1);
   @include respond-to("navigation small") {
     background-color: rgba($black, 0.75);
+    padding-bottom: 10em;
+  }
+  @include respond-to("no bg-image") {
+    padding-bottom: 0em;
+    background-color: color($tan, 'dark');    
+  }  
+  .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
+    background-color: color($blue, 'main');    
+    @include grid-span(12,1);
+    padding-bottom: 1em;
   }
   .logo {
-    @include grid-span(7,1);
+    @include grid-span(7,1);    
     padding-top: 1.5em;
     padding-left: 1em;
-    display: block;
+    img {
+      max-width: 270px;
+      max-height: 72px;
+    } 
     @include respond-to("navigation small") {
-      width: 100%;
       margin: 0 auto;
-      padding:8em 2em 2em; 
       text-align: center;
+      padding-top: 4.5em;
+      padding-left: 0;
+      padding-bottom: 3.5em;
+      display: none;
     }
   }
   .actions {
+    @include grid-span(5,8);
+    @include respond-to("navigation small") {
+      width: 100%;
+      display: none;
+      margin-top: 0;
+      background-color: $white;
+      padding: 0;      
+    }
     padding-top: 2em;
     padding-right: 1em;
-    @include grid-span(5,8);
     font-family: $trade-reg;
+    float: right;
     p {
       margin: 0;
     }
-    @include respond-to("navigation small") {
-      display: none;
-      width: 100%;
-      margin-top: 0;
-      background-color: $white;
-      padding: 0;
-    }
   }
   .user-login {
-    @include grid-span(4,1, $output-style:'float');
+    @include grid-span(4,1);
     padding-right: 1em;
     margin: 0;
     border-right:1px solid $white;
@@ -78,7 +93,12 @@
     }  
   }
   .block-search {
-    @include grid-span(8,5, $output-style:'float');
+    @include grid-span(8,5);
+    @include respond-to("navigation small") {
+      width: 100%;
+      background-color: color($blue, 'main', 5%);
+      border-top: 1px solid color($blue, 'main', -10%);          
+    }         
     padding-left: 1em;
     padding-top: .5em;
     .form-submit {
@@ -90,8 +110,128 @@
       margin-top: 0.3em;
     }
     @include respond-to("navigation small") {
-      padding:1em;
-      width: 100%;
+      padding:1.5em 1em;
     }
   }
+  &.with-mobile {
+    @include respond-to("navigation small") {
+      padding-bottom: 0;
+    }
+    .logo {
+      @include grid-span(5,1);    
+    }
+    .user-login {
+      @include grid-span(3,5, $output-style:'float');  
+      @include respond-to("navigation small") {
+        width: 100%;
+      }    
+    }   
+    .actions {
+      @include grid-span(7,6);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }         
+    } 
+    .block-search {
+      @include grid-span(5,8, $output-style:'float');     
+      @include respond-to("navigation small") {
+        width: 100%;
+      }         
+    }
+  }
+  .mobile-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    background-color: $white;
+    .logo-mobile {
+      display: none;
+      position: relative;
+      @include grid-span(6, 1, $output-style:'float');
+      @include respond-to("navigation small") {
+        display: block; 
+        float: left;
+      }
+      @include respond-to("navigation smallest") {
+        display: none;
+      }
+      img {
+        max-width: 270px;
+        max-height: 72px;
+        float: left;
+        width: 100%;
+        height: auto;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+        }        
+      }      
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+          padding: 2em 0;
+        }
+      }   
+    } 
+    .logo-mobile-small {
+      display: none;
+      position: relative;
+      float: left;
+      width: 40%;      
+      @include respond-to("navigation smallest") {
+        display: block;
+      }    
+      img {
+        max-width: 195px;
+        max-height: 70px;
+        float: left;
+        width: 100%;
+        height: auto;
+      }  
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+      }          
+    }    
+    .actions {
+      width: 100%;
+    }
+    .user-login {
+      width: 100%;
+    }
+    .block-search {
+      width: 100%;     
+    }      
+  }
+  .title-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    margin-top:2em;
+    clear: both;
+    @include respond-to("navigation small") {
+      padding: 2em 0 1em;
+      margin-top: 0;
+    }
+    .breadcrumb-image {
+      @include respond-to("navigation medium") {
+        padding:0 1em; 
+      }  
+      @include respond-to("navigation small") {
+        display: none;
+      }        
+    }
+    .page-title {
+      @include respond-to("navigation medium") {
+        padding:0 1em; 
+      }
+      h1 {
+        color: $white;
+      }
+    }    
+  } 
 }
