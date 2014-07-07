@@ -1648,6 +1648,18 @@ input.action-delete:focus {
 [dir="rtl"] #header {
   float: left;
 }
+#header .logo-actions-wrap {
+  background-color: #1f346b;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  padding-bottom: 1em;
+}
+[dir="rtl"] #header .logo-actions-wrap {
+  float: left;
+}
 #header .logo {
   width: 57.44681%;
   float: left;

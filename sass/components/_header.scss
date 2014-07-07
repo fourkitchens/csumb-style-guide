@@ -41,6 +41,11 @@
     padding-bottom: 0em;
     background-color: color($tan, 'dark');    
   }  
+  .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
+    background-color: color($blue, 'main');    
+    @include grid-span(12,1);
+    padding-bottom: 1em;
+  }
   .logo {
     @include grid-span(7,1);    
     padding-top: 1.5em;
