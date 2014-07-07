@@ -3,9 +3,7 @@
 (function ($) {
     'use strict';
     $(document).ready(function () {
-    var pullNav                   = $('.pull-nav'),
-        menu                      = $('.navigation-wrap'),
-        pullNavTop                = $('.pull-nav-main'),
+    var pullNavTop                = $('.pull-nav-main'),
         menuTop                   = $('.mobile-bar'),        
         pullNavDesktop            = $('.pull-nav-desktop'),
         menuDesktop               = $('.desktop-bar'),
@@ -19,11 +17,21 @@
             height: "toggle",
             opacity: "toggle"
             }, "500");
-        };
-        pullNav.click({toggled : menu}, toggler);
+        };      
         pullNavTop.click({toggled : menuTop}, toggler);
         pullNavDesktop.click({toggled : menuDesktop}, toggler);
         pullSideMenu.click({toggled : menuSidebar}, toggler);
         pullSearch.click({toggled : search}, toggler);
-    });
+       });
+
+    var pullNav                   = $('.pull-nav'),
+        menu                      = $('.navigation-wrap'),
+        togglez              = function(twidth){
+          $(this).toggleClass('active');
+          twidth.data.toggledWidth.animate({
+            width: "80%",
+            opacity: "toggle"
+            }, "slow");
+        };  
+        pullNav.click({toggledWidth : menu}, togglez);
 })(jQuery);
