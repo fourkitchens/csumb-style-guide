@@ -211,7 +211,7 @@
   }
   .title-wrap {
     @include grid-span(12,1, $output-style:'float');
-    margin-top:2em;
+    margin-top:4em;
     clear: both;
     @include respond-to("navigation small") {
       padding: 2em 0 1em;
@@ -231,6 +231,7 @@
       }
       h1 {
         color: $white;
+        margin-bottom: 0;
       }
     }    
   } 

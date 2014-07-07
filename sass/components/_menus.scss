@@ -403,7 +403,7 @@
     }               
     &.user-menu { // for header-subpage template - JT
       @include respond-to("navigation full") {
-        margin-top: 6em;
+        margin-top: 3em;
       }
       @include respond-to("navigation medium") {
         margin-top: 2.5em;
