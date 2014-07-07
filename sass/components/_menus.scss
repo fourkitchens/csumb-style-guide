@@ -261,7 +261,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
+      width: 80%;
       display: none;
       background-color: rgba($white, 0.85);
       z-index: 10;
@@ -277,12 +277,14 @@
       background-color: transparent;
     }
     &.menu-block-1,
-    &.menu-block-3 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
+    &.menu-block-3,
+    &.menu-block-5 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
       margin: 0 auto 4.5em;
       width: 100%;
       float: left;   
     }
-    &.menu-block-1 { // for main header template - navigation spacing JT
+    &.menu-block-1,
+    &.menu-block-5 { // for main header template - navigation spacing JT
       @include respond-to("navigation full") {
         margin-top: 18em;
       }
@@ -391,7 +393,7 @@
         position: relative;
       } 
     }               
-    &.user-menu { // for header-subpage template - JT
+    &.user-menu { // menu-block-3 // for header-subpage template - JT
       @include respond-to("navigation full") {
         margin-top: 6em;
       }
@@ -405,7 +407,85 @@
         background-color:transparent;
         border-top: 1px solid #fff;
       }      
-    }    
+    }   
+    &.student-menu {
+      ul {
+        li {
+          &.item-1 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-learn-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .2em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-2 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-cms-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-3 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-email-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-4 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-calendar-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-5 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-mybookmarks-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-6 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-housing-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }          
+        }
+      }
+    } 
   }
   ul.menu { // Main menu styles
     width: 100%;
@@ -710,6 +790,7 @@
     }      
   }  
 }
+
 // Sidebar Menu
 .toggles { 
   &.sidebar-menu { // sidebar subsection menu toggles

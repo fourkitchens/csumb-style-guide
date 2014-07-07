@@ -2377,7 +2377,7 @@ a.icon-checkmark:hover {
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.85);
 }
-#header .navigation.menu-block-1, #header .navigation.menu-block-3 {
+#header .navigation.menu-block-1, #header .navigation.menu-block-3, #header .navigation.menu-block-5 {
   margin: 0 auto 4.5em;
   width: 100%;
   float: left;
@@ -2427,6 +2427,54 @@ a.icon-checkmark:hover {
 #header .navigation.menu-block-4 ul.desktop-menu span:hover,
 #header .navigation.menu-block-4 ul.desktop-menu a:hover {
   color: #3051a6;
+}
+#header .navigation.student-menu ul li.item-1 span:before,
+#header .navigation.student-menu ul li.item-1 a:before {
+  content: url('../images/../images/icons/icon-learn-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .2em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-2 span:before,
+#header .navigation.student-menu ul li.item-2 a:before {
+  content: url('../images/../images/icons/icon-cms-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-3 span:before,
+#header .navigation.student-menu ul li.item-3 a:before {
+  content: url('../images/../images/icons/icon-email-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-4 span:before,
+#header .navigation.student-menu ul li.item-4 a:before {
+  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-5 span:before,
+#header .navigation.student-menu ul li.item-5 a:before {
+  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-6 span:before,
+#header .navigation.student-menu ul li.item-6 a:before {
+  content: url('../images/../images/icons/icon-housing-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 #header ul.menu {
   width: 100%;

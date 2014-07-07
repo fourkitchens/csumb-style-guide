@@ -28,10 +28,7 @@
         menu                      = $('.navigation-wrap'),
         togglez              = function(twidth){
           $(this).toggleClass('active');
-          twidth.data.toggledWidth.animate({
-            width: "80%",
-            opacity: "toggle"
-            }, "slow");
+          twidth.data.toggledWidth.toggle("slide");
         };  
         pullNav.click({toggledWidth : menu}, togglez);
 })(jQuery);

@@ -2990,7 +2990,7 @@ a.icon-checkmark:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
+    width: 80%;
     display: none;
     background-color: rgba(255, 255, 255, 0.85);
     z-index: 10;
@@ -3008,23 +3008,23 @@ a.icon-checkmark:hover {
     background-color: transparent;
   }
 }
-#header .navigation.menu-block-1, #header .navigation.menu-block-3 {
+#header .navigation.menu-block-1, #header .navigation.menu-block-3, #header .navigation.menu-block-5 {
   margin: 0 auto 4.5em;
   width: 100%;
   float: left;
 }
 @media (min-width: 65.125em) {
-  #header .navigation.menu-block-1 {
+  #header .navigation.menu-block-1, #header .navigation.menu-block-5 {
     margin-top: 18em;
   }
 }
 @media (max-width: 67.1875em) {
-  #header .navigation.menu-block-1 {
+  #header .navigation.menu-block-1, #header .navigation.menu-block-5 {
     margin-top: 13em;
   }
 }
 @media (max-width: 54.375em) {
-  #header .navigation.menu-block-1 {
+  #header .navigation.menu-block-1, #header .navigation.menu-block-5 {
     margin: 0;
     padding: 0;
     float: left;
@@ -3148,6 +3148,54 @@ a.icon-checkmark:hover {
     background-color: transparent;
     border-top: 1px solid #fff;
   }
+}
+#header .navigation.student-menu ul li.item-1 span:before,
+#header .navigation.student-menu ul li.item-1 a:before {
+  content: url('../images/../images/icons/icon-learn-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .2em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-2 span:before,
+#header .navigation.student-menu ul li.item-2 a:before {
+  content: url('../images/../images/icons/icon-cms-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-3 span:before,
+#header .navigation.student-menu ul li.item-3 a:before {
+  content: url('../images/../images/icons/icon-email-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-4 span:before,
+#header .navigation.student-menu ul li.item-4 a:before {
+  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-5 span:before,
+#header .navigation.student-menu ul li.item-5 a:before {
+  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.student-menu ul li.item-6 span:before,
+#header .navigation.student-menu ul li.item-6 a:before {
+  content: url('../images/../images/icons/icon-housing-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 #header ul.menu {
   width: 100%;
