@@ -355,10 +355,10 @@
       }       
     }
     &.menu-block-4 { // for desktop menu only - main nav truncated -JT
-      background-color: rgba($white, 0.85);
+      background-color: color($green, main);
       width: 100%;
       margin: 0 auto;
-      ul.desktop-menu {
+      ul.desktop-menu, ul.tabbed {
         @include respond-to("navigation small") {
           padding: 1em 0;
         }
@@ -366,18 +366,18 @@
           &.active {
             a,
             span {
-              color: color($blue, 'dark');            
+              color: color($green,dark);            
             }
           }
         }
         span,
         a {
-          color: color($blue, 'main');            
+          color: color($tan,bright);            
           letter-spacing: .05em;
           font-size: .85em;
-          text-transform: none;
+          text-transform: uppercase;
           &:hover {
-            color: color($blue, 'main', 15%);            
+            color: color($green,bright);            
           }
           @include respond-to("navigation small") {
             padding: 1em 1.5em;
@@ -446,7 +446,7 @@
         }
       }
       &.active {
-        background-image: url(../images/icons/icon-active-up.svg);
+        background-image: url(../images/icons/icon-active-up-green.svg);
         background-position: center bottom;
         background-repeat: no-repeat; 
         @include respond-to("navigation small") {
@@ -470,7 +470,7 @@
             text-transform: none;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
-            content: image-url('../images/icons/icon-dropup.svg'); 
+            content: image-url('../images/icons/icon-dropup-green.svg'); 
             width: 15px; 
             height: 24px;        
             vertical-align: middle;
@@ -511,7 +511,7 @@
           text-transform: none;
           line-height: 1;
           -webkit-font-smoothing: antialiased;
-          content: image-url('icons/icon-dropdown.svg'); 
+          content: image-url('icons/icon-dropdown-green.svg'); 
           width: 15px; 
           height: 24px;        
           margin-left: 0.3em;
@@ -578,7 +578,7 @@
       }         
     }
   }
-  ul.desktop-menu { // tabbed menu
+  ul.desktop-menu { // tabbed menu //--I am not sure this is being referenced anywhere ".desktop-menu" 
     width: 100%;
     max-width: 68em;
     padding: 0;
@@ -609,9 +609,9 @@
           background-image: none;
         }
         span {
-          color: color($blue, 'bright');
+          color: $white;
           &:hover {
-            color: color($blue, 'main');
+            color: color($tan, 'light');
           }
           &:after {
             display: inline-block;
@@ -678,8 +678,8 @@
       width: 100%;
       float: left;
       position: relative;
-      background-color: $white;
-      border-top: 4px solid color($blue,'dark');
+      background-color: color($green,dark);
+      border-top: 4px solid color($green,dark);
       .panel {
         display: none;
         ul {
@@ -693,16 +693,17 @@
             display: inline;
             position: relative;
             list-style: none;
-            font-family: $trade-bold;     
+            font-family: $trade;
+            line-height: 1.4em;    
             padding: 0;
             margin: 0;       
             a {
               display: block;
               width:100%;
-              padding: .5em 1em;
+              padding: 1em 1em;
               text-decoration: none;
-              text-align: center;
               transition: all 0.15s ease-in-out;
+              color: #7EA883;
             }
           }
         }

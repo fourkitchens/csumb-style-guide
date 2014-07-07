@@ -2409,24 +2409,27 @@ a.icon-checkmark:hover {
   font-size: .75em;
 }
 #header .navigation.menu-block-4 {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: #029555;
   width: 100%;
   margin: 0 auto;
 }
 #header .navigation.menu-block-4 ul.desktop-menu li.active a,
-#header .navigation.menu-block-4 ul.desktop-menu li.active span {
-  color: #001e54;
+#header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
+#header .navigation.menu-block-4 ul.tabbed li.active span {
+  color: #07633b;
 }
 #header .navigation.menu-block-4 ul.desktop-menu span,
-#header .navigation.menu-block-4 ul.desktop-menu a {
-  color: #1f346b;
+#header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span,
+#header .navigation.menu-block-4 ul.tabbed a {
+  color: #dddac7;
   letter-spacing: .05em;
   font-size: .85em;
-  text-transform: none;
+  text-transform: uppercase;
 }
 #header .navigation.menu-block-4 ul.desktop-menu span:hover,
-#header .navigation.menu-block-4 ul.desktop-menu a:hover {
-  color: #3051a6;
+#header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover,
+#header .navigation.menu-block-4 ul.tabbed a:hover {
+  color: #1bc37a;
 }
 #header ul.menu {
   width: 100%;
@@ -2444,7 +2447,7 @@ a.icon-checkmark:hover {
   padding: 0;
 }
 #header ul.menu li.active {
-  background-image: url(../images/icons/icon-active-up.svg);
+  background-image: url(../images/icons/icon-active-up-green.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -2466,7 +2469,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropup.svg');
+  content: url('../images/../images/icons/icon-dropup-green.svg');
   width: 15px;
   height: 24px;
   vertical-align: middle;
@@ -2496,7 +2499,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: url('../images/icons/icon-dropdown.svg');
+  content: url('../images/icons/icon-dropdown-green.svg');
   width: 15px;
   height: 24px;
   margin-left: 0.3em;
@@ -2555,10 +2558,10 @@ a.icon-checkmark:hover {
   background-repeat: no-repeat;
 }
 #header ul.desktop-menu li.active span {
-  color: #3b559a;
+  color: white;
 }
 #header ul.desktop-menu li.active span:hover {
-  color: #1f346b;
+  color: #f3f2e8;
 }
 #header ul.desktop-menu li.active span:after {
   display: inline-block;
@@ -2610,8 +2613,8 @@ a.icon-checkmark:hover {
   width: 100%;
   float: left;
   position: relative;
-  background-color: white;
-  border-top: 4px solid #001e54;
+  background-color: #07633b;
+  border-top: 4px solid #07633b;
 }
 #header .desktop-bar .panels .panel {
   display: none;
@@ -2628,17 +2631,18 @@ a.icon-checkmark:hover {
   display: inline;
   position: relative;
   list-style: none;
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  line-height: 1.4em;
   padding: 0;
   margin: 0;
 }
 #header .desktop-bar .panels .panel ul li a {
   display: block;
   width: 100%;
-  padding: .5em 1em;
+  padding: 1em 1em;
   text-decoration: none;
-  text-align: center;
   transition: all 0.15s ease-in-out;
+  color: #7EA883;
 }
 
 .toggles.sidebar-menu {
