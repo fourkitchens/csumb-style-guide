@@ -364,14 +364,24 @@
         }
         li {
           &.active {
+            background-image: url(../images/icons/icon-active-up-green.svg);
             a,
             span {
               color: color($green,dark);            
             }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
+            } 
+          }
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
+            }
           }
         }
-        span,
-        a {
+        span, a {
           color: color($tan,bright);            
           letter-spacing: .05em;
           font-size: .85em;
@@ -446,7 +456,7 @@
         }
       }
       &.active {
-        background-image: url(../images/icons/icon-active-up-green.svg);
+        background-image: url(../images/icons/icon-active-up.svg);
         background-position: center bottom;
         background-repeat: no-repeat; 
         @include respond-to("navigation small") {
@@ -470,7 +480,7 @@
             text-transform: none;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
-            content: image-url('../images/icons/icon-dropup-green.svg'); 
+            content: image-url('../images/icons/icon-dropup.svg'); 
             width: 15px; 
             height: 24px;        
             vertical-align: middle;
@@ -511,7 +521,7 @@
           text-transform: none;
           line-height: 1;
           -webkit-font-smoothing: antialiased;
-          content: image-url('icons/icon-dropdown-green.svg'); 
+          content: image-url('icons/icon-dropdown.svg'); 
           width: 15px; 
           height: 24px;        
           margin-left: 0.3em;
@@ -556,8 +566,10 @@
             a {
               color: color($blue, 'highlight');
               text-transform: none;
+              font-family: $trade-reg;
               font-size: 1em;
               line-height: 1.4em;
+              letter-spacing: 0;
               @include respond-to("navigation small") {
                 @include border-radius(0);
                 padding: 1em 3.5em;
@@ -693,7 +705,7 @@
             display: inline;
             position: relative;
             list-style: none;
-            font-family: $trade;
+            font-family: $trade-reg;
             line-height: 1.4em;    
             padding: 0;
             margin: 0;       
@@ -703,7 +715,10 @@
               padding: 1em 1em;
               text-decoration: none;
               transition: all 0.15s ease-in-out;
-              color: #7EA883;
+              color: #96C49B;
+              &:hover {
+                color: $white;
+              }
             }
           }
         }

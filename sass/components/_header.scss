@@ -212,7 +212,7 @@
       padding: 2em 0 1em;
       margin-top: 0;
     }
-    .breadcrumb {
+    .breadcrumb-image {
       @include respond-to("navigation medium") {
         padding:0 1em; 
       }  
@@ -225,9 +225,7 @@
         padding:0 1em; 
       }
       h1 {
-        @include respond-to("no bg-image") {
-          color: $white;
-        }
+        color: $white;
       }
     }    
   } 

@@ -1068,6 +1068,32 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   color: #9f9558;
 }
 
+.breadcrumb-image {
+  text-transform: uppercase;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  color: #f3f2e8;
+  font-size: 1em;
+}
+.breadcrumb-image a {
+  padding: 0 .75em;
+}
+.breadcrumb-image a:first-child {
+  padding: 0 .75em 0 0;
+}
+.breadcrumb-image a:link, .breadcrumb-image a:visited {
+  text-decoration: none;
+  color: #f3f2e8;
+}
+.breadcrumb-image a:hover {
+  color: #f3f2e8;
+}
+.breadcrumb-image a.active {
+  color: #8f864f;
+}
+.breadcrumb-image a.active:hover {
+  color: #029555;
+}
+
 /**
  * @file _base_layouts.scss
  * A generic set of layouts that are used cross-site.
@@ -1822,6 +1848,9 @@ input.action-delete:focus {
   float: left;
   margin-left: 0;
 }
+#header .title-wrap .page-title h1 {
+  color: white;
+}
 
 /**
  * @file _logo.scss.
@@ -2413,22 +2442,27 @@ a.icon-checkmark:hover {
   width: 100%;
   margin: 0 auto;
 }
+#header .navigation.menu-block-4 ul.desktop-menu li.active, #header .navigation.menu-block-4 ul.tabbed li.active {
+  background-image: url(../images/icons/icon-active-up-green.svg);
+}
 #header .navigation.menu-block-4 ul.desktop-menu li.active a,
 #header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
 #header .navigation.menu-block-4 ul.tabbed li.active span {
   color: #07633b;
 }
-#header .navigation.menu-block-4 ul.desktop-menu span,
-#header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span,
-#header .navigation.menu-block-4 ul.tabbed a {
+#header .navigation.menu-block-4 ul.desktop-menu li.active span:after, #header .navigation.menu-block-4 ul.tabbed li.active span:after {
+  content: url('../images/../images/icons/icon-dropup-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu li span:after, #header .navigation.menu-block-4 ul.tabbed li span:after {
+  content: url('../images/../images/icons/icon-dropdown-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
   color: #dddac7;
   letter-spacing: .05em;
   font-size: .85em;
   text-transform: uppercase;
 }
-#header .navigation.menu-block-4 ul.desktop-menu span:hover,
-#header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover,
-#header .navigation.menu-block-4 ul.tabbed a:hover {
+#header .navigation.menu-block-4 ul.desktop-menu span:hover, #header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover, #header .navigation.menu-block-4 ul.tabbed a:hover {
   color: #1bc37a;
 }
 #header ul.menu {
@@ -2447,7 +2481,7 @@ a.icon-checkmark:hover {
   padding: 0;
 }
 #header ul.menu li.active {
-  background-image: url(../images/icons/icon-active-up-green.svg);
+  background-image: url(../images/icons/icon-active-up.svg);
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -2469,7 +2503,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropup-green.svg');
+  content: url('../images/../images/icons/icon-dropup.svg');
   width: 15px;
   height: 24px;
   vertical-align: middle;
@@ -2499,7 +2533,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: url('../images/icons/icon-dropdown-green.svg');
+  content: url('../images/icons/icon-dropdown.svg');
   width: 15px;
   height: 24px;
   margin-left: 0.3em;
@@ -2524,8 +2558,10 @@ a.icon-checkmark:hover {
 #header ul.menu li .submenu ul.menu li a {
   color: #7e96d5;
   text-transform: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-size: 1em;
   line-height: 1.4em;
+  letter-spacing: 0;
 }
 #header ul.menu li .submenu ul.menu li a:hover {
   color: white;
@@ -2631,7 +2667,7 @@ a.icon-checkmark:hover {
   display: inline;
   position: relative;
   list-style: none;
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   line-height: 1.4em;
   padding: 0;
   margin: 0;
@@ -2642,7 +2678,10 @@ a.icon-checkmark:hover {
   padding: 1em 1em;
   text-decoration: none;
   transition: all 0.15s ease-in-out;
-  color: #7EA883;
+  color: #96C49B;
+}
+#header .desktop-bar .panels .panel ul li a:hover {
+  color: white;
 }
 
 .toggles.sidebar-menu {
