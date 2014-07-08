@@ -250,6 +250,10 @@
   .desktop-bar {
     display: none;
   }
+  .mobile-bar {
+    background-color: color($blue, 'main');
+    @include grid-span(12,1);
+  }
   .desktop-bar {
     @include respond-to("navigation small") {
       display: none !important;
