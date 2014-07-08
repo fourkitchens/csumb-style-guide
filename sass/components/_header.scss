@@ -72,7 +72,7 @@
       background-color: $white;
       padding: 0;      
     }
-    padding-top: 0;
+    padding-top: 2em;
     padding-right: 1em;
     font-family: $trade-reg;
     float: right;
@@ -82,9 +82,9 @@
   }
   .user-login {
     @include grid-span(4,1);
-    padding-right: 1em;
-    margin: 0;
-    border-right:1px solid $white;
+    //padding-right: 1em;
+    //margin: 0;
+    //border-right:1px solid $white;
     .button {
       float: right;
     }
