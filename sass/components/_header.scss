@@ -42,7 +42,7 @@
     background-color: color($tan, 'dark');    
   }  
   .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
-    background-color: color($blue, 'main');    
+    background-color: $white;    
     @include grid-span(12,1);
     padding-bottom: 1em;
   }
@@ -72,7 +72,7 @@
       background-color: $white;
       padding: 0;      
     }
-    padding-top: 2em;
+    padding-top: 0;
     padding-right: 1em;
     font-family: $trade-reg;
     float: right;
