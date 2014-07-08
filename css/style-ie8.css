@@ -1767,19 +1767,28 @@ input.action-delete:focus {
   margin: 0;
 }
 #header .user-login {
-  width: 31.91489%;
+  width: 150px;
+  border-right: 1px solid white;
+}
+#header .user-login a {
+  float: right;
+  color: #1f346b;
+  text-align: center;
   float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
+  padding: 1em;
+  width: 100%;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  letter-spacing: .12em;
+  text-transform: uppercase;
 }
-[dir="rtl"] #header .user-login {
-  float: right;
-  margin-left: -100%;
-  margin-right: 0;
+#header .user-login a:before {
+  content: url('../images/../images/icons/icon-rows-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
 }
-#header .user-login .button {
-  float: right;
+#header .user-login a:hover {
+  color: #3b559a;
 }
 #header .block-search {
   width: 65.95745%;
