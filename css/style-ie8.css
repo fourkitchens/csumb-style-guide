@@ -2385,6 +2385,19 @@ a.icon-checkmark:hover {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.15);
 }
+#header .toggles.main li a.pull-nav span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+}
+#header .toggles.main li a.pull-nav.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
 #header .toggles.mobile {
   width: 48.93617%;
   clear: right;
@@ -2441,42 +2454,6 @@ a.icon-checkmark:hover {
   vertical-align: middle;
   transition: content 0.4s ease-in-out;
 }
-#header .toggles.close {
-  border-bottom: 1px solid #b5ac02;
-  -moz-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
-  box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-[dir="rtl"] #header .toggles.close {
-  float: left;
-}
-#header .toggles.close li {
-  width: 100%;
-}
-#header .toggles.close li a {
-  background-color: #fef552;
-  color: #001e54;
-}
-#header .toggles.close li a:hover {
-  background-color: #e8dc02;
-}
-#header .toggles.close li a.active {
-  background-color: #fef552;
-}
-#header .toggles.close li a.active:hover {
-  background-color: #e8dc02;
-}
-#header .toggles.close li a span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
 #header .mobile-bar,
 #header .desktop-bar {
   display: none;
@@ -2492,9 +2469,6 @@ a.icon-checkmark:hover {
 [dir="rtl"] #header .mobile-bar {
   float: left;
 }
-#header .navigation-wrap {
-  position: relative;
-}
 #header .navigation {
   position: relative;
   display: block;
@@ -2502,9 +2476,11 @@ a.icon-checkmark:hover {
   background-color: rgba(255, 255, 255, 0.85);
 }
 #header .navigation.menu-block-1, #header .navigation.menu-block-3 {
-  margin: 0 auto 4.5em;
   width: 100%;
   float: left;
+}
+#header .navigation.menu-block-1 {
+  margin: 0 auto 4.5em;
 }
 #header .navigation.menu-block-2 {
   background-color: #1f346b;
@@ -2779,6 +2755,16 @@ a.icon-checkmark:hover {
 #header .desktop-bar .panels .panel ul li a:hover {
   color: white;
 }
+#header .navigation-wrap.department {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .navigation-wrap.department {
+  float: left;
+}
 
 .toggles.sidebar-menu {
   width: 100%;
@@ -2803,9 +2789,11 @@ a.icon-checkmark:hover {
 }
 .toggles.sidebar-menu li a:hover {
   background-color: #001e54;
+  color: white;
 }
 .toggles.sidebar-menu li a.active {
   background-color: #001e54;
+  color: white;
 }
 .toggles.sidebar-menu li a.pull-sidebar span:before {
   content: url('../images/../images/icons/icon-menu-white-small.svg');
@@ -3469,9 +3457,11 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 .menu-left-sidebar ul.menu li a:hover, .menu-left-sidebar ul.menu li a:focus {
   background-color: #001e54;
+  color: white;
 }
 .menu-left-sidebar ul.menu li a:active {
   background-color: #001e54;
+  color: white;
 }
 
 /**

@@ -3012,16 +3012,18 @@ a.icon-checkmark:hover {
   color: rgba(255, 255, 255, 0.85);
   background-color: rgba(255, 255, 255, 0.15);
 }
-@media (max-width: 54.375em) {
-  #header .toggles.main li a span {
-    padding: 0 0 0 1em;
-    display: inline;
-  }
+#header .toggles.main li a.pull-nav span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
 }
-@media (max-width: 54.375em) {
-  #header .toggles.main li a img {
-    display: inline;
-  }
+#header .toggles.main li a.pull-nav.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 #header .toggles.mobile {
   width: 48.93617%;
@@ -3100,41 +3102,6 @@ a.icon-checkmark:hover {
   vertical-align: middle;
   transition: content 0.4s ease-in-out;
 }
-#header .toggles.close {
-  border-bottom: 1px solid #b5ac02;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
-  box-shadow: rgba(0, 0, 0, 0.9) 0 0 3px 10px inset;
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-}
-[dir="rtl"] #header .toggles.close {
-  float: left;
-}
-#header .toggles.close li {
-  width: 100%;
-}
-#header .toggles.close li a {
-  background-color: #fef552;
-  color: #001e54;
-}
-#header .toggles.close li a:hover {
-  background-color: #e8dc02;
-}
-#header .toggles.close li a.active {
-  background-color: #fef552;
-}
-#header .toggles.close li a.active:hover {
-  background-color: #e8dc02;
-}
-#header .toggles.close li a span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
 #header .mobile-bar,
 #header .desktop-bar {
   display: none;
@@ -3155,21 +3122,6 @@ a.icon-checkmark:hover {
     display: none !important;
   }
 }
-#header .navigation-wrap {
-  position: relative;
-}
-@media (max-width: 54.375em) {
-  #header .navigation-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.85);
-    z-index: 10;
-    height: 100%;
-  }
-}
 #header .navigation {
   position: relative;
   display: block;
@@ -3182,9 +3134,11 @@ a.icon-checkmark:hover {
   }
 }
 #header .navigation.menu-block-1, #header .navigation.menu-block-3 {
-  margin: 0 auto 4.5em;
   width: 100%;
   float: left;
+}
+#header .navigation.menu-block-1 {
+  margin: 0 auto 4.5em;
 }
 @media (min-width: 65.125em) {
   #header .navigation.menu-block-1 {
@@ -3201,6 +3155,7 @@ a.icon-checkmark:hover {
     margin: 0;
     padding: 0;
     float: left;
+    display: none;
   }
 }
 #header .navigation.menu-block-2 {
@@ -3264,6 +3219,65 @@ a.icon-checkmark:hover {
     padding: .5em 1.5em;
   }
 }
+@media (min-width: 65.125em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 3em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 2.5em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu {
+    padding: 0;
+    margin: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu li {
+    list-style: none;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu {
+    background-color: #1f346b;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu {
+    padding: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu li a {
+    padding: 1em 1.5em;
+  }
+  #header .navigation.menu-block-3 ul.menu li a,
+  #header .navigation.menu-block-3 ul.menu li span {
+    background-color: #1f346b;
+    border: none;
+    color: white;
+    display: block;
+    margin: 0 0 1px;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    text-transform: none;
+    letter-spacing: .05em;
+    font-size: .85em;
+  }
+  #header .navigation.menu-block-3 ul.menu li a:hover, #header .navigation.menu-block-3 ul.menu li a:focus,
+  #header .navigation.menu-block-3 ul.menu li span:hover,
+  #header .navigation.menu-block-3 ul.menu li span:focus {
+    background-color: #001e54;
+    color: white;
+  }
+  #header .navigation.menu-block-3 ul.menu li a:active,
+  #header .navigation.menu-block-3 ul.menu li span:active {
+    background-color: #001e54;
+    color: white;
+  }
+}
 #header .navigation.menu-block-4 {
   background-color: #029555;
   width: 100%;
@@ -3308,25 +3322,6 @@ a.icon-checkmark:hover {
     padding: 0;
     float: left;
     position: relative;
-  }
-}
-@media (min-width: 65.125em) {
-  #header .navigation.user-menu {
-    margin-top: 3em;
-  }
-}
-@media (max-width: 67.1875em) {
-  #header .navigation.user-menu {
-    margin-top: 2.5em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.user-menu {
-    margin: 0;
-    padding: 0;
-    float: left;
-    background-color: transparent;
-    border-top: 1px solid #fff;
   }
 }
 #header ul.menu {
@@ -3665,6 +3660,21 @@ a.icon-checkmark:hover {
 #header .desktop-bar .panels .panel ul li a:hover {
   color: white;
 }
+#header .navigation-wrap.department {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header .navigation-wrap.department {
+  float: left;
+}
+@media (max-width: 54.375em) {
+  #header .navigation-wrap.department {
+    display: none;
+  }
+}
 
 .toggles.sidebar-menu {
   width: 100%;
@@ -3694,9 +3704,11 @@ a.icon-checkmark:hover {
 }
 .toggles.sidebar-menu li a:hover {
   background-color: #001e54;
+  color: white;
 }
 .toggles.sidebar-menu li a.active {
   background-color: #001e54;
+  color: white;
 }
 .toggles.sidebar-menu li a.pull-sidebar span:before {
   content: url('../images/../images/icons/icon-menu-white-small.svg');
@@ -4505,9 +4517,11 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 }
 .menu-left-sidebar ul.menu li a:hover, .menu-left-sidebar ul.menu li a:focus {
   background-color: #001e54;
+  color: white;
 }
 .menu-left-sidebar ul.menu li a:active {
   background-color: #001e54;
+  color: white;
 }
 
 /**
