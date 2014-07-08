@@ -125,17 +125,27 @@
             color: rgba($white, 0.85);
             background-color: rgba($white, 0.15);
           }   
-          span {
-            @include respond-to("navigation small") {
-              padding: 0 0 0 1em;
-              display: inline;
-            } 
-          }
-          img {
-            @include respond-to("navigation small") {
-              display: inline;
-            }  
-          }
+          &.pull-nav {
+            span {
+              &:before {
+                content: image-url('../images/icons/icon-menu-white-small.svg');        
+                vertical-align: middle;
+                padding-right: 1em;
+                display: inline-block;
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  vertical-align: middle;
+                  padding-right:1em;
+                  display: inline-block;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }
+          } 
         }
       }  
     }
@@ -232,56 +242,18 @@
         }
       }
     }    
-    &.close { // close button toggle for mobile fly in menu.
-      border-bottom: 1px solid color($status, 'warning', -10%);
-      @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
-      @include grid-span(12, 1);
-      li {
-        width: 100%;
-        a {
-          background-color: color($status, 'warning', 20%);
-          color: color($blue, 'dark');   
-          &:hover {
-            background-color: color($status, 'warning');
-          }
-          &.active {
-            background-color: color($status, 'warning', 20%);
-            &:hover {
-              background-color: color($status, 'warning');
-            }
-          }
-          span {
-            &:before {
-              content: image-url('../images/icons/icon-cancel-blue-small.svg');        
-              vertical-align: middle;
-              padding-right: 1em;
-              display: inline-block;
-            }
-          }          
-        }
-      }
-    }   
   }
   .mobile-bar,
   .desktop-bar {
     display: none;
   }
+  .mobile-bar {
+    background-color: color($blue, 'main');
+    @include grid-span(12,1);
+  }
   .desktop-bar {
     @include respond-to("navigation small") {
       display: none !important;
-    }
-  }
-  .navigation-wrap {
-    position: relative;
-    @include respond-to("navigation small") {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 80%;
-      display: none;
-      background-color: rgba($white, 0.85);
-      z-index: 10;
-      height: 100%;
     }
   }
   .navigation {   
@@ -292,15 +264,8 @@
     @include respond-to("navigation small") {
       background-color: transparent;
     }
-    &.menu-block-1,
-    &.menu-block-3,
-    &.menu-block-5 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
+    &.menu-block-1 { // for main header template - navigation spacing JT
       margin: 0 auto 4.5em;
-      width: 100%;
-      float: left;   
-    }
-    &.menu-block-1,
-    &.menu-block-5 { // for main header template - navigation spacing JT
       @include respond-to("navigation full") {
         margin-top: 18em;
       }
@@ -311,6 +276,7 @@
         margin: 0;
         padding: 0;
         float: left;
+        display: none;
       }      
     }
     &.menu-block-2 { // for header-subpage template - main nav truncated -JT
@@ -371,31 +337,96 @@
           }
         }
       }       
-    }
-    &.menu-block-4 { // for desktop menu only - main nav truncated -JT
-      background-color: rgba($white, 0.85);
+    } 
+    &.menu-block-3 { // for header-subpage template - JT
+      @include respond-to("navigation full") {
+        margin-top: 3em;   
+        margin-bottom: 4.5em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 2.5em;
+        margin-bottom: 4.5em;        
+      }     
+      @include respond-to("navigation small") {
+        margin-top: 0;
+        margin-bottom: 0;
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+            .submenu {
+              background-color: color($blue);
+              ul.menu {
+                padding: 0;
+                li {
+                  a {
+                    padding: 1em 1.5em;
+                  }
+                }
+              }
+            }
+            a,
+            span {
+              background-color: color($blue);
+              border: none;
+              color: $white;
+              display: block;
+              margin: 0 0 1px;
+              padding: 1em 2em;
+              text-decoration: none;
+              font-family: $trade-reg;
+              text-transform: none;
+              letter-spacing: .05em;
+              font-size: .85em;  
+              &:hover, &:focus {
+                background-color: color($blue, dark);
+                color: $white;
+              }
+            
+              &:active {
+                background-color: color($blue, dark);
+                color: $white;   
+              }
+            }
+          }
+        }
+      }
+    }    
+    &.menu-block-4 { // for desktop menu only - main nav toggle from top -JT
+      background-color: color($green, main);
       width: 100%;
       margin: 0 auto;
-      ul.desktop-menu {
+      ul.desktop-menu, ul.tabbed {
         @include respond-to("navigation small") {
           padding: 1em 0;
         }
         li {
           &.active {
+            background-image: url(../images/icons/icon-active-up-green.svg);
             a,
             span {
-              color: color($blue, 'dark');            
+              color: color($green,dark);            
+            }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
+            } 
+          }
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
             }
           }
         }
-        span,
-        a {
-          color: color($blue, 'main');            
+        span, a {
+          color: color($tan,bright);            
           letter-spacing: .05em;
           font-size: .85em;
-          text-transform: none;
+          text-transform: uppercase;
           &:hover {
-            color: color($blue, 'main', 15%);            
+            color: color($green,bright);            
           }
           @include respond-to("navigation small") {
             padding: 1em 1.5em;
@@ -409,23 +440,63 @@
         position: relative;
       } 
     }               
-    &.user-menu { // menu-block-3 // for header-subpage template - JT
+    &.menu-block-5 { // Student Menu Block 
+      width: 100%;
+      float: left;      
       @include respond-to("navigation full") {
-        margin-top: 6em;
+        margin-top: 3em;   
+        margin-bottom: 4.5em;
       }
       @include respond-to("navigation medium") {
         margin-top: 2.5em;
-      }    
-      @include respond-to("navigation small") {
-        margin: 0;
-        padding: 0;
-        float: left;
-        background-color:transparent;
-        border-top: 1px solid #fff;
-      }      
-    }   
-    &.student-menu {
-      ul {
+        margin-bottom: 4.5em;        
+      }     
+      @include respond-to("navigation small") { // Mobile menu styles collapsed into toggle
+        margin-top: 0;
+        margin-bottom: 0;
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+            .submenu {
+              background-color: color($blue);
+              ul.menu {
+                padding: 0;
+                li {
+                  a {
+                    padding: 1em 1.5em;
+                  }
+                }
+              }
+            }
+            a,
+            span {
+              background-color: color($blue);
+              border: none;
+              color: $white;
+              display: block;
+              margin: 0 0 1px;
+              padding: 1em 2em;
+              text-decoration: none;
+              font-family: $trade-reg;
+              text-transform: none;
+              letter-spacing: .05em;
+              font-size: .85em;  
+              &:hover, &:focus {
+                background-color: color($blue, dark);
+                color: $white;
+              }
+            
+              &:active {
+                background-color: color($blue, dark);
+                color: $white;   
+              }
+            }
+          }
+        }
+      }     
+      ul { // Desktop menu styles
         li {
           &.item-1 {
             span,
@@ -542,6 +613,7 @@
         }
       }
       &.active {
+        border: none;
         background-image: url(../images/icons/icon-active-up.svg);
         background-position: center bottom;
         background-repeat: no-repeat; 
@@ -652,8 +724,10 @@
             a {
               color: color($blue, 'highlight');
               text-transform: none;
+              font-family: $trade-reg;
               font-size: 1em;
               line-height: 1.4em;
+              letter-spacing: 0;
               @include respond-to("navigation small") {
                 @include border-radius(0);
                 padding: 1em 3.5em;
@@ -674,7 +748,7 @@
       }         
     }
   }
-  ul.desktop-menu { // tabbed menu
+  ul.desktop-menu { // tabbed menu //--I am not sure this is being referenced anywhere ".desktop-menu" 
     width: 100%;
     max-width: 68em;
     padding: 0;
@@ -705,9 +779,9 @@
           background-image: none;
         }
         span {
-          color: color($blue, 'bright');
+          color: $white;
           &:hover {
-            color: color($blue, 'main');
+            color: color($tan, 'light');
           }
           &:after {
             display: inline-block;
@@ -774,8 +848,8 @@
       width: 100%;
       float: left;
       position: relative;
-      background-color: $white;
-      border-top: 4px solid color($blue,'dark');
+      background-color: color($green,dark);
+      border-top: 4px solid color($green,dark);
       .panel {
         display: none;
         ul {
@@ -789,69 +863,88 @@
             display: inline;
             position: relative;
             list-style: none;
-            font-family: $trade-bold;     
+            font-family: $trade-reg;
+            line-height: 1.4em;    
             padding: 0;
             margin: 0;       
             a {
               display: block;
               width:100%;
-              padding: .5em 1em;
+              padding: 1em 1em;
               text-decoration: none;
-              text-align: center;
               transition: all 0.15s ease-in-out;
+              color: #96C49B;
+              &:hover {
+                color: $white;
+              }
             }
           }
         }
       }      
     }      
   }  
+  // Department Menu 
+  .navigation-wrap {
+    &.department,// Department Landing section
+    &.student { // Student Dashboard section
+      @include grid-span(12, 1);
+      @include respond-to("navigation small") {
+        display: none;
+      }
+    }
+  }   
 }
 
 // Sidebar Menu
-.toggles { 
-  &.sidebar-menu { // sidebar subsection menu toggles
-    @include grid-span(12, 1);
-    display: none;
-    border-bottom: 1px solid rgba($white, 0.3);
-    @include respond-to("navigation small") {
-      display: block;
-    }    
-    li {
-      width: 100%;
-      a {
-        color: $white;
-        background-color: color($blue, 'main');
-        padding: 1em 1.5em;
-        text-align: left;
-        &:hover {
-          background-color: color($blue, 'dark');
-        }          
-        &.active {
-          background-color: color($blue, 'dark');
-        } 
-        &.pull-sidebar {
-          span {
-            &:before {
-              content: image-url('../images/icons/icon-menu-white-small.svg');        
-              vertical-align: middle;
-              padding-right: 1em;
-              display: inline-block;
-              transition: content 0.4s ease-in-out;
-            }
-          }
+#main {
+  .toggles { 
+    &.sidebar-menu { // sidebar subsection menu toggles
+      @include grid-span(12, 1);
+      display: none;
+      border-bottom: 1px solid rgba($white, 0.3);
+      @include respond-to("navigation small") {
+        display: block;
+      }    
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          background-color: color($blue, 'main');
+          padding: 1em 1.5em;
+          text-align: left;
+          &:hover {
+            background-color: color($blue, 'dark');
+            color: $white;
+          }          
           &.active {
+            background-color: color($blue, 'dark');
+            color: $white;
+          } 
+          &.pull-sidebar {
+            color: $white;
             span {
               &:before {
-                content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                content: image-url('../images/icons/icon-menu-white-small.svg');        
                 vertical-align: middle;
-                padding-right:1em;
+                padding-right: 1em;
                 display: inline-block;
                 transition: content 0.4s ease-in-out;
               }
-            }              
-          }
-        } 
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  vertical-align: middle;
+                  padding-right:1em;
+                  display: inline-block;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }
+          } 
+        }
       }
-    }
-  } 
+    } 
+  }
 }

@@ -7,14 +7,13 @@ $map: 600px; //Match mobile menu breakpoint
 .map {
   clear: both;
   margin-top: 2em;
+  h4 {
+    color: color($tan);
+    margin: 0;
+  }
   h3 {
     color: color($tan, dark);
-    margin-top: 0;
-    text-transform: none;
-  }
-  h4 {
-    margin-bottom: 0;
-    color: color($tan);
     text-transform: uppercase;
+    margin: .5em 0;
   }
 }

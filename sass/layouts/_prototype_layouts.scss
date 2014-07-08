@@ -2,6 +2,9 @@
  * @file _prototype_layouts.scss
  * A full-width layout that doesn't factor in the left sidebar.
  */
+ 
+$padding-content: 1100px; //Adds padding so content does not go to edge of screen on <1100px widths
+
 
 .prototype-grid {
     @include add-grid(12); // Add a 12 grid here to lay things out.
@@ -14,5 +17,12 @@
   .wrapper {
     max-width: 68em;
     margin: 0 auto;
+  }
+}
+
+.limiter {
+  padding: 0 1.5em;
+  @include breakpoint ($padding-content) {
+    padding: 0;
   }
 }

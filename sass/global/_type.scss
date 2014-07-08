@@ -91,6 +91,7 @@ h6 {
 a {
   &:link {
   color: $link;
+  text-decoration: none;
   }
   &:visited {
     color: $visited;
@@ -113,33 +114,41 @@ a {
 }
 
 // Links within content
-
-.main-container {
-  a {
-    color: $link;
-    cursor: pointer;
-    text-decoration: none;
-    border-bottom: 1px solid color($blue, bright);
-    &:visited {
-      color: $visited;
+#main {
+  p, ul li, ol li, .contact, .map, .related-content {
+    a {
+      color: $link;
+      cursor: pointer;
+      text-decoration: none;
+      border-bottom: 1px solid color($blue, bright);
+      &:visited {
+        color: $visited;
+        &:hover, &:focus {
+          color: color($blue, dark);
+          border-bottom: 1px solid color($blue, dark);
+        }
+      }
+    
       &:hover, &:focus {
         color: color($blue, dark);
         border-bottom: 1px solid color($blue, dark);
       }
-    }
-  
-    &:hover, &:focus {
-      color: color($blue, dark);
-      border-bottom: 1px solid color($blue, dark);
-    }
-  
-    &:active {
-      color: color($blue, dark);
-      border-bottom: 1px solid color($blue, dark);
-    }
     
-    &.link-bold {
-      font-weight: 700;
+      &:active {
+        color: color($blue, dark);
+        border-bottom: 1px solid color($blue, dark);
+      }
+      
+      &.link-bold {
+        font-weight: 700;
+      }
+    }
+  }
+  .menu-left-sidebar {
+    ul li {
+      a {
+        color: $white;
+      }
     }
   }
 }

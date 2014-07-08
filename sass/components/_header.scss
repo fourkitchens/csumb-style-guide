@@ -41,6 +41,19 @@
     padding-bottom: 0em;
     background-color: color($tan, 'dark');    
   }  
+  .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
+    @include grid-span(12,1);
+    @include respond-to("navigation small") {
+      background-color: color($blue, 'main');    
+    }    
+    &.blue-bg {
+      background-color: color($blue, 'main');    
+      padding-bottom: 1em;
+      @include respond-to("navigation small") {
+        padding-bottom: 0;
+      }
+    }
+  }
   .logo {
     @include grid-span(7,1);    
     padding-top: 1.5em;
@@ -116,8 +129,7 @@
     @include grid-span(8,5);
     @include respond-to("navigation small") {
       width: 100%;
-      background-color: color($blue, 'main', 5%);
-      border-top: 1px solid color($blue, 'main', -10%);          
+      background-color: color($blue, 'main');
     }         
     padding-left: 1em;
     padding-top: .5em;
@@ -231,13 +243,13 @@
   }
   .title-wrap {
     @include grid-span(12,1, $output-style:'float');
-    margin-top:2em;
+    margin-top:4em;
     clear: both;
     @include respond-to("navigation small") {
       padding: 2em 0 1em;
       margin-top: 0;
     }
-    .breadcrumb {
+    .breadcrumb-image {
       @include respond-to("navigation medium") {
         padding:0 1em; 
       }  
@@ -250,9 +262,8 @@
         padding:0 1em; 
       }
       h1 {
-        @include respond-to("no bg-image") {
-          color: $white;
-        }
+        color: $white;
+        margin-bottom: 0;
       }
     }    
   } 

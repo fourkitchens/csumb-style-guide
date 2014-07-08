@@ -7,18 +7,18 @@ $contact: 600px; //Match mobile menu breakpoint
 .contact {
   @extend %clearfix;
   margin-top: 2em;
-  h3 {
-    color: color($tan, dark);
+  h4 {
+    color: color($tan);
     margin-top: 0;
   }
   p {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     float: left;
     margin-right: 3em;
   }
   .contact-phone {
     &:before {
-      content: url("../images/icons/icon-phone.png");
+      content: url("../images/icons/icon-phone-24.png");
       margin-right: 7px;
       margin-top: 4px;
       float: left;
@@ -26,7 +26,18 @@ $contact: 600px; //Match mobile menu breakpoint
   }
   .contact-email {
     &:before {
-      content: url("../images/icons/icon-email.png");
+      content: url("../images/icons/icon-email-24.png");
+      margin-right: 7px;
+      margin-top: 4px;
+      float: left;
+    }
+    a {
+      border: none;
+    }
+  }
+  .contact-twitter {
+    &:before {
+      content: url("../images/icons/icon-twitter-24.png");
       margin-right: 7px;
       margin-top: 4px;
       float: left;
