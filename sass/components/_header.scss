@@ -83,9 +83,25 @@
     .button {
       float: right;
     }
+    .student-info {
+      display: none;
+    }
     @include respond-to("navigation small") {
       display: none;
     }  
+    &.logged-in {
+      button {
+        display: none;
+      }
+      .student-info {
+        display: block;
+        padding: 0;
+        margin: 0;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
   }
   .block-search {
     @include grid-span(8,5);

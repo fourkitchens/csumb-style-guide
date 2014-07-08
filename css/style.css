@@ -1989,10 +1989,24 @@ input.action-delete:focus {
 #header .user-login .button {
   float: right;
 }
+#header .user-login .student-info {
+  display: none;
+}
 @media (max-width: 54.375em) {
   #header .user-login {
     display: none;
   }
+}
+#header .user-login.logged-in button {
+  display: none;
+}
+#header .user-login.logged-in .student-info {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#header .user-login.logged-in .student-info li {
+  list-style-type: none;
 }
 #header .block-search {
   width: 65.95745%;
@@ -2886,10 +2900,27 @@ a.icon-checkmark:hover {
     width: 100%;
   }
 }
+@media (max-width: 29.6875em) and (max-width: 29.6875em) {
+  #header .toggles.mobile li.first.logged-in {
+    width: 50%;
+  }
+}
+
 @media (max-width: 29.6875em) {
   #header .toggles.mobile li {
     width: 50%;
   }
+}
+@media (max-width: 29.6875em) {
+  #header .toggles.mobile li.logged-in {
+    width: 100%;
+  }
+}
+#header .toggles.mobile li.logged-in a.no-toggle {
+  padding: .5em;
+}
+#header .toggles.mobile li.logged-in a.no-toggle.log-out {
+  border-top: 1px solid #1f346b;
 }
 #header .toggles.mobile li a {
   color: #1c2e5f;

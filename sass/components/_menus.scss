@@ -150,10 +150,26 @@
         &.first {
           @include respond-to("navigation smallest") {
             width: 100%;
+            &.logged-in {
+              @include respond-to("navigation smallest") {
+                width: 50%;
+              }
+            }
           }          
         }
         @include respond-to("navigation smallest") {
           width: 50%;
+        }
+        &.logged-in {
+          @include respond-to("navigation smallest") {
+            width: 100%;
+          }
+          a.no-toggle {
+            padding: .5em;
+            &.log-out {
+              border-top: 1px solid color($blue, 'main');
+            }
+          }
         }
         a {
           color: color($blue, 'main', -3%);

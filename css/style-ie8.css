@@ -1675,6 +1675,20 @@ input.action-delete:focus {
 #header .user-login .button {
   float: right;
 }
+#header .user-login .student-info {
+  display: none;
+}
+#header .user-login.logged-in button {
+  display: none;
+}
+#header .user-login.logged-in .student-info {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+#header .user-login.logged-in .student-info li {
+  list-style-type: none;
+}
 #header .block-search {
   width: 65.95745%;
   float: right;
@@ -2285,6 +2299,12 @@ a.icon-checkmark:hover {
 }
 #header .toggles.mobile li {
   width: 33.33%;
+}
+#header .toggles.mobile li.logged-in a.no-toggle {
+  padding: .5em;
+}
+#header .toggles.mobile li.logged-in a.no-toggle.log-out {
+  border-top: 1px solid #1f346b;
 }
 #header .toggles.mobile li a {
   color: #1c2e5f;
