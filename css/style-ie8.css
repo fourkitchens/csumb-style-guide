@@ -1689,6 +1689,13 @@ input.action-delete:focus {
 #header .user-login.logged-in .student-info li {
   list-style-type: none;
 }
+#header .user-login.logged-in .student-info li a.no-toggle {
+  color: white;
+}
+#header .user-login.logged-in .student-info li a.no-toggle:hover {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
 #header .block-search {
   width: 65.95745%;
   float: right;

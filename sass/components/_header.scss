@@ -99,6 +99,15 @@
         margin: 0;
         li {
           list-style-type: none;
+          a {
+            &.no-toggle {
+              color: $white;
+              &:hover {
+                color: rgba($white, 0.85);
+                text-decoration: none;
+              }
+            }
+          }
         }
       }
     }
