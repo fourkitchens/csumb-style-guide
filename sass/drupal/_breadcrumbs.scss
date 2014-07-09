@@ -9,6 +9,7 @@
   font-family: $trade-bold;
   color: wp-color($tan, 'main');
   font-size: 1em;
+  letter-spacing: 1px;
   a {
     padding: 0 .75em;
     &:first-child {
@@ -38,6 +39,7 @@
   font-family: $trade-bold;
   color: color($tan,light);
   font-size: 1em;
+  letter-spacing: 1px;
   a {
     padding: 0 .75em;
     &:first-child {

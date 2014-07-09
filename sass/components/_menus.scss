@@ -62,30 +62,28 @@
       display: block;
       padding: 0;
       li {
-        width: 100%;
+        width: 175px;;
         a {
-          color: $white;  
+          color: color($blue);  
           text-align: center;
           float: left;
           padding: 1em;
           width: 100%;
-          background-color: rgba($white, 0.05);
+          font-family: $trade-reg;
           &:hover {
-            color: rgba($white, 0.85);
-            background-color: rgba($white, 0.15);
+            color: color($blue,bright);  
           } 
           &.active {
-            @include box-shadow(inset 0 0 5px rgba(color($grey, 'dark'), 0.9));
-            background-color: rgba($white, 0.25);
+            color: color($blue,bright);  
             span {
-              color: color($grey, 'dark');
+              color: color($blue,bright);  
             }           
           }
           &.pull-nav-main,
           &.pull-nav-desktop {
             span {
               &:before {
-                content: image-url('../images/icons/icon-menu-white-small.svg');        
+                content: image-url('../images/icons/icon-rows-blue-small.svg');        
                 vertical-align: middle;
                 padding-right: 1em;
                 display: inline-block;
@@ -94,7 +92,7 @@
             &.active {
               span {
                 &:before {
-                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  content: image-url('../images/icons/icon-x-blue-small.svg');        
                   vertical-align: middle;
                   padding-right:1em;
                   display: inline-block;
@@ -198,7 +196,7 @@
             span {
               display: block;
               &:before {
-                content: image-url('../images/icons/icon-menu-blue-small.svg');        
+                content: image-url('../images/icons/icon-rows-blue-small.svg');        
                 vertical-align: middle;
               }
             }
@@ -216,7 +214,7 @@
             span {
               display: block;
               &:before {
-                content: image-url('../images/icons/icon-user-blue-small.svg');        
+                content: image-url('../images/icons/icon-login-blue-small.svg');        
                 vertical-align: middle;
               }
             }
@@ -280,21 +278,31 @@
       }      
     }
     &.menu-block-2 { // for header-subpage template - main nav truncated -JT
-      background-color: color($blue, main);
+      background-color: color($green, main);
       width: 100%;
       margin: 0 auto;
       @include respond-to("navigation small") {
-        border-bottom: 1px solid color($blue, 'main', 5%);
       }
       ul.menu {
         @include respond-to("navigation small") {
-          padding: 1em 0;
+          padding: 0;
         }
         li {
+          border-bottom: 1px solid color($green,dark);
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
+            }
+          }
           &.active {
             a,
             span {
               color: rgba($white, .5);            
+            }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
             }
           }
         }
@@ -302,7 +310,7 @@
         a {
           color: rgba($white, 0.75);
           letter-spacing: .05em;
-          font-size: .85em;
+          font-size: 1em;
           text-transform: none;
           &:hover {
             color: rgba($white, 1);
@@ -319,19 +327,19 @@
         position: relative;
       } 
       .submenu {
-        background-color: color($blue, dark);
+        background-color: color($green,dark);
         ul.menu {
           @include respond-to("navigation small") {
             padding: .7em 0;
           }
           li {
             a {
-              font-size: .75em;
+              font-size: 1em;
             }
             a, 
             span {
               @include respond-to("navigation small") {
-                padding: .5em 1.5em;
+                padding: 1em 2em;
               }  
             }
           }
@@ -354,39 +362,41 @@
           padding: 0;
           margin: 0;
           li {
+            border-top: 0px;
+            border-bottom: 1px solid #222;
             list-style: none;
             .submenu {
-              background-color: color($blue);
               ul.menu {
                 padding: 0;
                 li {
                   a {
-                    padding: 1em 1.5em;
+                    padding: 1em 2em;
+                    &:hover {
+                      background-color: $white;
+                      color: color($blue);
+                    }
                   }
                 }
               }
             }
             a,
             span {
-              background-color: color($blue);
+              background-color: $white;
               border: none;
-              color: $white;
+              color: color($blue);
               display: block;
-              margin: 0 0 1px;
-              padding: 1em 2em;
+              margin: 0;
+              padding: 1em 1.5em;
               text-decoration: none;
-              font-family: $trade-reg;
-              text-transform: none;
-              letter-spacing: .05em;
-              font-size: .85em;  
+              font-family: $trade-bold;
+              text-transform: uppercase;
+              //letter-spacing: .05em;
+              font-size: 1em;  
               &:hover, &:focus {
-                background-color: color($blue, dark);
-                color: $white;
+              color: color($blue,bright);
               }
-            
               &:active {
-                background-color: color($blue, dark);
-                color: $white;   
+              color: color($blue,bright);
               }
             }
           }
