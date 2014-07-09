@@ -34,7 +34,7 @@
   padding: 0;
   @include grid-span(12,1);
   @include respond-to("navigation small") {
-    background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.25);
     padding-bottom: 10em;
   }
   @include respond-to("no bg-image") {
@@ -42,9 +42,17 @@
     background-color: color($tan, 'dark');    
   }  
   .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
-    background-color: $white;    
     @include grid-span(12,1);
-    padding-bottom: 1em;
+    @include respond-to("navigation small") {
+      background-color: color($blue, 'main');    
+    }    
+    &.blue-bg {
+      background-color: $white;    
+      padding-bottom: 1em;
+      @include respond-to("navigation small") {
+        padding-bottom: 0;
+      }
+    }
   }
   .logo {
     @include grid-span(7,1);    
@@ -109,8 +117,7 @@
     @include grid-span(8,5);
     @include respond-to("navigation small") {
       width: 100%;
-      background-color: color($blue, 'main', 5%);
-      border-top: 1px solid color($blue, 'main', -10%);          
+      background-color: color($blue, 'main');
     }         
     padding-left: 1em;
     padding-top: .5em;

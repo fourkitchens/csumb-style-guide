@@ -123,17 +123,27 @@
             color: rgba($white, 0.85);
             background-color: rgba($white, 0.15);
           }   
-          span {
-            @include respond-to("navigation small") {
-              padding: 0 0 0 1em;
-              display: inline;
-            } 
-          }
-          img {
-            @include respond-to("navigation small") {
-              display: inline;
-            }  
-          }
+          &.pull-nav {
+            span {
+              &:before {
+                content: image-url('../images/icons/icon-menu-white-small.svg');        
+                vertical-align: middle;
+                padding-right: 1em;
+                display: inline-block;
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  vertical-align: middle;
+                  padding-right:1em;
+                  display: inline-block;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }
+          } 
         }
       }  
     }
@@ -214,56 +224,18 @@
         }
       }
     }    
-    &.close { // close button toggle for mobile fly in menu.
-      border-bottom: 1px solid color($status, 'warning', -10%);
-      @include box-shadow(rgba(#000, 0.9) 0 0 3px 10px inset);
-      @include grid-span(12, 1);
-      li {
-        width: 100%;
-        a {
-          background-color: color($status, 'warning', 20%);
-          color: color($blue, 'dark');   
-          &:hover {
-            background-color: color($status, 'warning');
-          }
-          &.active {
-            background-color: color($status, 'warning', 20%);
-            &:hover {
-              background-color: color($status, 'warning');
-            }
-          }
-          span {
-            &:before {
-              content: image-url('../images/icons/icon-cancel-blue-small.svg');        
-              vertical-align: middle;
-              padding-right: 1em;
-              display: inline-block;
-            }
-          }          
-        }
-      }
-    }   
   }
   .mobile-bar,
   .desktop-bar {
     display: none;
   }
+  .mobile-bar {
+    background-color: color($blue, 'main');
+    @include grid-span(12,1);
+  }
   .desktop-bar {
     @include respond-to("navigation small") {
       display: none !important;
-    }
-  }
-  .navigation-wrap {
-    position: relative;
-    @include respond-to("navigation small") {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 80%;
-      display: none;
-      background-color: rgba($white, 0.85);
-      z-index: 10;
-      height: 100%;
     }
   }
   .navigation {   
@@ -276,11 +248,11 @@
     }
     &.menu-block-1,
     &.menu-block-3 { // The main focus navigation system on both the home page and alternate menu both need bottom margin - JT.
-      margin: 0 auto 4.5em;
       width: 100%;
       float: left;   
     }
     &.menu-block-1 { // for main header template - navigation spacing JT
+      margin: 0 auto 4.5em;
       @include respond-to("navigation full") {
         margin-top: 18em;
       }
@@ -291,24 +263,35 @@
         margin: 0;
         padding: 0;
         float: left;
+        display: none;
       }      
     }
     &.menu-block-2 { // for header-subpage template - main nav truncated -JT
-      background-color: color($blue, main);
+      background-color: color($green, main);
       width: 100%;
       margin: 0 auto;
       @include respond-to("navigation small") {
-        border-bottom: 1px solid color($blue, 'main', 5%);
       }
       ul.menu {
         @include respond-to("navigation small") {
-          padding: 1em 0;
+          padding: 0;
         }
         li {
+          border-bottom: 1px solid color($green,dark);
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
+            }
+          }
           &.active {
             a,
             span {
               color: rgba($white, .5);            
+            }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
             }
           }
         }
@@ -316,7 +299,7 @@
         a {
           color: rgba($white, 0.75);
           letter-spacing: .05em;
-          font-size: .85em;
+          font-size: 1em;
           text-transform: none;
           &:hover {
             color: rgba($white, 1);
@@ -333,26 +316,83 @@
         position: relative;
       } 
       .submenu {
-        background-color: color($blue, dark);
+        background-color: color($green,dark);
         ul.menu {
           @include respond-to("navigation small") {
             padding: .7em 0;
           }
           li {
             a {
-              font-size: .75em;
+              font-size: 1em;
             }
             a, 
             span {
               @include respond-to("navigation small") {
-                padding: .5em 1.5em;
+                padding: 1em 2em;
               }  
             }
           }
         }
       }       
-    }
-    &.menu-block-4 { // for desktop menu only - main nav truncated -JT
+    } 
+    &.menu-block-3 { // for header-subpage template - JT
+      @include respond-to("navigation full") {
+        margin-top: 3em;   
+        margin-bottom: 4.5em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 2.5em;
+        margin-bottom: 4.5em;        
+      }     
+      @include respond-to("navigation small") {
+        margin-top: 0;
+        margin-bottom: 0;
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          li {
+            border-top: 0px;
+            border-bottom: 1px solid #222;
+            list-style: none;
+            .submenu {
+              ul.menu {
+                padding: 0;
+                li {
+                  a {
+                    padding: 1em 2em;
+                    &:hover {
+                      background-color: $white;
+                      color: color($blue);
+                    }
+                  }
+                }
+              }
+            }
+            a,
+            span {
+              background-color: $white;
+              border: none;
+              color: color($blue);
+              display: block;
+              margin: 0;
+              padding: 1em 1.5em;
+              text-decoration: none;
+              font-family: $trade-bold;
+              text-transform: uppercase;
+              //letter-spacing: .05em;
+              font-size: 1em;  
+              &:hover, &:focus {
+              color: color($blue,bright);
+              }
+              &:active {
+              color: color($blue,bright);
+              }
+            }
+          }
+        }
+      }
+    }    
+    &.menu-block-4 { // for desktop menu only - main nav toggle from top -JT
       background-color: color($green, main);
       width: 100%;
       margin: 0 auto;
@@ -398,22 +438,7 @@
         float: left;
         position: relative;
       } 
-    }               
-    &.user-menu { // for header-subpage template - JT
-      @include respond-to("navigation full") {
-        margin-top: 3em;
-      }
-      @include respond-to("navigation medium") {
-        margin-top: 2.5em;
-      }    
-      @include respond-to("navigation small") {
-        margin: 0;
-        padding: 0;
-        float: left;
-        background-color:transparent;
-        border-top: 1px solid #fff;
-      }      
-    }    
+    }                
   }
   ul.menu { // Main menu styles
     width: 100%;
@@ -724,7 +749,17 @@
       }      
     }      
   }  
+  // Department Menu 
+  .navigation-wrap {
+    &.department {
+      @include grid-span(12, 1);
+      @include respond-to("navigation small") {
+        display: none;
+      }
+    }
+  }   
 }
+
 // Sidebar Menu
 .toggles { 
   &.sidebar-menu { // sidebar subsection menu toggles
@@ -743,9 +778,11 @@
         text-align: left;
         &:hover {
           background-color: color($blue, 'dark');
+          color: $white;
         }          
         &.active {
           background-color: color($blue, 'dark');
+          color: $white;
         } 
         &.pull-sidebar {
           span {
