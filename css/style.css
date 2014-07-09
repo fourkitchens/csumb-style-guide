@@ -2126,28 +2126,35 @@ input.action-delete:focus {
   margin: 0;
 }
 #header .user-login {
-  width: 150px;
+  width: 31.91489%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
   border-right: 1px solid white;
 }
-#header .user-login a {
+[dir="rtl"] #header .user-login {
   float: right;
-  color: #1f346b;
-  text-align: center;
-  float: left;
-  padding: 1em;
-  width: 100%;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  margin-left: -100%;
+  margin-right: 0;
 }
-#header .user-login a:before {
-  content: url('../images/../images/icons/icon-rows-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
+#header .user-login a {
+  color: #1f346b;
+  float: right;
+  padding: 1em;
 }
 #header .user-login a:hover {
   color: #3b559a;
+}
+#header .user-login a span {
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+#header .user-login a span:before {
+  content: url('../images/../images/icons/icon-login-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
 }
 @media (max-width: 54.375em) {
   #header .user-login {
@@ -2952,7 +2959,6 @@ a.icon-checkmark:hover {
   padding: 1em;
   width: 100%;
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  letter-spacing: .12em;
 }
 #header .toggles.desktop li a:hover {
   color: #3b559a;

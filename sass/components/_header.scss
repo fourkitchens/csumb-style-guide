@@ -81,29 +81,25 @@
     }
   }
   .user-login {
-    //@include grid-span(4,1);
-    //padding-right: 1em;
-    width: 150px;
+    @include grid-span(4,1);
     border-right:1px solid $white;
     a {
-      float: right;
       color: color($blue);  
-      text-align: center;
-      float: left;
+      float: right;
       padding: 1em;
-      width: 100%;
-      font-family: $trade-reg;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      &:before {
-        content: image-url('../images/icons/icon-rows-blue-small.svg');        
-        vertical-align: middle;
-        padding-right: 1em;
-        display: inline-block;
-      }
       &:hover {
         color: color($blue,bright);  
-      }          
+      }
+      span {
+        vertical-align: middle;
+        text-transform: uppercase;
+        &:before {
+          content: image-url('../images/icons/icon-login-blue-small.svg');        
+          vertical-align: middle;
+          padding-right: 1em;
+          display: inline-block;
+        }
+      }
     }
     @include respond-to("navigation small") {
       display: none;
