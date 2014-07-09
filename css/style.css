@@ -2079,6 +2079,7 @@ input.action-delete:focus {
 @media (max-width: 54.375em) {
   #header .logo-actions-wrap.blue-bg {
     padding-bottom: 0;
+    background-color: #1f346b;
   }
 }
 #header .logo {
@@ -2494,7 +2495,7 @@ input.action-delete:focus {
   display: none;
   position: relative;
   float: left;
-  width: 60%;
+  width: 50%;
 }
 @media (max-width: 29.6875em) {
   #header .mobile-wrap .logo-mobile-small {
@@ -2673,6 +2674,9 @@ input.action-delete:focus {
 }
 [dir="rtl"] #main {
   float: left;
+}
+#main.student-dashboard {
+  background-color: #eceade;
 }
 #main .main-container {
   padding: 1em;
@@ -3207,7 +3211,7 @@ a.icon-checkmark:hover {
 @media (max-width: 29.6875em) {
   #header .toggles.mobile {
     float: right;
-    width: 60%;
+    width: 50%;
   }
 }
 #header .toggles.mobile li {
@@ -3515,13 +3519,13 @@ a.icon-checkmark:hover {
 }
 @media (min-width: 65.125em) {
   #header .navigation.menu-block-5 {
-    margin-top: 13em;
+    margin-top: 6em;
     margin-bottom: 4.5em;
   }
 }
 @media (max-width: 67.1875em) {
   #header .navigation.menu-block-5 {
-    margin-top: 8em;
+    margin-top: 4em;
     margin-bottom: 4.5em;
   }
 }

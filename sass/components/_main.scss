@@ -7,7 +7,9 @@
   background-color: $white;
   @extend %clearfix;
   @include grid-span(12,1);
-
+  &.student-dashboard {
+    background-color: color($tan, 'highlight');
+  }
   .main-container {
     padding: 1em;
   }

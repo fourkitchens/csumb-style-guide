@@ -54,6 +54,7 @@
       padding-bottom: 1em;
       @include respond-to("navigation small") {
         padding-bottom: 0;
+        background-color: color($blue, 'main');    
       }
     }
   }
@@ -369,7 +370,7 @@
       display: none;
       position: relative;
       float: left;
-      width: 60%;      
+      width: 50%;      
       @include respond-to("navigation smallest") {
         display: block;
       }    

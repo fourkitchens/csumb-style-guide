@@ -2067,7 +2067,7 @@ input.action-delete:focus {
   display: none;
   position: relative;
   float: left;
-  width: 60%;
+  width: 50%;
 }
 #header .mobile-wrap .logo-mobile-small img {
   max-width: 200px;
@@ -2208,6 +2208,9 @@ input.action-delete:focus {
 }
 [dir="rtl"] #main {
   float: left;
+}
+#main.student-dashboard {
+  background-color: #eceade;
 }
 #main .main-container {
   padding: 1em;
