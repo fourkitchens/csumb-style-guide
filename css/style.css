@@ -2337,7 +2337,7 @@ input.action-delete:focus {
   display: none;
   position: relative;
   float: left;
-  width: 40%;
+  width: 60%;
 }
 @media (max-width: 29.6875em) {
   #header .mobile-wrap .logo-mobile-small {
@@ -2345,8 +2345,7 @@ input.action-delete:focus {
   }
 }
 #header .mobile-wrap .logo-mobile-small img {
-  max-width: 195px;
-  max-height: 70px;
+  max-width: 200px;
   float: left;
   width: 100%;
   height: auto;
@@ -3087,7 +3086,7 @@ a.icon-checkmark:hover {
   display: block;
 }
 #header .toggles.mobile li a.pull-nav-main span:before {
-  content: url('../images/../images/icons/icon-menu-blue-small.svg');
+  content: url('../images/../images/icons/icon-rows-blue-small.svg');
   vertical-align: middle;
 }
 #header .toggles.mobile li a.pull-nav-main.active span:before {
@@ -3099,7 +3098,7 @@ a.icon-checkmark:hover {
   display: block;
 }
 #header .toggles.mobile li a.pull-user span:before {
-  content: url('../images/../images/icons/icon-user-blue-small.svg');
+  content: url('../images/../images/icons/icon-login-blue-small.svg');
   vertical-align: middle;
 }
 #header .toggles.mobile li a.pull-search span {
