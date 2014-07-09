@@ -34,7 +34,7 @@
   padding: 0;
   @include grid-span(12,1);
   @include respond-to("navigation small") {
-    background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.25);
     padding-bottom: 10em;
   }
   @include respond-to("no bg-image") {
@@ -42,9 +42,17 @@
     background-color: color($tan, 'dark');    
   }  
   .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
-    background-color: color($blue, 'main');    
     @include grid-span(12,1);
-    padding-bottom: 1em;
+    @include respond-to("navigation small") {
+      background-color: color($blue, 'main');    
+    }    
+    &.blue-bg {
+      background-color: $white;    
+      padding-bottom: 1em;
+      @include respond-to("navigation small") {
+        padding-bottom: 0;
+      }
+    }
   }
   .logo {
     @include grid-span(7,1);    
@@ -82,11 +90,24 @@
   }
   .user-login {
     @include grid-span(4,1);
-    padding-right: 1em;
-    margin: 0;
     border-right:1px solid $white;
-    .button {
+    a {
+      color: color($blue);  
       float: right;
+      padding: 1em;
+      &:hover {
+        color: color($blue,bright);  
+      }
+      span {
+        vertical-align: middle;
+        text-transform: uppercase;
+        &:before {
+          content: image-url('../images/icons/icon-login-blue-small.svg');        
+          vertical-align: middle;
+          padding-right: 1em;
+          display: inline-block;
+        }
+      }
     }
     @include respond-to("navigation small") {
       display: none;
@@ -96,8 +117,7 @@
     @include grid-span(8,5);
     @include respond-to("navigation small") {
       width: 100%;
-      background-color: color($blue, 'main', 5%);
-      border-top: 1px solid color($blue, 'main', -10%);          
+      background-color: color($blue, 'main');
     }         
     padding-left: 1em;
     padding-top: .5em;
@@ -181,13 +201,12 @@
       display: none;
       position: relative;
       float: left;
-      width: 40%;      
+      width: 60%;      
       @include respond-to("navigation smallest") {
         display: block;
       }    
       img {
-        max-width: 195px;
-        max-height: 70px;
+        max-width: 200px;
         float: left;
         width: 100%;
         height: auto;

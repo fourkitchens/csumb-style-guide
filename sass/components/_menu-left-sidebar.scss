@@ -36,10 +36,12 @@ $one-column: 870px; //Match mobile menu breakpoint
         }
         &:hover, &:focus {
           background-color: color($blue, dark);
+          color: $white;
         }
       
         &:active {
           background-color: color($blue, dark);
+          color: $white;
         }
       }
     }

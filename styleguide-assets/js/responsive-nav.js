@@ -3,12 +3,16 @@
 (function ($) {
     'use strict';
     $(document).ready(function () {
-    var pullNavTop                = $('.pull-nav-main'),
+    var pullNav                   = $('.pull-nav'),
+        menu                      = $('.navigation-wrap'),
+        pullNavTop                = $('.pull-nav-main'),
         menuTop                   = $('.mobile-bar'),        
         pullNavDesktop            = $('.pull-nav-desktop'),
         menuDesktop               = $('.desktop-bar'),
         pullSideMenu              = $('.pull-sidebar'),
         menuSidebar               = $('.menu-left-sidebar'),        
+        pullDepartment            = $('.pull-department'),     
+        menuDepartment            = $('.navigation-wrap'),
         pullSearch                = $('.pull-search'),
         search                    = $('.actions'),
         toggler                   = function(a){
@@ -18,17 +22,11 @@
             opacity: "toggle"
             }, "500");
         };      
+        pullNav.click({toggled : menu}, toggler);
         pullNavTop.click({toggled : menuTop}, toggler);
         pullNavDesktop.click({toggled : menuDesktop}, toggler);
         pullSideMenu.click({toggled : menuSidebar}, toggler);
+        pullDepartment.click({toggled : menuDepartment}, toggler);
         pullSearch.click({toggled : search}, toggler);
        });
-
-    var pullNav                   = $('.pull-nav'),
-        menu                      = $('.navigation-wrap'),
-        togglez              = function(twidth){
-          $(this).toggleClass('active');
-          twidth.data.toggledWidth.toggle("slide");
-        };  
-        pullNav.click({toggledWidth : menu}, togglez);
 })(jQuery);
