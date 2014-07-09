@@ -2019,16 +2019,21 @@ input.action-delete:focus {
     top: 10%;
   }
 }
-@media (max-width: 41.3125em) {
-  .prototype-grid .header-image {
-    display: none;
-    top: 0;
-  }
-}
 .prototype-grid .header-image img {
   width: 100%;
   height: auto;
   position: relative;
+}
+.prototype-grid .header-image img.mobile {
+  display: none;
+}
+@media (max-width: 54.375em) {
+  .prototype-grid .header-image img.desktop {
+    display: none;
+  }
+  .prototype-grid .header-image img.mobile {
+    display: block;
+  }
 }
 
 /**
@@ -2050,12 +2055,6 @@ input.action-delete:focus {
   #header {
     background-color: rgba(0, 0, 0, 0.25);
     padding-bottom: 10em;
-  }
-}
-@media (max-width: 41.3125em) {
-  #header {
-    padding-bottom: 0em;
-    background-color: #39351b;
   }
 }
 #header .logo-actions-wrap {
@@ -3537,64 +3536,46 @@ a.icon-checkmark:hover {
   }
   #header .navigation.menu-block-5 ul.menu li {
     list-style: none;
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-1 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-1 a:before {
-    content: url('../images/../images/icons/icon-learn-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-2 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-2 a:before {
-    content: url('../images/../images/icons/icon-cms-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-3 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-3 a:before {
-    content: url('../images/../images/icons/icon-email-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-4 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-4 a:before {
-    content: url('../images/../images/icons/icon-calendar-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-5 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-5 a:before {
-    content: url('../images/../images/icons/icon-mybookmarks-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li.item-6 span:before,
-  #header .navigation.menu-block-5 ul.menu li.item-6 a:before {
-    content: url('../images/../images/icons/icon-housing-white-small.svg');
-  }
-  #header .navigation.menu-block-5 ul.menu li .submenu {
-    background-color: #1f346b;
+    background-color: white;
+    color: #1f346b;
+    border-top: 0px;
+    border-bottom: 1px solid #222;
+    list-style: none;
   }
   #header .navigation.menu-block-5 ul.menu li .submenu ul.menu {
     padding: 0;
   }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li {
+    border: none;
+  }
   #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a {
-    padding: 1em 1.5em;
+    padding: 1em 2em;
+  }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a:hover {
+    background-color: white;
+    color: #1f346b;
   }
   #header .navigation.menu-block-5 ul.menu li a,
   #header .navigation.menu-block-5 ul.menu li span {
-    background-color: #1f346b;
+    background-color: white;
     border: none;
-    color: white;
+    color: #1f346b;
     display: block;
-    margin: 0 0 1px;
-    padding: 1em 2em;
+    margin: 0;
+    padding: 1em 1.5em;
     text-decoration: none;
-    font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-    text-transform: none;
-    letter-spacing: .05em;
-    font-size: .85em;
+    font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
   }
   #header .navigation.menu-block-5 ul.menu li a:hover, #header .navigation.menu-block-5 ul.menu li a:focus,
   #header .navigation.menu-block-5 ul.menu li span:hover,
   #header .navigation.menu-block-5 ul.menu li span:focus {
-    background-color: #001e54;
-    color: white;
+    color: #3b559a;
   }
   #header .navigation.menu-block-5 ul.menu li a:active,
   #header .navigation.menu-block-5 ul.menu li span:active {
-    background-color: #001e54;
-    color: white;
+    color: #3b559a;
   }
 }
 #header .navigation.menu-block-5 ul li.item-1 span:before,

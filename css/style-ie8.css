@@ -1702,6 +1702,9 @@ input.action-delete:focus {
   height: auto;
   position: relative;
 }
+.prototype-grid .header-image img.mobile {
+  display: none;
+}
 
 /**
 * Header

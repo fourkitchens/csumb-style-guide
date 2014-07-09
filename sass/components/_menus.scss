@@ -390,7 +390,6 @@
               text-decoration: none;
               font-family: $trade-bold;
               text-transform: uppercase;
-              //letter-spacing: .05em;
               font-size: 1em;  
               &:hover, &:focus {
               color: color($blue,bright);
@@ -469,85 +468,43 @@
           margin: 0;
           li {
             list-style: none;
-             &.item-1 { // Change mobile icons to white instead of blue.
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-learn-white-small.svg');        
-                  }
-                }
-              }
-              &.item-2 {
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-cms-white-small.svg');        
-                  }
-                }
-              }
-              &.item-3 {
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-email-white-small.svg');        
-                  }
-                }
-              }
-              &.item-4 {
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-calendar-white-small.svg');        
-                  }
-                }
-              }
-              &.item-5 {
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-mybookmarks-white-small.svg');        
-                  }
-                }
-              }
-              &.item-6 {
-                span,
-                a {
-                  &:before {
-                    content: image-url('../images/icons/icon-housing-white-small.svg');        
-                  }
-                }
-              }  
+            background-color: $white;
+            color: color($blue);
+            border-top: 0px;
+            border-bottom: 1px solid #222;
+            list-style: none;                  
             .submenu {
-              background-color: color($blue);
               ul.menu {
                 padding: 0;
-                li {
+                li {  
+                  border: none;
                   a {
-                    padding: 1em 1.5em;
+                    padding: 1em 2em;
+                    &:hover {
+                      background-color: $white;
+                      color: color($blue);
+                    }
                   }
                 }
               }
             }
             a,
             span {
-              background-color: color($blue);
+              background-color: $white;
               border: none;
-              color: $white;
+              color: color($blue);
               display: block;
-              margin: 0 0 1px;
-              padding: 1em 2em;
+              margin: 0;
+              padding: 1em 1.5em;
               text-decoration: none;
-              font-family: $trade-reg;
-              text-transform: none;
-              letter-spacing: .05em;
-              font-size: .85em;  
+              font-family: $trade-bold;
+              text-transform: uppercase;
+              font-size: 1em;  
               &:hover, &:focus {
-                background-color: color($blue, dark);
-                color: $white;
-              }          
+              color: color($blue,bright);
+              }
               &:active {
-                background-color: color($blue, dark);
-                color: $white;   
+              color: color($blue,bright);
               }
             }
           }

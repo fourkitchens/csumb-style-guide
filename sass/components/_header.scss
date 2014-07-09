@@ -11,18 +11,25 @@
     left: auto;
     z-index: -1;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     @include respond-to("navigation small") {
-      top: 10%;
-    }   
-    @include respond-to("no bg-image") {
-      display: none;
-      top: 0;
-    }
+      top:10%;
+    }    
     img {
       width: 100%;
       height: auto;
       position: relative;
+      &.mobile { // Mobile-sized images get this class and are hidden by default
+        display: none;
+      }       
+      @include respond-to("navigation small") {
+        &.desktop {
+          display: none;
+        } 
+        &.mobile {
+          display: block;
+        }        
+      }       
     }
   }
 }
@@ -37,10 +44,6 @@
     background-color: rgba($black, 0.25);
     padding-bottom: 10em;
   }
-  @include respond-to("no bg-image") {
-    padding-bottom: 0em;
-    background-color: color($tan, 'dark');    
-  }  
   .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
     @include grid-span(12,1);
     @include respond-to("navigation small") {
