@@ -102,28 +102,6 @@
     @include respond-to("navigation small") {
       display: none;
     }  
-    &.logged-in {
-      button {
-        display: none;
-      }
-      .student-info {
-        display: block;
-        padding: 0;
-        margin: 0;
-        li {
-          list-style-type: none;
-          a {
-            &.no-toggle {
-              color: $white;
-              &:hover {
-                color: rgba($white, 0.85);
-                text-decoration: none;
-              }
-            }
-          }
-        }
-      }
-    }
   }
   .block-search {
     @include grid-span(8,5);
@@ -157,6 +135,141 @@
       @include respond-to("navigation small") {
         width: 100%;
       }    
+      &.logged-in { // Student/User drop-down
+        border-right:none;
+        padding: 0;
+        @include grid-span(4,5, $output-style:'float', $gutter:0);  
+        button {
+          display: none;
+        }
+        .student-info {
+          display: block;
+          padding: 0;
+          margin: 0;
+          position: relative;
+          float: left;
+          width: 100%;
+          li {
+            list-style-type: none;
+            position: relative;
+            float: left;
+            width: 100%;
+            margin-bottom: 2px;
+            span { 
+              &.name {
+                cursor: pointer;
+                padding: 1em;
+                display: block;
+                text-align: center;
+                position: relative; 
+                background-color: color($green, 'main');
+                &:before {
+                  display: inline-block;
+                  speak: none;
+                  font-family: $trade-bold;     
+                  font-style: normal;
+                  font-weight: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  background-color: $white;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                  content: "2";
+                  padding: .3em .5em;
+                  margin-right: .3em;
+                  vertical-align: middle;
+                  color: color($green, 'main'); 
+                  @include border-radius(25px);
+                }
+                &:after {
+                  display: inline-block;
+                  speak: none;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                  content: url('../images/icons/icon-dropdown.svg');
+                  width: 15px;
+                  height: 24px;
+                  margin-left: 0.3em;
+                  vertical-align: middle;                
+                }
+                &.active {
+                  &:after {
+                    display: inline-block;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    content: url('../images/icons/icon-dropup.svg');
+                    width: 15px;
+                    height: 24px;
+                    margin-left: 0.3em;
+                    vertical-align: middle;                
+                  }                  
+                }                
+              }
+            }           
+            a {
+              &.no-toggle {
+                color: color($blue, 'main');
+                padding: .5em 1em;
+                float: left;
+                width: 100%;
+                background-color: rgba($white,.80);
+                &:hover {
+                  color: color($blue, 'dark');
+                  text-decoration: none;
+                  background-color: rgba($white,.95);
+                }
+              }
+            }
+            ul.user-actions {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              position: absolute;
+              top: 65px;
+              left: 0;
+              display: none;
+              li {
+                width: 100%;
+                float: left;
+                a {
+                  display: block;
+                  color: color($blue, 'main');
+                  &:hover,
+                  &.active {
+                    color: color($blue, 'dark');
+                  }
+                }
+                &.favorite {
+                  a {
+                    &:before {
+                      content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
+                      vertical-align: middle;
+                      padding-right: .5em;
+                      display: inline-block;
+                      transition: content 0.4s ease-in-out;
+                    }
+                    &:focus,
+                    &.active {
+                      &:before {
+                        content: image-url('../images/icons/icon-star-blue-small.svg');       
+                      } 
+                    }
+                  }                
+                }
+              }
+            }
+          }
+        }
+      }      
     }   
     .actions {
       @include grid-span(7,6);
@@ -168,7 +281,13 @@
       @include grid-span(5,8, $output-style:'float');     
       @include respond-to("navigation small") {
         width: 100%;
-      }         
+      }     
+      &.logged-in { // If logged in, decrease the search width.
+        @include grid-span(4,9, $output-style:'float');  
+        @include respond-to("navigation small") {
+          width: 100%;
+        }          
+      }          
     }
   }
   .mobile-wrap {

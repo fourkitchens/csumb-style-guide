@@ -116,11 +116,23 @@
         <div class="user-login logged-in">
           <button class="btn-primary">Login</button>
           <ul class="student-info">
-            <li class="name"><a href="/user" class="logged-in no-toggle"><span class="name">Rashida Jones</span></a></li>
-            <li class="logout"><a href="#" class="no-toggle" title="Logout">Logout</a></li>
+            <li class="name logged-in">
+            <span class="no-link name pull-student-menu">Rashida Jones</span>
+              <ul class="user-actions">
+                <li class="favorite">
+                  <a href="#" class="no-toggle" title="Add to MyBookings"><span>Add to MyBookings</span></a>
+                </li>
+                <li class="profile">
+                  <a href="#" class="no-toggle" title="View Profile"><span>View Profile</span></a>
+                </li>                
+                <li class="logout">
+                  <a href="#" class="no-toggle" title="Logout"><span>Logout</span></a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
-        <div class="block-search">
+        <div class="block-search logged-in">
           <div class="form-item-search-block-form">
             <label class="element-invisible">Search </label>
             <input placeholder="Search CSUMB" type="text" name="search_block_form" class="form-text">

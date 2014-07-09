@@ -53,7 +53,7 @@
   }
 }
 
-// Menus in the Header section
+// Menus/Toggles in the Header section
 #header { 
   .toggles {
     // all toggle class-specific styles below    
@@ -440,17 +440,17 @@
         position: relative;
       } 
     }               
-    &.menu-block-5 { // Student Menu Block 
+    &.menu-block-5 { // Student Menu Block - Icon-based user menu
       width: 100%;
       float: left;      
       @include respond-to("navigation full") {
-        margin-top: 3em;   
-        margin-bottom: 4.5em;
+        margin-top: 13em;
+        margin-bottom: 4.5em;        
       }
       @include respond-to("navigation medium") {
-        margin-top: 2.5em;
+        margin-top: 8em;
         margin-bottom: 4.5em;        
-      }     
+      }   
       @include respond-to("navigation small") { // Mobile menu styles collapsed into toggle
         margin-top: 0;
         margin-bottom: 0;
@@ -459,6 +459,54 @@
           margin: 0;
           li {
             list-style: none;
+             &.item-1 { // Change mobile icons to white instead of blue.
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-learn-white-small.svg');        
+                  }
+                }
+              }
+              &.item-2 {
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-cms-white-small.svg');        
+                  }
+                }
+              }
+              &.item-3 {
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-email-white-small.svg');        
+                  }
+                }
+              }
+              &.item-4 {
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-calendar-white-small.svg');        
+                  }
+                }
+              }
+              &.item-5 {
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-mybookmarks-white-small.svg');        
+                  }
+                }
+              }
+              &.item-6 {
+                span,
+                a {
+                  &:before {
+                    content: image-url('../images/icons/icon-housing-white-small.svg');        
+                  }
+                }
+              }  
             .submenu {
               background-color: color($blue);
               ul.menu {
@@ -486,8 +534,7 @@
               &:hover, &:focus {
                 background-color: color($blue, dark);
                 color: $white;
-              }
-            
+              }          
               &:active {
                 background-color: color($blue, dark);
                 color: $white;   
@@ -498,7 +545,7 @@
       }     
       ul { // Desktop menu styles
         li {
-          &.item-1 {
+          &.item-1 { // Blue icons, and other basic styles that cascade down to mobile.
             span,
             a {
               &:before {
@@ -574,7 +621,7 @@
       }
     } 
   }
-  ul.menu { // Main menu styles
+  ul.menu { // Global .menu styles
     width: 100%;
     max-width: 68em;
     padding: 0;
@@ -746,101 +793,6 @@
           }
         }     
       }         
-    }
-  }
-  ul.desktop-menu { // tabbed menu //--I am not sure this is being referenced anywhere ".desktop-menu" 
-    width: 100%;
-    max-width: 68em;
-    padding: 0;
-    margin: 0 auto;
-    @extend %clearfix;
-    @include respond-to("navigation medium") {
-      padding: 0 4em;
-    }
-    @include respond-to("navigation medium padding") {
-      padding: 0 2em;
-    }
-    @include respond-to("navigation small padding") {
-      padding: 0em;
-    }
-    li {
-      float: left;
-      display: inline-block;
-      list-style: none;
-      font-family: $trade-bold;
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      &.active {
-        background-image: url(../images/icons/icon-active-up.svg);
-        background-position: center bottom;
-        background-repeat: no-repeat; 
-        @include respond-to("navigation small") {
-          background-image: none;
-        }
-        span {
-          color: $white;
-          &:hover {
-            color: color($tan, 'light');
-          }
-          &:after {
-            display: inline-block;
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            content: image-url('../images/icons/icon-dropup.svg'); 
-            width: 15px; 
-            height: 24px;        
-            vertical-align: middle;
-            color: color($blue, dark);
-          }
-        }
-      }
-      span,
-      a {
-        color: color($blue, 'main');
-        text-decoration: none;
-        letter-spacing: .05em;
-        font-size: 1em;
-        padding: 1em 1.2em;
-        display: block;
-        cursor: pointer;
-        transition: color 0.15s ease-in-out;
-        @include respond-to("navigation medium") {
-          padding: 1em .8em;
-          margin-right: 0;
-          font-size: .9em;
-        }
-        @include respond-to("navigation small") {
-          font-size: 1.2em;
-          padding: 1.5em 3em 1em;
-        }
-        &:hover {
-          color: color($blue, 'bright');
-        }
-      }
-      span {
-        &:after {
-          display: inline-block;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          -webkit-font-smoothing: antialiased;
-          content: image-url('../images/icons/icon-dropdown.svg'); 
-          width: 15px; 
-          height: 24px;        
-          margin-left: 0.3em;
-          vertical-align: middle;
-          color: color($blue, 'dark');
-        }
-      }           
     }
   }
   .desktop-bar {

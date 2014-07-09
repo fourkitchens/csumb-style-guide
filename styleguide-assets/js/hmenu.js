@@ -3,7 +3,7 @@
 (function($){ 
   'use strict';
   $(document).ready(function(){
-    $("ul ul" ).wrap( "<div class='submenu'></div>" );
+    $("ul.menu ul.menu" ).wrap( "<div class='submenu'></div>" );
     $('.nolink').click(function() {
       var active = $(this).next(':visible').length > 0;
       $(this).parents('.menu').children('.active').removeClass('active');

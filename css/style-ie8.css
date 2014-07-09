@@ -426,7 +426,6 @@ ul.pager:after,
 #main:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
-#header ul.desktop-menu:after,
 #footer:after,
 #user-profile-form .password-strength:after,
 .person-chunk:after,
@@ -1787,24 +1786,6 @@ input.action-delete:focus {
 #header .user-login .student-info {
   display: none;
 }
-#header .user-login.logged-in button {
-  display: none;
-}
-#header .user-login.logged-in .student-info {
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-#header .user-login.logged-in .student-info li {
-  list-style-type: none;
-}
-#header .user-login.logged-in .student-info li a.no-toggle {
-  color: white;
-}
-#header .user-login.logged-in .student-info li a.no-toggle:hover {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: none;
-}
 #header .block-search {
   width: 65.95745%;
   float: right;
@@ -1850,6 +1831,137 @@ input.action-delete:focus {
   float: right;
   margin-left: 2.12766%;
 }
+#header.with-mobile .user-login.logged-in {
+  border-right: none;
+  padding: 0;
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] #header.with-mobile .user-login.logged-in {
+  clear: left;
+  float: right;
+  margin-left: 0%;
+}
+#header.with-mobile .user-login.logged-in button {
+  display: none;
+}
+#header.with-mobile .user-login.logged-in .student-info {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+#header.with-mobile .user-login.logged-in .student-info li {
+  list-style-type: none;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 2px;
+}
+#header.with-mobile .user-login.logged-in .student-info li span.name {
+  cursor: pointer;
+  padding: 1em;
+  display: block;
+  text-align: center;
+  position: relative;
+  background-color: #029555;
+}
+#header.with-mobile .user-login.logged-in .student-info li span.name:before {
+  display: inline-block;
+  speak: none;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-color: white;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "2";
+  padding: .3em .5em;
+  margin-right: .3em;
+  vertical-align: middle;
+  color: #029555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+#header.with-mobile .user-login.logged-in .student-info li span.name:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url("../images/icons/icon-dropdown.svg");
+  width: 15px;
+  height: 24px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+#header.with-mobile .user-login.logged-in .student-info li span.name.active:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url("../images/icons/icon-dropup.svg");
+  width: 15px;
+  height: 24px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+#header.with-mobile .user-login.logged-in .student-info li a.no-toggle {
+  color: #1f346b;
+  padding: .5em 1em;
+  float: left;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#header.with-mobile .user-login.logged-in .student-info li a.no-toggle:hover {
+  color: #001e54;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  display: none;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li {
+  width: 100%;
+  float: left;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a {
+  display: block;
+  color: #1f346b;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a:hover, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a.active {
+  color: #001e54;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:before {
+  content: url('../images/../images/icons/icon-star-outline-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:focus:before, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a.active:before {
+  content: url('../images/../images/icons/icon-star-blue-small.svg');
+}
 #header.with-mobile .actions {
   width: 57.44681%;
   float: right;
@@ -1867,6 +1979,17 @@ input.action-delete:focus {
   margin-right: 0;
 }
 [dir="rtl"] #header.with-mobile .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header.with-mobile .block-search.logged-in {
+  width: 31.91489%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] #header.with-mobile .block-search.logged-in {
   clear: left;
   float: left;
   margin-left: 0;
@@ -2719,78 +2842,6 @@ a.icon-checkmark:hover {
 }
 #header ul.menu li .submenu ul.menu li a.active:hover {
   color: #365aba;
-}
-#header ul.desktop-menu {
-  width: 100%;
-  max-width: 68em;
-  padding: 0;
-  margin: 0 auto;
-}
-#header ul.desktop-menu li {
-  float: left;
-  display: inline-block;
-  list-style: none;
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
-#header ul.desktop-menu li.active {
-  background-image: url(../images/icons/icon-active-up.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-#header ul.desktop-menu li.active span {
-  color: white;
-}
-#header ul.desktop-menu li.active span:hover {
-  color: #f3f2e8;
-}
-#header ul.desktop-menu li.active span:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropup.svg');
-  width: 15px;
-  height: 24px;
-  vertical-align: middle;
-  color: #001e54;
-}
-#header ul.desktop-menu li span,
-#header ul.desktop-menu li a {
-  color: #1f346b;
-  text-decoration: none;
-  letter-spacing: .05em;
-  font-size: 1em;
-  padding: 1em 1.2em;
-  display: block;
-  cursor: pointer;
-  transition: color 0.15s ease-in-out;
-}
-#header ul.desktop-menu li span:hover,
-#header ul.desktop-menu li a:hover {
-  color: #3b559a;
-}
-#header ul.desktop-menu li span:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropdown.svg');
-  width: 15px;
-  height: 24px;
-  margin-left: 0.3em;
-  vertical-align: middle;
-  color: #001e54;
 }
 #header .desktop-bar .panels {
   width: 100%;

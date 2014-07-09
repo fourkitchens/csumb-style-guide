@@ -12,7 +12,9 @@
         pullSideMenu              = $('.pull-sidebar'),
         menuSidebar               = $('.menu-left-sidebar'),        
         pullDepartment            = $('.pull-department'),     
-        menuDepartment            = $('.navigation-wrap'),
+        menuDepartment            = $('.navigation-wrap'),      
+        pullStudent               = $('.pull-student-menu'),     
+        menuStudent               = $('.user-actions'),  
         pullSearch                = $('.pull-search'),
         search                    = $('.actions'),
         toggler                   = function(a){
@@ -27,6 +29,7 @@
         pullNavDesktop.click({toggled : menuDesktop}, toggler);
         pullSideMenu.click({toggled : menuSidebar}, toggler);
         pullDepartment.click({toggled : menuDepartment}, toggler);
+        pullStudent.click({toggled : menuStudent}, toggler);
         pullSearch.click({toggled : search}, toggler);
        });
 })(jQuery);
