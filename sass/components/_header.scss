@@ -171,11 +171,10 @@
             span { 
               &.name {
                 cursor: pointer;
-                padding: 1em;
+                padding: 1.2em 0;
                 display: block;
-                text-align: center;
                 position: relative; 
-                background-color: color($green, 'main');
+                color: color($blue, 'main');
                 &:before {
                   display: inline-block;
                   speak: none;
@@ -189,9 +188,10 @@
                   -webkit-font-smoothing: antialiased;
                   content: "2";
                   padding: .3em .5em;
-                  margin-right: .3em;
+                  margin-right: .5em;
                   vertical-align: middle;
-                  color: color($green, 'main'); 
+                  background-color: color($green, 'main');
+                  color: $white; 
                   @include border-radius(25px);
                 }
                 &:after {
@@ -253,6 +253,7 @@
               li {
                 width: 100%;
                 float: left;
+                font-size: .8em;
                 a {
                   display: block;
                   color: color($blue, 'main');
@@ -260,24 +261,44 @@
                   &.active {
                     color: color($blue, 'dark');
                   }
+                  span {
+                    text-transform: none;
+                  }       
                 }
                 &.favorite {
                   a {
-                    &:before {
-                      content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
-                      vertical-align: middle;
-                      padding-right: .5em;
-                      display: inline-block;
-                      transition: content 0.4s ease-in-out;
+                    span {
+                      &:before {
+                        content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
+                        vertical-align: middle;
+                        padding-right: .5em;
+                        display: inline-block;
+                        transition: content 0.4s ease-in-out;
+                      }
                     }
                     &:focus,
                     &.active {
-                      &:before {
-                        content: image-url('../images/icons/icon-star-blue-small.svg');       
-                      } 
+                      span {
+                        &:before {
+                          content: image-url('../images/icons/icon-star-blue-small.svg');       
+                        } 
+                      }
                     }
                   }                
                 }
+                &.logout {
+                  a {
+                    span {
+                      &:before {
+                        content: image-url('../images/icons/icon-sign-out-blue-small.svg');        
+                        vertical-align: middle;
+                        padding-right: .5em;
+                        display: inline-block;
+                        transition: content 0.4s ease-in-out;
+                      }
+                    }
+                  }
+                }                
               }
             }
           }

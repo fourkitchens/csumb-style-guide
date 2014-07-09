@@ -2272,11 +2272,10 @@ input.action-delete:focus {
 }
 #header.with-mobile .user-login.logged-in .student-info li span.name {
   cursor: pointer;
-  padding: 1em;
+  padding: 1.2em 0;
   display: block;
-  text-align: center;
   position: relative;
-  background-color: #029555;
+  color: #1f346b;
 }
 #header.with-mobile .user-login.logged-in .student-info li span.name:before {
   display: inline-block;
@@ -2291,9 +2290,10 @@ input.action-delete:focus {
   -webkit-font-smoothing: antialiased;
   content: "2";
   padding: .3em .5em;
-  margin-right: .3em;
+  margin-right: .5em;
   vertical-align: middle;
-  color: #029555;
+  background-color: #029555;
+  color: white;
   border-radius: 25px;
 }
 #header.with-mobile .user-login.logged-in .student-info li span.name:after {
@@ -2350,6 +2350,7 @@ input.action-delete:focus {
 #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li {
   width: 100%;
   float: left;
+  font-size: .8em;
 }
 #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a {
   display: block;
@@ -2358,15 +2359,25 @@ input.action-delete:focus {
 #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a:hover, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a.active {
   color: #001e54;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:before {
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a span {
+  text-transform: none;
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a span:before {
   content: url('../images/../images/icons/icon-star-outline-blue-small.svg');
   vertical-align: middle;
   padding-right: .5em;
   display: inline-block;
   transition: content 0.4s ease-in-out;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:focus:before, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a.active:before {
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:focus span:before, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a.active span:before {
   content: url('../images/../images/icons/icon-star-blue-small.svg');
+}
+#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.logout a span:before {
+  content: url('../images/../images/icons/icon-sign-out-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 #header.with-mobile .actions {
   width: 57.44681%;
