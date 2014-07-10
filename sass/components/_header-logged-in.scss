@@ -203,6 +203,9 @@
           @include grid-span(3,1, $output-style:'float');
           display: block;
           padding: 0;
+          @include respond-to("navigation small") {
+            display: none;
+          }
         }
       }        
       .user-login {

@@ -2135,6 +2135,11 @@ input.action-delete:focus {
   float: right;
   padding: 1em;
 }
+@media (max-width: 54.375em) {
+  #header .user-login a {
+    float: left;
+  }
+}
 #header .user-login a:hover {
   color: #3b559a;
 }
@@ -2626,6 +2631,11 @@ input.action-delete:focus {
   float: right;
   margin-right: 0;
   margin-left: 2.12766%;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in.mobile-menu .toggles.desktop {
+    display: none;
+  }
 }
 #header.logged-in.mobile-menu .user-login {
   width: 31.91489%;
