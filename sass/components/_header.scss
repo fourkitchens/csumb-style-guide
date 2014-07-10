@@ -5,25 +5,31 @@
 
  .prototype-grid {
   .header-image {
-    width: 100%;
-    background-image: url(../images/photos/header-students.jpg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     top:0;
     right: auto;
     left: auto;
     z-index: -1;
-    @include respond-to("navigation full") {
-      height: 590px;
-      background-position: 0% 20%;
-    }
-    @include respond-to("navigation medium") {
-      height: 500px;
-    }
+    width: 100%;
+    height: 100%;
     @include respond-to("navigation small") {
-      height: 400px;
+      top:10%;
+    }    
+    img {
+      width: 100%;
+      height: auto;
+      position: relative;
+      &.mobile { // Mobile-sized images get this class and are hidden by default
+        display: none;
+      }       
+      @include respond-to("navigation small") {
+        &.desktop {
+          display: none;
+        } 
+        &.mobile {
+          display: block;
+        }        
+      }       
     }
   }
 }
@@ -35,50 +41,91 @@
   padding: 0;
   @include grid-span(12,1);
   @include respond-to("navigation small") {
-    background-color: rgba($black, 0.75);
+    background-color: rgba($black, 0.25);
+    padding-bottom: 10em;
+  }
+  .logo-actions-wrap { // div that wraps the logo and actions on header-subpage tamplated layouts.
+    @include grid-span(12,1);
+    @include respond-to("navigation small") {
+      background-color: color($blue, 'main');    
+    }    
+    &.blue-bg {
+      background-color: $white;    
+      padding-bottom: 1em;
+      @include respond-to("navigation small") {
+        padding-bottom: 0;
+        background-color: color($blue, 'main');    
+      }
+    }
   }
   .logo {
-    @include grid-span(7,1);
+    @include grid-span(7,1);    
     padding-top: 1.5em;
     padding-left: 1em;
-    display: block;
+    img {
+      max-width: 270px;
+      max-height: 72px;
+    } 
     @include respond-to("navigation small") {
-      width: 100%;
       margin: 0 auto;
-      padding:8em 2em 2em; 
       text-align: center;
+      padding-top: 4.5em;
+      padding-left: 0;
+      padding-bottom: 3.5em;
+      display: none;
     }
   }
   .actions {
+    @include grid-span(5,8);
+    @include respond-to("navigation small") {
+      width: 100%;
+      display: none;
+      margin-top: 0;
+      background-color: $white;
+      padding: 0;      
+    }
     padding-top: 2em;
     padding-right: 1em;
-    @include grid-span(5,8);
     font-family: $trade-reg;
+    float: right;
     p {
       margin: 0;
     }
-    @include respond-to("navigation small") {
-      display: none;
-      width: 100%;
-      margin-top: 0;
-      background-color: $white;
-      padding: 0;
-    }
   }
   .user-login {
-    @include grid-span(4,1, $output-style:'float');
-    padding-right: 1em;
-    margin: 0;
+    @include grid-span(4,1);
     border-right:1px solid $white;
-    .button {
+    a {
+      color: color($blue);  
       float: right;
+      padding: 1em;
+      &:hover {
+        color: color($blue,bright);  
+      }
+      span {
+        vertical-align: middle;
+        text-transform: uppercase;
+        &:before {
+          content: image-url('../images/icons/icon-login-blue-small.svg');        
+          vertical-align: middle;
+          padding-right: 1em;
+          display: inline-block;
+        }
+      }
+    }
+    .student-info {
+      display: none;
     }
     @include respond-to("navigation small") {
       display: none;
     }  
   }
   .block-search {
-    @include grid-span(8,5, $output-style:'float');
+    @include grid-span(8,5);
+    @include respond-to("navigation small") {
+      width: 100%;
+      background-color: color($blue, 'main');
+    }         
     padding-left: 1em;
     padding-top: .5em;
     .form-submit {
@@ -90,8 +137,290 @@
       margin-top: 0.3em;
     }
     @include respond-to("navigation small") {
-      padding:1em;
-      width: 100%;
+      padding:1.5em 1em;
     }
   }
+  &.with-mobile {
+    @include respond-to("navigation small") {
+      padding-bottom: 0;
+    }
+    .logo {
+      @include grid-span(5,1);    
+    }
+    .user-login {
+      @include grid-span(3,5, $output-style:'float');  
+      @include respond-to("navigation small") {
+        width: 100%;
+      }    
+      &.logged-in { // Student/User drop-down
+        border-right:none;
+        padding: 0;
+        @include grid-span(4,5, $output-style:'float', $gutter:0);  
+        button {
+          display: none;
+        }
+        .student-info {
+          display: block;
+          padding: 0;
+          margin: 0;
+          position: relative;
+          float: left;
+          width: 100%;
+          li {
+            list-style-type: none;
+            position: relative;
+            float: left;
+            width: 100%;
+            margin-bottom: 2px;
+            span { 
+              &.name {
+                cursor: pointer;
+                padding: 1.2em 0;
+                display: block;
+                position: relative; 
+                color: color($blue, 'main');
+                &:before {
+                  display: inline-block;
+                  speak: none;
+                  font-family: $trade-bold;     
+                  font-style: normal;
+                  font-weight: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  background-color: $white;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                  content: "2";
+                  padding: .3em .5em;
+                  margin-right: .5em;
+                  vertical-align: middle;
+                  background-color: color($green, 'main');
+                  color: $white; 
+                  @include border-radius(25px);
+                }
+                &:after {
+                  display: inline-block;
+                  speak: none;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-variant: normal;
+                  text-transform: none;
+                  line-height: 1;
+                  -webkit-font-smoothing: antialiased;
+                  content: url('../images/icons/icon-dropdown.svg');
+                  width: 15px;
+                  height: 24px;
+                  margin-left: 0.3em;
+                  vertical-align: middle;                
+                }
+                &.active {
+                  &:after {
+                    display: inline-block;
+                    speak: none;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    content: url('../images/icons/icon-dropup.svg');
+                    width: 15px;
+                    height: 24px;
+                    margin-left: 0.3em;
+                    vertical-align: middle;                
+                  }                  
+                }                
+              }
+            }           
+            a {
+              &.no-toggle {
+                color: color($blue, 'main');
+                padding: .5em 1em;
+                float: left;
+                width: 100%;
+                background-color: rgba($white,.80);
+                &:hover {
+                  color: color($blue, 'dark');
+                  text-decoration: none;
+                  background-color: rgba($white,.95);
+                }
+              }
+            }
+            ul.user-actions {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              position: absolute;
+              top: 65px;
+              left: 0;
+              display: none;
+              li {
+                width: 100%;
+                float: left;
+                font-size: .8em;
+                a {
+                  display: block;
+                  color: color($blue, 'main');
+                  &:hover,
+                  &.active {
+                    color: color($blue, 'dark');
+                  }
+                  span {
+                    text-transform: none;
+                  }       
+                }
+                &.favorite {
+                  a {
+                    span {
+                      &:before {
+                        content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
+                        vertical-align: middle;
+                        padding-right: .5em;
+                        display: inline-block;
+                        transition: content 0.4s ease-in-out;
+                      }
+                    }
+                    &:focus,
+                    &.active {
+                      span {
+                        &:before {
+                          content: image-url('../images/icons/icon-star-blue-small.svg');       
+                        } 
+                      }
+                    }
+                  }                
+                }
+                &.logout {
+                  a {
+                    span {
+                      &:before {
+                        content: image-url('../images/icons/icon-sign-out-blue-small.svg');        
+                        vertical-align: middle;
+                        padding-right: .5em;
+                        display: inline-block;
+                        transition: content 0.4s ease-in-out;
+                      }
+                    }
+                  }
+                }                
+              }
+            }
+          }
+        }
+      }      
+    }   
+    .actions {
+      @include grid-span(7,6);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }         
+    } 
+    .block-search {
+      @include grid-span(5,8, $output-style:'float');     
+      @include respond-to("navigation small") {
+        width: 100%;
+      }     
+      &.logged-in { // If logged in, decrease the search width.
+        @include grid-span(4,9, $output-style:'float');  
+        @include respond-to("navigation small") {
+          width: 100%;
+        }          
+      }          
+    }
+  }
+  .mobile-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    background-color: $white;
+    .logo-mobile {
+      display: none;
+      position: relative;
+      @include grid-span(6, 1, $output-style:'float');
+      @include respond-to("navigation small") {
+        display: block; 
+        float: left;
+      }
+      @include respond-to("navigation smallest") {
+        display: none;
+      }
+      img {
+        max-width: 270px;
+        max-height: 72px;
+        float: left;
+        width: 100%;
+        height: auto;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+        }        
+      }      
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+          padding: 2em 0;
+        }
+      }   
+    } 
+    .logo-mobile-small {
+      display: none;
+      position: relative;
+      float: left;
+      width: 50%;      
+      @include respond-to("navigation smallest") {
+        display: block;
+      }    
+      img {
+        max-width: 200px;
+        float: left;
+        width: 100%;
+        height: auto;
+      }  
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+      }          
+    }    
+    .actions {
+      width: 100%;
+    }
+    .user-login {
+      width: 100%;
+    }
+    .block-search {
+      width: 100%;     
+    }      
+  }
+  .title-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    margin-top:4em;
+    clear: both;
+    @include respond-to("navigation small") {
+      padding: 2em 0 1em;
+      margin-top: 0;
+    }
+    .breadcrumb-image {
+      @include respond-to("navigation medium") {
+        padding:0 1em; 
+      }  
+      @include respond-to("navigation small") {
+        display: none;
+      }        
+    }
+    .page-title {
+      @include respond-to("navigation medium") {
+        padding:0 1em; 
+      }
+      h1 {
+        color: $white;
+        margin-bottom: 0;
+      }
+    }    
+  } 
 }

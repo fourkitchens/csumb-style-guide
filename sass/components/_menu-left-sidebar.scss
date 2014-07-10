@@ -4,32 +4,45 @@
  */
 
 $one-column: 870px; //Match mobile menu breakpoint
-
-.menu-left-sidebar {
-  margin-top: 2em;
-  @include grid-span(12,1);
-  @include breakpoint ($one-column) {
-    @include grid-span(3,1);
-  }
-  ul.menu {
-    padding: 0;
-    li {
-      list-style: none;
-      a {
-        background-color: color($blue);
-        border: none;
-        color: $white;
-        display: block;
-        margin: 0 0 1px;
-        padding: 15px 20px;
-        font-family: $trade-reg;
-        text-decoration: none;
-        &:hover, &:focus {
-          background-color: color($blue, dark);
-        }
-      
-        &:active {
-          background-color: color($blue, dark);
+#main {
+  .menu-left-sidebar {
+    margin-top: 2em;
+    @include grid-span(12,1);
+    @include breakpoint ($one-column) {
+      @include grid-span(3,1);
+    }
+    @include respond-to("navigation small") {
+      display: none;
+      margin-top: 0;
+    }
+    ul.menu {
+      padding: 0;
+      @include respond-to("navigation small") {
+        margin: 0;
+      }
+      li {
+        list-style: none;
+        a {
+          background-color: color($blue);
+          border: none;
+          color: $white;
+          display: block;
+          margin: 0 0 1px;
+          padding: 15px 20px;
+          font-family: $trade-reg;
+          text-decoration: none;
+          @include respond-to("navigation small") {
+            padding: 1em 1.5em;
+          }
+          &:hover, &:focus {
+            background-color: color($blue, dark);
+            color: $white;
+          }
+        
+          &:active {
+            background-color: color($blue, dark);
+            color: $white;
+          }
         }
       }
     }

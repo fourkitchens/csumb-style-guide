@@ -4,30 +4,60 @@
  * Styles for breadcrumbs.
  */
 
- .breadcrumb {
-    text-transform: uppercase;
-    font-family: $trade-bold;
-    color: wp-color($tan, 'main');
-    font-size: 1em;
-    a {
-      padding: 0 .75em;
-      &:first-child {
-        padding: 0 .75em 0 0;
-      }
-      &:link,
-      &:visited {
-        text-decoration: none;
-        color: wp-color($blue, 'main');
-      }
+.breadcrumb {
+  text-transform: uppercase;
+  font-family: $trade-bold;
+  color: wp-color($tan, 'main');
+  font-size: 1em;
+  letter-spacing: 1px;
+  a {
+    padding: 0 .75em;
+    &:first-child {
+      padding: 0 .75em 0 0;
+    }
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: wp-color($blue, 'main');
+    }
+    &:hover {
+      color: wp-color($blue, 'main', 10%);      
+    }
+    &.active {
+      color: wp-color($tan, 'main');
       &:hover {
-        color: wp-color($blue, 'main', 10%);      
-      }
-      &.active {
-        color: wp-color($tan, 'main');
-        &:hover {
-          color: wp-color($tan, 'main', 5%);      
-        }
+        color: wp-color($tan, 'main', 5%);      
       }
     }
+  }
+}
 
- }
+////Breadcrumbs for overtop of an image
+ 
+.breadcrumb-image {
+  text-transform: uppercase;
+  font-family: $trade-bold;
+  color: color($tan,light);
+  font-size: 1em;
+  letter-spacing: 1px;
+  a {
+    padding: 0 .75em;
+    &:first-child {
+      padding: 0 .75em 0 0;
+    }
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: color($tan, light);
+    }
+    &:hover {
+      color: color($tan, light);
+    }
+    &.active {
+      color: color($tan, main);
+      &:hover {
+        color: color($green,'main');      
+      }
+    }
+  }
+}
