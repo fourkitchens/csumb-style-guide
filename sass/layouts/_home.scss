@@ -1,0 +1,249 @@
+/**
+ * Prototype for Basic Page.
+ */
+
+$one-column: 870px; //Match mobile menu breakpoint
+$person-chunk-column: 1000px; //Match mobile menu breakpoint
+$person-chunk-column-two: 700px; //Match mobile menu breakpoint
+
+
+.homepage {
+  #quick-facts {
+    background-color: color($blue);
+    @include clearfix;
+    .main-container {
+      h1, h2, h3 {
+        margin-top: 0;
+      }
+      p {
+        color: color($tan);
+      }
+      #fact-one {
+        margin: 2em 0;
+        @include grid-span(12,1);
+        @include breakpoint ($one-column) {
+          @include grid-span(4,1);
+        }
+        h1 {
+          color: color($yellow);
+          text-align: center;
+          font-size: 60px;
+          border-top: 2px solid color($tan);
+          border-bottom: 2px solid color($tan);
+          padding: .5em 0;
+          margin: 0 72px;
+          margin-bottom: .5em;
+        }
+      }
+      
+      #fact-two {
+        margin: 2em 0;
+        @include grid-span(12,1);
+        @include breakpoint ($one-column) {
+          @include grid-span(4,5);
+        }
+        h3 {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+        }
+        p {
+        margin-top: 2.5em;
+        }
+      }
+      
+      #fact-three {
+        margin: 2em 0;
+        @include grid-span(12,1);
+        @include breakpoint ($one-column) {
+          @include grid-span(4,9);
+        }
+        h1 {
+          color: $white;
+          text-align: center;
+          font-size: 60px;
+          border-top: 2px solid $white;
+          border-bottom: 2px solid $white;
+          padding: .5em 0;
+          margin: 0 72px;
+          margin-bottom: .5em;
+        }
+      }
+    
+    }
+  }
+  
+  #featured-story {
+    width: 100%;
+    background-image: url(../images/photos/classroom-red.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include respond-to("navigation full") {
+      height: 590px;
+      background-position: 0% 20%;
+    }
+    @include respond-to("navigation medium") {
+      height: 500px;
+    }
+    @include respond-to("navigation small") {
+      height: 400px;
+    }
+    .main-container {
+      background-color: rgba(12, 12, 12, 0.72);  
+      margin-top: 3em;
+      @include grid-span(10,2);
+      @include breakpoint ($one-column) {
+        @include grid-span(5,2);
+      }
+      p {
+        color: color($tan,light);
+      }
+      h1 {
+        color: color($tan,highlight);
+      }
+    }
+  }
+  
+  #news-events {
+  :before1 {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -15px;
+    background: url(../images/icons/icon-dropdown.svg) no-repeat center top;
+    background-size: contain;
+  }
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 2em;
+    }
+    p {
+      text-align: center;
+      button {
+        
+      }
+    }
+  }
+  
+  #profiles {
+    background-color: color($tan,light);
+    @extend %clearfix;
+    padding-top: 2em;
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 2em;
+    }
+    .profile-content {
+      padding: 2em;
+      h3.name {
+        margin-top: .5em;
+        margin-bottom: .2em;
+        color: color($blue, bright);
+        text-transform: none;
+      }
+      h4.title {
+        margin-top: .5em;
+        text-transform: none;
+        margin-bottom: 1em;
+        color: color($tan);
+      }
+      p.person-description {
+        margin-bottom: 0;
+      }
+      .name {
+        a {
+          padding-bottom: 2px;
+          &:hover, &:focus {
+            color: color($blue, dark);
+            border-bottom: 1px solid color($blue, dark);
+          }
+        }
+      }
+    }
+    .profile-one {
+      @include grid-span(12,1);
+      clear: both;
+      @include breakpoint ($person-chunk-column-two) {
+        @include grid-span(6,1);
+      }
+      @include breakpoint ($person-chunk-column) {
+        @include grid-span(4,1);
+      }
+    }
+    .profile-two {
+      @include grid-span(12,1);
+      clear: both;
+      @include breakpoint ($person-chunk-column-two) {
+        @include grid-span(6,7);
+      }
+      @include breakpoint ($person-chunk-column) {
+        @include grid-span(4,5);
+      }
+    }
+    .profile-three {
+      @include grid-span(12,1);
+      clear: both;
+      @include breakpoint ($person-chunk-column-two) {
+        @include grid-span(6,1);
+        clear: both;
+      }
+      @include breakpoint ($person-chunk-column) {
+        @include grid-span(4,9);
+      }
+    } 
+  }
+  
+  #about-university {
+    background-color: color($blue,dark);
+    @extend %clearfix;
+    padding-bottom: 2em;
+    h1 {
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: 2em;
+      color: color($tan);
+      }
+    h3 {
+      color: color($tan);
+    }
+    p {
+      text-align: center;
+      button {
+        
+      }
+    }
+  }
+  
+  #social-media {
+    padding: 1em 0;
+    @extend %clearfix;
+    .main-container {
+      padding: 0;
+      ul {
+        font-size: 0;
+        li {
+          list-style-type: none;
+          float: left;
+          display: inline;
+          position: relative;
+          width: 19%;
+          text-align: center;
+          a {
+            background-size: 100%;
+            border-bottom: none;
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}
