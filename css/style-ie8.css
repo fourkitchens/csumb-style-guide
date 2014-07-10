@@ -1463,6 +1463,12 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   display: table;
   clear: both;
 }
+.homepage #quick-facts .main-container h1, .homepage #quick-facts .main-container h2, .homepage #quick-facts .main-container h3 {
+  margin-top: 0;
+}
+.homepage #quick-facts .main-container p {
+  color: #988f78;
+}
 .homepage #quick-facts .main-container #fact-one {
   margin: 2em 0;
   width: 100%;
@@ -1473,6 +1479,16 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 [dir="rtl"] .homepage #quick-facts .main-container #fact-one {
   float: left;
+}
+.homepage #quick-facts .main-container #fact-one h1 {
+  color: #ffe85c;
+  text-align: center;
+  font-size: 60px;
+  border-top: 2px solid #988f78;
+  border-bottom: 2px solid #988f78;
+  padding: .5em 0;
+  margin: 0 72px;
+  margin-bottom: .5em;
 }
 .homepage #quick-facts .main-container #fact-two {
   margin: 2em 0;
@@ -1485,6 +1501,13 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 [dir="rtl"] .homepage #quick-facts .main-container #fact-two {
   float: left;
 }
+.homepage #quick-facts .main-container #fact-two h3 {
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+}
+.homepage #quick-facts .main-container #fact-two p {
+  margin-top: 2.5em;
+}
 .homepage #quick-facts .main-container #fact-three {
   margin: 2em 0;
   width: 100%;
@@ -1495,6 +1518,16 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 [dir="rtl"] .homepage #quick-facts .main-container #fact-three {
   float: left;
+}
+.homepage #quick-facts .main-container #fact-three h1 {
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: .5em 0;
+  margin: 0 72px;
+  margin-bottom: .5em;
 }
 .homepage #featured-story {
   width: 100%;
@@ -1523,6 +1556,18 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 .homepage #featured-story .main-container h1 {
   color: #eceade;
 }
+.homepage #news-events :before1 {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -15px;
+  background: url(../images/icons/icon-dropdown.svg) no-repeat center top;
+  background-size: contain;
+}
 .homepage #news-events h1 {
   text-transform: uppercase;
   text-align: center;
@@ -1544,19 +1589,26 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   padding: 2em;
 }
 .homepage #profiles .profile-content h3.name {
-  margin-top: 0;
+  margin-top: .5em;
   margin-bottom: .2em;
-  color: #39351b;
+  color: #3b559a;
   text-transform: none;
 }
 .homepage #profiles .profile-content h4.title {
-  margin-top: 0;
+  margin-top: .5em;
   text-transform: none;
   margin-bottom: 1em;
   color: #988f78;
 }
 .homepage #profiles .profile-content p.person-description {
   margin-bottom: 0;
+}
+.homepage #profiles .profile-content .name a {
+  padding-bottom: 2px;
+}
+.homepage #profiles .profile-content .name a:hover, .homepage #profiles .profile-content .name a:focus {
+  color: #001e54;
+  border-bottom: 1px solid #001e54;
 }
 .homepage #profiles .profile-one {
   width: 100%;
@@ -1593,11 +1645,16 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 .homepage #about-university {
   background-color: #001e54;
+  padding-bottom: 2em;
 }
 .homepage #about-university h1 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2em;
+  color: #988f78;
+}
+.homepage #about-university h3 {
+  color: #988f78;
 }
 .homepage #about-university p {
   text-align: center;
@@ -2046,7 +2103,7 @@ input.action-delete:focus {
 /**
  * Icons
  */
-.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply, .icon-x, .icon-open, .icon-close, .icon-checkmark, .icon-dining, .icon-schedule, .icon-library, .icon-printing, .icon-ottercard, .icon-email, .icon-phone, .icon-twitter, .icon-facebook, .icon-youtube, .icon-flickr, .icon-linkedin {
+.icon-abuse, .icon-cc, .icon-friends, .icon-private, .icon-public, .icon-region, .icon-tags, .icon-edit, .icon-delete, .icon-reply, .icon-x, .icon-open, .icon-close, .icon-checkmark, .icon-dining, .icon-schedule, .icon-library, .icon-printing, .icon-ottercard, .icon-email, .icon-phone, .icon-twitter, .icon-facebook, .icon-youtube, .icon-instagram, .icon-linkedin {
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -2062,12 +2119,12 @@ input.action-delete:focus {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply, .backgroundsize .icon-small.icon-x, .backgroundsize .icon-small.icon-open, .backgroundsize .icon-small.icon-close, .backgroundsize .icon-small.icon-checkmark, .backgroundsize .icon-small.icon-dining, .backgroundsize .icon-small.icon-schedule, .backgroundsize .icon-small.icon-library, .backgroundsize .icon-small.icon-printing, .backgroundsize .icon-small.icon-ottercard, .backgroundsize .icon-small.icon-email, .backgroundsize .icon-small.icon-phone, .backgroundsize .icon-small.icon-twitter, .backgroundsize .icon-small.icon-facebook, .backgroundsize .icon-small.icon-youtube, .backgroundsize .icon-small.icon-flickr, .backgroundsize .icon-small.icon-linkedin {
+.backgroundsize .icon-small.icon-abuse, .backgroundsize .icon-small.icon-cc, .backgroundsize .icon-small.icon-friends, .backgroundsize .icon-small.icon-private, .backgroundsize .icon-small.icon-public, .backgroundsize .icon-small.icon-region, .backgroundsize .icon-small.icon-tags, .backgroundsize .icon-small.icon-edit, .backgroundsize .icon-small.icon-delete, .backgroundsize .icon-small.icon-reply, .backgroundsize .icon-small.icon-x, .backgroundsize .icon-small.icon-open, .backgroundsize .icon-small.icon-close, .backgroundsize .icon-small.icon-checkmark, .backgroundsize .icon-small.icon-dining, .backgroundsize .icon-small.icon-schedule, .backgroundsize .icon-small.icon-library, .backgroundsize .icon-small.icon-printing, .backgroundsize .icon-small.icon-ottercard, .backgroundsize .icon-small.icon-email, .backgroundsize .icon-small.icon-phone, .backgroundsize .icon-small.icon-twitter, .backgroundsize .icon-small.icon-facebook, .backgroundsize .icon-small.icon-youtube, .backgroundsize .icon-small.icon-instagram, .backgroundsize .icon-small.icon-linkedin {
   height: 24px;
   width: 24px;
   line-height: 24px;
 }
-.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply, .svg .icon-x, .svg .icon-open, .svg .icon-close, .svg .icon-checkmark, .svg .icon-dining, .svg .icon-schedule, .svg .icon-library, .svg .icon-printing, .svg .icon-ottercard, .svg .icon-email, .svg .icon-phone, .svg .icon-twitter, .svg .icon-facebook, .svg .icon-youtube, .svg .icon-flickr, .svg .icon-linkedin {
+.svg .icon-abuse, .svg .icon-cc, .svg .icon-friends, .svg .icon-private, .svg .icon-public, .svg .icon-region, .svg .icon-tags, .svg .icon-edit, .svg .icon-delete, .svg .icon-reply, .svg .icon-x, .svg .icon-open, .svg .icon-close, .svg .icon-checkmark, .svg .icon-dining, .svg .icon-schedule, .svg .icon-library, .svg .icon-printing, .svg .icon-ottercard, .svg .icon-email, .svg .icon-phone, .svg .icon-twitter, .svg .icon-facebook, .svg .icon-youtube, .svg .icon-instagram, .svg .icon-linkedin {
   background-size: 60%;
 }
 
@@ -2288,11 +2345,11 @@ a.icon-checkmark:hover {
   background-image: url('../images/icons/icon-youtube.svg');
 }
 
-.icon-flickr {
-  background-image: url('../images/icons/icon-flickr-32.png');
+.icon-instagram {
+  background-image: url('../images/icons/icon-instagram-32.png');
 }
-.svg .icon-flickr {
-  background-image: url('../images/icons/icon-flickr.svg');
+.svg .icon-instagram {
+  background-image: url('../images/icons/icon-instagram.svg');
 }
 
 .icon-linkedin {
