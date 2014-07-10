@@ -48,3 +48,58 @@ $one-column: 870px; //Match mobile menu breakpoint
     }
   }
 }
+
+
+// Sidebar Menu Toggle.
+#main {
+  .toggles { 
+    &.sidebar-menu { // sidebar subsection menu toggles
+      @include grid-span(12, 1);
+      display: none;
+      border-bottom: 1px solid rgba($white, 0.3);
+      @include respond-to("navigation small") {
+        display: block;
+      }    
+      li {
+        width: 100%;
+        a {
+          color: $white;
+          background-color: color($blue, 'main');
+          padding: 1em 1.5em;
+          text-align: left;
+          &:hover {
+            background-color: color($blue, 'dark');
+            color: $white;
+          }          
+          &.active {
+            background-color: color($blue, 'dark');
+            color: $white;
+          } 
+          &.pull-sidebar {
+            color: $white;
+            span {
+              &:before {
+                content: image-url('../images/icons/icon-menu-white-small.svg');        
+                vertical-align: middle;
+                padding-right: 1em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                  vertical-align: middle;
+                  padding-right:1em;
+                  display: inline-block;
+                  transition: content 0.4s ease-in-out;
+                }
+              }              
+            }
+          } 
+        }
+      }
+    } 
+  }
+}

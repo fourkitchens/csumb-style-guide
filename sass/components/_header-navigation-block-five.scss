@@ -1,0 +1,151 @@
+/**
+ * @file _header-navigation-block-five.scss
+ * The design for menu-block-5 in the navigation region of the header. 
+ */
+
+
+/**
+* Header - navigation block five styles
+*/
+#header {
+  .navigation { 
+    &.menu-block-5 { // Student Menu Block - Icon-based user menu
+      width: 100%;
+      float: left;      
+      @include respond-to("navigation full") {
+        margin-top: 6em;
+        margin-bottom: 4.5em;        
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 4em;
+        margin-bottom: 4.5em;        
+      }   
+      @include respond-to("navigation small") { // Mobile menu styles collapsed into toggle
+        margin-top: 0;
+        margin-bottom: 0;
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          li {
+            list-style: none;
+            background-color: $white;
+            color: color($blue);
+            border-top: 0px;
+            border-bottom: 1px solid #222;
+            list-style: none;                  
+            .submenu {
+              ul.menu {
+                padding: 0;
+                li {  
+                  border: none;
+                  a {
+                    padding: 1em 2em;
+                    &:hover {
+                      background-color: $white;
+                      color: color($blue);
+                    }
+                  }
+                }
+              }
+            }
+            a,
+            span {
+              background-color: $white;
+              border: none;
+              color: color($blue);
+              display: block;
+              margin: 0;
+              padding: 1em 1.5em;
+              text-decoration: none;
+              font-family: $trade-bold;
+              text-transform: uppercase;
+              font-size: 1em;  
+              &:hover, &:focus {
+              color: color($blue,bright);
+              }
+              &:active {
+              color: color($blue,bright);
+              }
+            }
+          }
+        }
+      }     
+      ul { // Desktop menu styles
+        li {
+          &.item-1 { // Blue icons, and other basic styles that cascade down to mobile.
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-learn-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-2 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-cms-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-3 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-email-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-4 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-calendar-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-5 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-mybookmarks-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }
+          &.item-6 {
+            span,
+            a {
+              &:before {
+                content: image-url('../images/icons/icon-housing-blue-small.svg');        
+                vertical-align: middle;
+                padding-right: .5em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }
+          }          
+        }
+      }
+    } 
+  }
+}

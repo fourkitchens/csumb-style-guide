@@ -1,0 +1,85 @@
+/**
+ * @file _header-navigation-block-two.scss
+ * The design for menu-block-2/desktop-menu in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
+ */
+
+/**
+* Header - navigation block two styles
+  This block appears on subpages that have two menu systems, with the main navigation taking the back seat.
+  This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+*/
+#header {
+  .navigation {   
+    &.menu-block-2 { // for header-subpage template - desktop menu
+      background-color: color($green, main);
+      width: 100%;
+      margin: 0 auto;
+      @include respond-to("navigation small") {
+      }
+      ul.menu {
+        @include respond-to("navigation small") {
+          padding: 0;
+        }
+        li {
+          border-bottom: 1px solid color($green,dark);
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
+            }
+          }
+          &.active {
+            a,
+            span {
+              color: rgba($white, .5);            
+            }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
+            }
+          }
+        }
+        span,
+        a {
+          color: rgba($white, 0.75);
+          letter-spacing: .05em;
+          font-size: 1em;
+          text-transform: none;
+          &:hover {
+            color: rgba($white, 1);
+          }
+          @include respond-to("navigation small") {
+            padding: 1em 1.5em;
+          }  
+        }
+      }      
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: relative;
+      } 
+      .submenu {
+        background-color: color($green,dark);
+        ul.menu {
+          @include respond-to("navigation small") {
+            padding: .7em 0;
+          }
+          li {
+            a {
+              font-size: 1em;
+            }
+            a, 
+            span {
+              @include respond-to("navigation small") {
+                padding: 1em 2em;
+              }  
+            }
+          }
+        }
+      }       
+    } 
+  }
+}

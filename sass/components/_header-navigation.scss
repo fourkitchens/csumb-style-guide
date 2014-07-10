@@ -1,0 +1,21 @@
+/**
+ * @file _header-navigation.scss
+ * The design for basic navigation component.
+ */
+
+/**
+* Header - navigation styles
+*/
+
+// general navigation styles
+#header {
+  .navigation {   
+    position: relative;
+    display: block;
+    z-index: 2;
+    background-color: rgba($white, 0.85);
+    @include respond-to("navigation small") {
+      background-color: transparent;
+    }                  
+  }
+}

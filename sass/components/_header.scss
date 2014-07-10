@@ -65,6 +65,16 @@
   .user-login {
     @include grid-span(4,1);
     border-right:1px solid $white;
+    font-family: $trade-reg;    
+    &.mobile { // hide this user-login instance and show it at the navigation small breakpoint.
+      display: none;
+      @include respond-to("navigation small") {
+        display: block;
+        width: 100%;
+        padding: 0 2em 1em;
+        clear: right;
+      }
+    }   
     a {
       color: color($blue);  
       float: right;
@@ -109,75 +119,6 @@
     @include respond-to("navigation small") {
       padding:1.5em 1em;
     }
-  }
-  .mobile-wrap {
-    @include grid-span(12,1, $output-style:'float');
-    background-color: $white;
-    .logo-mobile {
-      display: none;
-      position: relative;
-      @include grid-span(6, 1, $output-style:'float');
-      @include respond-to("navigation small") {
-        display: block; 
-        float: left;
-      }
-      @include respond-to("navigation smallest") {
-        display: none;
-      }
-      img {
-        max-width: 270px;
-        max-height: 72px;
-        float: left;
-        width: 100%;
-        height: auto;
-        @include respond-to("navigation smallest") {
-          float: none;
-          margin: 0 auto;
-        }        
-      }      
-      a {
-        display: block; 
-        float: left;
-        padding-top: 1em;
-        padding-left: 1em;
-        @include respond-to("navigation smallest") {
-          float: none;
-          margin: 0 auto;
-          text-align: center;
-          padding: 2em 0;
-        }
-      }   
-    } 
-    .logo-mobile-small {
-      display: none;
-      position: relative;
-      float: left;
-      width: 50%;      
-      @include respond-to("navigation smallest") {
-        display: block;
-      }    
-      img {
-        max-width: 200px;
-        float: left;
-        width: 100%;
-        height: auto;
-      }  
-      a {
-        display: block; 
-        float: left;
-        padding-top: 1em;
-        padding-left: 1em;
-      }          
-    }    
-    .actions {
-      width: 100%;
-    }
-    .user-login {
-      width: 100%;
-    }
-    .block-search {
-      width: 100%;     
-    }      
   }
   .title-wrap {
     @include grid-span(12,1, $output-style:'float');

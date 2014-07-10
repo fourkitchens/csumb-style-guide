@@ -1759,11 +1759,15 @@ input.action-delete:focus {
   margin-left: 0;
   clear: none;
   border-right: 1px solid white;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 [dir="rtl"] #header .user-login {
   float: right;
   margin-left: -100%;
   margin-right: 0;
+}
+#header .user-login.mobile {
+  display: none;
 }
 #header .user-login a {
   color: #1f346b;
@@ -1807,6 +1811,75 @@ input.action-delete:focus {
   border-radius: 6px;
   width: 100%;
   margin-top: 0.3em;
+}
+#header .title-wrap {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  margin-top: 4em;
+  clear: both;
+}
+[dir="rtl"] #header .title-wrap {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header .title-wrap .page-title h1 {
+  color: white;
+  margin-bottom: 0;
+}
+
+/**
+ * @file _header-mobile.scss
+ * The design for the mobile version of the header.
+ */
+/**
+* Header - mobile styles for the regular header
+*/
+#header.mobile-menu .logo {
+  width: 31.91489%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header.mobile-menu .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header.mobile-menu .actions {
+  width: 65.95745%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header.mobile-menu .actions {
+  float: left;
+}
+#header.mobile-menu .user-login {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header.mobile-menu .user-login {
+  clear: left;
+  float: right;
+  margin-left: 2.12766%;
+}
+#header.mobile-menu .block-search {
+  width: 40.42553%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] #header.mobile-menu .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
 }
 #header .mobile-wrap {
   width: 100%;
@@ -1859,6 +1932,7 @@ input.action-delete:focus {
   float: left;
   width: 100%;
   height: auto;
+  padding-right: .5em;
 }
 #header .mobile-wrap .logo-mobile-small a {
   display: block;
@@ -1875,55 +1949,26 @@ input.action-delete:focus {
 #header .mobile-wrap .block-search {
   width: 100%;
 }
-#header .title-wrap {
-  width: 100%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-  margin-top: 4em;
-  clear: both;
-}
-[dir="rtl"] #header .title-wrap {
-  clear: left;
-  float: left;
-  margin-left: 0;
-}
-#header .title-wrap .page-title h1 {
-  color: white;
-  margin-bottom: 0;
-}
 
 /**
- * @file _header-mobile.scss
- * The design for the mobile version of the header.
+ * @file _header-logged-in.scss
+ * The design for the header when you're logged in.
  */
 /**
-* Header - mobile styles
+* Header - logged in styles styles
 */
-#header.with-mobile .logo {
-  width: 40.42553%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-}
-[dir="rtl"] #header.with-mobile .logo {
+#header.logged-in .block-search {
+  width: 31.91489%;
+  clear: right;
   float: right;
-  margin-left: -100%;
   margin-right: 0;
 }
-#header.with-mobile .user-login {
-  width: 23.40426%;
-  clear: right;
-  float: left;
-  margin-right: 2.12766%;
-}
-[dir="rtl"] #header.with-mobile .user-login {
+[dir="rtl"] #header.logged-in .block-search {
   clear: left;
-  float: right;
-  margin-left: 2.12766%;
+  float: left;
+  margin-left: 0;
 }
-#header.with-mobile .user-login.logged-in {
+#header.logged-in .user-login {
   border-right: none;
   padding: 0;
   width: 33.33333%;
@@ -1931,15 +1976,18 @@ input.action-delete:focus {
   float: left;
   margin-right: 0%;
 }
-[dir="rtl"] #header.with-mobile .user-login.logged-in {
+[dir="rtl"] #header.logged-in .user-login {
   clear: left;
   float: right;
   margin-left: 0%;
 }
-#header.with-mobile .user-login.logged-in button {
+#header.logged-in .user-login .login-link {
   display: none;
 }
-#header.with-mobile .user-login.logged-in .student-info {
+#header.logged-in .user-login.mobile {
+  display: none;
+}
+#header.logged-in .user-login .student-info {
   display: block;
   padding: 0;
   margin: 0;
@@ -1947,21 +1995,21 @@ input.action-delete:focus {
   float: left;
   width: 100%;
 }
-#header.with-mobile .user-login.logged-in .student-info li {
+#header.logged-in .user-login .student-info li {
   list-style-type: none;
   position: relative;
   float: left;
   width: 100%;
   margin-bottom: 2px;
 }
-#header.with-mobile .user-login.logged-in .student-info li span.name {
+#header.logged-in .user-login .student-info li span.name {
   cursor: pointer;
   padding: 1.2em 0;
   display: block;
   position: relative;
   color: #1f346b;
 }
-#header.with-mobile .user-login.logged-in .student-info li span.name:before {
+#header.logged-in .user-login .student-info li span.name:before {
   display: inline-block;
   speak: none;
   font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
@@ -1982,7 +2030,7 @@ input.action-delete:focus {
   -webkit-border-radius: 25px;
   border-radius: 25px;
 }
-#header.with-mobile .user-login.logged-in .student-info li span.name:after {
+#header.logged-in .user-login .student-info li span.name:after {
   display: inline-block;
   speak: none;
   font-style: normal;
@@ -1997,7 +2045,7 @@ input.action-delete:focus {
   margin-left: 0.3em;
   vertical-align: middle;
 }
-#header.with-mobile .user-login.logged-in .student-info li span.name.active:after {
+#header.logged-in .user-login .student-info li span.name.active:after {
   display: inline-block;
   speak: none;
   font-style: normal;
@@ -2012,19 +2060,19 @@ input.action-delete:focus {
   margin-left: 0.3em;
   vertical-align: middle;
 }
-#header.with-mobile .user-login.logged-in .student-info li a.no-toggle {
+#header.logged-in .user-login .student-info li a.no-toggle {
   color: #1f346b;
   padding: .5em 1em;
   float: left;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
 }
-#header.with-mobile .user-login.logged-in .student-info li a.no-toggle:hover {
+#header.logged-in .user-login .student-info li a.no-toggle:hover {
   color: #001e54;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.95);
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions {
+#header.logged-in .user-login .student-info li ul.user-actions {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -2032,70 +2080,315 @@ input.action-delete:focus {
   top: 65px;
   left: 0;
   display: none;
+  z-index: 1;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li {
+#header.logged-in .user-login .student-info li ul.user-actions li {
   width: 100%;
   float: left;
   font-size: .8em;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a {
+#header.logged-in .user-login .student-info li ul.user-actions li a {
   display: block;
   color: #1f346b;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a:hover, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a.active {
+#header.logged-in .user-login .student-info li ul.user-actions li a:hover, #header.logged-in .user-login .student-info li ul.user-actions li a.active {
   color: #001e54;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a span {
+#header.logged-in .user-login .student-info li ul.user-actions li a span {
   text-transform: none;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a span:before {
+#header.logged-in .user-login .student-info li ul.user-actions li.favorite a span:before {
   content: url('../images/../images/icons/icon-star-outline-blue-small.svg');
   vertical-align: middle;
   padding-right: .5em;
   display: inline-block;
   transition: content 0.4s ease-in-out;
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:focus span:before, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a.active span:before {
+#header.logged-in .user-login .student-info li ul.user-actions li.favorite a:focus span:before, #header.logged-in .user-login .student-info li ul.user-actions li.favorite a.active span:before {
   content: url('../images/../images/icons/icon-star-blue-small.svg');
 }
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.logout a span:before {
+#header.logged-in .user-login .student-info li ul.user-actions li.logout a span:before {
   content: url('../images/../images/icons/icon-sign-out-blue-small.svg');
   vertical-align: middle;
   padding-right: .5em;
   display: inline-block;
   transition: content 0.4s ease-in-out;
 }
-#header.with-mobile .actions {
-  width: 57.44681%;
+#header.logged-in.mobile-menu .logo {
+  width: 31.91489%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header.logged-in.mobile-menu .actions {
+  width: 65.95745%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] #header.with-mobile .actions {
+[dir="rtl"] #header.logged-in.mobile-menu .actions {
   float: left;
 }
-#header.with-mobile .block-search {
+#header.logged-in.mobile-menu .toggles.desktop {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  display: block;
+  padding: 0;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .toggles.desktop {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+#header.logged-in.mobile-menu .user-login {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .user-login {
+  clear: left;
+  float: right;
+  margin-left: 2.12766%;
+}
+#header.logged-in.mobile-menu .block-search {
   width: 40.42553%;
   clear: right;
   float: right;
   margin-right: 0;
 }
-[dir="rtl"] #header.with-mobile .block-search {
+[dir="rtl"] #header.logged-in.mobile-menu .block-search {
   clear: left;
   float: left;
   margin-left: 0;
 }
-#header.with-mobile .block-search.logged-in {
-  width: 31.91489%;
-  clear: right;
-  float: right;
-  margin-right: 0;
+
+/**
+ * @file _header-navigation.scss
+ * The design for basic navigation component.
+ */
+/**
+* Header - navigation styles
+*/
+#header .navigation {
+  position: relative;
+  display: block;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
 }
-[dir="rtl"] #header.with-mobile .block-search.logged-in {
-  clear: left;
+
+/**
+ * @file _header-navigation-block-one.scss
+ * The design for menu-block-1 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block one styles
+*/
+#header .navigation.menu-block-1 {
+  margin: 0 auto 4.5em;
+}
+
+/**
+ * @file _header-navigation-block-two.scss
+ * The design for menu-block-2/desktop-menu in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
+ */
+/**
+* Header - navigation block two styles
+  This block appears on subpages that have two menu systems, with the main navigation taking the back seat.
+  This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+*/
+#header .navigation.menu-block-2 {
+  background-color: #029555;
+  width: 100%;
+  margin: 0 auto;
+}
+#header .navigation.menu-block-2 ul.menu li {
+  border-bottom: 1px solid #07633b;
+}
+#header .navigation.menu-block-2 ul.menu li span:after {
+  content: url('../images/../images/icons/icon-dropdown-green.svg');
+}
+#header .navigation.menu-block-2 ul.menu li.active a,
+#header .navigation.menu-block-2 ul.menu li.active span {
+  color: rgba(255, 255, 255, 0.5);
+}
+#header .navigation.menu-block-2 ul.menu li.active span:after {
+  content: url('../images/../images/icons/icon-dropup-green.svg');
+}
+#header .navigation.menu-block-2 ul.menu span,
+#header .navigation.menu-block-2 ul.menu a {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: .05em;
+  font-size: 1em;
+  text-transform: none;
+}
+#header .navigation.menu-block-2 ul.menu span:hover,
+#header .navigation.menu-block-2 ul.menu a:hover {
+  color: white;
+}
+#header .navigation.menu-block-2 .submenu {
+  background-color: #07633b;
+}
+#header .navigation.menu-block-2 .submenu ul.menu li a {
+  font-size: 1em;
+}
+
+/**
+ * @file _header-navigation-block-three.scss
+ * The design for menu-block-3 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block three styles
+*/
+/**
+ * @file _header-navigation-block-four.scss
+ * The design for menu-block-4 in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/tabbed.js
+ */
+/**
+* Header - navigation block four styles
+ - This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+ - This uses the tabbed.js to show different panel-baed menus/divs based on interaction.
+*/
+#header .desktop-bar .panels {
+  width: 100%;
   float: left;
-  margin-left: 0;
+  position: relative;
+  background-color: #07633b;
+  border-top: 4px solid #07633b;
+}
+#header .desktop-bar .panels .panel {
+  display: none;
+}
+#header .desktop-bar .panels .panel ul {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+#header .desktop-bar .panels .panel ul li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+  list-style: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+#header .desktop-bar .panels .panel ul li a {
+  display: block;
+  width: 100%;
+  padding: 1em 1em;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  color: #96C49B;
+}
+#header .desktop-bar .panels .panel ul li a:hover {
+  color: white;
+}
+#header .navigation.menu-block-4 {
+  background-color: #029555;
+  width: 100%;
+  margin: 0 auto;
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active, #header .navigation.menu-block-4 ul.tabbed li.active {
+  background-image: url(../images/icons/icon-active-up-green.svg);
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active a,
+#header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
+#header .navigation.menu-block-4 ul.tabbed li.active span {
+  color: #07633b;
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active span:after, #header .navigation.menu-block-4 ul.tabbed li.active span:after {
+  content: url('../images/../images/icons/icon-dropup-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu li span:after, #header .navigation.menu-block-4 ul.tabbed li span:after {
+  content: url('../images/../images/icons/icon-dropdown-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
+  color: #dddac7;
+  letter-spacing: .05em;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+#header .navigation.menu-block-4 ul.desktop-menu span:hover, #header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover, #header .navigation.menu-block-4 ul.tabbed a:hover {
+  color: #1bc37a;
+}
+
+/**
+ * @file _header-navigation-block-five.scss
+ * The design for menu-block-5 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block five styles
+*/
+#header .navigation.menu-block-5 {
+  width: 100%;
+  float: left;
+}
+#header .navigation.menu-block-5 ul li.item-1 span:before,
+#header .navigation.menu-block-5 ul li.item-1 a:before {
+  content: url('../images/../images/icons/icon-learn-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-2 span:before,
+#header .navigation.menu-block-5 ul li.item-2 a:before {
+  content: url('../images/../images/icons/icon-cms-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-3 span:before,
+#header .navigation.menu-block-5 ul li.item-3 a:before {
+  content: url('../images/../images/icons/icon-email-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-4 span:before,
+#header .navigation.menu-block-5 ul li.item-4 a:before {
+  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-5 span:before,
+#header .navigation.menu-block-5 ul li.item-5 a:before {
+  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-6 span:before,
+#header .navigation.menu-block-5 ul li.item-6 a:before {
+  content: url('../images/../images/icons/icon-housing-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 
 /**
@@ -2455,10 +2748,12 @@ a.icon-checkmark:hover {
 /**
  * @file _menus.scss
  * The foundation design for all system menus - ul.menu.
- *** Related asset: styleguide-assets/hmenu.js
+ * 
+ **** Related asset: styleguide-assets/hmenu.js
  */
 /**
 * Menus - main menu, footer menu, etc.
+ - This uses hmenu.js to trigger adding ".active" classes and uses .wrap() for submenu markup.
 */
 #header .mobile-bar,
 #header .desktop-bar {
@@ -2584,168 +2879,6 @@ a.icon-checkmark:hover {
 #header ul.menu li .submenu ul.menu li a.active:hover {
   color: #365aba;
 }
-#header .navigation {
-  position: relative;
-  display: block;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-#header .navigation.menu-block-1 {
-  margin: 0 auto 4.5em;
-}
-#header .navigation.menu-block-2 {
-  background-color: #029555;
-  width: 100%;
-  margin: 0 auto;
-}
-#header .navigation.menu-block-2 ul.menu li {
-  border-bottom: 1px solid #07633b;
-}
-#header .navigation.menu-block-2 ul.menu li span:after {
-  content: url('../images/../images/icons/icon-dropdown-green.svg');
-}
-#header .navigation.menu-block-2 ul.menu li.active a,
-#header .navigation.menu-block-2 ul.menu li.active span {
-  color: rgba(255, 255, 255, 0.5);
-}
-#header .navigation.menu-block-2 ul.menu li.active span:after {
-  content: url('../images/../images/icons/icon-dropup-green.svg');
-}
-#header .navigation.menu-block-2 ul.menu span,
-#header .navigation.menu-block-2 ul.menu a {
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: .05em;
-  font-size: 1em;
-  text-transform: none;
-}
-#header .navigation.menu-block-2 ul.menu span:hover,
-#header .navigation.menu-block-2 ul.menu a:hover {
-  color: white;
-}
-#header .navigation.menu-block-2 .submenu {
-  background-color: #07633b;
-}
-#header .navigation.menu-block-2 .submenu ul.menu li a {
-  font-size: 1em;
-}
-#header .navigation.menu-block-4 {
-  background-color: #029555;
-  width: 100%;
-  margin: 0 auto;
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active, #header .navigation.menu-block-4 ul.tabbed li.active {
-  background-image: url(../images/icons/icon-active-up-green.svg);
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active a,
-#header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
-#header .navigation.menu-block-4 ul.tabbed li.active span {
-  color: #07633b;
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active span:after, #header .navigation.menu-block-4 ul.tabbed li.active span:after {
-  content: url('../images/../images/icons/icon-dropup-green.svg');
-}
-#header .navigation.menu-block-4 ul.desktop-menu li span:after, #header .navigation.menu-block-4 ul.tabbed li span:after {
-  content: url('../images/../images/icons/icon-dropdown-green.svg');
-}
-#header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
-  color: #dddac7;
-  letter-spacing: .05em;
-  font-size: .85em;
-  text-transform: uppercase;
-}
-#header .navigation.menu-block-4 ul.desktop-menu span:hover, #header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover, #header .navigation.menu-block-4 ul.tabbed a:hover {
-  color: #1bc37a;
-}
-#header .navigation.menu-block-5 {
-  width: 100%;
-  float: left;
-}
-#header .navigation.menu-block-5 ul li.item-1 span:before,
-#header .navigation.menu-block-5 ul li.item-1 a:before {
-  content: url('../images/../images/icons/icon-learn-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-2 span:before,
-#header .navigation.menu-block-5 ul li.item-2 a:before {
-  content: url('../images/../images/icons/icon-cms-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-3 span:before,
-#header .navigation.menu-block-5 ul li.item-3 a:before {
-  content: url('../images/../images/icons/icon-email-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-4 span:before,
-#header .navigation.menu-block-5 ul li.item-4 a:before {
-  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-5 span:before,
-#header .navigation.menu-block-5 ul li.item-5 a:before {
-  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-6 span:before,
-#header .navigation.menu-block-5 ul li.item-6 a:before {
-  content: url('../images/../images/icons/icon-housing-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .desktop-bar .panels {
-  width: 100%;
-  float: left;
-  position: relative;
-  background-color: #07633b;
-  border-top: 4px solid #07633b;
-}
-#header .desktop-bar .panels .panel {
-  display: none;
-}
-#header .desktop-bar .panels .panel ul {
-  width: 100%;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-#header .desktop-bar .panels .panel ul li {
-  list-style-type: none;
-  float: left;
-  display: inline;
-  position: relative;
-  list-style: none;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  line-height: 1.4em;
-  padding: 0;
-  margin: 0;
-}
-#header .desktop-bar .panels .panel ul li a {
-  display: block;
-  width: 100%;
-  padding: 1em 1em;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
-  color: #96C49B;
-}
-#header .desktop-bar .panels .panel ul li a:hover {
-  color: white;
-}
 #header .navigation-wrap.department, #header .navigation-wrap.student {
   width: 100%;
   float: right;
@@ -2757,57 +2890,11 @@ a.icon-checkmark:hover {
   float: left;
 }
 
-#main .toggles.sidebar-menu {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  display: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-[dir="rtl"] #main .toggles.sidebar-menu {
-  float: left;
-}
-#main .toggles.sidebar-menu li {
-  width: 100%;
-}
-#main .toggles.sidebar-menu li a {
-  color: white;
-  background-color: #1f346b;
-  padding: 1em 1.5em;
-  text-align: left;
-}
-#main .toggles.sidebar-menu li a:hover {
-  background-color: #001e54;
-  color: white;
-}
-#main .toggles.sidebar-menu li a.active {
-  background-color: #001e54;
-  color: white;
-}
-#main .toggles.sidebar-menu li a.pull-sidebar {
-  color: white;
-}
-#main .toggles.sidebar-menu li a.pull-sidebar span:before {
-  content: url('../images/../images/icons/icon-menu-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#main .toggles.sidebar-menu li a.pull-sidebar.active span:before {
-  content: url('../images/../images/icons/icon-cancel-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-
 /**
  * @file _toggle-menus.scss
  * The design for all toggle menus.
- *** Related asset: styleguide-assets/responsive-nav.js
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
  */
 .toggles {
   margin: 0;
@@ -2843,9 +2930,8 @@ a.icon-checkmark:hover {
   line-height: 1;
   text-align: center;
   transition: content 0.4s ease-in-out;
-}
-.toggles li a img {
   vertical-align: middle;
+  min-height: 24px;
 }
 
 .toggles.desktop {
@@ -2862,9 +2948,6 @@ a.icon-checkmark:hover {
   float: right;
   margin-right: 0;
   margin-left: 2.12766%;
-}
-.toggles.desktop li {
-  width: 175px;
 }
 .toggles.desktop li a {
   color: #1f346b;
@@ -2949,12 +3032,6 @@ a.icon-checkmark:hover {
 .toggles.mobile li {
   width: 33.33%;
 }
-.toggles.mobile li.logged-in a.no-toggle {
-  padding: .5em;
-}
-.toggles.mobile li.logged-in a.no-toggle.log-out {
-  border-top: 1px solid #1f346b;
-}
 .toggles.mobile li a {
   color: #1c2e5f;
 }
@@ -2972,6 +3049,7 @@ a.icon-checkmark:hover {
 .toggles.mobile li a.pull-nav-main span:before {
   content: url('../images/../images/icons/icon-rows-blue-small.svg');
   vertical-align: middle;
+  height: 24px;
 }
 .toggles.mobile li a.pull-nav-main.active span:before {
   content: url('../images/../images/icons/icon-x-blue-small.svg');
@@ -2984,6 +3062,7 @@ a.icon-checkmark:hover {
 .toggles.mobile li a.pull-user span:before {
   content: url('../images/../images/icons/icon-login-blue-small.svg');
   vertical-align: middle;
+  height: 24px;
 }
 .toggles.mobile li a.pull-search span {
   display: block;
@@ -2991,6 +3070,7 @@ a.icon-checkmark:hover {
 .toggles.mobile li a.pull-search span:before {
   content: url('../images/../images/icons/icon-search-blue-small.svg');
   vertical-align: middle;
+  height: 24px;
 }
 .toggles.mobile li a.pull-search.active span:before {
   content: url('../images/../images/icons/icon-x-blue-small.svg');
@@ -3650,6 +3730,53 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 #main .menu-left-sidebar ul.menu li a:active {
   background-color: #001e54;
   color: white;
+}
+
+#main .toggles.sidebar-menu {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  display: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+[dir="rtl"] #main .toggles.sidebar-menu {
+  float: left;
+}
+#main .toggles.sidebar-menu li {
+  width: 100%;
+}
+#main .toggles.sidebar-menu li a {
+  color: white;
+  background-color: #1f346b;
+  padding: 1em 1.5em;
+  text-align: left;
+}
+#main .toggles.sidebar-menu li a:hover {
+  background-color: #001e54;
+  color: white;
+}
+#main .toggles.sidebar-menu li a.active {
+  background-color: #001e54;
+  color: white;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar {
+  color: white;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 
 /**

@@ -4,196 +4,104 @@
  */
 
 /**
-* Header - mobile styles
+* Header - mobile styles for the regular header
 */
 
 #header {
-  &.with-mobile {
+  &.mobile-menu {
     @include respond-to("navigation small") {
       padding-bottom: 0;
     }
     .logo {
-      @include grid-span(5,1);    
+      @include grid-span(4,1);    
     }
+    .actions {
+      @include grid-span(8,5);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }         
+    }     
     .user-login {
       @include grid-span(3,5, $output-style:'float');  
       @include respond-to("navigation small") {
         width: 100%;
-      }    
-      &.logged-in { // Student/User drop-down
-        border-right:none;
-        padding: 0;
-        @include grid-span(4,5, $output-style:'float', $gutter:0);  
-        button {
-          display: none;
-        }
-        .student-info {
-          display: block;
-          padding: 0;
-          margin: 0;
-          position: relative;
-          float: left;
-          width: 100%;
-          li {
-            list-style-type: none;
-            position: relative;
-            float: left;
-            width: 100%;
-            margin-bottom: 2px;
-            span { 
-              &.name {
-                cursor: pointer;
-                padding: 1.2em 0;
-                display: block;
-                position: relative; 
-                color: color($blue, 'main');
-                &:before {
-                  display: inline-block;
-                  speak: none;
-                  font-family: $trade-bold;     
-                  font-style: normal;
-                  font-weight: normal;
-                  font-variant: normal;
-                  text-transform: none;
-                  background-color: $white;
-                  line-height: 1;
-                  -webkit-font-smoothing: antialiased;
-                  content: "2";
-                  padding: .3em .5em;
-                  margin-right: .5em;
-                  vertical-align: middle;
-                  background-color: color($green, 'main');
-                  color: $white; 
-                  @include border-radius(25px);
-                }
-                &:after {
-                  display: inline-block;
-                  speak: none;
-                  font-style: normal;
-                  font-weight: normal;
-                  font-variant: normal;
-                  text-transform: none;
-                  line-height: 1;
-                  -webkit-font-smoothing: antialiased;
-                  content: url('../images/icons/icon-dropdown.svg');
-                  width: 15px;
-                  height: 24px;
-                  margin-left: 0.3em;
-                  vertical-align: middle;                
-                }
-                &.active {
-                  &:after {
-                    display: inline-block;
-                    speak: none;
-                    font-style: normal;
-                    font-weight: normal;
-                    font-variant: normal;
-                    text-transform: none;
-                    line-height: 1;
-                    -webkit-font-smoothing: antialiased;
-                    content: url('../images/icons/icon-dropup.svg');
-                    width: 15px;
-                    height: 24px;
-                    margin-left: 0.3em;
-                    vertical-align: middle;                
-                  }                  
-                }                
-              }
-            }           
-            a {
-              &.no-toggle {
-                color: color($blue, 'main');
-                padding: .5em 1em;
-                float: left;
-                width: 100%;
-                background-color: rgba($white,.80);
-                &:hover {
-                  color: color($blue, 'dark');
-                  text-decoration: none;
-                  background-color: rgba($white,.95);
-                }
-              }
-            }
-            ul.user-actions {
-              margin: 0;
-              padding: 0;
-              width: 100%;
-              position: absolute;
-              top: 65px;
-              left: 0;
-              display: none;
-              li {
-                width: 100%;
-                float: left;
-                font-size: .8em;
-                a {
-                  display: block;
-                  color: color($blue, 'main');
-                  &:hover,
-                  &.active {
-                    color: color($blue, 'dark');
-                  }
-                  span {
-                    text-transform: none;
-                  }       
-                }
-                &.favorite {
-                  a {
-                    span {
-                      &:before {
-                        content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
-                        vertical-align: middle;
-                        padding-right: .5em;
-                        display: inline-block;
-                        transition: content 0.4s ease-in-out;
-                      }
-                    }
-                    &:focus,
-                    &.active {
-                      span {
-                        &:before {
-                          content: image-url('../images/icons/icon-star-blue-small.svg');       
-                        } 
-                      }
-                    }
-                  }                
-                }
-                &.logout {
-                  a {
-                    span {
-                      &:before {
-                        content: image-url('../images/icons/icon-sign-out-blue-small.svg');        
-                        vertical-align: middle;
-                        padding-right: .5em;
-                        display: inline-block;
-                        transition: content 0.4s ease-in-out;
-                      }
-                    }
-                  }
-                }                
-              }
-            }
-          }
-        }
-      }      
+      }        
     }   
-    .actions {
-      @include grid-span(7,6);
-      @include respond-to("navigation small") {
-        width: 100%;
-      }         
-    } 
     .block-search {
       @include grid-span(5,8, $output-style:'float');     
       @include respond-to("navigation small") {
         width: 100%;
-      }     
-      &.logged-in { // If logged in, decrease the search width.
-        @include grid-span(4,9, $output-style:'float');  
-        @include respond-to("navigation small") {
-          width: 100%;
-        }          
-      }          
+      }        
     }
   }
+  .mobile-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    background-color: $white;
+    .logo-mobile {
+      display: none;
+      position: relative;
+      @include grid-span(6, 1, $output-style:'float');
+      @include respond-to("navigation small") {
+        display: block; 
+        float: left;
+      }
+      @include respond-to("navigation smallest") {
+        display: none;
+      }
+      img {
+        max-width: 270px;
+        max-height: 72px;
+        float: left;
+        width: 100%;
+        height: auto;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+        }        
+      }      
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+          padding: 2em 0;
+        }
+      }   
+    } 
+    .logo-mobile-small {
+      display: none;
+      position: relative;
+      float: left;
+      width: 50%;      
+      @include respond-to("navigation smallest") {
+        display: block;
+      }    
+      img {
+        max-width: 200px;
+        float: left;
+        width: 100%;
+        height: auto;
+        padding-right: .5em;
+      }  
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+      }          
+    }    
+    .actions {
+      width: 100%;
+    }
+    .user-login {
+      width: 100%;
+    }
+    .block-search {
+      width: 100%;     
+    }      
+  }  
 }

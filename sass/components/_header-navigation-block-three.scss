@@ -1,0 +1,69 @@
+/**
+ * @file _header-navigation-block-three.scss
+ * The design for menu-block-3 in the navigation region of the header. 
+ */
+
+
+/**
+* Header - navigation block three styles
+*/
+#header {
+  .navigation {   
+    &.menu-block-3 { // for header-subpage template - department menu
+      @include respond-to("navigation full") {
+        margin-top: 3em;   
+        margin-bottom: 4.5em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 2.5em;
+        margin-bottom: 4.5em;        
+      }     
+      @include respond-to("navigation small") {
+        margin-top: 0;
+        margin-bottom: 0;
+        ul.menu {
+          padding: 0;
+          margin: 0;
+          li {
+            border-top: 0px;
+            border-bottom: 1px solid #222;
+            list-style: none;
+            .submenu {
+              ul.menu {
+                padding: 0;
+                li {
+                  a {
+                    padding: 1em 2em;
+                    &:hover {
+                      background-color: $white;
+                      color: color($blue);
+                    }
+                  }
+                }
+              }
+            }
+            a,
+            span {
+              background-color: $white;
+              border: none;
+              color: color($blue);
+              display: block;
+              margin: 0;
+              padding: 1em 1.5em;
+              text-decoration: none;
+              font-family: $trade-bold;
+              text-transform: uppercase;
+              font-size: 1em;  
+              &:hover, &:focus {
+              color: color($blue,bright);
+              }
+              &:active {
+              color: color($blue,bright);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
