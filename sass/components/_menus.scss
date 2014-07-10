@@ -1,246 +1,15 @@
 /**
+ * @file _menus.scss
+ * The foundation design for all system menus - ul.menu.
+ *** Related asset: styleguide-assets/hmenu.js
+ */
+
+/**
 * Menus - main menu, footer menu, etc.
 */
 
-// general toggle styles
-.toggles {
-  margin: 0;
-  display: none;
-  padding: 0;
-  font-family: $trade;
-  @include respond-to("navigation small") {
-    display: block;
-  }
-  li {
-    list-style-type: none;
-    float: left;
-    display: inline;
-    position: relative;
-    a {
-      display: block;
-      width:100%;
-      padding: 2em .5em;
-      text-decoration: none;
-      text-align: center;
-      transition: all 0.15s ease-in-out;
-      span {
-        vertical-align: middle;
-        text-transform: uppercase;
-        @include respond-to("navigation smallest") {
-          display: block;
-          padding: .5em 0 0;
-        }
-        &:before {
-          display:block;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          text-align: center;
-          transition: content 0.4s ease-in-out;
-        }
-      }
-      img {
-        vertical-align: middle;
-        @include respond-to("navigation smallest") {
-          display: block;
-          margin: 0 auto;
-        }
-      }
-    }
-  }
-}
-
-// Menus/Toggles in the Header section
+// Menus in the Header section
 #header { 
-  .toggles {
-    // all toggle class-specific styles below    
-    &.desktop { // desktop toggle for the main menu - e.g. department pages
-      @include grid-span(4,1, $output-style:'float');
-      display: block;
-      padding: 0;
-      li {
-        width: 175px;;
-        a {
-          color: color($blue);  
-          text-align: center;
-          float: left;
-          padding: 1em;
-          width: 100%;
-          font-family: $trade-reg;
-          &:hover {
-            color: color($blue,bright);  
-          } 
-          &.active {
-            color: color($blue,bright);  
-            span {
-              color: color($blue,bright);  
-            }           
-          }
-          &.pull-nav-main,
-          &.pull-nav-desktop {
-            span {
-              &:before {
-                content: image-url('../images/icons/icon-rows-blue-small.svg');        
-                vertical-align: middle;
-                padding-right: 1em;
-                display: inline-block;
-              }
-            }
-            &.active {
-              span {
-                &:before {
-                  content: image-url('../images/icons/icon-x-blue-small.svg');        
-                  vertical-align: middle;
-                  padding-right:1em;
-                  display: inline-block;
-                  transition: content 0.4s ease-in-out;
-                }
-              }              
-            }
-          }             
-        }
-      }    
-      @include respond-to("navigation small") {
-        display: none;
-      }
-    }    
-    &.main { // desktop toggle for department/section mobile menu
-      @include grid-span(12, 1);
-      margin-top: 1.5em;
-      li {
-        width: 100%;
-        a {
-          color: $white;  
-          text-align: left;
-          float: left;
-          padding: 1em;
-          width: auto;
-          background-color: rgba($white, 0.05);
-          &:hover {
-            color: rgba($white, 0.85);
-            background-color: rgba($white, 0.15);
-          }   
-          &.pull-nav {
-            span {
-              &:before {
-                content: image-url('../images/icons/icon-menu-white-small.svg');        
-                vertical-align: middle;
-                padding-right: 1em;
-                display: inline-block;
-              }
-            }
-            &.active {
-              span {
-                &:before {
-                  content: image-url('../images/icons/icon-cancel-white-small.svg');        
-                  vertical-align: middle;
-                  padding-right:1em;
-                  display: inline-block;
-                  transition: content 0.4s ease-in-out;
-                }
-              }              
-            }
-          } 
-        }
-      }  
-    }
-    &.mobile { // top mobile toggles
-      @include grid-span(6, 7, $output-style:'float');     
-      @include respond-to("navigation smallest") {
-        float: right;
-        width: 50%;    
-      } 
-      li {
-        width: 33.33%;   
-        &.first {
-          @include respond-to("navigation smallest") {
-            width: 100%;
-            &.logged-in {
-              @include respond-to("navigation smallest") {
-                width: 50%;
-              }
-            }
-          }          
-        }
-        @include respond-to("navigation smallest") {
-          width: 50%;
-        }
-        &.logged-in {
-          @include respond-to("navigation smallest") {
-            width: 100%;
-          }
-          a.no-toggle {
-            padding: .5em;
-            &.log-out {
-              border-top: 1px solid color($blue, 'main');
-            }
-          }
-        }
-        a {
-          color: color($blue, 'main', -3%);
-          @include respond-to("navigation smallest") {
-            padding: .5em;
-          }          
-          &:hover {
-            color: color($blue, 'main', -10%);
-            background-color: rgba($white, 0.82);
-          }          
-          &.active {
-            background-color: rgba($white, 0.82);
-            color: color($blue, 'main', 10%);
-          }
-          &.pull-nav-main {
-            span {
-              display: block;
-              &:before {
-                content: image-url('../images/icons/icon-rows-blue-small.svg');        
-                vertical-align: middle;
-              }
-            }
-            &.active {
-              span {
-                &:before {
-                  content: image-url('../images/icons/icon-cancel-blue-small.svg');        
-                  vertical-align: middle;
-                  transition: content 0.4s ease-in-out;
-                }
-              }              
-            }            
-          }
-          &.pull-user {
-            span {
-              display: block;
-              &:before {
-                content: image-url('../images/icons/icon-login-blue-small.svg');        
-                vertical-align: middle;
-              }
-            }
-          }
-          &.pull-search {
-            span {
-              display: block;
-              &:before {
-                content: image-url('../images/icons/icon-search-blue-small.svg');        
-                vertical-align: middle;
-              }
-            }
-            &.active {
-              span {
-                &:before {
-                  content: image-url('../images/icons/icon-cancel-blue-small.svg');        
-                  vertical-align: middle;
-                  transition: content 0.4s ease-in-out;
-                }
-              }              
-            }             
-          }                    
-        }
-      }
-    }    
-  }
   .mobile-bar,
   .desktop-bar {
     display: none;
@@ -254,6 +23,182 @@
       display: none !important;
     }
   }
+  ul.menu { // Global .menu styles
+    width: 100%;
+    max-width: 68em;
+    padding: 0;
+    margin: 0 auto;
+    @extend %clearfix;
+    @include respond-to("navigation medium") {
+      padding: 0 4em;
+    }
+    @include respond-to("navigation medium padding") {
+      padding: 0 2em;
+    }
+    @include respond-to("navigation small padding") {
+      padding: 0em;
+    }
+    li {
+      float: left;
+      display: inline-block;
+      list-style: none;
+      font-family: $trade-bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
+      @include respond-to("navigation small") {
+        width: 100%;
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid rgba($white, 0.10);
+        border-bottom: 1px solid rgba($black, 0.15);
+        &.first {
+          border-top: 0;
+        }
+        &.last {
+          border-bottom: 0;
+        }
+      }
+      &.active {
+        border: none;
+        background-image: url(../images/icons/icon-active-up.svg);
+        background-position: center bottom;
+        background-repeat: no-repeat; 
+        @include respond-to("navigation small") {
+          background-image: none;
+        }
+        .submenu {
+          display: block;
+        }
+        span {
+          color: color($blue, 'bright');
+
+          &:hover {
+            color: color($blue, 'main');
+          }
+          &:after {
+            display: inline-block;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            content: image-url('../images/icons/icon-dropup.svg'); 
+            width: 15px; 
+            height: 24px;        
+            vertical-align: middle;
+            color: color($blue, dark);
+          }
+        }
+      }
+      span,
+      a {
+        color: color($blue, 'main');
+        text-decoration: none;
+        letter-spacing: .05em;
+        font-size: 1em;
+        padding: 1em 1.2em;
+        display: block;
+        cursor: pointer;
+        transition: color 0.15s ease-in-out;
+        @include respond-to("navigation medium") {
+          padding: 1em .8em;
+          margin-right: 0;
+          font-size: .9em;
+        }
+        @include respond-to("navigation small") {
+          font-size: 1.2em;
+          padding: 1.5em 3em 1em;
+        }
+        &:hover {
+          color: color($blue, 'bright');
+        }
+      }
+      span {
+        &:after {
+          display: inline-block;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          content: image-url('icons/icon-dropdown.svg'); 
+          width: 15px; 
+          height: 24px;        
+          margin-left: 0.3em;
+          vertical-align: middle;
+          color: color($blue, dark);
+        }
+      }
+      // 2nd level
+      .submenu {
+        display: none;
+        background-color: color($blue, dark);
+        width: 100%;
+        position: absolute;
+        left: 0;
+        @include respond-to("navigation small") {
+          position: relative;
+          padding: 0;
+          margin: 0;
+          background-color: rgba(#001e54, 0.85);
+        }
+        ul.menu {
+          margin: 0 auto;
+          padding:0;
+          list-style-type: none; 
+          position: relative;
+          width: 100%;
+          max-width: 68em;
+          @extend %clearfix;
+          @include respond-to("navigation small") {
+            padding: .8em 0;
+          }
+          li { 
+            @include respond-to("navigation small") {
+              width: 100%;
+              display: block;
+              float: left;
+              margin: 0;
+              padding: 0;
+              border-bottom: none;
+              border-top: none;
+            }
+            a {
+              color: color($blue, 'highlight');
+              text-transform: none;
+              font-family: $trade-reg;
+              font-size: 1em;
+              line-height: 1.4em;
+              letter-spacing: 0;
+              @include respond-to("navigation small") {
+                @include border-radius(0);
+                padding: 1em 3.5em;
+              }
+              &:hover {
+                color: $white;
+                background-color: transparent;
+              }
+              &.active {
+                color: color($blue, 'main', 20%);
+                &:hover {
+                  color: color($blue, 'main', 20%);
+                }
+              }
+            }
+          }
+        }     
+      }         
+    }
+  }
+
+
   .navigation {   
     position: relative;
     display: block;
@@ -587,180 +532,6 @@
         }
       }
     } 
-  }
-  ul.menu { // Global .menu styles
-    width: 100%;
-    max-width: 68em;
-    padding: 0;
-    margin: 0 auto;
-    @extend %clearfix;
-    @include respond-to("navigation medium") {
-      padding: 0 4em;
-    }
-    @include respond-to("navigation medium padding") {
-      padding: 0 2em;
-    }
-    @include respond-to("navigation small padding") {
-      padding: 0em;
-    }
-    li {
-      float: left;
-      display: inline-block;
-      list-style: none;
-      font-family: $trade-bold;
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0;
-      @include respond-to("navigation small") {
-        width: 100%;
-        display: block;
-        float: left;
-        margin: 0;
-        padding: 0;
-        border-top: 1px solid rgba($white, 0.10);
-        border-bottom: 1px solid rgba($black, 0.15);
-        &.first {
-          border-top: 0;
-        }
-        &.last {
-          border-bottom: 0;
-        }
-      }
-      &.active {
-        border: none;
-        background-image: url(../images/icons/icon-active-up.svg);
-        background-position: center bottom;
-        background-repeat: no-repeat; 
-        @include respond-to("navigation small") {
-          background-image: none;
-        }
-        .submenu {
-          display: block;
-        }
-        span {
-          color: color($blue, 'bright');
-
-          &:hover {
-            color: color($blue, 'main');
-          }
-          &:after {
-            display: inline-block;
-            speak: none;
-            font-style: normal;
-            font-weight: normal;
-            font-variant: normal;
-            text-transform: none;
-            line-height: 1;
-            -webkit-font-smoothing: antialiased;
-            content: image-url('../images/icons/icon-dropup.svg'); 
-            width: 15px; 
-            height: 24px;        
-            vertical-align: middle;
-            color: color($blue, dark);
-          }
-        }
-      }
-      span,
-      a {
-        color: color($blue, 'main');
-        text-decoration: none;
-        letter-spacing: .05em;
-        font-size: 1em;
-        padding: 1em 1.2em;
-        display: block;
-        cursor: pointer;
-        transition: color 0.15s ease-in-out;
-        @include respond-to("navigation medium") {
-          padding: 1em .8em;
-          margin-right: 0;
-          font-size: .9em;
-        }
-        @include respond-to("navigation small") {
-          font-size: 1.2em;
-          padding: 1.5em 3em 1em;
-        }
-        &:hover {
-          color: color($blue, 'bright');
-        }
-      }
-      span {
-        &:after {
-          display: inline-block;
-          speak: none;
-          font-style: normal;
-          font-weight: normal;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          -webkit-font-smoothing: antialiased;
-          content: image-url('icons/icon-dropdown.svg'); 
-          width: 15px; 
-          height: 24px;        
-          margin-left: 0.3em;
-          vertical-align: middle;
-          color: color($blue, dark);
-        }
-      }
-      // 2nd level
-      .submenu {
-        display: none;
-        background-color: color($blue, dark);
-        width: 100%;
-        position: absolute;
-        left: 0;
-        @include respond-to("navigation small") {
-          position: relative;
-          padding: 0;
-          margin: 0;
-          background-color: rgba(#001e54, 0.85);
-        }
-        ul.menu {
-          margin: 0 auto;
-          padding:0;
-          list-style-type: none; 
-          position: relative;
-          width: 100%;
-          max-width: 68em;
-          @extend %clearfix;
-          @include respond-to("navigation small") {
-            padding: .8em 0;
-          }
-          li { 
-            @include respond-to("navigation small") {
-              width: 100%;
-              display: block;
-              float: left;
-              margin: 0;
-              padding: 0;
-              border-bottom: none;
-              border-top: none;
-            }
-            a {
-              color: color($blue, 'highlight');
-              text-transform: none;
-              font-family: $trade-reg;
-              font-size: 1em;
-              line-height: 1.4em;
-              letter-spacing: 0;
-              @include respond-to("navigation small") {
-                @include border-radius(0);
-                padding: 1em 3.5em;
-              }
-              &:hover {
-                color: $white;
-                background-color: transparent;
-              }
-              &.active {
-                color: color($blue, 'main', 20%);
-                &:hover {
-                  color: color($blue, 'main', 20%);
-                }
-              }
-            }
-          }
-        }     
-      }         
-    }
   }
   .desktop-bar {
     .panels {

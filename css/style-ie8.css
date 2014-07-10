@@ -1688,26 +1688,8 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
-.prototype-grid .header-image {
-  position: absolute;
-  top: 0;
-  right: auto;
-  left: auto;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-.prototype-grid .header-image img {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-.prototype-grid .header-image img.mobile {
-  display: none;
-}
-
 /**
-* Header
+* Header - global styles
 */
 #header {
   color: white;
@@ -1826,6 +1808,98 @@ input.action-delete:focus {
   width: 100%;
   margin-top: 0.3em;
 }
+#header .mobile-wrap {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  background-color: white;
+}
+[dir="rtl"] #header .mobile-wrap {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header .mobile-wrap .logo-mobile {
+  display: none;
+  position: relative;
+  width: 48.93617%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header .mobile-wrap .logo-mobile {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+#header .mobile-wrap .logo-mobile img {
+  max-width: 270px;
+  max-height: 72px;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+#header .mobile-wrap .logo-mobile a {
+  display: block;
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+#header .mobile-wrap .logo-mobile-small {
+  display: none;
+  position: relative;
+  float: left;
+  width: 50%;
+}
+#header .mobile-wrap .logo-mobile-small img {
+  max-width: 200px;
+  float: left;
+  width: 100%;
+  height: auto;
+}
+#header .mobile-wrap .logo-mobile-small a {
+  display: block;
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+}
+#header .mobile-wrap .actions {
+  width: 100%;
+}
+#header .mobile-wrap .user-login {
+  width: 100%;
+}
+#header .mobile-wrap .block-search {
+  width: 100%;
+}
+#header .title-wrap {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  margin-top: 4em;
+  clear: both;
+}
+[dir="rtl"] #header .title-wrap {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+#header .title-wrap .page-title h1 {
+  color: white;
+  margin-bottom: 0;
+}
+
+/**
+ * @file _header-mobile.scss
+ * The design for the mobile version of the header.
+ */
+/**
+* Header - mobile styles
+*/
 #header.with-mobile .logo {
   width: 40.42553%;
   float: left;
@@ -2023,89 +2097,27 @@ input.action-delete:focus {
   float: left;
   margin-left: 0;
 }
-#header .mobile-wrap {
+
+/**
+ * @file _header-image.scss
+ * The design for the header background images.
+ */
+.prototype-grid .header-image {
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: auto;
+  z-index: -1;
   width: 100%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-  background-color: white;
+  height: 100%;
 }
-[dir="rtl"] #header .mobile-wrap {
-  clear: left;
-  float: left;
-  margin-left: 0;
-}
-#header .mobile-wrap .logo-mobile {
-  display: none;
-  position: relative;
-  width: 48.93617%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 2.12766%;
-}
-[dir="rtl"] #header .mobile-wrap .logo-mobile {
-  clear: left;
-  float: right;
-  margin-right: 0;
-  margin-left: 2.12766%;
-}
-#header .mobile-wrap .logo-mobile img {
-  max-width: 270px;
-  max-height: 72px;
-  float: left;
+.prototype-grid .header-image img {
   width: 100%;
   height: auto;
-}
-#header .mobile-wrap .logo-mobile a {
-  display: block;
-  float: left;
-  padding-top: 1em;
-  padding-left: 1em;
-}
-#header .mobile-wrap .logo-mobile-small {
-  display: none;
   position: relative;
-  float: left;
-  width: 50%;
 }
-#header .mobile-wrap .logo-mobile-small img {
-  max-width: 200px;
-  float: left;
-  width: 100%;
-  height: auto;
-}
-#header .mobile-wrap .logo-mobile-small a {
-  display: block;
-  float: left;
-  padding-top: 1em;
-  padding-left: 1em;
-}
-#header .mobile-wrap .actions {
-  width: 100%;
-}
-#header .mobile-wrap .user-login {
-  width: 100%;
-}
-#header .mobile-wrap .block-search {
-  width: 100%;
-}
-#header .title-wrap {
-  width: 100%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-  margin-top: 4em;
-  clear: both;
-}
-[dir="rtl"] #header .title-wrap {
-  clear: left;
-  float: left;
-  margin-left: 0;
-}
-#header .title-wrap .page-title h1 {
-  color: white;
-  margin-bottom: 0;
+.prototype-grid .header-image img.mobile {
+  display: none;
 }
 
 /**
@@ -2441,196 +2453,13 @@ a.icon-checkmark:hover {
 }
 
 /**
+ * @file _menus.scss
+ * The foundation design for all system menus - ul.menu.
+ *** Related asset: styleguide-assets/hmenu.js
+ */
+/**
 * Menus - main menu, footer menu, etc.
 */
-.toggles {
-  margin: 0;
-  display: none;
-  padding: 0;
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-.toggles li {
-  list-style-type: none;
-  float: left;
-  display: inline;
-  position: relative;
-}
-.toggles li a {
-  display: block;
-  width: 100%;
-  padding: 2em .5em;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.15s ease-in-out;
-}
-.toggles li a span {
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-.toggles li a span:before {
-  display: block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-align: center;
-  transition: content 0.4s ease-in-out;
-}
-.toggles li a img {
-  vertical-align: middle;
-}
-
-#header .toggles.desktop {
-  width: 31.91489%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 2.12766%;
-  display: block;
-  padding: 0;
-}
-[dir="rtl"] #header .toggles.desktop {
-  clear: left;
-  float: right;
-  margin-right: 0;
-  margin-left: 2.12766%;
-}
-#header .toggles.desktop li {
-  width: 175px;
-}
-#header .toggles.desktop li a {
-  color: #1f346b;
-  text-align: center;
-  float: left;
-  padding: 1em;
-  width: 100%;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-#header .toggles.desktop li a:hover {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.active {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.active span {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.pull-nav-main span:before, #header .toggles.desktop li a.pull-nav-desktop span:before {
-  content: url('../images/../images/icons/icon-rows-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
-#header .toggles.desktop li a.pull-nav-main.active span:before, #header .toggles.desktop li a.pull-nav-desktop.active span:before {
-  content: url('../images/../images/icons/icon-x-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .toggles.main {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  margin-top: 1.5em;
-}
-[dir="rtl"] #header .toggles.main {
-  float: left;
-}
-#header .toggles.main li {
-  width: 100%;
-}
-#header .toggles.main li a {
-  color: white;
-  text-align: left;
-  float: left;
-  padding: 1em;
-  width: auto;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-#header .toggles.main li a:hover {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(255, 255, 255, 0.15);
-}
-#header .toggles.main li a.pull-nav span:before {
-  content: url('../images/../images/icons/icon-menu-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
-#header .toggles.main li a.pull-nav.active span:before {
-  content: url('../images/../images/icons/icon-cancel-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .toggles.mobile {
-  width: 48.93617%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-}
-[dir="rtl"] #header .toggles.mobile {
-  clear: left;
-  float: left;
-  margin-left: 0;
-}
-#header .toggles.mobile li {
-  width: 33.33%;
-}
-#header .toggles.mobile li.logged-in a.no-toggle {
-  padding: .5em;
-}
-#header .toggles.mobile li.logged-in a.no-toggle.log-out {
-  border-top: 1px solid #1f346b;
-}
-#header .toggles.mobile li a {
-  color: #1c2e5f;
-}
-#header .toggles.mobile li a:hover {
-  color: #142143;
-  background-color: rgba(255, 255, 255, 0.82);
-}
-#header .toggles.mobile li a.active {
-  background-color: rgba(255, 255, 255, 0.82);
-  color: #2a4793;
-}
-#header .toggles.mobile li a.pull-nav-main span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-nav-main span:before {
-  content: url('../images/../images/icons/icon-rows-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-nav-main.active span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  transition: content 0.4s ease-in-out;
-}
-#header .toggles.mobile li a.pull-user span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-user span:before {
-  content: url('../images/../images/icons/icon-login-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-search span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-search span:before {
-  content: url('../images/../images/icons/icon-search-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-search.active span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  transition: content 0.4s ease-in-out;
-}
 #header .mobile-bar,
 #header .desktop-bar {
   display: none;
@@ -2645,6 +2474,115 @@ a.icon-checkmark:hover {
 }
 [dir="rtl"] #header .mobile-bar {
   float: left;
+}
+#header ul.menu {
+  width: 100%;
+  max-width: 68em;
+  padding: 0;
+  margin: 0 auto;
+}
+#header ul.menu li {
+  float: left;
+  display: inline-block;
+  list-style: none;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+#header ul.menu li.active {
+  border: none;
+  background-image: url(../images/icons/icon-active-up.svg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+#header ul.menu li.active .submenu {
+  display: block;
+}
+#header ul.menu li.active span {
+  color: #3b559a;
+}
+#header ul.menu li.active span:hover {
+  color: #1f346b;
+}
+#header ul.menu li.active span:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/../images/icons/icon-dropup.svg');
+  width: 15px;
+  height: 24px;
+  vertical-align: middle;
+  color: #001e54;
+}
+#header ul.menu li span,
+#header ul.menu li a {
+  color: #1f346b;
+  text-decoration: none;
+  letter-spacing: .05em;
+  font-size: 1em;
+  padding: 1em 1.2em;
+  display: block;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+#header ul.menu li span:hover,
+#header ul.menu li a:hover {
+  color: #3b559a;
+}
+#header ul.menu li span:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/icons/icon-dropdown.svg');
+  width: 15px;
+  height: 24px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+  color: #001e54;
+}
+#header ul.menu li .submenu {
+  display: none;
+  background-color: #001e54;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+#header ul.menu li .submenu ul.menu {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  max-width: 68em;
+}
+#header ul.menu li .submenu ul.menu li a {
+  color: #7e96d5;
+  text-transform: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+  letter-spacing: 0;
+}
+#header ul.menu li .submenu ul.menu li a:hover {
+  color: white;
+  background-color: transparent;
+}
+#header ul.menu li .submenu ul.menu li a.active {
+  color: #365aba;
+}
+#header ul.menu li .submenu ul.menu li a.active:hover {
+  color: #365aba;
 }
 #header .navigation {
   position: relative;
@@ -2770,115 +2708,6 @@ a.icon-checkmark:hover {
   display: inline-block;
   transition: content 0.4s ease-in-out;
 }
-#header ul.menu {
-  width: 100%;
-  max-width: 68em;
-  padding: 0;
-  margin: 0 auto;
-}
-#header ul.menu li {
-  float: left;
-  display: inline-block;
-  list-style: none;
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
-#header ul.menu li.active {
-  border: none;
-  background-image: url(../images/icons/icon-active-up.svg);
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
-#header ul.menu li.active .submenu {
-  display: block;
-}
-#header ul.menu li.active span {
-  color: #3b559a;
-}
-#header ul.menu li.active span:hover {
-  color: #1f346b;
-}
-#header ul.menu li.active span:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropup.svg');
-  width: 15px;
-  height: 24px;
-  vertical-align: middle;
-  color: #001e54;
-}
-#header ul.menu li span,
-#header ul.menu li a {
-  color: #1f346b;
-  text-decoration: none;
-  letter-spacing: .05em;
-  font-size: 1em;
-  padding: 1em 1.2em;
-  display: block;
-  cursor: pointer;
-  transition: color 0.15s ease-in-out;
-}
-#header ul.menu li span:hover,
-#header ul.menu li a:hover {
-  color: #3b559a;
-}
-#header ul.menu li span:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url('../images/icons/icon-dropdown.svg');
-  width: 15px;
-  height: 24px;
-  margin-left: 0.3em;
-  vertical-align: middle;
-  color: #001e54;
-}
-#header ul.menu li .submenu {
-  display: none;
-  background-color: #001e54;
-  width: 100%;
-  position: absolute;
-  left: 0;
-}
-#header ul.menu li .submenu ul.menu {
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-  position: relative;
-  width: 100%;
-  max-width: 68em;
-}
-#header ul.menu li .submenu ul.menu li a {
-  color: #7e96d5;
-  text-transform: none;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-size: 1em;
-  line-height: 1.4em;
-  letter-spacing: 0;
-}
-#header ul.menu li .submenu ul.menu li a:hover {
-  color: white;
-  background-color: transparent;
-}
-#header ul.menu li .submenu ul.menu li a.active {
-  color: #365aba;
-}
-#header ul.menu li .submenu ul.menu li a.active:hover {
-  color: #365aba;
-}
 #header .desktop-bar .panels {
   width: 100%;
   float: left;
@@ -2972,6 +2801,200 @@ a.icon-checkmark:hover {
   vertical-align: middle;
   padding-right: 1em;
   display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+
+/**
+ * @file _toggle-menus.scss
+ * The design for all toggle menus.
+ *** Related asset: styleguide-assets/responsive-nav.js
+ */
+.toggles {
+  margin: 0;
+  display: none;
+  padding: 0;
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+.toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.toggles li a {
+  display: block;
+  width: 100%;
+  padding: 2em .5em;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+.toggles li a span {
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+.toggles li a span:before {
+  display: block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-align: center;
+  transition: content 0.4s ease-in-out;
+}
+.toggles li a img {
+  vertical-align: middle;
+}
+
+.toggles.desktop {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  display: block;
+  padding: 0;
+}
+[dir="rtl"] .toggles.desktop {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+.toggles.desktop li {
+  width: 175px;
+}
+.toggles.desktop li a {
+  color: #1f346b;
+  text-align: center;
+  float: left;
+  padding: 1em;
+  width: 100%;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+.toggles.desktop li a:hover {
+  color: #3b559a;
+}
+.toggles.desktop li a.active {
+  color: #3b559a;
+}
+.toggles.desktop li a.active span {
+  color: #3b559a;
+}
+.toggles.desktop li a.pull-nav-main span:before, .toggles.desktop li a.pull-nav-desktop span:before {
+  content: url('../images/../images/icons/icon-rows-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+}
+.toggles.desktop li a.pull-nav-main.active span:before, .toggles.desktop li a.pull-nav-desktop.active span:before {
+  content: url('../images/../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+.toggles.main {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-top: 1.5em;
+}
+[dir="rtl"] .toggles.main {
+  float: left;
+}
+.toggles.main li {
+  width: 100%;
+}
+.toggles.main li a {
+  color: white;
+  text-align: left;
+  float: left;
+  padding: 1em;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.toggles.main li a:hover {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.toggles.main li a.pull-nav span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+}
+.toggles.main li a.pull-nav.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+.toggles.mobile {
+  width: 48.93617%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] .toggles.mobile {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+.toggles.mobile li {
+  width: 33.33%;
+}
+.toggles.mobile li.logged-in a.no-toggle {
+  padding: .5em;
+}
+.toggles.mobile li.logged-in a.no-toggle.log-out {
+  border-top: 1px solid #1f346b;
+}
+.toggles.mobile li a {
+  color: #1c2e5f;
+}
+.toggles.mobile li a:hover {
+  color: #142143;
+  background-color: rgba(255, 255, 255, 0.82);
+}
+.toggles.mobile li a.active {
+  background-color: rgba(255, 255, 255, 0.82);
+  color: #2a4793;
+}
+.toggles.mobile li a.pull-nav-main span {
+  display: block;
+}
+.toggles.mobile li a.pull-nav-main span:before {
+  content: url('../images/../images/icons/icon-rows-blue-small.svg');
+  vertical-align: middle;
+}
+.toggles.mobile li a.pull-nav-main.active span:before {
+  content: url('../images/../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
+  transition: content 0.4s ease-in-out;
+}
+.toggles.mobile li a.pull-user span {
+  display: block;
+}
+.toggles.mobile li a.pull-user span:before {
+  content: url('../images/../images/icons/icon-login-blue-small.svg');
+  vertical-align: middle;
+}
+.toggles.mobile li a.pull-search span {
+  display: block;
+}
+.toggles.mobile li a.pull-search span:before {
+  content: url('../images/../images/icons/icon-search-blue-small.svg');
+  vertical-align: middle;
+}
+.toggles.mobile li a.pull-search.active span:before {
+  content: url('../images/../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
   transition: content 0.4s ease-in-out;
 }
 
