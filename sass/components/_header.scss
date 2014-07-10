@@ -77,11 +77,8 @@
     }   
     a {
       color: color($blue);  
-      float: right;
+      float: left;
       padding: 1em;
-      @include respond-to("navigation small") {
-        float: left;
-      }
       &:hover {
         color: color($blue,bright);  
       }

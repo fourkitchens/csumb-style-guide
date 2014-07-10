@@ -1771,7 +1771,7 @@ input.action-delete:focus {
 }
 #header .user-login a {
   color: #1f346b;
-  float: right;
+  float: left;
   padding: 1em;
 }
 #header .user-login a:hover {
