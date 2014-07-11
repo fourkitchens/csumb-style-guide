@@ -1400,7 +1400,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   float: left;
 }
 
-.page-title.department {
+.page-title.full {
   padding-top: 2em;
 }
 
@@ -3127,13 +3127,13 @@ a.icon-checkmark:hover {
   content: url('../images/icons/icon-rows-white-small.svg');
 }
 #header.single-page .toggles.mobile a.pull-nav-main.active span:before {
-  content: url('../images/icons/icon-x-white-small.svg');
+  content: url('../images/icons/icon-x-green-small.svg');
 }
 #header.single-page .toggles.mobile a.pull-search span:before {
   content: url('../images/icons/icon-search-white-small.svg');
 }
 #header.single-page .toggles.mobile a.pull-search.active span:before {
-  content: url('../images/icons/icon-x-white-small.svg');
+  content: url('../images/icons/icon-x-green-small.svg');
 }
 
 /**

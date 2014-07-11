@@ -281,9 +281,9 @@
             &.active {
               span {
                 &:before {
-                  content: image-url('icons/icon-x-white-small.svg');        
+                  content: image-url('icons/icon-x-green-small.svg');      
                 }
-              }              
+              }                             
             }            
           }    
           &.pull-search {
@@ -295,8 +295,8 @@
             &.active {
               span {
                 &:before {
-                  content: image-url('icons/icon-x-white-small.svg');        
-                }
+                  content: image-url('icons/icon-x-green-small.svg');                          
+                }            
               }              
             }             
           }
