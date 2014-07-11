@@ -33,7 +33,7 @@
       padding: 0 2em;
     }
     @include respond-to("navigation small padding") {
-      padding: 0em;
+      padding: 0;
     }
     li {
       float: left;
@@ -60,7 +60,7 @@
       }
       &.active {
         border: none;
-        background-image: url(../images/icons/icon-active-up.svg);
+        background-image: image-url('icons/icon-active-up.svg');
         background-position: center bottom;
         background-repeat: no-repeat; 
         @include respond-to("navigation small") {
@@ -84,7 +84,7 @@
             text-transform: none;
             line-height: 1;
             -webkit-font-smoothing: antialiased;
-            content: image-url('../images/icons/icon-dropup.svg'); 
+            content: image-url('icons/icon-dropup.svg'); 
             width: 15px; 
             height: 24px;        
             vertical-align: middle;

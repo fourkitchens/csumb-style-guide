@@ -66,15 +66,9 @@
     @include grid-span(4,1);
     border-right:1px solid $white;
     font-family: $trade-reg;    
-    &.mobile { // hide this user-login instance and show it at the navigation small breakpoint.
-      display: none;
-      @include respond-to("navigation small") {
-        display: block;
-        width: 100%;
-        padding: 0 2em 1em;
-        clear: right;
-      }
-    }   
+    button {
+      float: right;
+    }
     a {
       color: color($blue);  
       float: left;
@@ -86,7 +80,7 @@
         vertical-align: middle;
         text-transform: uppercase;
         &:before {
-          content: image-url('../images/icons/icon-login-blue-small.svg');        
+          content: image-url('icons/icon-login-blue-small.svg');        
           vertical-align: middle;
           padding-right: 1em;
           display: inline-block;

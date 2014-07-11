@@ -25,13 +25,40 @@
       @include grid-span(3,5, $output-style:'float');  
       @include respond-to("navigation small") {
         width: 100%;
-      }        
+      }              
     }   
     .block-search {
       @include grid-span(5,8, $output-style:'float');     
       @include respond-to("navigation small") {
         width: 100%;
       }        
+    }
+  }
+  &.single-page {
+    .mobile-wrap {
+      background-color: transparent;
+      .logo-mobile {
+        display: none;
+        &.white {
+          @include respond-to("navigation small") {
+            display: block;
+          }       
+          @include respond-to("navigation smallest") {
+            display: none;
+          }
+        }
+      }
+      .logo-mobile-small {
+        display: none;
+        &.white {
+          @include respond-to("navigation small") {
+            display: none;
+          }          
+          @include respond-to("navigation smallest") {
+            display: block;
+          }
+        }
+      }     
     }
   }
   .mobile-wrap {
@@ -41,6 +68,9 @@
       display: none;
       position: relative;
       @include grid-span(6, 1, $output-style:'float');
+      &.white { // White version of mobile logo only appears on .single-page classed pages.
+        display: none;
+      }
       @include respond-to("navigation small") {
         display: block; 
         float: left;
@@ -99,6 +129,19 @@
     }
     .user-login {
       width: 100%;
+      &.mobile { // hide this user-login instance and show it at the navigation small breakpoint.
+        display: none;
+        a {
+          padding:0;
+        }
+        @include respond-to("navigation small") {
+          display: block;
+          width: 100%;
+          padding: .5em 2em 1em;
+          clear: both;
+          float: left;
+        }
+      }         
     }
     .block-search {
       width: 100%;     

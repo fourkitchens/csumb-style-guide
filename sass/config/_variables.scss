@@ -238,7 +238,8 @@ $breakpoints: add-breakpoint('navigation medium padding', max-width 996px);
 $breakpoints: add-breakpoint('navigation medium', max-width 1075px);
 $breakpoints: add-breakpoint('navigation full', min-width 1042px);
 
-$breakpoints: add-breakpoint('no bg-image', max-width 661px);
+$breakpoints: add-breakpoint('bg-image small', max-width 400px);
+$breakpoints: add-breakpoint('bg-image medium', max-width 750px);
 $breakpoints: add-breakpoint('footer smallest', max-width 400px);
 $breakpoints: add-breakpoint('footer small', max-width 700px);
 $breakpoints: add-breakpoint('footer medium', max-width 750px);

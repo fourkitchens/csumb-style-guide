@@ -79,7 +79,7 @@
         &.pull-nav-desktop {
           span {
             &:before {
-              content: image-url('../images/icons/icon-rows-blue-small.svg');        
+              content: image-url('icons/icon-rows-blue-small.svg');        
               vertical-align: middle;
               padding-right: 1em;
               display: inline-block;
@@ -88,7 +88,7 @@
           &.active {
             span {
               &:before {
-                content: image-url('../images/icons/icon-x-blue-small.svg');        
+                content: image-url('icons/icon-x-blue-small.svg');        
                 vertical-align: middle;
                 padding-right:1em;
                 display: inline-block;
@@ -122,7 +122,7 @@
         &.pull-nav {
           span {
             &:before {
-              content: image-url('../images/icons/icon-menu-white-small.svg');        
+              content: image-url('icons/icon-menu-white-small.svg');        
               vertical-align: middle;
               padding-right: 1em;
               display: inline-block;
@@ -131,7 +131,7 @@
           &.active {
             span {
               &:before {
-                content: image-url('../images/icons/icon-cancel-white-small.svg');        
+                content: image-url('icons/icon-cancel-white-small.svg');        
                 vertical-align: middle;
                 padding-right:1em;
                 display: inline-block;
@@ -150,7 +150,7 @@
       width: 48%;    
     } 
     @include respond-to("navigation smallest") {
-      border-left:1px solid $black;         
+      border-left: 1px solid darken($white, 20%);  
     }          
     li {
       width: 33.33%;   
@@ -162,8 +162,11 @@
       }      
       a {
         color: color($blue, 'main', -3%);
+        @include respond-to("navigation small") {
+          padding: 1em .5em;
+        }
         @include respond-to("navigation smallest") {
-          padding: .5em;
+          padding: .5em 1.5em;
         }          
         &:hover {
           color: color($blue, 'main', -10%);
@@ -174,15 +177,26 @@
           color: color($blue, 'main', 10%);
         }
         &.desktop-login {// Hide this item at small resolution.
-        @include respond-to("navigation small") {
-          display: none;
-        }          
+          @include respond-to("navigation small") {
+            display: none;
+          }          
+        }
+        span {
+          @include respond-to("navigation smallest") {
+            text-align: left;
+          }
+          &:before { // at smallest breakpoint, make the icons inline with span text.
+            @include respond-to("navigation smallest") {
+              display: inline-block;
+              padding-right: .5em;
+            }  
+          }
         }
         &.pull-nav-main {
           span {
             display: block;
             &:before {
-              content: image-url('../images/icons/icon-rows-blue-small.svg');        
+              content: image-url('icons/icon-rows-blue-small.svg');        
               vertical-align: middle;
               height: 24px;
             }
@@ -190,7 +204,7 @@
           &.active {
             span {
               &:before {
-                content: image-url('../images/icons/icon-x-blue-small.svg');        
+                content: image-url('icons/icon-x-blue-small.svg');        
                 vertical-align: middle;
                 transition: content 0.4s ease-in-out;
               }
@@ -201,7 +215,7 @@
           span {
             display: block;
             &:before {
-              content: image-url('../images/icons/icon-login-blue-small.svg');        
+              content: image-url('icons/icon-login-blue-small.svg');        
               vertical-align: middle;
               height: 24px;
             }
@@ -211,15 +225,15 @@
           span {
             display: block;
             &:before {
-              content: image-url('../images/icons/icon-search-blue-small.svg');        
+              content: image-url('icons/icon-search-blue-small.svg');        
               vertical-align: middle;
-              height: 24px;
+              height: 24px;            
             }
           }
           &.active {
             span {
               &:before {
-                content: image-url('../images/icons/icon-x-blue-small.svg');        
+                content: image-url('icons/icon-x-blue-small.svg');        
                 vertical-align: middle;
                 transition: content 0.4s ease-in-out;
               }
@@ -231,3 +245,63 @@
   }    
 }
 
+#header { // Make toggle icons white if you're on the home page or a ".single-page" classed page
+  &.single-page {
+    .user-login {
+      a {
+        color: darken($white, 25%);   
+        &:hover {
+          color:$white;  
+        }
+      }
+      span {
+        &:before {
+          content: image-url('icons/icon-login-white-small.svg');        
+        }
+      }
+    }
+    .toggles {
+      &.mobile {
+        a {
+          color: darken($white, 25%);   
+          &:hover {
+            color:$white;   
+            background-color: transparent;
+          }          
+          &.active {
+            color:color($green);   
+            background-color: transparent;
+          } 
+          &.pull-nav-main {
+            span {
+              &:before {
+                content: image-url('icons/icon-rows-white-small.svg');        
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('icons/icon-x-white-small.svg');        
+                }
+              }              
+            }            
+          }    
+          &.pull-search {
+            span {
+              &:before {
+                content: image-url('icons/icon-search-white-small.svg');             
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('icons/icon-x-white-small.svg');        
+                }
+              }              
+            }             
+          }
+        }         
+      }
+    }
+  }
+}

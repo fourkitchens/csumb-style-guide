@@ -32,7 +32,9 @@
         @include respond-to("navigation small") {
           display: block;
           width: 100%;
-          padding: 0 2em 1em;
+          padding: .5em 2em 1em;
+          border-top: 1px solid darken($white, 20%);
+          margin-top: .5em;
         }
       }                 
       .student-info {
@@ -86,7 +88,7 @@
                 text-transform: none;
                 line-height: 1;
                 -webkit-font-smoothing: antialiased;
-                content: url('../images/icons/icon-dropdown.svg');
+                content: image-url('icons/icon-dropdown.svg');
                 width: 15px;
                 height: 24px;
                 margin-left: 0.3em;
@@ -102,7 +104,7 @@
                   text-transform: none;
                   line-height: 1;
                   -webkit-font-smoothing: antialiased;
-                  content: url('../images/icons/icon-dropup.svg');
+                  content: image-url('icons/icon-dropup.svg');
                   width: 15px;
                   height: 24px;
                   margin-left: 0.3em;
@@ -153,7 +155,7 @@
                 a {
                   span {
                     &:before {
-                      content: image-url('../images/icons/icon-star-outline-blue-small.svg');        
+                      content: image-url('icons/icon-star-outline-blue-small.svg');        
                       vertical-align: middle;
                       padding-right: .5em;
                       display: inline-block;
@@ -164,7 +166,7 @@
                   &.active {
                     span {
                       &:before {
-                        content: image-url('../images/icons/icon-star-blue-small.svg');       
+                        content: image-url('icons/icon-star-blue-small.svg');       
                       } 
                     }
                   }
@@ -174,7 +176,7 @@
                 a {
                   span {
                     &:before {
-                      content: image-url('../images/icons/icon-sign-out-blue-small.svg');        
+                      content: image-url('icons/icon-sign-out-blue-small.svg');        
                       vertical-align: middle;
                       padding-right: .5em;
                       display: inline-block;
