@@ -6,7 +6,6 @@
 $one-column: 870px; //Match mobile menu breakpoint
 #main {
   .menu-left-sidebar {
-    margin-top: 2em;
     @include grid-span(12,1);
     @include breakpoint ($one-column) {
       @include grid-span(3,1);

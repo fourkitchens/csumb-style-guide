@@ -419,6 +419,7 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
+#top-tier .limiter:after,
 #main:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
@@ -1647,7 +1648,6 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
  * Prototype for Basic Page.
  */
 .main-container {
-  margin-top: 2em;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1668,6 +1668,10 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   [dir="rtl"] .main-container {
     float: left;
   }
+}
+
+.page-title.department {
+  padding-top: 2em;
 }
 
 .clear-h2 {
@@ -3294,6 +3298,9 @@ input.action-delete:focus {
 #main .main-container {
   padding: 1em;
 }
+#main .main-container h2 {
+  margin-top: 0;
+}
 
 /**
  * Icons
@@ -4909,7 +4916,6 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
  *   All styles that have to do with buttons on the site.
  */
 #main .menu-left-sidebar {
-  margin-top: 2em;
   width: 100%;
   float: right;
   margin-left: 0;
