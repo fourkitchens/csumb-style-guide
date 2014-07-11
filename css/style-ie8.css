@@ -430,7 +430,6 @@ ul.pager:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
 #footer:after,
-#footer2:after,
 #user-profile-form .password-strength:after,
 .person-chunk:after,
 .news-chunk:after,
@@ -1710,6 +1709,13 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 .homepage #social-media .main-container ul li a:hover {
   border-bottom: none;
+}
+
+/**
+ * Prototype for Basic Page.
+ */
+.more {
+  display: none;
 }
 
 /**
@@ -3257,7 +3263,7 @@ a.icon-checkmark:hover {
   clear: none;
   padding: 1em;
   position: relative;
-  margin-top: 2em;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 [dir="rtl"] #footer {
   float: left;
@@ -3265,87 +3271,65 @@ a.icon-checkmark:hover {
 #footer ul li {
   list-style: none;
 }
-#footer .menu {
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  width: 65.95745%;
+#footer .popular {
+  width: 14.89362%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
-  padding: 0;
-  margin: 0;
 }
-[dir="rtl"] #footer .menu {
+[dir="rtl"] #footer .popular {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
-#footer .menu .item1,
-#footer .menu .item2,
-#footer .menu .item3 {
-  width: 33.33333%;
-  clear: right;
+#footer .tools {
+  width: 14.89362%;
   float: left;
-  margin-left: 0;
-  margin-right: 0%;
+  margin-right: -100%;
+  margin-left: 17.02128%;
+  clear: none;
 }
-[dir="rtl"] #footer .menu .item1, [dir="rtl"]
-#footer .menu .item2, [dir="rtl"]
-#footer .menu .item3 {
-  clear: left;
+[dir="rtl"] #footer .tools {
   float: right;
+  margin-left: -100%;
+  margin-right: 17.02128%;
 }
-#footer .menu .item4,
-#footer .menu .item5,
-#footer .menu .item6 {
-  width: 33.33333%;
-  clear: right;
+#footer .links {
+  width: 23.40426%;
   float: left;
-  margin-right: 0%;
+  margin-right: -100%;
+  margin-left: 34.04255%;
+  clear: none;
 }
-[dir="rtl"] #footer .menu .item4, [dir="rtl"]
-#footer .menu .item5, [dir="rtl"]
-#footer .menu .item6 {
-  clear: left;
+[dir="rtl"] #footer .links {
   float: right;
-  margin-left: 0%;
+  margin-left: -100%;
+  margin-right: 34.04255%;
 }
-#footer .menu .item7,
-#footer .menu .item8,
-#footer .menu .item9 {
-  width: 33.33333%;
-  clear: right;
-  float: left;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer .menu .item7, [dir="rtl"]
-#footer .menu .item8, [dir="rtl"]
-#footer .menu .item9 {
-  clear: left;
-  float: right;
-  margin-left: 0%;
-}
-#footer .menu li {
+#footer li {
   margin: 0 0 .275em;
 }
-#footer .menu li a {
+#footer li a {
   color: #001e54;
   text-decoration: none;
 }
-#footer .menu li a:hover {
+#footer li a:hover {
   color: #003087;
 }
 #footer .donate {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  width: 31.91489%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
+  width: 23.40426%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 59.57447%;
   clear: none;
   padding: 0;
 }
 [dir="rtl"] #footer .donate {
-  float: left;
+  float: right;
+  margin-left: -100%;
+  margin-right: 59.57447%;
 }
 #footer .donate button {
   width: 100%;
@@ -3357,181 +3341,26 @@ a.icon-checkmark:hover {
 [dir="rtl"] #footer .donate button {
   float: left;
 }
-#footer .donate .links {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
+#footer .donate .other {
   padding: 0;
   margin: 0;
 }
-[dir="rtl"] #footer .donate .links {
-  float: left;
-}
-#footer .donate .links li {
-  text-align: right;
-  width: 50%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer .donate .links li {
-  clear: left;
-  float: right;
-}
-#footer .donate .links a {
+#footer .donate .other a {
   color: #001e54;
   text-decoration: none;
 }
-#footer .donate .links a:hover {
+#footer .donate .other a:hover {
   color: #003087;
 }
-
-#footer2 {
-  color: #dddac7;
-  background-color: #cac5a7;
-  background-image: url(../images/photos/beach-footer.png);
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding: 1em;
-  position: relative;
-}
-[dir="rtl"] #footer2 {
-  float: left;
-}
-#footer2 ul li {
-  list-style: none;
-}
-#footer2 .menu {
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  width: 65.95745%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-  padding: 0;
-  margin: 0;
-}
-[dir="rtl"] #footer2 .menu {
-  float: right;
-  margin-left: -100%;
-  margin-right: 0;
-}
-#footer2 .menu .item1,
-#footer2 .menu .item2,
-#footer2 .menu .item3 {
-  width: 33.33333%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer2 .menu .item1, [dir="rtl"]
-#footer2 .menu .item2, [dir="rtl"]
-#footer2 .menu .item3 {
-  clear: left;
-  float: right;
-}
-#footer2 .menu .item4,
-#footer2 .menu .item5,
-#footer2 .menu .item6 {
-  width: 33.33333%;
-  clear: right;
-  float: left;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer2 .menu .item4, [dir="rtl"]
-#footer2 .menu .item5, [dir="rtl"]
-#footer2 .menu .item6 {
-  clear: left;
-  float: right;
-  margin-left: 0%;
-}
-#footer2 .menu .item7,
-#footer2 .menu .item8,
-#footer2 .menu .item9 {
-  width: 33.33333%;
-  clear: right;
-  float: left;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer2 .menu .item7, [dir="rtl"]
-#footer2 .menu .item8, [dir="rtl"]
-#footer2 .menu .item9 {
-  clear: left;
-  float: right;
-  margin-left: 0%;
-}
-#footer2 .menu li {
-  margin: 0 0 .275em;
-}
-#footer2 .menu li a {
-  color: #001e54;
-  text-decoration: none;
-}
-#footer2 .menu li a:hover {
-  color: #003087;
-}
-#footer2 .donate {
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  width: 31.91489%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding: 0;
-}
-[dir="rtl"] #footer2 .donate {
-  float: left;
-}
-#footer2 .donate button {
-  width: 100%;
+#footer .address {
+  width: 14.89362%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] #footer2 .donate button {
+[dir="rtl"] #footer .address {
   float: left;
-}
-#footer2 .donate .links {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  padding: 0;
-  margin: 0;
-}
-[dir="rtl"] #footer2 .donate .links {
-  float: left;
-}
-#footer2 .donate .links li {
-  text-align: right;
-  width: 50%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 0%;
-}
-[dir="rtl"] #footer2 .donate .links li {
-  clear: left;
-  float: right;
-}
-#footer2 .donate .links a {
-  color: #001e54;
-  text-decoration: none;
-}
-#footer2 .donate .links a:hover {
-  color: #003087;
 }
 
 /**
