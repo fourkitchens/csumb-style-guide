@@ -2598,6 +2598,11 @@ input.action-delete:focus {
   display: none;
   z-index: 1;
 }
+@media (max-width: 54.375em) {
+  #header.logged-in .user-login .student-info li ul.user-actions {
+    top: 49px;
+  }
+}
 #header.logged-in .user-login .student-info li ul.user-actions li {
   width: 100%;
   float: left;

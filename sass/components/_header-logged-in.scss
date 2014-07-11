@@ -136,6 +136,9 @@
             left: 0;
             display: none;
             z-index: 1;
+            @include respond-to("navigation small") {
+              top: 49px;
+            }
             li {
               width: 100%;
               float: left;
