@@ -1644,7 +1644,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   color: #001e54;
   border-bottom: 1px solid #001e54;
 }
-.homepage #profiles .profile-one {
+.homepage #profiles .profile {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1652,29 +1652,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
   clear: both;
 }
-[dir="rtl"] .homepage #profiles .profile-one {
-  float: left;
-}
-.homepage #profiles .profile-two {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  clear: both;
-}
-[dir="rtl"] .homepage #profiles .profile-two {
-  float: left;
-}
-.homepage #profiles .profile-three {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  clear: both;
-}
-[dir="rtl"] .homepage #profiles .profile-three {
+[dir="rtl"] .homepage #profiles .profile {
   float: left;
 }
 .homepage #about-university {

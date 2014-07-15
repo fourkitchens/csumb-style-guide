@@ -167,37 +167,47 @@ $person-chunk-column-two: 700px; //Match mobile menu breakpoint
         }
       }
     }
-    .profile-one {
+    .profile {
       @include grid-span(12,1);
       clear: both;
       @include breakpoint ($person-chunk-column-two) {
-        @include grid-span(6,1);
+        @include grid-span(6,1, $output-style:"float", $gutter:0);
       }
       @include breakpoint ($person-chunk-column) {
-        @include grid-span(4,1);
-      }
+        @include grid-span(4,1, $output-style:"float",$gutter:0);
+      }      
     }
-    .profile-two {
-      @include grid-span(12,1);
-      clear: both;
-      @include breakpoint ($person-chunk-column-two) {
-        @include grid-span(6,7);
-      }
-      @include breakpoint ($person-chunk-column) {
-        @include grid-span(4,5);
-      }
-    }
-    .profile-three {
-      @include grid-span(12,1);
-      clear: both;
-      @include breakpoint ($person-chunk-column-two) {
-        @include grid-span(6,1);
-        clear: both;
-      }
-      @include breakpoint ($person-chunk-column) {
-        @include grid-span(4,9);
-      }
-    } 
+    // .profile-one {
+    //   @include grid-span(12,1);
+    //   clear: both;
+    //   @include breakpoint ($person-chunk-column-two) {
+    //     @include grid-span(6,1);
+    //   }
+    //   @include breakpoint ($person-chunk-column) {
+    //     @include grid-span(4,1);
+    //   }
+    // }
+    // .profile-two {
+    //   @include grid-span(12,1);
+    //   clear: both;
+    //   @include breakpoint ($person-chunk-column-two) {
+    //     @include grid-span(6,7);
+    //   }
+    //   @include breakpoint ($person-chunk-column) {
+    //     @include grid-span(4,5);
+    //   }
+    // }
+    // .profile-three {
+    //   @include grid-span(12,1);
+    //   clear: both;
+    //   @include breakpoint ($person-chunk-column-two) {
+    //     @include grid-span(6,1);
+    //     clear: both;
+    //   }
+    //   @include breakpoint ($person-chunk-column) {
+    //     @include grid-span(4,9);
+    //   }
+    // } 
   }
   
   #about-university {
