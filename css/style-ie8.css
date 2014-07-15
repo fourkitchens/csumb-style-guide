@@ -485,6 +485,11 @@ h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.homepage h2.section-head {
+  color: #029555;
+  font-size: 2.5em;
+}
+
 h1 {
   color: #029555;
   font-size: 2.5em;
@@ -1508,7 +1513,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 [dir="rtl"] .homepage #quick-facts .main-container #fact-one {
   float: left;
 }
-.homepage #quick-facts .main-container #fact-one h1 {
+.homepage #quick-facts .main-container #fact-one h2 {
   color: #ffe85c;
   text-align: center;
   font-size: 60px;
@@ -1547,7 +1552,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 [dir="rtl"] .homepage #quick-facts .main-container #fact-three {
   float: left;
 }
-.homepage #quick-facts .main-container #fact-three h1 {
+.homepage #quick-facts .main-container #fact-three h2 {
   color: white;
   text-align: center;
   font-size: 60px;
@@ -1581,8 +1586,9 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 .homepage #featured-story .main-container p {
   color: #f3f2e8;
 }
-.homepage #featured-story .main-container h1 {
+.homepage #featured-story .main-container h2.section-head {
   color: #eceade;
+  margin-top: 0;
 }
 .homepage #news-events :before1 {
   content: "";
@@ -1596,7 +1602,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   background: url(../images/icons/icon-dropdown.svg) no-repeat center top;
   background-size: contain;
 }
-.homepage #news-events h1 {
+.homepage #news-events h2.section-head {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2em;
@@ -1608,7 +1614,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   background-color: #f3f2e8;
   padding-top: 2em;
 }
-.homepage #profiles h1 {
+.homepage #profiles h2.section-head {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2em;
@@ -1675,7 +1681,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   background-color: #001e54;
   padding-bottom: 2em;
 }
-.homepage #about-university h1 {
+.homepage #about-university h2.section-head {
   text-transform: uppercase;
   text-align: center;
   margin-top: 2em;

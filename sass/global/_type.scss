@@ -54,7 +54,14 @@ p {
   text-transform: uppercase;
 }
 
-h1 {
+.homepage {
+  h2.section-head {
+    color: color($green);
+    font-size: 2.5em;
+  }
+}
+
+h1{
   color: color($green);
   font-size: 2.5em;
 }

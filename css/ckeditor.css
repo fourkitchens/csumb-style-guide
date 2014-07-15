@@ -458,6 +458,11 @@ h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.homepage h2.section-head {
+  color: #029555;
+  font-size: 2.5em;
+}
+
 h1 {
   color: #029555;
   font-size: 2.5em;
