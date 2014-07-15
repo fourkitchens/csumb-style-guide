@@ -18,57 +18,48 @@ $person-chunk-column-two: 700px; //Match mobile menu breakpoint
       p {
         color: color($tan);
       }
-      #fact-one {
+      .fact-block {
         margin: 2em 0;
         @include grid-span(12,1);
         @include breakpoint ($one-column) {
-          @include grid-span(4,1);
-        }
-        h2 {
-          color: color($yellow);
-          text-align: center;
-          font-size: 60px;
-          border-top: 2px solid color($tan);
-          border-bottom: 2px solid color($tan);
-          padding: .5em 0;
-          margin: 0 72px;
-          margin-bottom: .5em;
-        }
-      }
-      
-      #fact-two {
-        margin: 2em 0;
-        @include grid-span(12,1);
-        @include breakpoint ($one-column) {
-          @include grid-span(4,5);
-        }
-        h3 {
-          margin-top: 1em;
-          margin-bottom: 1.5em;
+          @include grid-span(4,1, $output-style:'float', $gutter:0);
         }
         p {
           margin-top: 2.5em;
+          padding: 0 1em;
+          &.quote {
+            margin-top: 1em;
+            margin-bottom: 1.5em;
+            color: color($green);
+            font-size: 1.6em;
+            text-transform: uppercase;
+            font-family: $trade;
+            font-weight: 400;
+            line-height: 1.125;
+            padding: 0 .5em;
+          }
+          &.cite {
+            margin-top: 3.5em;
+          }
+          &.number {
+            color: color($yellow);
+            text-align: center;
+            font-size: 60px;
+            border-top: 2px solid color($tan);
+            border-bottom: 2px solid color($tan);
+            padding: .5em 0;
+            margin: 0 1.5em .5em;
+            font-family: $trade;
+            font-weight: 400;
+            line-height: 1.125;            
+            &.white {
+              color: $white;
+              border-top: 2px solid $white;
+              border-bottom: 2px solid $white;              
+            }
+          }
         }
-      }
-      
-      #fact-three {
-        margin: 2em 0;
-        @include grid-span(12,1);
-        @include breakpoint ($one-column) {
-          @include grid-span(4,9);
-        }
-        h2 {
-          color: $white;
-          text-align: center;
-          font-size: 60px;
-          border-top: 2px solid $white;
-          border-bottom: 2px solid $white;
-          padding: .5em 0;
-          margin: 0 72px;
-          margin-bottom: .5em;
-        }
-      }
-    
+      }      
     }
   }
   
