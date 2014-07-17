@@ -7,6 +7,7 @@ $department-home: 800px; //Match mobile menu breakpoint
 .basic-page {
   #top-tier {
     .limiter {
+      @extend %clearfix;
       .main-content {
         margin-top: 2em;
         @include grid-span(12,1);

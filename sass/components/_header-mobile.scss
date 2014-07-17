@@ -1,0 +1,150 @@
+/**
+ * @file _header-mobile.scss
+ * The design for the mobile version of the header.
+ */
+
+/**
+* Header - mobile styles for the regular header
+*/
+
+#header {
+  &.mobile-menu {
+    @include respond-to("navigation small") {
+      padding-bottom: 0;
+    }
+    .logo {
+      @include grid-span(4,1);    
+    }
+    .actions {
+      @include grid-span(8,5);
+      @include respond-to("navigation small") {
+        width: 100%;
+      }         
+    }     
+    .user-login {
+      @include grid-span(3,5, $output-style:'float');  
+      @include respond-to("navigation small") {
+        width: 100%;
+      }              
+    }   
+    .block-search {
+      @include grid-span(5,8, $output-style:'float');     
+      @include respond-to("navigation small") {
+        width: 100%;
+      }        
+    }
+  }
+  &.single-page {
+    .mobile-wrap {
+      background-color: transparent;
+      .logo-mobile {
+        display: none;
+        &.white {
+          @include respond-to("navigation small") {
+            display: block;
+          }       
+          @include respond-to("navigation smallest") {
+            display: none;
+          }
+        }
+      }
+      .logo-mobile-small {
+        display: none;
+        &.white {
+          @include respond-to("navigation small") {
+            display: none;
+          }          
+          @include respond-to("navigation smallest") {
+            display: block;
+          }
+        }
+      }     
+    }
+  }
+  .mobile-wrap {
+    @include grid-span(12,1, $output-style:'float');
+    background-color: $white;
+    .logo-mobile {
+      display: none;
+      position: relative;
+      @include grid-span(6, 1, $output-style:'float');
+      &.white { // White version of mobile logo only appears on .single-page classed pages.
+        display: none;
+      }
+      @include respond-to("navigation small") {
+        display: block; 
+        float: left;
+      }
+      @include respond-to("navigation smallest") {
+        display: none;
+      }
+      img {
+        max-width: 270px;
+        max-height: 72px;
+        float: left;
+        width: 100%;
+        height: auto;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+        }        
+      }      
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+        @include respond-to("navigation smallest") {
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+          padding: 2em 0;
+        }
+      }   
+    } 
+    .logo-mobile-small {
+      display: none;
+      position: relative;
+      float: left;
+      width: 50%;      
+      @include respond-to("navigation smallest") {
+        display: block;
+      }    
+      img {
+        max-width: 200px;
+        float: left;
+        width: 100%;
+        height: auto;
+        padding-right: .5em;
+      }  
+      a {
+        display: block; 
+        float: left;
+        padding-top: 1em;
+        padding-left: 1em;
+      }          
+    }    
+    .actions {
+      width: 100%;
+    }
+    .user-login {
+      width: 100%;
+      &.mobile { // hide this user-login instance and show it at the navigation small breakpoint.
+        display: none;
+        a {
+          padding:0;
+        }
+        @include respond-to("navigation small") {
+          display: block;
+          width: 100%;
+          padding: .5em 2em 1em;
+          clear: both;
+          float: left;
+        }
+      }         
+    }
+    .block-search {
+      width: 100%;     
+    }      
+  }  
+}

@@ -6,24 +6,27 @@ $one-column: 870px; //Match mobile menu breakpoint
 
 .basic-page {
   .main-container {
-      margin-top: 2em;
-      @include grid-span(12,1);
+    @include grid-span(12,1);
     @include breakpoint ($one-column) {
-        @include grid-span(9,4);
-      }
+      @include grid-span(9,4);
+    }
   }
-  
-  .clear-h2 {
-    clear: both;
+}
+.page-title {
+  &.full {
+    padding-top: 2em;
   }
-  
-  .main-container2 {
-      margin-top: 2em;
-      padding-left: 1.5em;
-      padding-right: 1.5em;
-      @include grid-span(12,1);
-    @include breakpoint ($one-column) {
-        @include grid-span(9,2);
-      }
+}
+.clear-h2 {
+  clear: both;
+}
+
+.main-container2 {
+  margin-top: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  @include grid-span(12,1);
+  @include breakpoint ($one-column) {
+    @include grid-span(9,2);
   }
 }

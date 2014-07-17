@@ -419,6 +419,7 @@ img, video {
 .form-type-textarea:after,
 ul.primary:after,
 ul.pager:after,
+.basic-page #top-tier .limiter:after,
 .homepage #profiles:after,
 .homepage #about-university:after,
 .homepage #social-media:after,
@@ -1651,7 +1652,6 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
  * Prototype for Basic Page.
  */
 .basic-page .main-container {
-  margin-top: 2em;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1673,10 +1673,16 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
     float: left;
   }
 }
-.basic-page .clear-h2 {
+
+.page-title.full {
+  padding-top: 2em;
+}
+
+.clear-h2 {
   clear: both;
 }
-.basic-page .main-container2 {
+
+.main-container2 {
   margin-top: 2em;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1686,18 +1692,18 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .basic-page .main-container2 {
+[dir="rtl"] .main-container2 {
   float: left;
 }
 @media (min-width: 54.375em) {
-  .basic-page .main-container2 {
+  .main-container2 {
     width: 73.91304%;
     float: left;
     margin-right: -100%;
     margin-left: 8.69565%;
     clear: none;
   }
-  [dir="rtl"] .basic-page .main-container2 {
+  [dir="rtl"] .main-container2 {
     float: right;
     margin-left: -100%;
     margin-right: 8.69565%;
@@ -2389,39 +2395,8 @@ input.action-delete:focus {
  * @file _header.scss
  * The design for the header.
  */
-.prototype-grid .header-image {
-  position: absolute;
-  top: 0;
-  right: auto;
-  left: auto;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-@media (max-width: 54.375em) {
-  .prototype-grid .header-image {
-    top: 10%;
-  }
-}
-.prototype-grid .header-image img {
-  width: 100%;
-  height: auto;
-  position: relative;
-}
-.prototype-grid .header-image img.mobile {
-  display: none;
-}
-@media (max-width: 54.375em) {
-  .prototype-grid .header-image img.desktop {
-    display: none;
-  }
-  .prototype-grid .header-image img.mobile {
-    display: block;
-  }
-}
-
 /**
-* Header
+* Header - global styles
 */
 #header {
   color: white;
@@ -2527,15 +2502,19 @@ input.action-delete:focus {
   margin-left: 0;
   clear: none;
   border-right: 1px solid white;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 }
 [dir="rtl"] #header .user-login {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
+#header .user-login button {
+  float: right;
+}
 #header .user-login a {
   color: #1f346b;
-  float: right;
+  float: left;
   padding: 1em;
 }
 #header .user-login a:hover {
@@ -2546,7 +2525,7 @@ input.action-delete:focus {
   text-transform: uppercase;
 }
 #header .user-login a span:before {
-  content: url('../images/../images/icons/icon-login-blue-small.svg');
+  content: url('../images/icons/icon-login-blue-small.svg');
   vertical-align: middle;
   padding-right: 1em;
   display: inline-block;
@@ -2590,224 +2569,143 @@ input.action-delete:focus {
     padding: 1.5em 1em;
   }
 }
+#header .title-wrap {
+  width: 100%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+  margin-top: 4em;
+  clear: both;
+}
+[dir="rtl"] #header .title-wrap {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
 @media (max-width: 54.375em) {
-  #header.with-mobile {
+  #header .title-wrap {
+    padding: 2em 0 1em;
+    margin-top: 0;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .title-wrap .breadcrumb-image {
+    padding: 0 1em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .title-wrap .breadcrumb-image {
+    display: none;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .title-wrap .page-title {
+    padding: 0 1em;
+  }
+}
+#header .title-wrap .page-title h1 {
+  color: white;
+  margin-bottom: 0;
+}
+
+/**
+ * @file _header-mobile.scss
+ * The design for the mobile version of the header.
+ */
+/**
+* Header - mobile styles for the regular header
+*/
+@media (max-width: 54.375em) {
+  #header.mobile-menu {
     padding-bottom: 0;
   }
 }
-#header.with-mobile .logo {
-  width: 40.42553%;
+#header.mobile-menu .logo {
+  width: 31.91489%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
   clear: none;
 }
-[dir="rtl"] #header.with-mobile .logo {
+[dir="rtl"] #header.mobile-menu .logo {
   float: right;
   margin-left: -100%;
   margin-right: 0;
 }
-#header.with-mobile .user-login {
-  width: 23.40426%;
-  clear: right;
-  float: left;
-  margin-right: 2.12766%;
-}
-[dir="rtl"] #header.with-mobile .user-login {
-  clear: left;
-  float: right;
-  margin-left: 2.12766%;
-}
-@media (max-width: 54.375em) {
-  #header.with-mobile .user-login {
-    width: 100%;
-  }
-}
-#header.with-mobile .user-login.logged-in {
-  border-right: none;
-  padding: 0;
-  width: 33.33333%;
-  clear: right;
-  float: left;
-  margin-right: 0%;
-}
-[dir="rtl"] #header.with-mobile .user-login.logged-in {
-  clear: left;
-  float: right;
-  margin-left: 0%;
-}
-#header.with-mobile .user-login.logged-in button {
-  display: none;
-}
-#header.with-mobile .user-login.logged-in .student-info {
-  display: block;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  float: left;
-  width: 100%;
-}
-#header.with-mobile .user-login.logged-in .student-info li {
-  list-style-type: none;
-  position: relative;
-  float: left;
-  width: 100%;
-  margin-bottom: 2px;
-}
-#header.with-mobile .user-login.logged-in .student-info li span.name {
-  cursor: pointer;
-  padding: 1.2em 0;
-  display: block;
-  position: relative;
-  color: #1f346b;
-}
-#header.with-mobile .user-login.logged-in .student-info li span.name:before {
-  display: inline-block;
-  speak: none;
-  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  background-color: white;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: "2";
-  padding: .3em .5em;
-  margin-right: .5em;
-  vertical-align: middle;
-  background-color: #029555;
-  color: white;
-  border-radius: 25px;
-}
-#header.with-mobile .user-login.logged-in .student-info li span.name:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url("../images/icons/icon-dropdown.svg");
-  width: 15px;
-  height: 24px;
-  margin-left: 0.3em;
-  vertical-align: middle;
-}
-#header.with-mobile .user-login.logged-in .student-info li span.name.active:after {
-  display: inline-block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content: url("../images/icons/icon-dropup.svg");
-  width: 15px;
-  height: 24px;
-  margin-left: 0.3em;
-  vertical-align: middle;
-}
-#header.with-mobile .user-login.logged-in .student-info li a.no-toggle {
-  color: #1f346b;
-  padding: .5em 1em;
-  float: left;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-#header.with-mobile .user-login.logged-in .student-info li a.no-toggle:hover {
-  color: #001e54;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.95);
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  position: absolute;
-  top: 65px;
-  left: 0;
-  display: none;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li {
-  width: 100%;
-  float: left;
-  font-size: .8em;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a {
-  display: block;
-  color: #1f346b;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a:hover, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a.active {
-  color: #001e54;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li a span {
-  text-transform: none;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a span:before {
-  content: url('../images/../images/icons/icon-star-outline-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a:focus span:before, #header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.favorite a.active span:before {
-  content: url('../images/../images/icons/icon-star-blue-small.svg');
-}
-#header.with-mobile .user-login.logged-in .student-info li ul.user-actions li.logout a span:before {
-  content: url('../images/../images/icons/icon-sign-out-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header.with-mobile .actions {
-  width: 57.44681%;
+#header.mobile-menu .actions {
+  width: 65.95745%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] #header.with-mobile .actions {
+[dir="rtl"] #header.mobile-menu .actions {
   float: left;
 }
 @media (max-width: 54.375em) {
-  #header.with-mobile .actions {
+  #header.mobile-menu .actions {
     width: 100%;
   }
 }
-#header.with-mobile .block-search {
+#header.mobile-menu .user-login {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header.mobile-menu .user-login {
+  clear: left;
+  float: right;
+  margin-left: 2.12766%;
+}
+@media (max-width: 54.375em) {
+  #header.mobile-menu .user-login {
+    width: 100%;
+  }
+}
+#header.mobile-menu .block-search {
   width: 40.42553%;
   clear: right;
   float: right;
   margin-right: 0;
 }
-[dir="rtl"] #header.with-mobile .block-search {
+[dir="rtl"] #header.mobile-menu .block-search {
   clear: left;
   float: left;
   margin-left: 0;
 }
 @media (max-width: 54.375em) {
-  #header.with-mobile .block-search {
+  #header.mobile-menu .block-search {
     width: 100%;
   }
 }
-#header.with-mobile .block-search.logged-in {
-  width: 31.91489%;
-  clear: right;
-  float: right;
-  margin-right: 0;
+#header.single-page .mobile-wrap {
+  background-color: transparent;
 }
-[dir="rtl"] #header.with-mobile .block-search.logged-in {
-  clear: left;
-  float: left;
-  margin-left: 0;
+#header.single-page .mobile-wrap .logo-mobile {
+  display: none;
 }
 @media (max-width: 54.375em) {
-  #header.with-mobile .block-search.logged-in {
-    width: 100%;
+  #header.single-page .mobile-wrap .logo-mobile.white {
+    display: block;
+  }
+}
+@media (max-width: 29.6875em) {
+  #header.single-page .mobile-wrap .logo-mobile.white {
+    display: none;
+  }
+}
+#header.single-page .mobile-wrap .logo-mobile-small {
+  display: none;
+}
+@media (max-width: 54.375em) {
+  #header.single-page .mobile-wrap .logo-mobile-small.white {
+    display: none;
+  }
+}
+@media (max-width: 29.6875em) {
+  #header.single-page .mobile-wrap .logo-mobile-small.white {
+    display: block;
   }
 }
 #header .mobile-wrap {
@@ -2836,6 +2734,9 @@ input.action-delete:focus {
   float: right;
   margin-right: 0;
   margin-left: 2.12766%;
+}
+#header .mobile-wrap .logo-mobile.white {
+  display: none;
 }
 @media (max-width: 54.375em) {
   #header .mobile-wrap .logo-mobile {
@@ -2891,6 +2792,7 @@ input.action-delete:focus {
   float: left;
   width: 100%;
   height: auto;
+  padding-right: .5em;
 }
 #header .mobile-wrap .logo-mobile-small a {
   display: block;
@@ -2904,46 +2806,768 @@ input.action-delete:focus {
 #header .mobile-wrap .user-login {
   width: 100%;
 }
+#header .mobile-wrap .user-login.mobile {
+  display: none;
+}
+#header .mobile-wrap .user-login.mobile a {
+  padding: 0;
+}
+@media (max-width: 54.375em) {
+  #header .mobile-wrap .user-login.mobile {
+    display: block;
+    width: 100%;
+    padding: .5em 2em 1em;
+    clear: both;
+    float: left;
+  }
+}
 #header .mobile-wrap .block-search {
   width: 100%;
 }
-#header .title-wrap {
-  width: 100%;
+
+/**
+ * @file _header-logged-in.scss
+ * The design for the header when you're logged in.
+ */
+/**
+* Header - logged in styles styles
+*/
+#header.logged-in .block-search {
+  width: 31.91489%;
   clear: right;
   float: right;
   margin-right: 0;
-  margin-top: 4em;
-  clear: both;
 }
-[dir="rtl"] #header .title-wrap {
+[dir="rtl"] #header.logged-in .block-search {
   clear: left;
   float: left;
   margin-left: 0;
 }
 @media (max-width: 54.375em) {
-  #header .title-wrap {
-    padding: 2em 0 1em;
-    margin-top: 0;
+  #header.logged-in .block-search {
+    width: 100%;
   }
 }
-@media (max-width: 67.1875em) {
-  #header .title-wrap .breadcrumb-image {
-    padding: 0 1em;
-  }
+#header.logged-in .user-login {
+  border-right: none;
+  padding: 0;
+  width: 33.33333%;
+  clear: right;
+  float: left;
+  margin-right: 0%;
+}
+[dir="rtl"] #header.logged-in .user-login {
+  clear: left;
+  float: right;
+  margin-left: 0%;
 }
 @media (max-width: 54.375em) {
-  #header .title-wrap .breadcrumb-image {
+  #header.logged-in .user-login {
+    width: 100%;
+  }
+}
+#header.logged-in .user-login .login-link {
+  display: none;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in .user-login {
     display: none;
   }
 }
-@media (max-width: 67.1875em) {
-  #header .title-wrap .page-title {
-    padding: 0 1em;
+#header.logged-in .user-login.mobile {
+  display: none;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in .user-login.mobile {
+    display: block;
+    width: 100%;
+    padding: .5em 2em 1em;
+    border-top: 1px solid #cccccc;
+    margin-top: .5em;
   }
 }
-#header .title-wrap .page-title h1 {
+#header.logged-in .user-login .student-info {
+  display: block;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+#header.logged-in .user-login .student-info li {
+  list-style-type: none;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 2px;
+}
+#header.logged-in .user-login .student-info li span.name {
+  cursor: pointer;
+  padding: 1.2em 0;
+  display: block;
+  position: relative;
+  color: #1f346b;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in .user-login .student-info li span.name {
+    padding: 0;
+  }
+}
+#header.logged-in .user-login .student-info li span.name:before {
+  display: inline-block;
+  speak: none;
+  font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-color: white;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "2";
+  padding: .3em .5em;
+  margin-right: .5em;
+  vertical-align: middle;
+  background-color: #029555;
   color: white;
-  margin-bottom: 0;
+  border-radius: 25px;
+}
+#header.logged-in .user-login .student-info li span.name:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/icons/icon-dropdown.svg');
+  width: 15px;
+  height: 24px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+#header.logged-in .user-login .student-info li span.name.active:after {
+  display: inline-block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: url('../images/icons/icon-dropup.svg');
+  width: 15px;
+  height: 24px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+#header.logged-in .user-login .student-info li a.no-toggle {
+  color: #1f346b;
+  padding: .5em 1em;
+  float: left;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+#header.logged-in .user-login .student-info li a.no-toggle:hover {
+  color: #001e54;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+#header.logged-in .user-login .student-info li ul.user-actions {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  display: none;
+  z-index: 1;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in .user-login .student-info li ul.user-actions {
+    top: 49px;
+  }
+}
+#header.logged-in .user-login .student-info li ul.user-actions li {
+  width: 100%;
+  float: left;
+  font-size: .8em;
+}
+#header.logged-in .user-login .student-info li ul.user-actions li a {
+  display: block;
+  color: #1f346b;
+}
+#header.logged-in .user-login .student-info li ul.user-actions li a:hover, #header.logged-in .user-login .student-info li ul.user-actions li a.active {
+  color: #001e54;
+}
+#header.logged-in .user-login .student-info li ul.user-actions li a span {
+  text-transform: none;
+}
+#header.logged-in .user-login .student-info li ul.user-actions li.favorite a span:before {
+  content: url('../images/icons/icon-star-outline-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header.logged-in .user-login .student-info li ul.user-actions li.favorite a:focus span:before, #header.logged-in .user-login .student-info li ul.user-actions li.favorite a.active span:before {
+  content: url('../images/icons/icon-star-blue-small.svg');
+}
+#header.logged-in .user-login .student-info li ul.user-actions li.logout a span:before {
+  content: url('../images/icons/icon-sign-out-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header.logged-in.mobile-menu .logo {
+  width: 31.91489%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .logo {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+#header.logged-in.mobile-menu .actions {
+  width: 65.95745%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .actions {
+  float: left;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in.mobile-menu .actions {
+    width: 100%;
+  }
+}
+#header.logged-in.mobile-menu .toggles.desktop {
+  width: 23.40426%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  display: block;
+  padding: 0;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .toggles.desktop {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in.mobile-menu .toggles.desktop {
+    display: none;
+  }
+}
+#header.logged-in.mobile-menu .user-login {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-right: 2.12766%;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .user-login {
+  clear: left;
+  float: right;
+  margin-left: 2.12766%;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in.mobile-menu .user-login {
+    width: 100%;
+  }
+}
+#header.logged-in.mobile-menu .block-search {
+  width: 40.42553%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] #header.logged-in.mobile-menu .block-search {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+@media (max-width: 54.375em) {
+  #header.logged-in.mobile-menu .block-search {
+    width: 100%;
+  }
+}
+
+/**
+ * @file _header-navigation.scss
+ * The design for basic navigation component.
+ */
+/**
+* Header - navigation styles
+*/
+#header .navigation {
+  position: relative;
+  display: block;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+@media (max-width: 54.375em) {
+  #header .navigation {
+    background-color: transparent;
+  }
+}
+
+/**
+ * @file _header-navigation-block-one.scss
+ * The design for menu-block-1 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block one styles
+*/
+#header .navigation.menu-block-1 {
+  margin: 0 auto 4.5em;
+}
+@media (min-width: 65.125em) {
+  #header .navigation.menu-block-1 {
+    margin-top: 18em;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .navigation.menu-block-1 {
+    margin-top: 13em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-1 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    display: none;
+  }
+}
+
+/**
+ * @file _header-navigation-block-two.scss
+ * The design for menu-block-2/desktop-menu in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
+ */
+/**
+* Header - navigation block two styles
+  This block appears on subpages that have two menu systems, with the main navigation taking the back seat.
+  This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+*/
+#header .navigation.menu-block-2 {
+  background-color: #029555;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 ul.menu {
+    padding: 0;
+  }
+}
+#header .navigation.menu-block-2 ul.menu li {
+  border-bottom: 1px solid #07633b;
+}
+#header .navigation.menu-block-2 ul.menu li span:after {
+  content: url('../images/../images/icons/icon-dropdown-green.svg');
+}
+#header .navigation.menu-block-2 ul.menu li.active a,
+#header .navigation.menu-block-2 ul.menu li.active span {
+  color: rgba(255, 255, 255, 0.5);
+}
+#header .navigation.menu-block-2 ul.menu li.active span:after {
+  content: url('../images/../images/icons/icon-dropup-green.svg');
+}
+#header .navigation.menu-block-2 ul.menu span,
+#header .navigation.menu-block-2 ul.menu a {
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: .05em;
+  font-size: 1em;
+  text-transform: none;
+}
+#header .navigation.menu-block-2 ul.menu span:hover,
+#header .navigation.menu-block-2 ul.menu a:hover {
+  color: white;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 ul.menu span,
+  #header .navigation.menu-block-2 ul.menu a {
+    padding: 1em 1.5em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+  }
+}
+#header .navigation.menu-block-2 .submenu {
+  background-color: #07633b;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 .submenu ul.menu {
+    padding: .7em 0;
+  }
+}
+#header .navigation.menu-block-2 .submenu ul.menu li a {
+  font-size: 1em;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-2 .submenu ul.menu li a,
+  #header .navigation.menu-block-2 .submenu ul.menu li span {
+    padding: 1em 2em;
+  }
+}
+
+/**
+ * @file _header-navigation-block-three.scss
+ * The design for menu-block-3 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block three styles
+*/
+@media (min-width: 65.125em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 3em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 2.5em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-3 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu {
+    padding: 0;
+    margin: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu li {
+    border-top: 0px;
+    border-bottom: 1px solid #222;
+    list-style: none;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu {
+    padding: 0;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu li a {
+    padding: 1em 2em;
+  }
+  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu li a:hover {
+    background-color: white;
+    color: #1f346b;
+  }
+  #header .navigation.menu-block-3 ul.menu li a,
+  #header .navigation.menu-block-3 ul.menu li span {
+    background-color: white;
+    border: none;
+    color: #1f346b;
+    display: block;
+    margin: 0;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  #header .navigation.menu-block-3 ul.menu li a:hover, #header .navigation.menu-block-3 ul.menu li a:focus,
+  #header .navigation.menu-block-3 ul.menu li span:hover,
+  #header .navigation.menu-block-3 ul.menu li span:focus {
+    color: #3b559a;
+  }
+  #header .navigation.menu-block-3 ul.menu li a:active,
+  #header .navigation.menu-block-3 ul.menu li span:active {
+    color: #3b559a;
+  }
+}
+
+/**
+ * @file _header-navigation-block-four.scss
+ * The design for menu-block-4 in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/tabbed.js
+ */
+/**
+* Header - navigation block four styles
+ - This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+ - This uses the tabbed.js to show different panel-baed menus/divs based on interaction.
+*/
+@media (max-width: 54.375em) {
+  #header .desktop-bar {
+    display: none !important;
+  }
+}
+#header .desktop-bar .panels {
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #07633b;
+  border-top: 4px solid #07633b;
+}
+#header .desktop-bar .panels .panel {
+  display: none;
+}
+#header .desktop-bar .panels .panel ul {
+  width: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+#header .desktop-bar .panels .panel ul li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+  list-style: none;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0;
+}
+#header .desktop-bar .panels .panel ul li a {
+  display: block;
+  width: 100%;
+  padding: 1em 1em;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  color: #96C49B;
+}
+#header .desktop-bar .panels .panel ul li a:hover {
+  color: white;
+}
+#header .navigation.menu-block-4 {
+  background-color: #029555;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-4 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    position: relative;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-4 ul.desktop-menu, #header .navigation.menu-block-4 ul.tabbed {
+    padding: 1em 0;
+  }
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active, #header .navigation.menu-block-4 ul.tabbed li.active {
+  background-image: url(../images/icons/icon-active-up-green.svg);
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active a,
+#header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
+#header .navigation.menu-block-4 ul.tabbed li.active span {
+  color: #07633b;
+}
+#header .navigation.menu-block-4 ul.desktop-menu li.active span:after, #header .navigation.menu-block-4 ul.tabbed li.active span:after {
+  content: url('../images/../images/icons/icon-dropup-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu li span:after, #header .navigation.menu-block-4 ul.tabbed li span:after {
+  content: url('../images/../images/icons/icon-dropdown-green.svg');
+}
+#header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
+  color: #dddac7;
+  letter-spacing: .05em;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+#header .navigation.menu-block-4 ul.desktop-menu span:hover, #header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover, #header .navigation.menu-block-4 ul.tabbed a:hover {
+  color: #1bc37a;
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
+    padding: 1em 1.5em;
+  }
+}
+
+/**
+ * @file _header-navigation-block-five.scss
+ * The design for menu-block-5 in the navigation region of the header. 
+ */
+/**
+* Header - navigation block five styles
+*/
+#header .navigation.menu-block-5 {
+  width: 100%;
+  float: left;
+}
+@media (min-width: 65.125em) {
+  #header .navigation.menu-block-5 {
+    margin-top: 6em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 67.1875em) {
+  #header .navigation.menu-block-5 {
+    margin-top: 4em;
+    margin-bottom: 4.5em;
+  }
+}
+@media (max-width: 54.375em) {
+  #header .navigation.menu-block-5 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #header .navigation.menu-block-5 ul.menu {
+    padding: 0;
+    margin: 0;
+  }
+  #header .navigation.menu-block-5 ul.menu li {
+    list-style: none;
+    background-color: white;
+    color: #1f346b;
+    border-top: 0px;
+    border-bottom: 1px solid #222;
+    list-style: none;
+  }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu {
+    padding: 0;
+  }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li {
+    border: none;
+  }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a {
+    padding: 1em 2em;
+  }
+  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a:hover {
+    background-color: white;
+    color: #1f346b;
+  }
+  #header .navigation.menu-block-5 ul.menu li a,
+  #header .navigation.menu-block-5 ul.menu li span {
+    background-color: white;
+    border: none;
+    color: #1f346b;
+    display: block;
+    margin: 0;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  #header .navigation.menu-block-5 ul.menu li a:hover, #header .navigation.menu-block-5 ul.menu li a:focus,
+  #header .navigation.menu-block-5 ul.menu li span:hover,
+  #header .navigation.menu-block-5 ul.menu li span:focus {
+    color: #3b559a;
+  }
+  #header .navigation.menu-block-5 ul.menu li a:active,
+  #header .navigation.menu-block-5 ul.menu li span:active {
+    color: #3b559a;
+  }
+}
+#header .navigation.menu-block-5 ul li.item-1 span:before,
+#header .navigation.menu-block-5 ul li.item-1 a:before {
+  content: url('../images/../images/icons/icon-learn-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-2 span:before,
+#header .navigation.menu-block-5 ul li.item-2 a:before {
+  content: url('../images/../images/icons/icon-cms-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-3 span:before,
+#header .navigation.menu-block-5 ul li.item-3 a:before {
+  content: url('../images/../images/icons/icon-email-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-4 span:before,
+#header .navigation.menu-block-5 ul li.item-4 a:before {
+  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-5 span:before,
+#header .navigation.menu-block-5 ul li.item-5 a:before {
+  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#header .navigation.menu-block-5 ul li.item-6 span:before,
+#header .navigation.menu-block-5 ul li.item-6 a:before {
+  content: url('../images/../images/icons/icon-housing-blue-small.svg');
+  vertical-align: middle;
+  padding-right: .5em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+
+/**
+ * @file _header-image.scss
+ * The design for the header background images.
+ */
+.prototype-grid .header-image {
+  position: absolute;
+  top: 0;
+  right: auto;
+  left: auto;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 46.875em) {
+  .prototype-grid .header-image {
+    top: 0;
+  }
+}
+@media (max-width: 25em) {
+  .prototype-grid .header-image {
+    top: 0;
+  }
+}
+.prototype-grid .header-image img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.prototype-grid .header-image img.mobile, .prototype-grid .header-image img.mobile-small {
+  display: none;
+}
+@media (max-width: 46.875em) {
+  .prototype-grid .header-image img.desktop {
+    display: none;
+  }
+  .prototype-grid .header-image img.mobile {
+    display: block;
+  }
+}
+@media (max-width: 25em) {
+  .prototype-grid .header-image img.desktop {
+    display: none;
+  }
+  .prototype-grid .header-image img.mobile {
+    display: none;
+  }
+  .prototype-grid .header-image img.mobile-small {
+    display: block;
+  }
 }
 
 /**
@@ -3064,6 +3688,9 @@ input.action-delete:focus {
 }
 #main .main-container {
   padding: 1em;
+}
+#main .main-container h2 {
+  margin-top: 0;
 }
 
 /**
@@ -3491,250 +4118,15 @@ a.icon-checkmark:hover {
 }
 
 /**
+ * @file _menus.scss
+ * The foundation design for all system menus - ul.menu.
+ * 
+ **** Related asset: styleguide-assets/hmenu.js
+ */
+/**
 * Menus - main menu, footer menu, etc.
+ - This uses hmenu.js to trigger adding ".active" classes and uses .wrap() for submenu markup.
 */
-.toggles {
-  margin: 0;
-  display: none;
-  padding: 0;
-  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-@media (max-width: 54.375em) {
-  .toggles {
-    display: block;
-  }
-}
-.toggles li {
-  list-style-type: none;
-  float: left;
-  display: inline;
-  position: relative;
-}
-.toggles li a {
-  display: block;
-  width: 100%;
-  padding: 2em .5em;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.15s ease-in-out;
-}
-.toggles li a span {
-  vertical-align: middle;
-  text-transform: uppercase;
-}
-@media (max-width: 29.6875em) {
-  .toggles li a span {
-    display: block;
-    padding: .5em 0 0;
-  }
-}
-.toggles li a span:before {
-  display: block;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  text-align: center;
-  transition: content 0.4s ease-in-out;
-}
-.toggles li a img {
-  vertical-align: middle;
-}
-@media (max-width: 29.6875em) {
-  .toggles li a img {
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-#header .toggles.desktop {
-  width: 31.91489%;
-  clear: right;
-  float: left;
-  margin-left: 0;
-  margin-right: 2.12766%;
-  display: block;
-  padding: 0;
-}
-[dir="rtl"] #header .toggles.desktop {
-  clear: left;
-  float: right;
-  margin-right: 0;
-  margin-left: 2.12766%;
-}
-#header .toggles.desktop li {
-  width: 175px;
-}
-#header .toggles.desktop li a {
-  color: #1f346b;
-  text-align: center;
-  float: left;
-  padding: 1em;
-  width: 100%;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-}
-#header .toggles.desktop li a:hover {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.active {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.active span {
-  color: #3b559a;
-}
-#header .toggles.desktop li a.pull-nav-main span:before, #header .toggles.desktop li a.pull-nav-desktop span:before {
-  content: url('../images/../images/icons/icon-rows-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
-#header .toggles.desktop li a.pull-nav-main.active span:before, #header .toggles.desktop li a.pull-nav-desktop.active span:before {
-  content: url('../images/../images/icons/icon-x-blue-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-@media (max-width: 54.375em) {
-  #header .toggles.desktop {
-    display: none;
-  }
-}
-#header .toggles.main {
-  width: 100%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
-  margin-top: 1.5em;
-}
-[dir="rtl"] #header .toggles.main {
-  float: left;
-}
-#header .toggles.main li {
-  width: 100%;
-}
-#header .toggles.main li a {
-  color: white;
-  text-align: left;
-  float: left;
-  padding: 1em;
-  width: auto;
-  background-color: rgba(255, 255, 255, 0.05);
-}
-#header .toggles.main li a:hover {
-  color: rgba(255, 255, 255, 0.85);
-  background-color: rgba(255, 255, 255, 0.15);
-}
-#header .toggles.main li a.pull-nav span:before {
-  content: url('../images/../images/icons/icon-menu-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-}
-#header .toggles.main li a.pull-nav.active span:before {
-  content: url('../images/../images/icons/icon-cancel-white-small.svg');
-  vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .toggles.mobile {
-  width: 48.93617%;
-  clear: right;
-  float: right;
-  margin-right: 0;
-}
-[dir="rtl"] #header .toggles.mobile {
-  clear: left;
-  float: left;
-  margin-left: 0;
-}
-@media (max-width: 29.6875em) {
-  #header .toggles.mobile {
-    float: right;
-    width: 50%;
-  }
-}
-#header .toggles.mobile li {
-  width: 33.33%;
-}
-@media (max-width: 29.6875em) {
-  #header .toggles.mobile li.first {
-    width: 100%;
-  }
-}
-@media (max-width: 29.6875em) and (max-width: 29.6875em) {
-  #header .toggles.mobile li.first.logged-in {
-    width: 50%;
-  }
-}
-
-@media (max-width: 29.6875em) {
-  #header .toggles.mobile li {
-    width: 50%;
-  }
-}
-@media (max-width: 29.6875em) {
-  #header .toggles.mobile li.logged-in {
-    width: 100%;
-  }
-}
-#header .toggles.mobile li.logged-in a.no-toggle {
-  padding: .5em;
-}
-#header .toggles.mobile li.logged-in a.no-toggle.log-out {
-  border-top: 1px solid #1f346b;
-}
-#header .toggles.mobile li a {
-  color: #1c2e5f;
-}
-@media (max-width: 29.6875em) {
-  #header .toggles.mobile li a {
-    padding: .5em;
-  }
-}
-#header .toggles.mobile li a:hover {
-  color: #142143;
-  background-color: rgba(255, 255, 255, 0.82);
-}
-#header .toggles.mobile li a.active {
-  background-color: rgba(255, 255, 255, 0.82);
-  color: #2a4793;
-}
-#header .toggles.mobile li a.pull-nav-main span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-nav-main span:before {
-  content: url('../images/../images/icons/icon-rows-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-nav-main.active span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  transition: content 0.4s ease-in-out;
-}
-#header .toggles.mobile li a.pull-user span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-user span:before {
-  content: url('../images/../images/icons/icon-login-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-search span {
-  display: block;
-}
-#header .toggles.mobile li a.pull-search span:before {
-  content: url('../images/../images/icons/icon-search-blue-small.svg');
-  vertical-align: middle;
-}
-#header .toggles.mobile li a.pull-search.active span:before {
-  content: url('../images/../images/icons/icon-cancel-blue-small.svg');
-  vertical-align: middle;
-  transition: content 0.4s ease-in-out;
-}
 #header .mobile-bar,
 #header .desktop-bar {
   display: none;
@@ -3749,330 +4141,6 @@ a.icon-checkmark:hover {
 }
 [dir="rtl"] #header .mobile-bar {
   float: left;
-}
-@media (max-width: 54.375em) {
-  #header .desktop-bar {
-    display: none !important;
-  }
-}
-#header .navigation {
-  position: relative;
-  display: block;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-@media (max-width: 54.375em) {
-  #header .navigation {
-    background-color: transparent;
-  }
-}
-#header .navigation.menu-block-1 {
-  margin: 0 auto 4.5em;
-}
-@media (min-width: 65.125em) {
-  #header .navigation.menu-block-1 {
-    margin-top: 18em;
-  }
-}
-@media (max-width: 67.1875em) {
-  #header .navigation.menu-block-1 {
-    margin-top: 13em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-1 {
-    margin: 0;
-    padding: 0;
-    float: left;
-    display: none;
-  }
-}
-#header .navigation.menu-block-2 {
-  background-color: #029555;
-  width: 100%;
-  margin: 0 auto;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-2 ul.menu {
-    padding: 0;
-  }
-}
-#header .navigation.menu-block-2 ul.menu li {
-  border-bottom: 1px solid #07633b;
-}
-#header .navigation.menu-block-2 ul.menu li span:after {
-  content: url('../images/../images/icons/icon-dropdown-green.svg');
-}
-#header .navigation.menu-block-2 ul.menu li.active a,
-#header .navigation.menu-block-2 ul.menu li.active span {
-  color: rgba(255, 255, 255, 0.5);
-}
-#header .navigation.menu-block-2 ul.menu li.active span:after {
-  content: url('../images/../images/icons/icon-dropup-green.svg');
-}
-#header .navigation.menu-block-2 ul.menu span,
-#header .navigation.menu-block-2 ul.menu a {
-  color: rgba(255, 255, 255, 0.75);
-  letter-spacing: .05em;
-  font-size: 1em;
-  text-transform: none;
-}
-#header .navigation.menu-block-2 ul.menu span:hover,
-#header .navigation.menu-block-2 ul.menu a:hover {
-  color: white;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-2 ul.menu span,
-  #header .navigation.menu-block-2 ul.menu a {
-    padding: 1em 1.5em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-2 {
-    margin: 0;
-    padding: 0;
-    float: left;
-    position: relative;
-  }
-}
-#header .navigation.menu-block-2 .submenu {
-  background-color: #07633b;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-2 .submenu ul.menu {
-    padding: .7em 0;
-  }
-}
-#header .navigation.menu-block-2 .submenu ul.menu li a {
-  font-size: 1em;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-2 .submenu ul.menu li a,
-  #header .navigation.menu-block-2 .submenu ul.menu li span {
-    padding: 1em 2em;
-  }
-}
-@media (min-width: 65.125em) {
-  #header .navigation.menu-block-3 {
-    margin-top: 3em;
-    margin-bottom: 4.5em;
-  }
-}
-@media (max-width: 67.1875em) {
-  #header .navigation.menu-block-3 {
-    margin-top: 2.5em;
-    margin-bottom: 4.5em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-3 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #header .navigation.menu-block-3 ul.menu {
-    padding: 0;
-    margin: 0;
-  }
-  #header .navigation.menu-block-3 ul.menu li {
-    border-top: 0px;
-    border-bottom: 1px solid #222;
-    list-style: none;
-  }
-  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu {
-    padding: 0;
-  }
-  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu li a {
-    padding: 1em 2em;
-  }
-  #header .navigation.menu-block-3 ul.menu li .submenu ul.menu li a:hover {
-    background-color: white;
-    color: #1f346b;
-  }
-  #header .navigation.menu-block-3 ul.menu li a,
-  #header .navigation.menu-block-3 ul.menu li span {
-    background-color: white;
-    border: none;
-    color: #1f346b;
-    display: block;
-    margin: 0;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-    text-transform: uppercase;
-    font-size: 1em;
-  }
-  #header .navigation.menu-block-3 ul.menu li a:hover, #header .navigation.menu-block-3 ul.menu li a:focus,
-  #header .navigation.menu-block-3 ul.menu li span:hover,
-  #header .navigation.menu-block-3 ul.menu li span:focus {
-    color: #3b559a;
-  }
-  #header .navigation.menu-block-3 ul.menu li a:active,
-  #header .navigation.menu-block-3 ul.menu li span:active {
-    color: #3b559a;
-  }
-}
-#header .navigation.menu-block-4 {
-  background-color: #029555;
-  width: 100%;
-  margin: 0 auto;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-4 ul.desktop-menu, #header .navigation.menu-block-4 ul.tabbed {
-    padding: 1em 0;
-  }
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active, #header .navigation.menu-block-4 ul.tabbed li.active {
-  background-image: url(../images/icons/icon-active-up-green.svg);
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active a,
-#header .navigation.menu-block-4 ul.desktop-menu li.active span, #header .navigation.menu-block-4 ul.tabbed li.active a,
-#header .navigation.menu-block-4 ul.tabbed li.active span {
-  color: #07633b;
-}
-#header .navigation.menu-block-4 ul.desktop-menu li.active span:after, #header .navigation.menu-block-4 ul.tabbed li.active span:after {
-  content: url('../images/../images/icons/icon-dropup-green.svg');
-}
-#header .navigation.menu-block-4 ul.desktop-menu li span:after, #header .navigation.menu-block-4 ul.tabbed li span:after {
-  content: url('../images/../images/icons/icon-dropdown-green.svg');
-}
-#header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
-  color: #dddac7;
-  letter-spacing: .05em;
-  font-size: .85em;
-  text-transform: uppercase;
-}
-#header .navigation.menu-block-4 ul.desktop-menu span:hover, #header .navigation.menu-block-4 ul.desktop-menu a:hover, #header .navigation.menu-block-4 ul.tabbed span:hover, #header .navigation.menu-block-4 ul.tabbed a:hover {
-  color: #1bc37a;
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-4 ul.desktop-menu span, #header .navigation.menu-block-4 ul.desktop-menu a, #header .navigation.menu-block-4 ul.tabbed span, #header .navigation.menu-block-4 ul.tabbed a {
-    padding: 1em 1.5em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-4 {
-    margin: 0;
-    padding: 0;
-    float: left;
-    position: relative;
-  }
-}
-#header .navigation.menu-block-5 {
-  width: 100%;
-  float: left;
-}
-@media (min-width: 65.125em) {
-  #header .navigation.menu-block-5 {
-    margin-top: 6em;
-    margin-bottom: 4.5em;
-  }
-}
-@media (max-width: 67.1875em) {
-  #header .navigation.menu-block-5 {
-    margin-top: 4em;
-    margin-bottom: 4.5em;
-  }
-}
-@media (max-width: 54.375em) {
-  #header .navigation.menu-block-5 {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #header .navigation.menu-block-5 ul.menu {
-    padding: 0;
-    margin: 0;
-  }
-  #header .navigation.menu-block-5 ul.menu li {
-    list-style: none;
-    background-color: white;
-    color: #1f346b;
-    border-top: 0px;
-    border-bottom: 1px solid #222;
-    list-style: none;
-  }
-  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu {
-    padding: 0;
-  }
-  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li {
-    border: none;
-  }
-  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a {
-    padding: 1em 2em;
-  }
-  #header .navigation.menu-block-5 ul.menu li .submenu ul.menu li a:hover {
-    background-color: white;
-    color: #1f346b;
-  }
-  #header .navigation.menu-block-5 ul.menu li a,
-  #header .navigation.menu-block-5 ul.menu li span {
-    background-color: white;
-    border: none;
-    color: #1f346b;
-    display: block;
-    margin: 0;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    font-family: "TradeGothicNextW01-Bold 693229", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-    text-transform: uppercase;
-    font-size: 1em;
-  }
-  #header .navigation.menu-block-5 ul.menu li a:hover, #header .navigation.menu-block-5 ul.menu li a:focus,
-  #header .navigation.menu-block-5 ul.menu li span:hover,
-  #header .navigation.menu-block-5 ul.menu li span:focus {
-    color: #3b559a;
-  }
-  #header .navigation.menu-block-5 ul.menu li a:active,
-  #header .navigation.menu-block-5 ul.menu li span:active {
-    color: #3b559a;
-  }
-}
-#header .navigation.menu-block-5 ul li.item-1 span:before,
-#header .navigation.menu-block-5 ul li.item-1 a:before {
-  content: url('../images/../images/icons/icon-learn-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-2 span:before,
-#header .navigation.menu-block-5 ul li.item-2 a:before {
-  content: url('../images/../images/icons/icon-cms-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-3 span:before,
-#header .navigation.menu-block-5 ul li.item-3 a:before {
-  content: url('../images/../images/icons/icon-email-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-4 span:before,
-#header .navigation.menu-block-5 ul li.item-4 a:before {
-  content: url('../images/../images/icons/icon-calendar-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-5 span:before,
-#header .navigation.menu-block-5 ul li.item-5 a:before {
-  content: url('../images/../images/icons/icon-mybookmarks-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
-}
-#header .navigation.menu-block-5 ul li.item-6 span:before,
-#header .navigation.menu-block-5 ul li.item-6 a:before {
-  content: url('../images/../images/icons/icon-housing-blue-small.svg');
-  vertical-align: middle;
-  padding-right: .5em;
-  display: inline-block;
-  transition: content 0.4s ease-in-out;
 }
 #header ul.menu {
   width: 100%;
@@ -4092,7 +4160,7 @@ a.icon-checkmark:hover {
 }
 @media (max-width: 58.25em) {
   #header ul.menu {
-    padding: 0em;
+    padding: 0;
   }
 }
 #header ul.menu li {
@@ -4123,7 +4191,7 @@ a.icon-checkmark:hover {
 }
 #header ul.menu li.active {
   border: none;
-  background-image: url(../images/icons/icon-active-up.svg);
+  background-image: url('../images/icons/icon-active-up.svg');
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -4150,7 +4218,7 @@ a.icon-checkmark:hover {
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: url('../images/../images/icons/icon-dropup.svg');
+  content: url('../images/icons/icon-dropup.svg');
   width: 15px;
   height: 24px;
   vertical-align: middle;
@@ -4265,44 +4333,6 @@ a.icon-checkmark:hover {
 #header ul.menu li .submenu ul.menu li a.active:hover {
   color: #365aba;
 }
-#header .desktop-bar .panels {
-  width: 100%;
-  float: left;
-  position: relative;
-  background-color: #07633b;
-  border-top: 4px solid #07633b;
-}
-#header .desktop-bar .panels .panel {
-  display: none;
-}
-#header .desktop-bar .panels .panel ul {
-  width: 100%;
-  float: left;
-  padding: 0;
-  margin: 0;
-}
-#header .desktop-bar .panels .panel ul li {
-  list-style-type: none;
-  float: left;
-  display: inline;
-  position: relative;
-  list-style: none;
-  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  line-height: 1.4em;
-  padding: 0;
-  margin: 0;
-}
-#header .desktop-bar .panels .panel ul li a {
-  display: block;
-  width: 100%;
-  padding: 1em 1em;
-  text-decoration: none;
-  transition: all 0.15s ease-in-out;
-  color: #96C49B;
-}
-#header .desktop-bar .panels .panel ul li a:hover {
-  color: white;
-}
 #header .navigation-wrap.department, #header .navigation-wrap.student {
   width: 100%;
   float: right;
@@ -4319,56 +4349,288 @@ a.icon-checkmark:hover {
   }
 }
 
-#main .toggles.sidebar-menu {
+/**
+ * @file _toggle-menus.scss
+ * The design for all toggle menus.
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
+ */
+.toggles {
+  margin: 0;
+  display: none;
+  padding: 0;
+  font-family: "TradeGothicNextW01-Cond", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+@media (max-width: 54.375em) {
+  .toggles {
+    display: block;
+  }
+}
+.toggles li {
+  list-style-type: none;
+  float: left;
+  display: inline;
+  position: relative;
+}
+.toggles li a {
+  display: block;
+  width: 100%;
+  padding: 2em .5em;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+.toggles li a span {
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+@media (max-width: 29.6875em) {
+  .toggles li a span {
+    display: block;
+    padding: .5em 0 0;
+  }
+}
+.toggles li a span:before {
+  display: block;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-align: center;
+  transition: content 0.4s ease-in-out;
+  vertical-align: middle;
+  min-height: 24px;
+}
+
+.toggles.desktop {
+  width: 31.91489%;
+  clear: right;
+  float: left;
+  margin-left: 0;
+  margin-right: 2.12766%;
+  display: block;
+  padding: 0;
+}
+[dir="rtl"] .toggles.desktop {
+  clear: left;
+  float: right;
+  margin-right: 0;
+  margin-left: 2.12766%;
+}
+.toggles.desktop li a {
+  color: #1f346b;
+  text-align: center;
+  float: left;
+  padding: 1em;
+  width: 100%;
+  font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+}
+.toggles.desktop li a:hover {
+  color: #3b559a;
+}
+.toggles.desktop li a.active {
+  color: #3b559a;
+}
+.toggles.desktop li a.active span {
+  color: #3b559a;
+}
+.toggles.desktop li a.pull-nav-main span:before, .toggles.desktop li a.pull-nav-desktop span:before {
+  content: url('../images/icons/icon-rows-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+}
+.toggles.desktop li a.pull-nav-main.active span:before, .toggles.desktop li a.pull-nav-desktop.active span:before {
+  content: url('../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+@media (max-width: 54.375em) {
+  .toggles.desktop {
+    display: none;
+  }
+}
+.toggles.main {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-  display: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 1.5em;
 }
-[dir="rtl"] #main .toggles.sidebar-menu {
+[dir="rtl"] .toggles.main {
   float: left;
 }
-@media (max-width: 54.375em) {
-  #main .toggles.sidebar-menu {
-    display: block;
-  }
-}
-#main .toggles.sidebar-menu li {
+.toggles.main li {
   width: 100%;
 }
-#main .toggles.sidebar-menu li a {
+.toggles.main li a {
   color: white;
-  background-color: #1f346b;
-  padding: 1em 1.5em;
   text-align: left;
+  float: left;
+  padding: 1em;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.05);
 }
-#main .toggles.sidebar-menu li a:hover {
-  background-color: #001e54;
-  color: white;
+.toggles.main li a:hover {
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.15);
 }
-#main .toggles.sidebar-menu li a.active {
-  background-color: #001e54;
-  color: white;
+.toggles.main li a.pull-nav span:before {
+  content: url('../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
 }
-#main .toggles.sidebar-menu li a.pull-sidebar {
-  color: white;
-}
-#main .toggles.sidebar-menu li a.pull-sidebar span:before {
-  content: url('../images/../images/icons/icon-menu-white-small.svg');
+.toggles.main li a.pull-nav.active span:before {
+  content: url('../images/icons/icon-cancel-white-small.svg');
   vertical-align: middle;
   padding-right: 1em;
   display: inline-block;
   transition: content 0.4s ease-in-out;
 }
-#main .toggles.sidebar-menu li a.pull-sidebar.active span:before {
-  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+.toggles.mobile {
+  width: 48.93617%;
+  clear: right;
+  float: right;
+  margin-right: 0;
+}
+[dir="rtl"] .toggles.mobile {
+  clear: left;
+  float: left;
+  margin-left: 0;
+}
+@media (max-width: 54.375em) {
+  .toggles.mobile {
+    float: right;
+    width: 48%;
+  }
+}
+@media (max-width: 29.6875em) {
+  .toggles.mobile {
+    border-left: 1px solid #cccccc;
+  }
+}
+.toggles.mobile li {
+  width: 33.33%;
+}
+@media (max-width: 54.375em) {
+  .toggles.mobile li {
+    width: 50%;
+  }
+}
+@media (max-width: 29.6875em) {
+  .toggles.mobile li {
+    width: 100%;
+  }
+}
+.toggles.mobile li a {
+  color: #1c2e5f;
+}
+@media (max-width: 54.375em) {
+  .toggles.mobile li a {
+    padding: 1em .5em;
+  }
+}
+@media (max-width: 29.6875em) {
+  .toggles.mobile li a {
+    padding: .5em 1.5em;
+  }
+}
+.toggles.mobile li a:hover {
+  color: #142143;
+  background-color: rgba(255, 255, 255, 0.82);
+}
+.toggles.mobile li a.active {
+  background-color: rgba(255, 255, 255, 0.82);
+  color: #2a4793;
+}
+@media (max-width: 54.375em) {
+  .toggles.mobile li a.desktop-login {
+    display: none;
+  }
+}
+@media (max-width: 29.6875em) {
+  .toggles.mobile li a span {
+    text-align: left;
+  }
+}
+@media (max-width: 29.6875em) {
+  .toggles.mobile li a span:before {
+    display: inline-block;
+    padding-right: .5em;
+  }
+}
+.toggles.mobile li a.pull-nav-main span {
+  display: block;
+}
+.toggles.mobile li a.pull-nav-main span:before {
+  content: url('../images/icons/icon-rows-blue-small.svg');
   vertical-align: middle;
-  padding-right: 1em;
-  display: inline-block;
+  height: 24px;
+}
+.toggles.mobile li a.pull-nav-main.active span:before {
+  content: url('../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
   transition: content 0.4s ease-in-out;
+}
+.toggles.mobile li a.pull-user span {
+  display: block;
+}
+.toggles.mobile li a.pull-user span:before {
+  content: url('../images/icons/icon-login-blue-small.svg');
+  vertical-align: middle;
+  height: 24px;
+}
+.toggles.mobile li a.pull-search span {
+  display: block;
+}
+.toggles.mobile li a.pull-search span:before {
+  content: url('../images/icons/icon-search-blue-small.svg');
+  vertical-align: middle;
+  height: 24px;
+}
+.toggles.mobile li a.pull-search.active span:before {
+  content: url('../images/icons/icon-x-blue-small.svg');
+  vertical-align: middle;
+  transition: content 0.4s ease-in-out;
+}
+
+#header.single-page .user-login a {
+  color: #bfbfbf;
+}
+#header.single-page .user-login a:hover {
+  color: white;
+}
+#header.single-page .user-login span:before {
+  content: url('../images/icons/icon-login-white-small.svg');
+}
+#header.single-page .toggles.mobile a {
+  color: #bfbfbf;
+}
+#header.single-page .toggles.mobile a:hover {
+  color: white;
+  background-color: transparent;
+}
+#header.single-page .toggles.mobile a.active {
+  color: #029555;
+  background-color: transparent;
+}
+#header.single-page .toggles.mobile a.pull-nav-main span:before {
+  content: url('../images/icons/icon-rows-white-small.svg');
+}
+#header.single-page .toggles.mobile a.pull-nav-main.active span:before {
+  content: url('../images/icons/icon-x-green-small.svg');
+}
+#header.single-page .toggles.mobile a.pull-search span:before {
+  content: url('../images/icons/icon-search-white-small.svg');
+}
+#header.single-page .toggles.mobile a.pull-search.active span:before {
+  content: url('../images/icons/icon-x-green-small.svg');
 }
 
 /**
@@ -5290,7 +5552,6 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
  *   All styles that have to do with buttons on the site.
  */
 #main .menu-left-sidebar {
-  margin-top: 2em;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -5353,6 +5614,58 @@ html body .cke_chrome .cke_wysiwyg_frame, html body .cke_chrome .cke_wysiwyg_div
 #main .menu-left-sidebar ul.menu li a:active {
   background-color: #001e54;
   color: white;
+}
+
+#main .toggles.sidebar-menu {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  display: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+[dir="rtl"] #main .toggles.sidebar-menu {
+  float: left;
+}
+@media (max-width: 54.375em) {
+  #main .toggles.sidebar-menu {
+    display: block;
+  }
+}
+#main .toggles.sidebar-menu li {
+  width: 100%;
+}
+#main .toggles.sidebar-menu li a {
+  color: white;
+  background-color: #1f346b;
+  padding: 1em 1.5em;
+  text-align: left;
+}
+#main .toggles.sidebar-menu li a:hover {
+  background-color: #001e54;
+  color: white;
+}
+#main .toggles.sidebar-menu li a.active {
+  background-color: #001e54;
+  color: white;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar {
+  color: white;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar span:before {
+  content: url('../images/../images/icons/icon-menu-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
+}
+#main .toggles.sidebar-menu li a.pull-sidebar.active span:before {
+  content: url('../images/../images/icons/icon-cancel-white-small.svg');
+  vertical-align: middle;
+  padding-right: 1em;
+  display: inline-block;
+  transition: content 0.4s ease-in-out;
 }
 
 /**

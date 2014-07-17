@@ -1,0 +1,106 @@
+/**
+ * @file _header-navigation-block-four.scss
+ * The design for menu-block-4 in the navigation region of the header. 
+ * 
+ **** Related asset: styleguide-assets/tabbed.js
+ */
+
+/**
+* Header - navigation block four styles
+ - This uses the responsive-nav.js to trigger show/hide functionality and add ".active" classes
+ - This uses the tabbed.js to show different panel-baed menus/divs based on interaction.
+*/
+#header {
+  .desktop-bar {
+    @include respond-to("navigation small") { // these needs to be hidden because at this size we need a different menu solution.
+      display: none !important;
+    }   
+    .panels {
+      width: 100%;
+      float: left;
+      position: relative;
+      background-color: color($green,dark);
+      border-top: 4px solid color($green,dark);
+      .panel {
+        display: none;
+        ul {
+          width: 100%;
+          float: left;
+          padding: 0;
+          margin: 0;
+          li {
+            list-style-type: none;
+            float: left;
+            display: inline;
+            position: relative;
+            list-style: none;
+            font-family: $trade-reg;
+            line-height: 1.4em;    
+            padding: 0;
+            margin: 0;       
+            a {
+              display: block;
+              width:100%;
+              padding: 1em 1em;
+              text-decoration: none;
+              transition: all 0.15s ease-in-out;
+              color: #96C49B;
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+      }      
+    }      
+  }   
+  .navigation {   
+    &.menu-block-4 { // for desktop menu only - main nav toggle from top -JT
+      background-color: color($green, main);
+      width: 100%;
+      margin: 0 auto;
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        position: relative;
+      }       
+      ul.desktop-menu, ul.tabbed {
+        @include respond-to("navigation small") {
+          padding: 1em 0;
+        }
+        li {
+          &.active {
+            background-image: url(../images/icons/icon-active-up-green.svg);
+            a,
+            span {
+              color: color($green,dark);            
+            }
+            span {
+              &:after {
+                content: image-url('../images/icons/icon-dropup-green.svg'); 
+              }
+            } 
+          }
+          span {
+            &:after {
+              content: image-url('../images/icons/icon-dropdown-green.svg'); 
+            }
+          }
+        }
+        span, a {
+          color: color($tan,bright);            
+          letter-spacing: .05em;
+          font-size: .85em;
+          text-transform: uppercase;
+          &:hover {
+            color: color($green,bright);            
+          }
+          @include respond-to("navigation small") {
+            padding: 1em 1.5em;
+          }  
+        }
+      }      
+    } 
+  }
+}    
