@@ -1,0 +1,56 @@
+/**
+ * @file _news-chunk.scss
+ */
+
+$news-chunk-column: 600px; //Match mobile menu breakpoint
+
+.teaser-feed {
+  padding: 1em;
+  margin-top: 2em;
+  @include grid-span(12,1);
+  @include breakpoint ($one-column) {
+    @include grid-span(9,4);
+  }
+
+  .teaser-group {
+    background-color: color($tan,highlight);
+    margin-bottom: 4em;
+    padding: .5em;
+    @include clearfix;
+    p {
+      margin: 0;
+    }
+    .tags {
+      float: right;
+      margin-top: .2em;
+      margin-right: 1em;
+      .tag {
+        margin-left: .4em;
+      }
+    }
+    .date {
+      text-transform: none;
+      float: right;
+      margin-top: .2em;
+    }
+    button {
+        @include grid-span(2,1);
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+  }
+
+  .teaser {
+    h1.title {
+      margin-top: .4em;
+      margin-bottom: .4em;
+      text-transform: none;
+    }
+    a { 
+        border: none !important;
+    }
+    blockquote {
+      color: color($tan,dark);
+    }
+  }
+}

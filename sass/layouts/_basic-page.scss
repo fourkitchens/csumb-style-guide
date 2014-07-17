@@ -17,13 +17,23 @@ $one-column: 870px; //Match mobile menu breakpoint
     clear: both;
   }
   
-  .main-container2 {
+  .main-container-centered {
       margin-top: 2em;
       padding-left: 1.5em;
       padding-right: 1.5em;
       @include grid-span(12,1);
     @include breakpoint ($one-column) {
         @include grid-span(9,2);
+      }
+  }
+  
+  .main-container-full {
+      margin-top: 2em;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+      @include grid-span(12,1);
+    @include breakpoint ($one-column) {
+        @include grid-span(12,1);
       }
   }
 }

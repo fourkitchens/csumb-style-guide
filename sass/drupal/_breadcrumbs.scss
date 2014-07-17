@@ -18,17 +18,23 @@
     &:link,
     &:visited {
       text-decoration: none;
-      color: wp-color($blue, 'main');
+      color: color($blue, 'main');
     }
     &:hover {
-      color: wp-color($blue, 'main', 10%);      
+      color: color($blue, 'main', 10%);      
     }
     &.active {
-      color: wp-color($tan, 'main');
+      color: color($tan, 'main');
       &:hover {
-        color: wp-color($tan, 'main', 5%);      
+        color: color($tan, 'main', 5%);      
       }
     }
+    &.disabled {
+      color: color($tan, 'main');
+      &:hover {
+        color: color($tan, 'main');      
+      }
+    }  
   }
 }
 

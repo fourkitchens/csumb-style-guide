@@ -422,6 +422,7 @@ ul.pager:after,
 .homepage #profiles:after,
 .homepage #about-university:after,
 .homepage #social-media:after,
+.majors-programs #second-tier:after,
 #main:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
@@ -1128,6 +1129,12 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 .breadcrumb a.active:hover {
   color: #a39b86;
 }
+.breadcrumb a.disabled {
+  color: #988f78;
+}
+.breadcrumb a.disabled:hover {
+  color: #988f78;
+}
 
 .breadcrumb-image {
   text-transform: uppercase;
@@ -1675,7 +1682,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 .basic-page .clear-h2 {
   clear: both;
 }
-.basic-page .main-container2 {
+.basic-page .main-container-centered {
   margin-top: 2em;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -1685,21 +1692,46 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .basic-page .main-container2 {
+[dir="rtl"] .basic-page .main-container-centered {
   float: left;
 }
 @media (min-width: 54.375em) {
-  .basic-page .main-container2 {
+  .basic-page .main-container-centered {
     width: 73.91304%;
     float: left;
     margin-right: -100%;
     margin-left: 8.69565%;
     clear: none;
   }
-  [dir="rtl"] .basic-page .main-container2 {
+  [dir="rtl"] .basic-page .main-container-centered {
     float: right;
     margin-left: -100%;
     margin-right: 8.69565%;
+  }
+}
+.basic-page .main-container-full {
+  margin-top: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .basic-page .main-container-full {
+  float: left;
+}
+@media (min-width: 54.375em) {
+  .basic-page .main-container-full {
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  [dir="rtl"] .basic-page .main-container-full {
+    float: left;
   }
 }
 
@@ -2189,8 +2221,411 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 /**
  * Prototype for Basic Page.
  */
-.more {
+.majors-programs .more {
   display: none;
+}
+.majors-programs .major-search {
+  background-color: #dddac7;
+  padding: 1em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .majors-programs .major-search {
+  float: left;
+}
+@media (min-width: 56.875em) {
+  .majors-programs .major-search {
+    width: 65.21739%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  [dir="rtl"] .majors-programs .major-search {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+.majors-programs .major-search .form-inline {
+  clear: both;
+}
+.majors-programs .major-search .form-inline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.majors-programs .major-search .form-inline .form-group {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  clear: both;
+}
+[dir="rtl"] .majors-programs .major-search .form-inline .form-group {
+  float: left;
+}
+@media (min-width: 30.5625em) {
+  .majors-programs .major-search .form-inline .form-group {
+    width: 65.95745%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  [dir="rtl"] .majors-programs .major-search .form-inline .form-group {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+@media (min-width: 50em) {
+  .majors-programs .major-search .form-inline .form-group {
+    width: 73.91304%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+  [dir="rtl"] .majors-programs .major-search .form-inline .form-group {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+.majors-programs .major-search .form-inline .form-group input.form-control {
+  width: 100%;
+  padding: .75em;
+}
+.majors-programs .major-search .form-inline input.btn {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  margin-top: 1em;
+}
+[dir="rtl"] .majors-programs .major-search .form-inline input.btn {
+  float: left;
+}
+@media (min-width: 30.5625em) {
+  .majors-programs .major-search .form-inline input.btn {
+    width: 31.91489%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    margin-top: 0em;
+  }
+  [dir="rtl"] .majors-programs .major-search .form-inline input.btn {
+    float: left;
+  }
+}
+@media (min-width: 50em) {
+  .majors-programs .major-search .form-inline input.btn {
+    width: 21.73913%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  [dir="rtl"] .majors-programs .major-search .form-inline input.btn {
+    float: left;
+  }
+}
+.majors-programs .majors-listing {
+  clear: both;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .majors-programs .majors-listing {
+  float: left;
+}
+@media (min-width: 50em) {
+  .majors-programs .majors-listing {
+    width: 47.82609%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    clear: both;
+  }
+  [dir="rtl"] .majors-programs .majors-listing {
+    float: right;
+    margin-left: -100%;
+    margin-right: 0;
+  }
+}
+.majors-programs .grad-degree-listing, .majors-programs .teaching-cred-listing, .majors-programs .assoc-degree-listing {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .majors-programs .grad-degree-listing, [dir="rtl"] .majors-programs .teaching-cred-listing, [dir="rtl"] .majors-programs .assoc-degree-listing {
+  float: left;
+}
+@media (min-width: 50em) {
+  .majors-programs .grad-degree-listing, .majors-programs .teaching-cred-listing, .majors-programs .assoc-degree-listing {
+    width: 47.82609%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    clear: right;
+  }
+  [dir="rtl"] .majors-programs .grad-degree-listing, [dir="rtl"] .majors-programs .teaching-cred-listing, [dir="rtl"] .majors-programs .assoc-degree-listing {
+    float: left;
+  }
+}
+.majors-programs .majors-listing ul, .majors-programs .grad-degree-listing ul, .majors-programs .teaching-cred-listing ul, .majors-programs .assoc-degree-listing ul {
+  padding-left: 0;
+}
+.majors-programs .majors-listing ul li, .majors-programs .grad-degree-listing ul li, .majors-programs .teaching-cred-listing ul li, .majors-programs .assoc-degree-listing ul li {
+  font-size: 18px;
+  list-style: none;
+  border-top: 1px solid #eceade;
+}
+.majors-programs .majors-listing ul li a, .majors-programs .grad-degree-listing ul li a, .majors-programs .teaching-cred-listing ul li a, .majors-programs .assoc-degree-listing ul li a {
+  border-bottom: 0 !important;
+  display: block;
+  padding: .5em;
+  list-style: none;
+  margin-left: 0;
+}
+.majors-programs .majors-listing ul li a:hover, .majors-programs .grad-degree-listing ul li a:hover, .majors-programs .teaching-cred-listing ul li a:hover, .majors-programs .assoc-degree-listing ul li a:hover {
+  background-color: #eceade;
+}
+.majors-programs .majors-listing ul li a.showing, .majors-programs .grad-degree-listing ul li a.showing, .majors-programs .teaching-cred-listing ul li a.showing, .majors-programs .assoc-degree-listing ul li a.showing {
+  background-color: #eceade;
+}
+.majors-programs .majors-listing ul .more, .majors-programs .grad-degree-listing ul .more, .majors-programs .teaching-cred-listing ul .more, .majors-programs .assoc-degree-listing ul .more {
+  background-color: #eceade;
+  padding: 1.5em;
+  border-top: 1px solid white;
+}
+.majors-programs .majors-listing ul .more ul li, .majors-programs .grad-degree-listing ul .more ul li, .majors-programs .teaching-cred-listing ul .more ul li, .majors-programs .assoc-degree-listing ul .more ul li {
+  border: none;
+}
+.majors-programs .majors-listing ul .more ul li a, .majors-programs .grad-degree-listing ul .more ul li a, .majors-programs .teaching-cred-listing ul .more ul li a, .majors-programs .assoc-degree-listing ul .more ul li a {
+  padding: 0;
+  border-bottom: 1px solid #3b559a !important;
+  display: inline;
+}
+.majors-programs .majors-listing ul .more ul li p, .majors-programs .grad-degree-listing ul .more ul li p, .majors-programs .teaching-cred-listing ul .more ul li p, .majors-programs .assoc-degree-listing ul .more ul li p {
+  padding-top: .5em;
+}
+.majors-programs #second-tier {
+  background-color: #f3f2e8;
+  padding-bottom: 4em;
+  clear: both;
+}
+.majors-programs #second-tier .other-programs h3.name {
+  margin-top: .5em;
+  margin-bottom: .2em;
+  color: #3b559a;
+  text-transform: none;
+}
+.majors-programs #second-tier .other-programs p.description {
+  margin-bottom: 0;
+}
+.majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+  clear: both;
+}
+[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
+  float: left;
+}
+.majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
+  float: left;
+}
+.majors-programs #second-tier .other-programs:nth-of-type(1n) {
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n) {
+  float: left;
+}
+@media (min-width: 60.9375em) {
+  .majors-programs #second-tier .other-programs:nth-of-type(3n+1) {
+    width: 33.33333%;
+    float: left;
+    margin-right: -100%;
+    clear: none;
+    padding-right: 2em;
+    clear: both;
+  }
+  [dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(3n+1) {
+    float: right;
+    margin-left: -100%;
+    padding-left: 2em;
+  }
+  .majors-programs #second-tier .other-programs:nth-of-type(3n+2) {
+    width: 33.33333%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 33.33333%;
+    clear: none;
+    padding-right: 2em;
+  }
+  [dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(3n+2) {
+    float: right;
+    margin-left: -100%;
+    margin-right: 33.33333%;
+    padding-left: 2em;
+  }
+  .majors-programs #second-tier .other-programs:nth-of-type(3n) {
+    width: 33.33333%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding-right: 0;
+  }
+  [dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(3n) {
+    float: left;
+    padding-left: 0;
+  }
+}
+.majors-programs #bottom-tier {
+  padding: 2em 0;
+  clear: both;
+  background-color: #029555;
+}
+.majors-programs #bottom-tier:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.majors-programs #bottom-tier .limiter .main-content {
+  margin-top: 2em;
+  color: white;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+.majors-programs #bottom-tier .limiter .main-content h2 {
+  color: #dddac7;
+}
+[dir="rtl"] .majors-programs #bottom-tier .limiter .main-content {
+  float: left;
+}
+@media (min-width: 50em) {
+  .majors-programs #bottom-tier .limiter .main-content {
+    width: 65.21739%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 17.3913%;
+    clear: none;
+  }
+  [dir="rtl"] .majors-programs #bottom-tier .limiter .main-content {
+    float: right;
+    margin-left: -100%;
+    margin-right: 17.3913%;
+  }
+}
+
+/**
+ * @file _news-chunk.scss
+ */
+.teaser-feed {
+  padding: 1em;
+  margin-top: 2em;
+  width: 100%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+[dir="rtl"] .teaser-feed {
+  float: left;
+}
+@media (min-width: 54.375em) {
+  .teaser-feed {
+    width: 73.91304%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+  [dir="rtl"] .teaser-feed {
+    float: left;
+  }
+}
+.teaser-feed .teaser-group {
+  background-color: #eceade;
+  margin-bottom: 4em;
+  padding: .5em;
+}
+.teaser-feed .teaser-group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.teaser-feed .teaser-group p {
+  margin: 0;
+}
+.teaser-feed .teaser-group .tags {
+  float: right;
+  margin-top: .2em;
+  margin-right: 1em;
+}
+.teaser-feed .teaser-group .tags .tag {
+  margin-left: .4em;
+}
+.teaser-feed .teaser-group .date {
+  text-transform: none;
+  float: right;
+  margin-top: .2em;
+}
+.teaser-feed .teaser-group button {
+  width: 14.89362%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+[dir="rtl"] .teaser-feed .teaser-group button {
+  float: right;
+  margin-left: -100%;
+  margin-right: 0;
+}
+.teaser-feed .teaser h1.title {
+  margin-top: .4em;
+  margin-bottom: .4em;
+  text-transform: none;
+}
+.teaser-feed .teaser a {
+  border: none !important;
+}
+.teaser-feed .teaser blockquote {
+  color: #39351b;
 }
 
 /**
@@ -2290,7 +2725,6 @@ input.action-submit {
   background-image: linear-gradient(#1bc37a 75%, #18ad6c);
   border-color: #016338;
   color: white;
-  text-shadow: 1px 1px 0 #029555;
 }
 .btn-primary:hover,
 .btn-primary:focus,
