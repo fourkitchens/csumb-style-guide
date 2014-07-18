@@ -2031,19 +2031,9 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-top: .2em;
 }
 #main .teaser-feed .teaser-group button {
-  width: 14.89362%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
   margin-top: 0;
   margin-bottom: 0;
   float: left;
-}
-[dir="rtl"] #main .teaser-feed .teaser-group button {
-  float: right;
-  margin-left: -100%;
-  margin-right: 0;
 }
 #main .teaser-feed .teaser h1.title {
   margin-top: .4em;
@@ -3781,8 +3771,15 @@ a.icon-checkmark:hover {
  * The design for the footer partials.
  */
 #footer {
-  color: #dddac7;
-  background-color: #cac5a7;
+  border-top: 2px solid #cabd9c;
+  width: 100%;
+  background-image: url(../images/photos/footer-beach.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  color: #39351b;
+  background-color: #eceade;
   width: 100%;
   float: right;
   margin-left: 0;
@@ -3795,11 +3792,18 @@ a.icon-checkmark:hover {
 [dir="rtl"] #footer {
   float: left;
 }
+#footer ul {
+  padding-left: 0;
+}
 #footer ul li {
   list-style: none;
 }
+#footer ul li.title {
+  text-transform: uppercase;
+  color: #39351b;
+}
 #footer .popular {
-  width: 14.89362%;
+  width: 48.93617%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
@@ -3811,80 +3815,68 @@ a.icon-checkmark:hover {
   margin-right: 0;
 }
 #footer .tools {
-  width: 14.89362%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 17.02128%;
+  width: 48.93617%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
   clear: none;
 }
 [dir="rtl"] #footer .tools {
-  float: right;
-  margin-left: -100%;
-  margin-right: 17.02128%;
+  float: left;
 }
 #footer .links {
-  width: 23.40426%;
+  width: 48.93617%;
   float: left;
   margin-right: -100%;
-  margin-left: 34.04255%;
+  margin-left: 0;
   clear: none;
+  clear: both;
 }
 [dir="rtl"] #footer .links {
   float: right;
   margin-left: -100%;
-  margin-right: 34.04255%;
+  margin-right: 0;
 }
 #footer li {
   margin: 0 0 .275em;
 }
-#footer li a {
-  color: #001e54;
-  text-decoration: none;
-}
-#footer li a:hover {
-  color: #003087;
-}
 #footer .donate {
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
-  width: 23.40426%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 59.57447%;
-  clear: none;
+  font-size: 16px;
   padding: 0;
+  margin-top: 1em;
+  width: 48.93617%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 [dir="rtl"] #footer .donate {
-  float: right;
-  margin-left: -100%;
-  margin-right: 59.57447%;
+  float: left;
 }
-#footer .donate button {
+#footer .donate .other {
+  margin: 0;
+  padding: 0;
+}
+#footer .donate .other li {
+  white-space: nowrap;
+  display: inline;
+}
+#footer .donate .other li a {
+  padding: .3em .4em;
+}
+#footer .address {
+  border-top: 2px solid #cabd9c;
+  margin-top: 1em;
+  padding-top: 1em;
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
-}
-[dir="rtl"] #footer .donate button {
-  float: left;
-}
-#footer .donate .other {
-  padding: 0;
-  margin: 0;
-}
-#footer .donate .other a {
-  color: #001e54;
-  text-decoration: none;
-}
-#footer .donate .other a:hover {
-  color: #003087;
-}
-#footer .address {
-  width: 14.89362%;
-  float: right;
-  margin-left: 0;
-  margin-right: 0;
-  clear: none;
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 16px;
+  clear: both;
 }
 [dir="rtl"] #footer .address {
   float: left;

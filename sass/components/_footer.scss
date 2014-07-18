@@ -3,9 +3,21 @@
  * The design for the footer partials.
  */
 
+$footer-address: 955px; //Donate, Address column need more room
+$links-two-column: 650px; //Links get squished.
+$links-one-column: 650px; //Links get squished.
+
 #footer {
-  color: wp-color($grey, bright);
-  background-color: wp-color($tan, 'bright', -10%);
+    border-top: 2px solid color($tan,mid);
+    width: 100%;
+    background-image: url(../images/photos/footer-beach.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+
+  color: color($tan,dark);
+  background-color: wp-color($tan,highlight);
   @include add-grid(12);
   @include grid-span(12,1);
   padding: 1em;
@@ -13,56 +25,74 @@
   @extend %clearfix;
   font-family: $trade-bold;
   ul {
+    padding-left: 0;
     li {
       list-style: none;
+      &.title {
+        text-transform: uppercase;
+        color: color($tan,dark);
+      }
     } 
   }
     .popular {
-      @include grid-span(2,1);
+      @include grid-span(6,1);
+      @include breakpoint ($links-two-column) {
+        @include grid-span(2,1);
+      }
     }
     .tools {
-      @include grid-span(2,3);
+      @include grid-span(6,7);
+      @include breakpoint ($links-two-column) {
+        @include grid-span(2,3);
+      }
     }
     .links {
-      @include grid-span(3,5);
+      @include grid-span(6,1);
+      clear: both;
+      @include breakpoint ($links-two-column) {
+        @include grid-span(3,5);
+      }
     }
     li {
       margin: 0 0 .275em;
-      a {
-        color: wp-color($blue, 'dark');
-        text-decoration: none;
-      }
-      a:hover {
-        color: wp-color($blue, 'dark', 10%);
-      }
     } 
   .donate {
     font-family: $trade-reg;
-    @include grid-span(3,8);
+    font-size: 16px;
     padding: 0;
-    @include respond-to("footer smallest") {
-      //width: 100%;
+    margin-top: 1em;
+    @include grid-span(6,7);
+    @include breakpoint ($links-two-column) {
+      @include grid-span(4,9);
+      margin-top: 0;
     }
-    button {
-      @include grid-span(12,1);
+    @include breakpoint ($footer-address) {
+      @include grid-span(5,8);
+      clear: right;
     }
     .other {
-      //@include grid-span(12,1);
+      margin: 0;
       padding: 0;
-      margin: 0;   
-      a {
-        color: wp-color($blue, 'dark');
-        text-decoration: none;
-      }
-      a:hover {
-        color: wp-color($blue, 'dark', 10%);
+      li {
+        white-space: nowrap;
+        display: inline;
+        a {
+          padding: .3em .4em;
+        }
       }
     }
   }
   .address {
-    @include grid-span(2,11);
-    @include respond-to("footer smallest") {
-      width: 100%;
+    border-top: 2px solid color($tan,mid);
+    margin-top: 1em;
+    padding-top: 1em;
+    @include grid-span(12,1);
+    font-family: $merriweather;
+    font-size: 16px;
+    clear: both;
+    @include breakpoint ($footer-address) {
+      @include grid-span(5,8);
+      clear: right;
     }
   }
 }
