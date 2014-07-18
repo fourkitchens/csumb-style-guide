@@ -426,7 +426,7 @@ ul.pager:after,
 .homepage #profiles:after,
 .homepage #about-university:after,
 .homepage #social-media:after,
-.majors-programs #second-tier:after,
+#main.majors-programs #second-tier:after,
 #main:after,
 #header ul.menu:after,
 #header ul.menu li .submenu ul.menu:after,
@@ -1734,30 +1734,35 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 /**
  * Prototype for Basic Page.
  */
-.majors-programs .more {
+#main.majors-programs .more {
   display: none;
 }
-.majors-programs .major-search {
-  background-color: #dddac7;
-  padding: 1em;
+#main.majors-programs .page-title {
+  margin-top: 2em;
+}
+#main.majors-programs .major-search {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .majors-programs .major-search {
+[dir="rtl"] #main.majors-programs .major-search {
   float: left;
 }
-.majors-programs .major-search .form-inline {
+#main.majors-programs .major-search .well {
+  background-color: #dddac7;
+  padding: 1em;
+}
+#main.majors-programs .major-search .well .form-inline {
   clear: both;
 }
-.majors-programs .major-search .form-inline:after {
+#main.majors-programs .major-search .well .form-inline:after {
   content: "";
   display: table;
   clear: both;
 }
-.majors-programs .major-search .form-inline .form-group {
+#main.majors-programs .major-search .well .form-inline .form-group {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1765,14 +1770,14 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
   clear: both;
 }
-[dir="rtl"] .majors-programs .major-search .form-inline .form-group {
+[dir="rtl"] #main.majors-programs .major-search .well .form-inline .form-group {
   float: left;
 }
-.majors-programs .major-search .form-inline .form-group input.form-control {
+#main.majors-programs .major-search .well .form-inline .form-group input.form-control {
   width: 100%;
   padding: .75em;
 }
-.majors-programs .major-search .form-inline input.btn {
+#main.majors-programs .major-search .well .form-inline input.btn {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1780,10 +1785,47 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
   margin-top: 1em;
 }
-[dir="rtl"] .majors-programs .major-search .form-inline input.btn {
+[dir="rtl"] #main.majors-programs .major-search .well .form-inline input.btn {
   float: left;
 }
-.majors-programs .majors-listing {
+#main.majors-programs .major-search #results ul {
+  padding-left: 0;
+}
+#main.majors-programs .major-search #results ul li {
+  font-size: 18px;
+  list-style: none;
+  border-top: 1px solid #eceade;
+}
+#main.majors-programs .major-search #results ul li a {
+  border-bottom: 0;
+  display: block;
+  padding: .5em;
+  list-style: none;
+  margin-left: 0;
+}
+#main.majors-programs .major-search #results ul li a:hover {
+  background-color: #eceade;
+}
+#main.majors-programs .major-search #results ul li a.more-link {
+  background-color: #eceade;
+}
+#main.majors-programs .major-search #results ul .more {
+  background-color: #eceade;
+  padding: 1.5em;
+  border-top: 1px solid white;
+}
+#main.majors-programs .major-search #results ul .more ul li {
+  border: none;
+}
+#main.majors-programs .major-search #results ul .more ul li a {
+  padding: 0;
+  border-bottom: 1px solid #3b559a;
+  display: inline;
+}
+#main.majors-programs .major-search #results ul .more ul li p {
+  padding-top: .5em;
+}
+#main.majors-programs .majors-listing {
   clear: both;
   width: 100%;
   float: right;
@@ -1791,71 +1833,71 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .majors-programs .majors-listing {
+[dir="rtl"] #main.majors-programs .majors-listing {
   float: left;
 }
-.majors-programs .grad-degree-listing, .majors-programs .teaching-cred-listing, .majors-programs .assoc-degree-listing {
+#main.majors-programs .grad-degree-listing, #main.majors-programs .teaching-cred-listing, #main.majors-programs .assoc-degree-listing {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .majors-programs .grad-degree-listing, [dir="rtl"] .majors-programs .teaching-cred-listing, [dir="rtl"] .majors-programs .assoc-degree-listing {
+[dir="rtl"] #main.majors-programs .grad-degree-listing, [dir="rtl"] #main.majors-programs .teaching-cred-listing, [dir="rtl"] #main.majors-programs .assoc-degree-listing {
   float: left;
 }
-.majors-programs .majors-listing ul, .majors-programs .grad-degree-listing ul, .majors-programs .teaching-cred-listing ul, .majors-programs .assoc-degree-listing ul {
+#main.majors-programs .majors-listing ul, #main.majors-programs .grad-degree-listing ul, #main.majors-programs .teaching-cred-listing ul, #main.majors-programs .assoc-degree-listing ul {
   padding-left: 0;
 }
-.majors-programs .majors-listing ul li, .majors-programs .grad-degree-listing ul li, .majors-programs .teaching-cred-listing ul li, .majors-programs .assoc-degree-listing ul li {
+#main.majors-programs .majors-listing ul li, #main.majors-programs .grad-degree-listing ul li, #main.majors-programs .teaching-cred-listing ul li, #main.majors-programs .assoc-degree-listing ul li {
   font-size: 18px;
   list-style: none;
   border-top: 1px solid #eceade;
 }
-.majors-programs .majors-listing ul li a, .majors-programs .grad-degree-listing ul li a, .majors-programs .teaching-cred-listing ul li a, .majors-programs .assoc-degree-listing ul li a {
+#main.majors-programs .majors-listing ul li a, #main.majors-programs .grad-degree-listing ul li a, #main.majors-programs .teaching-cred-listing ul li a, #main.majors-programs .assoc-degree-listing ul li a {
   border-bottom: 0 !important;
   display: block;
   padding: .5em;
   list-style: none;
   margin-left: 0;
 }
-.majors-programs .majors-listing ul li a:hover, .majors-programs .grad-degree-listing ul li a:hover, .majors-programs .teaching-cred-listing ul li a:hover, .majors-programs .assoc-degree-listing ul li a:hover {
+#main.majors-programs .majors-listing ul li a:hover, #main.majors-programs .grad-degree-listing ul li a:hover, #main.majors-programs .teaching-cred-listing ul li a:hover, #main.majors-programs .assoc-degree-listing ul li a:hover {
   background-color: #eceade;
 }
-.majors-programs .majors-listing ul li a.showing, .majors-programs .grad-degree-listing ul li a.showing, .majors-programs .teaching-cred-listing ul li a.showing, .majors-programs .assoc-degree-listing ul li a.showing {
+#main.majors-programs .majors-listing ul li a.showing, #main.majors-programs .grad-degree-listing ul li a.showing, #main.majors-programs .teaching-cred-listing ul li a.showing, #main.majors-programs .assoc-degree-listing ul li a.showing {
   background-color: #eceade;
 }
-.majors-programs .majors-listing ul .more, .majors-programs .grad-degree-listing ul .more, .majors-programs .teaching-cred-listing ul .more, .majors-programs .assoc-degree-listing ul .more {
+#main.majors-programs .majors-listing ul .more, #main.majors-programs .grad-degree-listing ul .more, #main.majors-programs .teaching-cred-listing ul .more, #main.majors-programs .assoc-degree-listing ul .more {
   background-color: #eceade;
   padding: 1.5em;
   border-top: 1px solid white;
 }
-.majors-programs .majors-listing ul .more ul li, .majors-programs .grad-degree-listing ul .more ul li, .majors-programs .teaching-cred-listing ul .more ul li, .majors-programs .assoc-degree-listing ul .more ul li {
+#main.majors-programs .majors-listing ul .more ul li, #main.majors-programs .grad-degree-listing ul .more ul li, #main.majors-programs .teaching-cred-listing ul .more ul li, #main.majors-programs .assoc-degree-listing ul .more ul li {
   border: none;
 }
-.majors-programs .majors-listing ul .more ul li a, .majors-programs .grad-degree-listing ul .more ul li a, .majors-programs .teaching-cred-listing ul .more ul li a, .majors-programs .assoc-degree-listing ul .more ul li a {
+#main.majors-programs .majors-listing ul .more ul li a, #main.majors-programs .grad-degree-listing ul .more ul li a, #main.majors-programs .teaching-cred-listing ul .more ul li a, #main.majors-programs .assoc-degree-listing ul .more ul li a {
   padding: 0;
-  border-bottom: 1px solid #3b559a !important;
+  border-bottom: 1px solid #3b559a;
   display: inline;
 }
-.majors-programs .majors-listing ul .more ul li p, .majors-programs .grad-degree-listing ul .more ul li p, .majors-programs .teaching-cred-listing ul .more ul li p, .majors-programs .assoc-degree-listing ul .more ul li p {
+#main.majors-programs .majors-listing ul .more ul li p, #main.majors-programs .grad-degree-listing ul .more ul li p, #main.majors-programs .teaching-cred-listing ul .more ul li p, #main.majors-programs .assoc-degree-listing ul .more ul li p {
   padding-top: .5em;
 }
-.majors-programs #second-tier {
+#main.majors-programs #second-tier {
   background-color: #f3f2e8;
   padding-bottom: 4em;
   clear: both;
 }
-.majors-programs #second-tier .other-programs h3.name {
+#main.majors-programs #second-tier .other-programs h3.name {
   margin-top: .5em;
   margin-bottom: .2em;
   color: #3b559a;
   text-transform: none;
 }
-.majors-programs #second-tier .other-programs p.description {
+#main.majors-programs #second-tier .other-programs p.description {
   margin-bottom: 0;
 }
-.majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
+#main.majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
   width: 100%;
   float: right;
   margin-left: 0;
@@ -1863,40 +1905,40 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   clear: none;
   clear: both;
 }
-[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
+[dir="rtl"] #main.majors-programs #second-tier .other-programs:nth-of-type(1n+1) {
   float: left;
 }
-.majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
+#main.majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
+[dir="rtl"] #main.majors-programs #second-tier .other-programs:nth-of-type(1n+2) {
   float: left;
 }
-.majors-programs #second-tier .other-programs:nth-of-type(1n) {
+#main.majors-programs #second-tier .other-programs:nth-of-type(1n) {
   width: 100%;
   float: right;
   margin-left: 0;
   margin-right: 0;
   clear: none;
 }
-[dir="rtl"] .majors-programs #second-tier .other-programs:nth-of-type(1n) {
+[dir="rtl"] #main.majors-programs #second-tier .other-programs:nth-of-type(1n) {
   float: left;
 }
-.majors-programs #bottom-tier {
+#main.majors-programs #bottom-tier {
   padding: 2em 0;
   clear: both;
   background-color: #029555;
 }
-.majors-programs #bottom-tier:after {
+#main.majors-programs #bottom-tier:after {
   content: "";
   display: table;
   clear: both;
 }
-.majors-programs #bottom-tier .limiter .main-content {
+#main.majors-programs #bottom-tier .limiter .main-content {
   margin-top: 2em;
   color: white;
   width: 100%;
@@ -1905,10 +1947,10 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   margin-right: 0;
   clear: none;
 }
-.majors-programs #bottom-tier .limiter .main-content h2 {
+#main.majors-programs #bottom-tier .limiter .main-content h2 {
   color: #dddac7;
 }
-[dir="rtl"] .majors-programs #bottom-tier .limiter .main-content {
+[dir="rtl"] #main.majors-programs #bottom-tier .limiter .main-content {
   float: left;
 }
 
@@ -1936,8 +1978,10 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   list-style-type: none;
   font-family: "Trade Gothic Next W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   text-transform: uppercase;
+  line-height: 2.5em;
 }
 #main .teaser-feed .teaser-sections .tags li {
+  white-space: nowrap;
   display: inline;
 }
 #main .teaser-feed .teaser-sections .tags li a {
@@ -1956,6 +2000,7 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
   color: #f3f2e8;
 }
 #main .teaser-feed .teaser-group {
+  clear: both;
   background-color: #eceade;
   margin-bottom: 4em;
   padding: .5em;
@@ -2017,18 +2062,6 @@ ul.primary li.active a, ul.primary li.pager-current, ul.pager li.active a, ul.pa
 }
 [dir="rtl"] #main .teaser-feed .teaser.small-image img {
   float: left;
-}
-#main .teaser-feed .teaser.small-image p {
-  width: 48.93617%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 0;
-  clear: none;
-}
-[dir="rtl"] #main .teaser-feed .teaser.small-image p {
-  float: right;
-  margin-left: -100%;
-  margin-right: 0;
 }
 #main .secondary-content {
   margin-top: 2em;

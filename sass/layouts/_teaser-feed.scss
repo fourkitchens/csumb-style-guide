@@ -21,7 +21,9 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
         list-style-type: none;
         font-family: $trade-reg;
         text-transform: uppercase;
+        line-height: 2.5em;
         li {
+          white-space: nowrap;
           display: inline;
           a {
             padding: .3em .4em;
@@ -42,6 +44,7 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
       }
     }
     .teaser-group {
+      clear: both;
       background-color: color($tan,highlight);
       margin-bottom: 4em;
       padding: .5em;
@@ -87,9 +90,6 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
           padding-left: 1.5em;
           padding-bottom: 1.5em;
         }
-        p {
-          @include grid-span(6,1);
-        }
       }
     }
   }
@@ -111,12 +111,6 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
       @include breakpoint ($teaser-feed) {
         padding: 1.5em;
       }         
-    }
-    .map {
-      //border-color: color($yellow, dark);
-    }
-    .related-content {
-      //border-color: color($blue);
     }
   }
 
