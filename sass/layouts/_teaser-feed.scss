@@ -2,55 +2,122 @@
  * @file _news-chunk.scss
  */
 
-$news-chunk-column: 600px; //Match mobile menu breakpoint
+$teaser-feed: 900px; //Match mobile menu breakpoint
 
-.teaser-feed {
-  padding: 1em;
-  margin-top: 2em;
-  @include grid-span(12,1);
-  @include breakpoint ($one-column) {
-    @include grid-span(9,4);
-  }
-
-  .teaser-group {
-    background-color: color($tan,highlight);
-    margin-bottom: 4em;
-    padding: .5em;
-    @include clearfix;
-    p {
-      margin: 0;
+#main {
+  .teaser-feed {
+    margin-top: 2em;
+    @include grid-span(12,1);
+    @include breakpoint ($teaser-feed) {
+      @include grid-span(7,1);
     }
-    .tags {
-      float: right;
-      margin-top: .2em;
-      margin-right: 1em;
-      .tag {
-        margin-left: .4em;
+  
+    .teaser-sections {
+      background-color: color($tan,light);
+      margin-bottom: 2em;
+      .tags {
+        margin: 0;
+        padding: 1em;
+        list-style-type: none;
+        font-family: $trade-reg;
+        text-transform: uppercase;
+        li {
+          display: inline;
+          a {
+            padding: .3em .4em;
+            color: color($green);
+            border-bottom: none;
+            &.active {
+              border-radius: 4px;
+              background-color: color($green);
+              color: $white;
+            }
+            &:hover {
+              border-radius: 4px;
+              background-color: color($tan);
+              color: color($tan,light);
+            }
+          }
+        }
       }
     }
-    .date {
-      text-transform: none;
-      float: right;
-      margin-top: .2em;
+    .teaser-group {
+      background-color: color($tan,highlight);
+      margin-bottom: 4em;
+      padding: .5em;
+      @include clearfix;
+      p {
+        margin: 0;
+      }
+      .tags {
+        float: right;
+        margin-top: .2em;
+        margin-right: 1em;
+        .tag {
+          margin-left: .4em;
+        }
+      }
+      .date {
+        text-transform: none;
+        float: right;
+        margin-top: .2em;
+      }
+      button {
+          @include grid-span(2,1);
+          margin-top: 0;
+          margin-bottom: 0;
+      }
     }
-    button {
-        @include grid-span(2,1);
-        margin-top: 0;
-        margin-bottom: 0;
+  
+    .teaser {
+      h1.title {
+        margin-top: .4em;
+        margin-bottom: .4em;
+        text-transform: none;
+      }
+      a { 
+          border: none;
+      }
+      blockquote {
+        color: color($tan,dark);
+      }
+      &.small-image {
+        img {
+          @include grid-span(6,7);
+          padding-left: 1.5em;
+          padding-bottom: 1.5em;
+        }
+        p {
+          @include grid-span(6,1);
+        }
+      }
+    }
+  }
+  
+  .secondary-content {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    @include grid-span(12,1);
+    @include breakpoint ($teaser-feed) {
+      @include grid-span(4,9);
+    } 
+    div {
+      background-color: color($tan, light);
+      padding: 1em;
+      margin: 0 0 1em 0;
+      -webkit-box-shadow: 0 3px 0 color($tan, bright);
+      -moz-box-shadow: 0 3px 0 color($tan, bright);
+      box-shadow: 0 3px 0 color($tan, bright);
+      @include breakpoint ($teaser-feed) {
+        padding: 1.5em;
+      }         
+    }
+    .map {
+      //border-color: color($yellow, dark);
+    }
+    .related-content {
+      //border-color: color($blue);
     }
   }
 
-  .teaser {
-    h1.title {
-      margin-top: .4em;
-      margin-bottom: .4em;
-      text-transform: none;
-    }
-    a { 
-        border: none !important;
-    }
-    blockquote {
-      color: color($tan,dark);
-    }
-  }
 }

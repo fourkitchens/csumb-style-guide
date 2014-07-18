@@ -4,7 +4,7 @@
 
 $department-home: 800px; //Match mobile menu breakpoint
 
-.basic-page {
+.department-home {
   #top-tier {
     .limiter {
       .main-content {
@@ -12,7 +12,7 @@ $department-home: 800px; //Match mobile menu breakpoint
         @include grid-span(12,1);
         @include breakpoint ($department-home) {
           @include grid-span(7,1);
-        } 
+        }
       }
       .secondary-content {
         margin-top: 2em;
@@ -20,14 +20,14 @@ $department-home: 800px; //Match mobile menu breakpoint
         @include grid-span(12,1);
         @include breakpoint ($department-home) {
           @include grid-span(4,9);
-        } 
+        }
         div {
           background-color: color($tan, light);
           padding: 1.5em;
           margin: 0 0 1em 0;
           -webkit-box-shadow: 0 3px 0 color($tan, bright);
           -moz-box-shadow: 0 3px 0 color($tan, bright);
-          box-shadow: 0 3px 0 color($tan, bright);        
+          box-shadow: 0 3px 0 color($tan, bright);         
         }
         .map {
           //border-color: color($yellow, dark);
