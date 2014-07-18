@@ -1,0 +1,123 @@
+/**
+ * @file _news-chunk.scss
+ */
+
+$teaser-feed: 900px; //Match mobile menu breakpoint
+$teaser-image-small: 500px; //Small image become full width
+
+#main {
+  .teaser-feed {
+    margin-top: 2em;
+    @include grid-span(12,1);
+    @include breakpoint ($teaser-feed) {
+      @include grid-span(7,1);
+    }
+  
+    .teaser-sections {
+      background-color: color($tan,light);
+      margin-bottom: 2em;
+      .tags {
+        margin: 0;
+        padding: 1em;
+        list-style-type: none;
+        font-family: $trade-reg;
+        text-transform: uppercase;
+        line-height: 2.5em;
+        li {
+          white-space: nowrap;
+          display: inline;
+          a {
+            padding: .3em .4em;
+            color: color($green);
+            border-bottom: none;
+            &.active {
+              border-radius: 4px;
+              background-color: color($green);
+              color: $white;
+            }
+            &:hover {
+              border-radius: 4px;
+              background-color: color($tan);
+              color: color($tan,light);
+            }
+          }
+        }
+      }
+    }
+    .teaser-group {
+      clear: both;
+      background-color: color($tan,highlight);
+      margin-bottom: 4em;
+      padding: .5em;
+      @include clearfix;
+      p {
+        margin: 0;
+      }
+      .tags {
+        float: right;
+        margin-top: .2em;
+        margin-right: 1em;
+        .tag {
+          margin-left: .4em;
+        }
+      }
+      .date {
+        text-transform: none;
+        float: right;
+        margin-top: .2em;
+      }
+      button {
+          margin-top: 0;
+          margin-bottom: 0;
+          float: left;
+      }
+    }
+  
+    .teaser {
+      h1.title {
+        margin-top: .4em;
+        margin-bottom: .4em;
+        text-transform: none;
+      }
+      a { 
+          border: none;
+      }
+      blockquote {
+        color: color($tan,dark);
+      }
+      &.small-image {
+        img {
+          @include grid-span(12,1);
+          padding-left: 0;
+          padding-bottom: 1.5em;
+          @include breakpoint ($teaser-image-small) {
+            @include grid-span(6,7);
+            padding-left: 1.5em;
+            padding-bottom: 1.5em;
+          }
+        }
+      }
+    }
+  }
+  
+  .secondary-content {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+    @include grid-span(12,1);
+    @include breakpoint ($teaser-feed) {
+      @include grid-span(4,9);
+    } 
+    div {
+      background-color: color($tan, light);
+      padding: 1em;
+      margin: 0 0 1em 0;
+      -webkit-box-shadow: 0 3px 0 color($tan, bright);
+      -moz-box-shadow: 0 3px 0 color($tan, bright);
+      box-shadow: 0 3px 0 color($tan, bright);
+      @include breakpoint ($teaser-feed) {
+        padding: 1.5em;
+      }         
+    }
+  }
+
+}

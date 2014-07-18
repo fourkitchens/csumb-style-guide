@@ -76,7 +76,6 @@ input.action-submit { // The input. is necessary here to override the above rule
   ));
   border-color: color($green, 'main', -10%);
   color: $white;
-  @include text-shadow(1px 1px 0 color($green, 'main'));
 
   &:hover, &:focus {
     border-color: color($green, 'main', -15%);
