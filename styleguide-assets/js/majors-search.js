@@ -2,20 +2,18 @@ $('.more-link').each(function() {
       var majorName = $(this).text();
       $(this).html($(this).html() + ' (' + $(this).parents('li').find('li').length + ')');
       $(this).next('.more').prepend('<p>You can study '+ majorName +' in one of the following majors:</p>');
-                        
+
 });
 $('form').first().on('submit', function(event) {
        event.preventDefault();
     $('#results li').remove();
     $('#results').show();
     var keyword = $('#keyword').val().toLowerCase();
-    $('#stuff .list-unstyled > li').each(function() {
-        console.log($(this).find('a').first().text().toLowerCase().search(keyword));
+    $('.programs-listing li').each(function() {
         if($(this).find('a').first().text().toLowerCase().search(keyword) !== -1) {
             var clone = $(this).clone();
-            clone.find('.more').removeClass('well').show();
-            
            $('#results ul').append(clone);
+           clone.find('.more').show();
         }
     });
 });
@@ -28,5 +26,5 @@ $('.more-link').on('click', function(event) {
     else {
         $(this).addClass('showing');
         $(this).next('.more').show();
-    } 
+    }
 });
