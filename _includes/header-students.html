@@ -1,4 +1,4 @@
-<header id="header" class="interior with-mobile">
+<header id="header" class="interior mobile-menu logged-in">
   <div class="mobile-bar">
     <div class="navigation menu-block menu-block-2 main-two-levels">
       <ul class="menu">
@@ -111,13 +111,13 @@
           <li><a href="#" class="pull-nav-desktop toggle"><span>Main Menu</span></a></li>
         </ul>     
         <div class="user-login logged-in">
-          <button class="btn-primary">Login</button>
+          <a href="#" class="no-toggle login-link" title="Login"><span>Login</span></a>
           <ul class="student-info">
             <li class="name logged-in">
             <span class="no-link name pull-student-menu">Rashida Jones</span>
               <ul class="user-actions">
                 <li class="favorite">
-                  <a href="#" class="no-toggle" title="Add to MyBookings"><span>Add to MyBookings</span></a>
+                  <a href="#" class="no-toggle" title="Add to Shortcuts"><span>Add to Shortcuts</span></a>
                 </li>
                 <li class="profile">
                   <a href="#" class="no-toggle" title="View Profile"><span>View Profile</span></a>
@@ -128,14 +128,14 @@
               </ul>
             </li>
           </ul>
-        </div>
+        </div><!--/user-login-logged-in-->
         <div class="block-search logged-in">
           <div class="form-item-search-block-form">
             <label class="element-invisible">Search </label>
             <input placeholder="Search CSUMB" type="text" name="search_block_form" class="form-text">
-          </div>
-        </div>
-      </div>
+          </div><!--/.form-item-block-search-->
+        </div><!--/.block-search-->
+      </div><!--/.actions-->
       <div class="logo desktop">
         <a href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-blue.svg" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
       </div><!--/.logo-desktop-->
@@ -145,31 +145,44 @@
   <div class="mobile-wrap">
     <div class="logo-mobile">
       <a href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-blue.svg" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
-    </div> 
-     <div class="logo-mobile-small">
+    </div>  
+    <div class="logo-mobile-small">
       <a href="/index.html" title="CSUMB Home Page"><img src="../images/logos/csumb-logo-blue-no-otter.svg" alt="CSUMB Logo" title="Cal State Monteray Bay"/></a>
-    </div>          
+    </div>            
     <ul class="toggles mobile">
       <li class="first logged-in"><a href="#" class="pull-nav-main toggle"><span>Main Menu</span></a></li>
       <li><a href="#" class="pull-search toggle"><span>Search</span></a></li>
-      <li class="logged-in"><a href="/user" class="logged-in no-toggle"><span class="name">Rashida Jones</span></a> <a href="user/logout" class="log-out no-toggle"><span>Logout</span></a></li>
     </ul>
+    <div class="user-login mobile logged-in">
+      <a href="#" class="no-toggle login-link" title="Login"><span>Login</span></a>
+      <ul class="student-info">
+        <li class="name logged-in">
+        <span class="no-link name pull-student-menu">Rashida Jones</span>
+          <ul class="user-actions">
+            <li class="favorite">
+              <a href="#" class="no-toggle" title="Add to Shortcuts"><span>Add to Shortcuts</span></a>
+            </li>
+            <li class="profile">
+              <a href="#" class="no-toggle" title="View Profile"><span>View Profile</span></a>
+            </li>                
+            <li class="logout">
+              <a href="#" class="no-toggle" title="Logout"><span>Logout</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>    
   </div><!--/.mobile-wrap--> 
     <div class="title-wrap">
       <div class="limiter">
-<!--         <div class="breadcrumb">
-          <a href="#">User</a> &#10095;
-          <a href="#">Student Dashboard</a> &#10095;
-        </div>   
         <div class="page-title">
           <h1>Your Dashboard</h1>
         </div>  
-      </div>  -->
-      <ul class="toggles main">
-        <li><a href="#" class="pull-nav toggle"><span>Student Menu</span> </a></li>
-      </ul>        
-    </div>
-  </div><!--/.limiter-->
+        <ul class="toggles main">
+          <li><a href="#" class="pull-nav toggle"><span>Student Menu</span> </a></li>
+        </ul>        
+      </div><!--/.limiter-->
+    </div><!--/.title-wrap-->
   <div class="navigation-wrap student">
     <div class="navigation menu-block menu-block-5 student-menu student-menu-two-levels">
       <ul class="menu">
@@ -177,13 +190,14 @@
         <li class="menu-item item-2"><a>CMS</a></li>
         <li class="menu-item item-3"><a>Email</a></li>
         <li class="menu-item item-4"><a>My Calendar</a></li>
-        <li class="menu-item item-5"><a>MyBookings</a></li>
+        <li class="menu-item item-5"><a>My Shortcuts</a></li>
         <li class="menu-item item-6 last"><a>MyHousing</a></li>
       </ul>
-    </div> 
-  </div> 
+    </div> <!--/.navigation-student-menu-block-->
+  </div> <!--/.navigation-wrap-student-->
 </header>
 <div class="header-image student-page">
   <img src="../images/photos/header-students-three-big.jpg" alt="CSUMB Image" class="desktop" title="Cal State Monteray Bay Students"/> 
-  <img src="../images/photos/header-students-three-mobile.jpg" alt="CSUMB Image" class="mobile" title="Cal State Monteray Bay Students"/>   
-</div>
+  <img src="../images/photos/header-students-three-mobile.jpg" alt="CSUMB Image" class="mobile" title="Cal State Monteray Bay Students"/> 
+  <img src="../images/photos/header-students-three-mobile-small.jpg" alt="CSUMB Image" class="mobile-small" title="Cal State Monteray Bay Students"/>     
+</div><!--/.header-image-student-page-->

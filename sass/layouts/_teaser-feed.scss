@@ -3,6 +3,7 @@
  */
 
 $teaser-feed: 900px; //Match mobile menu breakpoint
+$teaser-image-small: 500px; //Small image become full width
 
 #main {
   .teaser-feed {
@@ -66,9 +67,9 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
         margin-top: .2em;
       }
       button {
-          @include grid-span(2,1);
           margin-top: 0;
           margin-bottom: 0;
+          float: left;
       }
     }
   
@@ -86,9 +87,14 @@ $teaser-feed: 900px; //Match mobile menu breakpoint
       }
       &.small-image {
         img {
-          @include grid-span(6,7);
-          padding-left: 1.5em;
+          @include grid-span(12,1);
+          padding-left: 0;
           padding-bottom: 1.5em;
+          @include breakpoint ($teaser-image-small) {
+            @include grid-span(6,7);
+            padding-left: 1.5em;
+            padding-bottom: 1.5em;
+          }
         }
       }
     }

@@ -1,0 +1,28 @@
+/**
+ * @file _header-navigation-block-one.scss
+ * The design for menu-block-1 in the navigation region of the header. 
+ */
+
+
+/**
+* Header - navigation block one styles
+*/
+#header {
+  .navigation {   
+    &.menu-block-1 { // for main header template - e.g. home page
+      margin: 0 auto 4.5em;
+      @include respond-to("navigation full") {
+        margin-top: 18em;
+      }
+      @include respond-to("navigation medium") {
+        margin-top: 13em;
+      }    
+      @include respond-to("navigation small") {
+        margin: 0;
+        padding: 0;
+        float: left;
+        display: none;
+      }      
+    }
+  }
+}

@@ -1,0 +1,307 @@
+/**
+ * @file _toggle-menus.scss
+ * The design for all toggle menus.
+ * 
+ **** Related asset: styleguide-assets/responsive-nav.js
+ */
+
+// general toggle styles
+
+.toggles {
+  margin: 0;
+  display: none;
+  padding: 0;
+  font-family: $trade;
+  @include respond-to("navigation small") {
+    display: block;
+  }
+  li {
+    list-style-type: none;
+    float: left;
+    display: inline;
+    position: relative;
+    a {
+      display: block;
+      width:100%;
+      padding: 2em .5em;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.15s ease-in-out;
+      span {
+        vertical-align: middle;
+        text-transform: uppercase;
+        @include respond-to("navigation smallest") {
+          display: block;
+          padding: .5em 0 0;
+        }
+        &:before {
+          display:block;
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          text-align: center;
+          transition: content 0.4s ease-in-out;
+          vertical-align: middle;
+          min-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+// Context-specific by .class Toggles
+.toggles {   
+  &.desktop { // desktop toggle for the main menu - e.g. department pages
+    @include grid-span(4,1, $output-style:'float');
+    display: block;
+    padding: 0;
+    li {
+      a {
+        color: color($blue);  
+        text-align: center;
+        float: left;
+        padding: 1em;
+        width: 100%;
+        font-family: $trade-reg;
+        &:hover {
+          color: color($blue,bright);  
+        } 
+        &.active {
+          color: color($blue,bright);  
+          span {
+            color: color($blue,bright);  
+          }           
+        }
+        &.pull-nav-main,
+        &.pull-nav-desktop {
+          span {
+            &:before {
+              content: image-url('icons/icon-rows-blue-small.svg');        
+              vertical-align: middle;
+              padding-right: 1em;
+              display: inline-block;
+            }
+          }
+          &.active {
+            span {
+              &:before {
+                content: image-url('icons/icon-x-blue-small.svg');        
+                vertical-align: middle;
+                padding-right:1em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }              
+          }
+        }             
+      }
+    }    
+    @include respond-to("navigation small") {
+      display: none;
+    }
+  }    
+  &.main { // desktop toggle for department/section mobile menu
+    @include grid-span(12, 1);
+    margin-top: 1.5em;
+    li {
+      width: 100%;
+      a {
+        color: $white;  
+        text-align: left;
+        float: left;
+        padding: 1em;
+        width: auto;
+        background-color: rgba($white, 0.05);
+        &:hover {
+          color: rgba($white, 0.85);
+          background-color: rgba($white, 0.15);
+        }   
+        &.pull-nav {
+          span {
+            &:before {
+              content: image-url('icons/icon-menu-white-small.svg');        
+              vertical-align: middle;
+              padding-right: 1em;
+              display: inline-block;
+            }
+          }
+          &.active {
+            span {
+              &:before {
+                content: image-url('icons/icon-cancel-white-small.svg');        
+                vertical-align: middle;
+                padding-right:1em;
+                display: inline-block;
+                transition: content 0.4s ease-in-out;
+              }
+            }              
+          }
+        } 
+      }
+    }  
+  }
+  &.mobile { // top mobile toggles
+    @include grid-span(6, 7, $output-style:'float');     
+    @include respond-to("navigation small") {
+      float: right;
+      width: 48%;    
+    } 
+    @include respond-to("navigation smallest") {
+      border-left: 1px solid darken($white, 20%);  
+    }          
+    li {
+      width: 33.33%;   
+      @include respond-to("navigation small") {
+        width: 50%;
+      }
+      @include respond-to("navigation smallest") {
+        width: 100%;
+      }      
+      a {
+        color: color($blue, 'main', -3%);
+        @include respond-to("navigation small") {
+          padding: 1em .5em;
+        }
+        @include respond-to("navigation smallest") {
+          padding: .5em 1.5em;
+        }          
+        &:hover {
+          color: color($blue, 'main', -10%);
+          background-color: rgba($white, 0.82);
+        }          
+        &.active {
+          background-color: rgba($white, 0.82);
+          color: color($blue, 'main', 10%);
+        }
+        &.desktop-login {// Hide this item at small resolution.
+          @include respond-to("navigation small") {
+            display: none;
+          }          
+        }
+        span {
+          @include respond-to("navigation smallest") {
+            text-align: left;
+          }
+          &:before { // at smallest breakpoint, make the icons inline with span text.
+            @include respond-to("navigation smallest") {
+              display: inline-block;
+              padding-right: .5em;
+            }  
+          }
+        }
+        &.pull-nav-main {
+          span {
+            display: block;
+            &:before {
+              content: image-url('icons/icon-rows-blue-small.svg');        
+              vertical-align: middle;
+              height: 24px;
+            }
+          }
+          &.active {
+            span {
+              &:before {
+                content: image-url('icons/icon-x-blue-small.svg');        
+                vertical-align: middle;
+                transition: content 0.4s ease-in-out;
+              }
+            }              
+          }            
+        }
+        &.pull-user {
+          span {
+            display: block;
+            &:before {
+              content: image-url('icons/icon-login-blue-small.svg');        
+              vertical-align: middle;
+              height: 24px;
+            }
+          }
+        }
+        &.pull-search {
+          span {
+            display: block;
+            &:before {
+              content: image-url('icons/icon-search-blue-small.svg');        
+              vertical-align: middle;
+              height: 24px;            
+            }
+          }
+          &.active {
+            span {
+              &:before {
+                content: image-url('icons/icon-x-blue-small.svg');        
+                vertical-align: middle;
+                transition: content 0.4s ease-in-out;
+              }
+            }              
+          }             
+        }                    
+      }
+    }
+  }    
+}
+
+#header { // Make toggle icons white if you're on the home page or a ".single-page" classed page
+  &.single-page {
+    .user-login {
+      a {
+        color: darken($white, 25%);   
+        &:hover {
+          color:$white;  
+        }
+      }
+      span {
+        &:before {
+          content: image-url('icons/icon-login-white-small.svg');        
+        }
+      }
+    }
+    .toggles {
+      &.mobile {
+        a {
+          color: darken($white, 25%);   
+          &:hover {
+            color:$white;   
+            background-color: transparent;
+          }          
+          &.active {
+            color:color($green);   
+            background-color: transparent;
+          } 
+          &.pull-nav-main {
+            span {
+              &:before {
+                content: image-url('icons/icon-rows-white-small.svg');        
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('icons/icon-x-green-small.svg');      
+                }
+              }                             
+            }            
+          }    
+          &.pull-search {
+            span {
+              &:before {
+                content: image-url('icons/icon-search-white-small.svg');             
+              }
+            }
+            &.active {
+              span {
+                &:before {
+                  content: image-url('icons/icon-x-green-small.svg');                          
+                }            
+              }              
+            }             
+          }
+        }         
+      }
+    }
+  }
+}
