@@ -86,22 +86,22 @@ input[type="password"] {
 // Custom Styling for Radios and Checkboxes - using this method: http://www.hongkiat.com/blog/css3-checkbox-radio/
 
 // Checkboxes
-.checkbox, 
+.checkbox,
 .radio {
   label {
-    display: inline-block;  
-    cursor: pointer;  
-    position: relative;  
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
     padding-left: 1.5em;
     line-height: 1em;
     &:before {
-      content: "";  
-      display: inline-block;  
-      width: 16px;  
-      height: 16px;  
-      margin-right: 1em;  
-      position: absolute;  
-      left: 0;  
+      content: "";
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 1em;
+      position: absolute;
+      left: 0;
       bottom: 1px;
       background-color: wp-color($tan, 'main', 35%);
     }
@@ -109,33 +109,33 @@ input[type="password"] {
 }
 .checkbox {
   label:before {
-    @include border-radius(4px); 
+    @include border-radius(4px);
     @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
   input[type=checkbox] {
     display: none;
     &:checked + label:before {
-      content: "\2713";  
-      color: wp-color($green, 'main', -14%); 
-      font-size: 15px;  
-      text-align: center;  
-      line-height: 15px;  
+      content: "\2713";
+      color: wp-color($green, 'main', -14%);
+      font-size: 15px;
+      text-align: center;
+      line-height: 15px;
     }
   }
 }
 // Radios
 .radio {
   label:before {
-    @include border-radius(8px); 
+    @include border-radius(8px);
     @include box-shadow(0 1px 1px rgba(wp-color($grey, 'dark', 15%), 0.8) inset);
   }
   input[type="radio"] {
     display: none;
     &:checked + label:before {
-      content: "\2022";  
-      color: wp-color($green, 'main', -14%);  
-      font-size: 30px;  
-      text-align: center;  
+      content: "\2022";
+      color: wp-color($green, 'main', -14%);
+      font-size: 30px;
+      text-align: center;
       line-height: 16px;
     }
   }
@@ -167,24 +167,6 @@ input[type="password"] {
     color: wp-color($grey, main, 20%);
   }
 
-  @include respond-to('wide form labels') {
-    label {
-      float: left;
-      width: 18%;
-      margin-right: 2%;
-      padding: 0.5em 0;
-    }
-
-    input {
-      float: right;
-      width: 80%;
-    }
-
-    .description {
-      float: right;
-      width: 80%;
-    }
-  }
 }
 
 // Radio buttons and checkboxes have a different output structure from the above,
@@ -212,21 +194,6 @@ input[type="password"] {
     }
   }
 
-
-  @include respond-to('wide form labels') {
-    > label {
-      float: left;
-      width: 18%;
-      margin-right: 2%;
-      padding: 0.5em 0;
-    }
-
-    .form-radios {
-      float: right;
-      width: 80%;
-      padding: 0.25em 0;
-    }
-  }
 }
 
 // Finally, text areas
@@ -241,18 +208,4 @@ input[type="password"] {
     color: wp-color($tan, main, 20%);
   }
 
-  @include respond-to('wide form labels') {
-    > label {
-      float: left;
-      width: 18%;
-      margin-right: 2%;
-      padding: 0.5em 0;
-    }
-
-    .form-textarea-wrapper {
-      float: right;
-      width: 80%;
-      padding: 0.25em 0;
-    }
-  }
 }
