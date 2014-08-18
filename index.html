@@ -5,18 +5,8 @@ title: Style Guide Index
 
 <div class="styleguide-content">
   <nav class="styleguide-nav collapse">
-    <h2>Elements</h2>
-    <ul>
-      {% for post in site.posts reversed %}
-        {% if post.layout == "heading" %}
-          <li class="heading">{{ post.date | date: "%Y" | plus:0 }}. {{ post.title }} <!-- <a href="{{ post.url }}">&rarr;</a> --></li>
-        {% else %}
-          <li><a href="#{{ post.id | remove_first:'/' | replace:'/','-' | replace:' ','-' }}">{{ post.title }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
     <h2>Prototypes</h2>
-    <ul>   
+    <ul>
       <li><a href="/header-footer.html">Header and Footer</a></li>
       <li><a href="/basic-page.html">Basic Page with Menu</a></li>
       <li><a href="/basic-page2.html">Basic Page Centered</a></li>
